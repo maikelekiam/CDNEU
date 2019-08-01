@@ -13,6 +13,24 @@ namespace CDNEU {
     public partial class SiteMaster {
         
         /// <summary>
+        /// lbl18 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl18;
+        
+        /// <summary>
+        /// btnLogOff control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnLogOff;
+        
+        /// <summary>
         /// dropdownListarPersonas control.
         /// </summary>
         /// <remarks>

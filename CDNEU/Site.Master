@@ -1,17 +1,29 @@
-﻿<%@ master language="C#" autoeventwireup="true" codebehind="Site.master.cs" inherits="CDNEU.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="CDNEU.SiteMaster" %>
 
 <!DOCTYPE html>
 
 <html lang="en">
-<head runat="server">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CDNEU - Registro de Personas</title>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>CDNEU</title>
+    <meta name="description" content="CDNEU | Multi-purpose HTML5 Template">
+    <meta name="author" content="IT-RAYS">
+
+    <!-- Devices Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+
+    <!-- Put favicon.ico and apple-touch-icon(s).png in the images folder -->
+    <link rel="shortcut icon" href="imagenes/copade.ico">
 
 
-
-    <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/bootstrap-datepicker.css" rel="stylesheet" />
+    <link href="css/bootstrap-select.css" rel="stylesheet" />
+
+    <link href="css/estilo-textbox.css" rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="assets/css/assets.css">
 
     <style>
         h3 {
@@ -20,6 +32,159 @@
             /*letter-spacing:0px;*/
             /*font-weight:500;*/
             /*font-size: large;*/
+        }
+    </style>
+
+
+
+
+    <!-- Template CSS files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/shortcodes.css">
+    <link id="theme_css" rel="stylesheet" href="assets/css/light.css">
+    <link id="skin_css" rel="stylesheet" href="assets/css/skins/default.css">
+</head>
+
+
+<body class="gry-bg pattern-3">
+    <form runat="server" class="form-horizontal form-control autoHeight">
+        <asp:ScriptManager EnablePageMethods="true" runat="server">
+            <Scripts>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <!-- site preloader start -->
+        <div class="page-loader"></div>
+        <!-- site preloader end -->
+
+        <div class="pageWrapper boxed main-wrapper">
+
+            <div class="top-bar">
+
+                <ul class="top-info f-left">
+                    <li><i class="fa fa-envelope main-color"></i><b class="main-color"></b><a href="#">marcamone@neuquen.gov.ar</a></li>
+                    <li><i class="fa fa-phone main-color"></i><b class="main-color"></b><a href="#">(0299) 449 5661</a></li>
+                    <li class="dropdown language-selector">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-close-others="true"><i class="fa fa-flag main-color"></i>Centro Administrativo Ministerial (CAM) - Antártida Argentina 1245 - Ed. 2 - P°4</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <asp:Label ID="lbl18" Font-Bold="true" runat="server" CssClass="control-label AlineadoIzquierda"></asp:Label>
+                        <%--<asp:Button ID="btnUsuarios" runat="server" Text="Usuarios" ForeColor="Black" OnClick="btnUsuarios_Click" />--%>
+                        <asp:Button ID="btnLogOff" CssClass="btn btn-info" runat="server" Text="Cerrar Sesion" OnClick="btnLogOff_Click" OnClientClick="return confirm('¿Desea cerrar la sesion?');" />
+                    </li>
+                    <%--<li><a class="btn" href="/Login.aspx">SALIR <span class="glyphicon glyphicon-log-out"></span></a></li>--%>
+                </ul>
+
+
+            </div>
+
+            <!-- Header start -->
+            <header class="top-head minimal no-border">
+
+                <div class="container p-r-3 p-l-3">
+
+                    <!-- Logo start -->
+                    <div class="logo">
+                        <a href="Default.aspx">
+                            <img src="imagenes/copade-barra.jpg" /></a>
+
+                    </div>
+                    <!-- Logo end -->
+
+                    <div class="responsive-nav">
+                        <!-- top navigation menu start -->
+                        <nav class="top-nav boxes with-borders">
+                            <ul>
+                                <li class="selected"><a href="default.aspx"><span>Inicio</span></a></li>
+                                <li><a href="#"><span>Nuevo Diseñador</span></a>
+                                    <ul>
+                                        <li><a runat="server" href="~/AltaPersona.aspx"><span class="glyphicon glyphicon-plus fa-fw"></span>Nuevo Diseñador</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><span>Editar Diseñador</span></a>
+                                    <ul>
+                                        <li><a runat="server" href="~/EditarPersona.aspx"><span class="glyphicon glyphicon-plus fa-fw"></span>Editar Diseñador</a></li>
+                                    </ul>
+                                </li>
+                                <li runat="server" id="dropdownListarPersonas">
+                                    <a href="#"><span>Listado de Diseñadores</span></a>
+                                    <ul>
+                                        <li><a runat="server" href="~/ListarPersonas.aspx"><span class="glyphicon glyphicon-credit-card fa-fw"></span>Listado de Diseñadores</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <!-- Header start -->
+
+            <br />
+            <div class="container body-content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+                <footer>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <p>CyT - COPADE - <%: DateTime.Now.Year %> - CDNEU - Registro de Diseñadores</p>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Back to top Link -->
+        <a id="to-top" href="#"><span class="fa fa fa-angle-up"></span></a>
+
+        <!-- Load JS plugins -->
+        <%--<script type="text/javascript" src="assets/js/jquery-1.12.0.min.js"></script>--%>
+        <!--este no va!!!-->
+
+        <script src="js/jquery-1.12.3.js"></script>
+        <script src="js/bootstrap-datepicker.js"></script>
+        <script src="js/bootstrap-select.js"></script>
+
+        <script type="text/javascript" src="assets/js/assets.js"></script>
+
+        <!-- general script file -->
+        <script type="text/javascript" src="assets/js/script.js"></script>
+
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<%--<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CDNEU - Registro de Personas</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-datepicker.css" rel="stylesheet" />
+
+    <style>
+        h3 {
+            font-family: 'Oswald','sans-serif';            
         }
     </style>
 
@@ -32,39 +197,9 @@
 
 </head>
 <body>
-    <form runat="server" class="form-horizontal form-control autoHeight">
-        <asp:ScriptManager runat="server">
-            <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
-                <%--Framework Scripts--%>
-                
-                <%--<asp:ScriptReference Name="MsAjaxBundle" />
-                <asp:ScriptReference Name="jquery" />
-                <asp:ScriptReference Name="bootstrap" />
-                <asp:ScriptReference Name="respond" />
-                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
-                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
-                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
-                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
-                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
-                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
-                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
-                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
-                <asp:ScriptReference Name="WebFormsBundle" />--%>
-                <%--Site Scripts--%>
-                
-            </Scripts>
-        </asp:ScriptManager>
-                
-
-
+    <form runat="server" class="form-horizontal form-control autoHeight">                    
         <div class="navbar navbar-default">
             <div class="container">
-                <%--<div class="navbar-header">
-                    <a class="navbar-brand" runat="server" href="~/Default.aspx">
-                        <h2>CDNEU</h2>
-                    </a>
-                </div>--%>
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
@@ -99,4 +234,4 @@
     <script src="js/bootstrap-datepicker.js"></script>
 
 </body>
-</html>
+</html>--%>

@@ -19,7 +19,7 @@ namespace CDNEU
             }
             else
             {
-                //lbl18.Text = "Bienvenido " + Session["userlogin"].ToString();
+                lbl18.Text = "Bienvenido " + Session["userlogin"].ToString();
 
                 if (Session["usergrupo"].ToString() == "1")
                 {
@@ -30,9 +30,8 @@ namespace CDNEU
                     dropdownListarPersonas.Visible = false;
                 }
             }
-
-
         }
+
         protected void btnLogOff_Click(object sender, EventArgs e)
         {
             Session.Abandon();
