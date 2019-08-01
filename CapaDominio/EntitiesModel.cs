@@ -58,6 +58,14 @@ namespace CapaDominio
 			}
 		}
 		
+		public IQueryable<Usuario> Usuarios 
+		{
+			get
+			{
+				return this.GetAll<Usuario>();
+			}
+		}
+		
 		public static BackendConfiguration GetBackendConfiguration()
 		{
 			BackendConfiguration backend = new BackendConfiguration();
@@ -80,6 +88,10 @@ namespace CapaDominio
 	public interface IModeloDeDominioUnitOfWork : IUnitOfWork
 	{
 		IQueryable<Persona> Personas
+		{
+			get;
+		}
+		IQueryable<Usuario> Usuarios
 		{
 			get;
 		}

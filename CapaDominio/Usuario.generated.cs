@@ -21,18 +21,18 @@ using Telerik.OpenAccess.Metadata.Fluent.Advanced;
 
 namespace CapaDominio	
 {
-	public partial class Persona
+	public partial class Usuario
 	{
-		private int idPersona;
-		public virtual int IdPersona
+		private int idUsuario;
+		public virtual int IdUsuario
 		{
 			get
 			{
-				return this.idPersona;
+				return this.idUsuario;
 			}
 			set
 			{
-				this.idPersona = value;
+				this.idUsuario = value;
 			}
 		}
 		
@@ -49,68 +49,55 @@ namespace CapaDominio
 			}
 		}
 		
-		private string apellido;
-		public virtual string Apellido
+		private string contrasenia;
+		public virtual string Contrasenia
 		{
 			get
 			{
-				return this.apellido;
+				return this.contrasenia;
 			}
 			set
 			{
-				this.apellido = value;
+				this.contrasenia = value;
 			}
 		}
 		
-		private int? edad;
-		public virtual int? Edad
+		private int? grupo;
+		public virtual int? Grupo
 		{
 			get
 			{
-				return this.edad;
+				return this.grupo;
 			}
 			set
 			{
-				this.edad = value;
+				this.grupo = value;
 			}
 		}
 		
-		private string observaciones;
-		public virtual string Observaciones
+		private string mail;
+		public virtual string Mail
 		{
 			get
 			{
-				return this.observaciones;
+				return this.mail;
 			}
 			set
 			{
-				this.observaciones = value;
+				this.mail = value;
 			}
 		}
 		
-		private string domicilio;
-		public virtual string Domicilio
+		private bool? activo;
+		public virtual bool? Activo
 		{
 			get
 			{
-				return this.domicilio;
+				return this.activo;
 			}
 			set
 			{
-				this.domicilio = value;
-			}
-		}
-		
-		private string correoElectronico;
-		public virtual string CorreoElectronico
-		{
-			get
-			{
-				return this.correoElectronico;
-			}
-			set
-			{
-				this.correoElectronico = value;
+				this.activo = value;
 			}
 		}
 		
