@@ -1,8 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AltaPersona.aspx.cs" Inherits="CDNEU.AltaPersona" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="container">
-        <asp:Panel ID="Panel1" CssClass="panel panel-info" runat="server">
+        <asp:Panel ID="Panel1" CssClass="panel panel-default" runat="server">
             <div class="panel-heading">
                 <h3>Nuevo DISEÑADOR</h3>
             </div>
@@ -97,13 +98,5 @@
                 </div>
             </div>
         </asp:Panel>
-        
-        
     </div>
-    
-
-
-
-
-
 </asp:Content>

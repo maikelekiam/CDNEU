@@ -120,13 +120,14 @@
     <Content Include="assets\css\section-scroll.css" />
     <Content Include="assets\css\shop.css" />
     <Content Include="assets\css\shortcodes.css" />
-    <Content Include="assets\css\skins\1.css" />
+    <Content Include="assets\css\skins\1 original.css" />
     <Content Include="assets\css\skins\2.css" />
     <Content Include="assets\css\skins\3.css" />
     <Content Include="assets\css\skins\4.css" />
     <Content Include="assets\css\skins\5.css" />
     <Content Include="assets\css\skins\6.css" />
     <Content Include="assets\css\skins\7.css" />
+    <Content Include="assets\css\skins\default original cyt.css" />
     <Content Include="assets\css\skins\default orig.css" />
     <Content Include="assets\css\skins\default.css" />
     <Content Include="assets\css\sliders\flexslider.css" />
@@ -230,6 +231,7 @@
     <Content Include="css\bootstrap-select.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\estilo-textbox.css" />
+    <Content Include="css\font-awesome.min.css" />
     <Content Include="EditarPersona.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="imagenes\background01.jpg" />

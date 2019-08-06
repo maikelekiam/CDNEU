@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using CapaDominio;
 using CapaNegocio;
+using System.IO;
 
 namespace CDNEU
 {
@@ -18,7 +19,7 @@ namespace CDNEU
             if (IsPostBack) return;
 
         }
-        
+
         protected void btnGuardarPersona_Click(object sender, EventArgs e)
         {
             if ((txtNombre.Text != "") && (txtApellido.Text != ""))
@@ -52,5 +53,13 @@ namespace CDNEU
 
             personaNego.GuardarPersona(persona);
         }
+
+
+        
+
+
+
+
+
     }
 }

@@ -2,10 +2,6 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron">
-        <h1>CDNEU</h1>
-        <p class="lead">Registro de Diseñadores de Neuquén</p>
-    </div>
 
     <div class="row">
         <div class="col-md-4">

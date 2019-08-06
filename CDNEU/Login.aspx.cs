@@ -42,5 +42,13 @@ namespace CDNEU
         {
             return usuarioNego.ObtenerUsuario(username, password);
         }
+
+        protected void btnRegistro_Click(object sender, EventArgs e)
+        {
+            //Aca hay que guardar los datos de Registro del Usuario NUEVO
+
+
+
+        }
     }
 }

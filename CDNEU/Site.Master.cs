@@ -24,10 +24,12 @@ namespace CDNEU
                 if (Session["usergrupo"].ToString() == "1")
                 {
                     dropdownListarPersonas.Visible = true;
+                    dropdownAltaPersona.Visible = true;
                 }
                 else
                 {
                     dropdownListarPersonas.Visible = false;
+                    dropdownAltaPersona.Visible = false;
                 }
             }
         }
