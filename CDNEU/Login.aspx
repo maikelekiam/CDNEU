@@ -11,7 +11,6 @@
     <%--<link href="css/font-awesome.css" rel="stylesheet" />--%>
     <%--<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />--%>
 
-
     <link rel="stylesheet" href="assets/css/assets.css" />
 
 
@@ -85,7 +84,7 @@
                                             <span class="input-group-addon alert-info">
                                                 <span class="glyphicon glyphicon-user"></span>
                                             </span>
-                                            <asp:TextBox ID="txtuserid" runat="server" CssClass="form-control" placeholder="Ingrese un nombre de Usuario" />
+                                            <asp:TextBox ID="txtLoginNombreUsuario" runat="server" CssClass="form-control" placeholder="Ingrese un nombre de Usuario" />
                                         </div>
                                     </div>
                                 </div>
@@ -96,7 +95,7 @@
                                             <span class="input-group-addon alert-info">
                                                 <span class="glyphicon glyphicon-lock"></span>
                                             </span>
-                                            <asp:TextBox ID="txtpassword" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese una Contraseña" />
+                                            <asp:TextBox ID="txtLoginContrasenia" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese una Contraseña" />
                                         </div>
                                     </div>
                                 </div>
@@ -107,8 +106,8 @@
                                 <hr />
                                 <div class="form-group">
                                     <div class="col-md-4 col-md-offset-1">
-                                        <asp:Button ID="btnlogin" runat="server"
-                                            Text="Ingresar" OnClick="btnlogin_Click" CssClass="boton_azul" />
+                                        <asp:Button ID="btnLogin" runat="server"
+                                            Text="Ingresar" OnClick="btnLogin_Click" CssClass="boton_azul" />
                                     </div>
                                 </div>
                             </div>
@@ -129,7 +128,7 @@
                                                 <span class="input-group-addon alert-info">
                                                     <span class="glyphicon glyphicon-user"></span>
                                                 </span>
-                                                <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="Ingrese nombre de Usuario" />
+                                                <asp:TextBox ID="txtRegistroNombreUsuario" runat="server" CssClass="form-control" placeholder="Ingrese un nombre de Usuario" />
                                             </div>
                                         </td>
                                     </tr>
@@ -186,7 +185,7 @@
                                                 <span class="input-group-addon alert-info">
                                                     <span class="glyphicon glyphicon-edit"></span>
                                                 </span>
-                                                <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" placeholder="Ingrese su apellido" />
+                                                <asp:TextBox ID="txtRegistroApellido" runat="server" CssClass="form-control" placeholder="Ingrese su apellido" />
                                             </div>
                                         </td>
                                     </tr>
@@ -205,7 +204,7 @@
                                                 <span class="input-group-addon alert-info">
                                                     <span class="glyphicon glyphicon-envelope"></span>
                                                 </span>
-                                                <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control" placeholder="Ingrese su Correo Electronico" />
+                                                <asp:TextBox ID="txtRegistroCorreoElectronico" runat="server" CssClass="form-control" placeholder="Ingrese su Correo Electronico" />
                                             </div>
                                         </td>
                                     </tr>
@@ -224,27 +223,49 @@
                                                 <span class="input-group-addon alert-info">
                                                     <span class="glyphicon glyphicon-phone-alt"></span>
                                                 </span>
-                                                <asp:TextBox ID="TextBox4" runat="server" CssClass="form-control" placeholder="Ingrese su Telefono" />
+                                                <asp:TextBox ID="txtRegistroTelefono" runat="server" CssClass="form-control" placeholder="Ingrese su Telefono" />
                                             </div>
                                         </td>
                                     </tr>
-
+                                    <tr>
+                                        <td class="anchotabla altotabla">
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="anchotabla">
+                                            <asp:Label ID="Label6" runat="server" Text="Label">Edad</asp:Label>
+                                        </td>
+                                        <td class="anchotextbox">
+                                            <div class="input-group">
+                                                <span class="input-group-addon alert-info">
+                                                    <span class="glyphicon glyphicon-edit"></span>
+                                                </span>
+                                                <asp:TextBox ID="txtRegistroEdad" runat="server" CssClass="form-control" placeholder="Ingrese su Edad" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="anchotabla altotabla">
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="anchotabla">
+                                            <asp:Label ID="Label10" runat="server" Text="Label">Domicilio</asp:Label>
+                                        </td>
+                                        <td class="anchotextbox">
+                                            <div class="input-group">
+                                                <span class="input-group-addon alert-info">
+                                                    <span class="glyphicon glyphicon-edit"></span>
+                                                </span>
+                                                <asp:TextBox ID="txtRegistroDomicilio" runat="server" CssClass="form-control" placeholder="Ingrese su Domicilio" />
+                                            </div>
+                                        </td>
+                                    </tr>
                                 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -334,18 +355,6 @@
                                         </div>
                                     </div>
                                 </div>--%>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

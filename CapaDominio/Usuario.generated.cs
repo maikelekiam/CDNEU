@@ -36,16 +36,16 @@ namespace CapaDominio
 			}
 		}
 		
-		private string nombre;
-		public virtual string Nombre
+		private string nombreUsuario;
+		public virtual string NombreUsuario
 		{
 			get
 			{
-				return this.nombre;
+				return this.nombreUsuario;
 			}
 			set
 			{
-				this.nombre = value;
+				this.nombreUsuario = value;
 			}
 		}
 		
@@ -62,8 +62,8 @@ namespace CapaDominio
 			}
 		}
 		
-		private int? grupo;
-		public virtual int? Grupo
+		private int grupo;
+		public virtual int Grupo
 		{
 			get
 			{
@@ -75,21 +75,21 @@ namespace CapaDominio
 			}
 		}
 		
-		private string mail;
-		public virtual string Mail
+		private string correoElectronico;
+		public virtual string CorreoElectronico
 		{
 			get
 			{
-				return this.mail;
+				return this.correoElectronico;
 			}
 			set
 			{
-				this.mail = value;
+				this.correoElectronico = value;
 			}
 		}
 		
-		private bool? activo;
-		public virtual bool? Activo
+		private bool activo;
+		public virtual bool Activo
 		{
 			get
 			{
@@ -98,6 +98,71 @@ namespace CapaDominio
 			set
 			{
 				this.activo = value;
+			}
+		}
+		
+		private string nombre;
+		public virtual string Nombre
+		{
+			get
+			{
+				return this.nombre;
+			}
+			set
+			{
+				this.nombre = value;
+			}
+		}
+		
+		private string apellido;
+		public virtual string Apellido
+		{
+			get
+			{
+				return this.apellido;
+			}
+			set
+			{
+				this.apellido = value;
+			}
+		}
+		
+		private string telefono;
+		public virtual string Telefono
+		{
+			get
+			{
+				return this.telefono;
+			}
+			set
+			{
+				this.telefono = value;
+			}
+		}
+		
+		private int? edad;
+		public virtual int? Edad
+		{
+			get
+			{
+				return this.edad;
+			}
+			set
+			{
+				this.edad = value;
+			}
+		}
+		
+		private string domicilio;
+		public virtual string Domicilio
+		{
+			get
+			{
+				return this.domicilio;
+			}
+			set
+			{
+				this.domicilio = value;
 			}
 		}
 		

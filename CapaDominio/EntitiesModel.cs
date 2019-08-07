@@ -50,14 +50,6 @@ namespace CapaDominio
 			:base(connection, backendConfiguration, metadataSource)
 		{ }
 			
-		public IQueryable<Persona> Personas 
-		{
-			get
-			{
-				return this.GetAll<Persona>();
-			}
-		}
-		
 		public IQueryable<Usuario> Usuarios 
 		{
 			get
@@ -87,10 +79,6 @@ namespace CapaDominio
 	
 	public interface IModeloDeDominioUnitOfWork : IUnitOfWork
 	{
-		IQueryable<Persona> Personas
-		{
-			get;
-		}
 		IQueryable<Usuario> Usuarios
 		{
 			get;

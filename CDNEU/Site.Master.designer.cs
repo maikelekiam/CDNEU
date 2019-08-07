@@ -31,22 +31,22 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.Button btnLogOff;
         
         /// <summary>
-        /// dropdownAltaPersona control.
+        /// dropdownAltaUsuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dropdownAltaPersona;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dropdownAltaUsuario;
         
         /// <summary>
-        /// dropdownListarPersonas control.
+        /// dropdownListarUsuarios control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dropdownListarPersonas;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dropdownListarUsuarios;
         
         /// <summary>
         /// MainContent control.

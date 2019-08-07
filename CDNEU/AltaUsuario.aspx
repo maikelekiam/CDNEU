@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AltaPersona.aspx.cs" Inherits="CDNEU.AltaPersona" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AltaUsuario.aspx.cs" Inherits="CDNEU.AltaUsuario" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -6,6 +6,37 @@
         <asp:Panel ID="Panel1" CssClass="panel panel-default" runat="server">
             <div class="panel-heading">
                 <h3>Nuevo DISEÑADOR</h3>
+            </div>
+            <!--NOMBRE DE USUARIO-->
+            <br />
+            <div class="form-group">
+                <asp:Label ID="Label1" runat="server" Text="NOMBRE DE USUARIO" CssClass="col-md-2 AlineadoDerecha"></asp:Label>
+                <div class="col-md-6">
+                    <asp:TextBox ID="txtNombreUsuario" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+            </div>
+            <!--CONTRASEÑA-->
+            <br />
+            <div class="form-group">
+                <asp:Label ID="Label2" runat="server" Text="CONTRASEÑA" CssClass="col-md-2 AlineadoDerecha"></asp:Label>
+                <div class="col-md-6">
+                    <asp:TextBox ID="txtContrasenia" TextMode="Password" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+            </div>
+            <!--GRUPO-->
+            <br />
+            <div class="form-group">
+                <asp:Label ID="Label3" runat="server" Text="GRUPO" CssClass="col-md-2 AlineadoDerecha"></asp:Label>
+                <div class="col-md-6">
+                    <asp:TextBox ID="txtGrupo" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+            </div>
+            <!-- ACTIVO -->
+            <div class="form-group">
+                <asp:Label ID="lblActivo" runat="server" Text="ACTIVO" CssClass="col-md-2 AlineadoDerecha "></asp:Label>
+                <div class="col-md-1">
+                    <asp:CheckBox ID="chkActivo" runat="server" CssClass="AlineadoDerecha" BorderStyle="None" Checked="true" />
+                </div>
             </div>
             <!--NOMBRE-->
             <br />
@@ -29,7 +60,7 @@
                     <asp:TextBox ID="txtEdad" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
-            <!--TIPO DOCUMENTO + DNI-->
+            <%--<!--TIPO DOCUMENTO + DNI-->
             <div class="form-group">
                 <asp:Label ID="lblTipoDocumento" runat="server" Text="TIPO" CssClass="col-md-2 AlineadoDerecha"></asp:Label>
                 <div class="col-md-2">
@@ -46,7 +77,7 @@
                 <div class="col-md-3">
                     <asp:TextBox ID="txtDocumento" runat="server" class="form-control"></asp:TextBox>
                 </div>
-            </div>
+            </div>--%>
             <!--TELEFONO-->
             <div class="form-group">
                 <asp:Label ID="lblTelefono" runat="server" Text="TELEFONO" CssClass="col-md-2 AlineadoDerecha"></asp:Label>
@@ -68,7 +99,7 @@
                     <asp:TextBox ID="txtDomicilio" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
-            <!--LOCALIDAD-->
+            <%--<!--LOCALIDAD-->
             <div class="form-group">
                 <asp:Label ID="lblLocalidad" runat="server" Text="LOCALIDAD" CssClass="col-md-2 AlineadoDerecha"></asp:Label>
                 <div class="col-md-4">
@@ -83,20 +114,24 @@
                         <asp:ListItem Value="-1">&lt;Seleccione Localidad&gt;</asp:ListItem>
                     </asp:DropDownList>
                 </div>
-            </div>
-            <!--OBSERVACIONES-->
+            </div>--%>
+            <%--<!--OBSERVACIONES-->
             <div class="form-group">
                 <asp:Label ID="lblObservaciones" runat="server" Text="OBSERVACIONES" CssClass="col-md-2 AlineadoDerecha"></asp:Label>
                 <div class="col-md-6">
                     <asp:TextBox ID="txtObservaciones" runat="server" TextMode="MultiLine" Rows="2" CssClass="form-control"></asp:TextBox>
                 </div>
-            </div>
+            </div>--%>
             <!-- BOTON GUARDAR -->
             <div class="form-group">
                 <div class="col-md-2 col-md-offset-2">
-                    <asp:Button ID="btnGuardarPersona" runat="server" Text="Guardar" Width="180" CssClass="boton_verde" OnClick="btnGuardarPersona_Click"></asp:Button>
+                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" Width="180" CssClass="boton_azul" OnClick="btnGuardar_Click"></asp:Button>
                 </div>
             </div>
         </asp:Panel>
     </div>
+
+
+
+
 </asp:Content>

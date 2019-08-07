@@ -23,13 +23,13 @@ namespace CDNEU
 
                 if (Session["usergrupo"].ToString() == "1")
                 {
-                    dropdownListarPersonas.Visible = true;
-                    dropdownAltaPersona.Visible = true;
+                    dropdownListarUsuarios.Visible = true;
+                    dropdownAltaUsuario.Visible = true;
                 }
                 else
                 {
-                    dropdownListarPersonas.Visible = false;
-                    dropdownAltaPersona.Visible = false;
+                    dropdownListarUsuarios.Visible = false;
+                    dropdownAltaUsuario.Visible = false;
                 }
             }
         }

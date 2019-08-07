@@ -102,7 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="AltaPersona.aspx" />
+    <Content Include="AltaUsuario.aspx" />
     <Content Include="assets\css\assets.css" />
     <Content Include="assets\css\dark.css" />
     <Content Include="assets\css\demos\construction.css" />
@@ -234,7 +234,6 @@
     <Content Include="css\estilo-textbox.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
-    <Content Include="EditarPersona.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="imagenes\background01.jpg" />
     <Content Include="imagenes\bg02.jpg" />
@@ -250,7 +249,7 @@
     <Content Include="js\bootstrap-select.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\jquery-1.12.3.js" />
-    <Content Include="ListarPersonas.aspx" />
+    <Content Include="ListarUsuarios.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -292,12 +291,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AltaPersona.aspx.cs">
-      <DependentUpon>AltaPersona.aspx</DependentUpon>
+    <Compile Include="AltaUsuario.aspx.cs">
+      <DependentUpon>AltaUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AltaPersona.aspx.designer.cs">
-      <DependentUpon>AltaPersona.aspx</DependentUpon>
+    <Compile Include="AltaUsuario.aspx.designer.cs">
+      <DependentUpon>AltaUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -322,22 +321,15 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EditarPersona.aspx.cs">
-      <DependentUpon>EditarPersona.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditarPersona.aspx.designer.cs">
-      <DependentUpon>EditarPersona.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="ListarPersonas.aspx.cs">
-      <DependentUpon>ListarPersonas.aspx</DependentUpon>
+    <Compile Include="ListarUsuarios.aspx.cs">
+      <DependentUpon>ListarUsuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ListarPersonas.aspx.designer.cs">
-      <DependentUpon>ListarPersonas.aspx</DependentUpon>
+    <Compile Include="ListarUsuarios.aspx.designer.cs">
+      <DependentUpon>ListarUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

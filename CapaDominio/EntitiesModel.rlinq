@@ -2,38 +2,7 @@
 <DomainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="2.0.0.0" name="ModeloDeDominio" namespace="CapaDominio" showPropertiesCompartment="true" xmlns="http://www.telerik.com/ORM">
   <orm:orm name="ModeloDeDominio" backend="mssql" default-schema="dbo" xmlns:orm="http://tempuri.org/ORM">
     <orm:namespace name="CapaDominio" default="true">
-      <orm:class name="Persona" uniqueId="d2917bf7-e320-467a-bf53-fcca0a54c2bc">
-        <orm:table name="Persona" />
-        <orm:identity>
-          <orm:key-generator name="autoinc">
-            <orm:key-generator-member property-name="IdPersona" />
-          </orm:key-generator>
-          <orm:single-field field-name="idPersona" />
-        </orm:identity>
-        <orm:concurrency strategy="changed" />
-        <orm:field name="idPersona" property="IdPersona" behavior="readwrite" uniqueId="ffbb2da1-abb0-47f5-920c-3ccf5fbdeb71" type="System.Int32">
-          <orm:column name="idPersona" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
-        </orm:field>
-        <orm:field name="nombre" property="Nombre" behavior="readwrite" uniqueId="02372ea8-f276-4234-8399-d1ac0cfdf81a" type="System.String">
-          <orm:column name="nombre" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="apellido" property="Apellido" behavior="readwrite" uniqueId="0ef3f9b7-5ca2-441c-8813-ff2c3fa9d108" type="System.String">
-          <orm:column name="apellido" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="edad" property="Edad" behavior="readwrite" uniqueId="548b3804-0e42-4b18-8570-d7d8ef24d8c8" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
-          <orm:column name="edad" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
-        </orm:field>
-        <orm:field name="observaciones" property="Observaciones" behavior="readwrite" uniqueId="ab4e879d-0792-4639-836d-a270cf7c1088" type="System.String">
-          <orm:column name="observaciones" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="domicilio" property="Domicilio" behavior="readwrite" uniqueId="27d99f6a-ab6a-425a-a6dc-83229b188d46" type="System.String">
-          <orm:column name="domicilio" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="correoElectronico" property="CorreoElectronico" behavior="readwrite" uniqueId="1a00ce33-5595-4393-90d8-52719a03fd82" type="System.String">
-          <orm:column name="correoElectronico" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-      </orm:class>
-      <orm:class name="Usuario" uniqueId="b7bf50d3-a653-43ae-bae5-b19b5be06557">
+      <orm:class name="Usuario" uniqueId="2839b0b4-026f-48f2-a72e-95866f704474">
         <orm:table name="Usuario" />
         <orm:identity>
           <orm:key-generator name="autoinc">
@@ -42,43 +11,54 @@
           <orm:single-field field-name="idUsuario" />
         </orm:identity>
         <orm:concurrency strategy="changed" />
-        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="454ac343-c668-491d-a2bb-42f942395546" type="System.Int32">
+        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="8a8e103e-4efa-4d90-8a61-ccaf891a3476" type="System.Int32">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         </orm:field>
-        <orm:field name="nombre" property="Nombre" behavior="readwrite" uniqueId="2045a58a-97f9-4479-8be3-352a8f4c8163" type="System.String">
-          <orm:column name="nombre" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:field name="nombreUsuario" property="NombreUsuario" behavior="readwrite" uniqueId="ff072cf4-1243-40b1-b55d-0887f94e55bb" type="System.String">
+          <orm:column name="nombreUsuario" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="contrasenia" property="Contrasenia" behavior="readwrite" uniqueId="c8c69997-71d7-4c9a-8d36-435773deea15" type="System.String">
+        <orm:field name="contrasenia" property="Contrasenia" behavior="readwrite" uniqueId="9a583383-ca5b-46ee-9435-4146cf7f9ff1" type="System.String">
           <orm:column name="contrasenia" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="grupo" property="Grupo" behavior="readwrite" uniqueId="0be0141e-525a-4a0b-9486-3cb8e58e7ecc" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
-          <orm:column name="grupo" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:field name="grupo" property="Grupo" behavior="readwrite" uniqueId="48599582-9e52-46b1-8a90-86a282d93743" type="System.Int32">
+          <orm:column name="grupo" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:field>
-        <orm:field name="mail" property="Mail" behavior="readwrite" uniqueId="0031f340-7d97-4163-a528-150198c51c65" type="System.String">
-          <orm:column name="mail" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:field name="correoElectronico" property="CorreoElectronico" behavior="readwrite" uniqueId="6d04352c-52de-4dc3-b7ff-10562c1fe2a2" type="System.String">
+          <orm:column name="correoElectronico" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="activo" property="Activo" behavior="readwrite" uniqueId="57cf8a19-7299-4ffc-8bdf-ac124615d9f7" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
-          <orm:column name="activo" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:field name="activo" property="Activo" behavior="readwrite" uniqueId="285b435c-3b46-48f5-9d75-8fcb859fdaa8" type="System.Boolean">
+          <orm:column name="activo" sql-type="bit" nullable="false" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="nombre" property="Nombre" behavior="readwrite" uniqueId="9bf83a4e-9ea8-4edc-96dc-a2f523bb6622" type="System.String">
+          <orm:column name="nombre" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="apellido" property="Apellido" behavior="readwrite" uniqueId="ece2e8d5-b1d6-49a1-9897-f1c37d3857f8" type="System.String">
+          <orm:column name="apellido" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="telefono" property="Telefono" behavior="readwrite" uniqueId="816ed9f9-4e05-4c70-b8da-bab125154075" type="System.String">
+          <orm:column name="telefono" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="edad" property="Edad" behavior="readwrite" uniqueId="72596da1-5037-49da-b70c-e0659a59d33a" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="edad" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="domicilio" property="Domicilio" behavior="readwrite" uniqueId="9e03d6c7-ff95-44e2-9df6-36e4b01a01e3" type="System.String">
+          <orm:column name="domicilio" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
       </orm:class>
     </orm:namespace>
     <orm:schema schema="">
-      <orm:table name="Persona">
-        <orm:column name="idPersona" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
-        <orm:column name="nombre" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="apellido" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="edad" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
-        <orm:column name="observaciones" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="domicilio" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="correoElectronico" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-      </orm:table>
       <orm:table name="Usuario">
         <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
-        <orm:column name="nombre" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="nombreUsuario" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="contrasenia" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="grupo" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
-        <orm:column name="mail" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="activo" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="grupo" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="correoElectronico" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="activo" sql-type="bit" nullable="false" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="nombre" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="apellido" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="telefono" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="edad" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="domicilio" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
       </orm:table>
       <orm:procedure name="fn_diagramobjects" is-function="true" return-type="int">
         <orm:result-sets />
@@ -91,7 +71,7 @@
   </orm:orm>
   <ModelSettings xmlns="">
     <AppConfigConnectionPropertyName>Conn</AppConfigConnectionPropertyName>
-    <AppConfigConnectionString>data source=COPADE_077\SQLEXPRESS;initial catalog=CDNEU;integrated security=True</AppConfigConnectionString>
+    <AppConfigConnectionString>Data Source=COPADE_077\SQLEXPRESS;Initial Catalog=CDNEU;Integrated Security=True</AppConfigConnectionString>
     <InitialCatalog>CDNEU</InitialCatalog>
     <NamingSettings>
       <ClassRules>
@@ -121,28 +101,23 @@
     </BackendConfigurationSettings>
   </ModelSettings>
   <Types>
-    <DomainClass Id="d2917bf7-e320-467a-bf53-fcca0a54c2bc" name="Persona" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdPersona">
-      <Property Id="ffbb2da1-abb0-47f5-920c-3ccf5fbdeb71" name="IdPersona" type="Int32" label="IdPersona : Int32" kind="Persistent" identity="true" fieldName="idPersona" />
-      <Property Id="0ef3f9b7-5ca2-441c-8813-ff2c3fa9d108" name="Apellido" label="Apellido : String" kind="Persistent" fieldName="apellido" />
-      <Property Id="548b3804-0e42-4b18-8570-d7d8ef24d8c8" name="Edad" type="Int32" label="Edad : Int32" nullable="true" kind="Persistent" fieldName="edad" />
-      <Property Id="02372ea8-f276-4234-8399-d1ac0cfdf81a" name="Nombre" label="Nombre : String" kind="Persistent" fieldName="nombre" />
-      <Property Id="ab4e879d-0792-4639-836d-a270cf7c1088" name="Observaciones" label="Observaciones : String" kind="Persistent" fieldName="observaciones" />
-      <Property Id="27d99f6a-ab6a-425a-a6dc-83229b188d46" name="Domicilio" label="Domicilio : String" kind="Persistent" fieldName="domicilio" />
-      <Property Id="1a00ce33-5595-4393-90d8-52719a03fd82" name="CorreoElectronico" label="CorreoElectronico : String" kind="Persistent" fieldName="correoElectronico" />
-    </DomainClass>
-    <DomainClass Id="b7bf50d3-a653-43ae-bae5-b19b5be06557" name="Usuario" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdUsuario">
-      <Property Id="454ac343-c668-491d-a2bb-42f942395546" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" identity="true" fieldName="idUsuario" />
-      <Property Id="57cf8a19-7299-4ffc-8bdf-ac124615d9f7" name="Activo" type="Boolean" label="Activo : Boolean" nullable="true" kind="Persistent" fieldName="activo" />
-      <Property Id="c8c69997-71d7-4c9a-8d36-435773deea15" name="Contrasenia" label="Contrasenia : String" kind="Persistent" fieldName="contrasenia" />
-      <Property Id="0be0141e-525a-4a0b-9486-3cb8e58e7ecc" name="Grupo" type="Int32" label="Grupo : Int32" nullable="true" kind="Persistent" fieldName="grupo" />
-      <Property Id="0031f340-7d97-4163-a528-150198c51c65" name="Mail" label="Mail : String" kind="Persistent" fieldName="mail" />
-      <Property Id="2045a58a-97f9-4479-8be3-352a8f4c8163" name="Nombre" label="Nombre : String" kind="Persistent" fieldName="nombre" />
+    <DomainClass Id="2839b0b4-026f-48f2-a72e-95866f704474" name="Usuario" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdUsuario">
+      <Property Id="8a8e103e-4efa-4d90-8a61-ccaf891a3476" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" identity="true" fieldName="idUsuario" />
+      <Property Id="285b435c-3b46-48f5-9d75-8fcb859fdaa8" name="Activo" type="Boolean" label="Activo : Boolean" kind="Persistent" fieldName="activo" />
+      <Property Id="ece2e8d5-b1d6-49a1-9897-f1c37d3857f8" name="Apellido" label="Apellido : String" kind="Persistent" fieldName="apellido" />
+      <Property Id="9a583383-ca5b-46ee-9435-4146cf7f9ff1" name="Contrasenia" label="Contrasenia : String" kind="Persistent" fieldName="contrasenia" />
+      <Property Id="6d04352c-52de-4dc3-b7ff-10562c1fe2a2" name="CorreoElectronico" label="CorreoElectronico : String" kind="Persistent" fieldName="correoElectronico" />
+      <Property Id="9e03d6c7-ff95-44e2-9df6-36e4b01a01e3" name="Domicilio" label="Domicilio : String" kind="Persistent" fieldName="domicilio" />
+      <Property Id="72596da1-5037-49da-b70c-e0659a59d33a" name="Edad" type="Int32" label="Edad : Int32" nullable="true" kind="Persistent" fieldName="edad" />
+      <Property Id="48599582-9e52-46b1-8a90-86a282d93743" name="Grupo" type="Int32" label="Grupo : Int32" kind="Persistent" fieldName="grupo" />
+      <Property Id="9bf83a4e-9ea8-4edc-96dc-a2f523bb6622" name="Nombre" label="Nombre : String" kind="Persistent" fieldName="nombre" />
+      <Property Id="ff072cf4-1243-40b1-b55d-0887f94e55bb" name="NombreUsuario" label="NombreUsuario : String" kind="Persistent" fieldName="nombreUsuario" />
+      <Property Id="816ed9f9-4e05-4c70-b8da-bab125154075" name="Telefono" label="Telefono : String" kind="Persistent" fieldName="telefono" />
     </DomainClass>
   </Types>
   <domainContext>
-    <domainModelHasDomainContext Id="7fb11c9e-59e9-4fb2-96e1-44d3b5156b30">
+    <domainModelHasDomainContext Id="4ef7f7c8-b1c8-4259-b4e2-c01c850b4553">
       <domainContainer name="ModeloDeDominio" namespace="CapaDominio" showPropertiesCompartment="true">
-        <entitySetProperty name="Personas" namespace="CapaDominio" type="Persona" label="Personas : IQueryable&lt;CapaDominio.Persona&gt;" />
         <entitySetProperty name="Usuarios" namespace="CapaDominio" type="Usuario" label="Usuarios : IQueryable&lt;CapaDominio.Usuario&gt;" />
       </domainContainer>
     </domainModelHasDomainContext>

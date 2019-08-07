@@ -10,7 +10,7 @@
 namespace CDNEU {
     
     
-    public partial class ListarPersonas {
+    public partial class ListarUsuarios {
         
         /// <summary>
         /// PanelListar control.

@@ -31,13 +31,13 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// txtuserid control.
+        /// txtLoginNombreUsuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtuserid;
+        protected global::System.Web.UI.WebControls.TextBox txtLoginNombreUsuario;
         
         /// <summary>
         /// Label2 control.
@@ -49,22 +49,22 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// txtpassword control.
+        /// txtLoginContrasenia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtpassword;
+        protected global::System.Web.UI.WebControls.TextBox txtLoginContrasenia;
         
         /// <summary>
-        /// btnlogin control.
+        /// btnLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnlogin;
+        protected global::System.Web.UI.WebControls.Button btnLogin;
         
         /// <summary>
         /// Label7 control.
@@ -76,13 +76,13 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.Label Label7;
         
         /// <summary>
-        /// TextBox1 control.
+        /// txtRegistroNombreUsuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtRegistroNombreUsuario;
         
         /// <summary>
         /// Label8 control.
@@ -130,13 +130,13 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// TextBox2 control.
+        /// txtRegistroApellido control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtRegistroApellido;
         
         /// <summary>
         /// Label4 control.
@@ -148,13 +148,13 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// TextBox3 control.
+        /// txtRegistroCorreoElectronico control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox txtRegistroCorreoElectronico;
         
         /// <summary>
         /// Label5 control.
@@ -166,13 +166,49 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// TextBox4 control.
+        /// txtRegistroTelefono control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox txtRegistroTelefono;
+        
+        /// <summary>
+        /// Label6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label6;
+        
+        /// <summary>
+        /// txtRegistroEdad control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtRegistroEdad;
+        
+        /// <summary>
+        /// Label10 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label10;
+        
+        /// <summary>
+        /// txtRegistroDomicilio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtRegistroDomicilio;
         
         /// <summary>
         /// btnRegistro control.

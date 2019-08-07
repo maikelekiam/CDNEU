@@ -13,7 +13,7 @@ namespace CapaRepositorio
         {
             using (ModeloDeDominio modeloDeDominio = new ModeloDeDominio())
             {
-                return modeloDeDominio.Usuarios.Where(c => c.Nombre == nombreUsuario && c.Contrasenia == contrasenia).FirstOrDefault();
+                return modeloDeDominio.Usuarios.Where(c => c.NombreUsuario == nombreUsuario && c.Contrasenia == contrasenia).FirstOrDefault();
 
             }
         }
@@ -50,11 +50,11 @@ namespace CapaRepositorio
                 return usuario;
             }
         }
-        public Usuario ControlarDuplicadoUsuario(String nombre)
+        public Usuario ControlarDuplicadoUsuario(String nombreUsuario)
         {
             using (ModeloDeDominio modeloDeDominio = new ModeloDeDominio())
             {
-                return modeloDeDominio.Usuarios.Where(c => c.Nombre == nombre).FirstOrDefault();
+                return modeloDeDominio.Usuarios.Where(c => c.NombreUsuario == nombreUsuario).FirstOrDefault();
 
             }
         }

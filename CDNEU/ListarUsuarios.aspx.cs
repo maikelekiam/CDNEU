@@ -9,7 +9,7 @@ using CapaNegocio;
 
 namespace CDNEU
 {
-    public partial class ListarPersonas : System.Web.UI.Page
+    public partial class ListarUsuarios : System.Web.UI.Page
     {
         UsuarioNego usuarioNego = new UsuarioNego();
 
@@ -31,7 +31,7 @@ namespace CDNEU
         }
         public void MostrarGrillaUsuarios()
         {
-            dgvUsuario.DataSource = usuarioNego.MostrarUsuarios().ToList().OrderBy(c => c.Nombre);
+            dgvUsuario.DataSource = usuarioNego.MostrarUsuarios().ToList().OrderBy(c => c.NombreUsuario);
             dgvUsuario.DataBind();
         }
     }
