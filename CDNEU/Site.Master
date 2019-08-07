@@ -103,7 +103,7 @@
                             <ul>
                                 <li class="selected"><a href="default.aspx"><span>Inicio</span></a></li>
                                 <li runat="server" id="dropdownAltaPersona">
-                                    <a href="~/AltaPersona.aspx"><span>Nuevo Diseñador</span></a>
+                                    <a href="AltaPersona.aspx"><span>Nuevo Diseñador</span></a>
                                     <ul>
                                         <li>
                                             <a runat="server" href="~/AltaPersona.aspx"><span class="glyphicon glyphicon-plus fa-fw"></span>Nuevo Diseñador</a>
@@ -119,7 +119,7 @@
                                     </ul>
                                 </li>
                                 <li runat="server" id="dropdownListarPersonas">
-                                    <a href="~/ListarPersonas.aspx"><span>Listado de Diseñadores</span></a>
+                                    <a href="ListarPersonas.aspx"><span>Listado de Diseñadores</span></a>
                                     <ul>
                                         <li>
                                             <a runat="server" href="~/ListarPersonas.aspx"><span class="glyphicon glyphicon-credit-card fa-fw"></span>Listado de Diseñadores</a>

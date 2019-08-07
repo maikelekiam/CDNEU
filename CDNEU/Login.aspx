@@ -6,9 +6,14 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-    <script src="js/jquery-1.12.3.js"></script>
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <%--<script src="js/jquery-1.12.3.js"></script>--%>
+    <%--<link href="css/bootstrap.css" rel="stylesheet" />--%>
+    <%--<link href="css/font-awesome.css" rel="stylesheet" />--%>
+    <%--<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />--%>
+
+
+    <link rel="stylesheet" href="assets/css/assets.css" />
+
 
     <style>
         body {
@@ -17,6 +22,34 @@
             padding: 0;
             margin: 0;
         }
+
+        .boton_azul {
+            text-decoration: none;
+            padding: 2px;
+            font-weight: 400;
+            font-size: 15px;
+            color: #ffffff;
+            background-color: #6082ac;
+            border-radius: 6px;
+            border: 2px solid #6082ac;
+            width: 180px;
+            /*text-align: left;*/
+        }
+
+            .boton_azul:hover {
+                color: #6082ac;
+                background-color: #ffffff;
+                border-color: #6082ac;
+            }
+            .anchotabla{
+                width: 200px;
+            }
+            .anchotextbox{
+                width: 300px;
+            }
+            .altotabla{
+                height: 5px;
+            }
     </style>
 
 </head>
@@ -25,7 +58,7 @@
     <br />
     <form id="form1" runat="server" class="form-horizontal">
         <div id="exTab3" class="container">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-6 col-md-offset-3">
 
                 <%--Panel Externo--%>
                 <div class="panel panel-default">
@@ -44,6 +77,7 @@
                             <%--Inicio del tab-pane del Login--%>
                             <div class="tab-pane active" id="1b">
                                 <h3>Ingreso al Sistema</h3>
+                                <hr />
                                 <div class="form-group">
                                     <div class="col-md-6 col-md-offset-1">
                                         <asp:Label ID="Label1" runat="server" Text="Label">Usuario</asp:Label>
@@ -60,7 +94,7 @@
                                         <asp:Label ID="Label2" runat="server" Text="Label">Contraseña</asp:Label>
                                         <div class="input-group">
                                             <span class="input-group-addon alert-info">
-                                                <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                                <span class="glyphicon glyphicon-lock"></span>
                                             </span>
                                             <asp:TextBox ID="txtpassword" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese una Contraseña" />
                                         </div>
@@ -70,31 +104,158 @@
                                 <%--<div class="logo">
                                     <img src="imagenes/copade-barra.jpg" alt="Sample Image" width="300" runat="server" />
                                 </div>--%>
-
+                                <hr />
                                 <div class="form-group">
                                     <div class="col-md-4 col-md-offset-1">
                                         <asp:Button ID="btnlogin" runat="server"
-                                            Text="Ingresar" OnClick="btnlogin_Click" CssClass="btn btn-default btn-lg btn-block" />
+                                            Text="Ingresar" OnClick="btnlogin_Click" CssClass="boton_azul" />
                                     </div>
                                 </div>
                             </div>
                             <%--Fin del tab-pane del Login--%>
 
-
-
-
-                            <%--Inicio del Panel del Registro--%>
+                            <%--Inicio del tab-pane del Registro--%>
                             <div class="tab-pane" id="2b">
                                 <h3>Registro de Nuevo Usuario</h3>
+                                <hr />
+
+                                <table>
+                                    <tr>
+                                        <td class="anchotabla">
+                                            <asp:Label ID="Label7" runat="server" Text="Label">Usuario</asp:Label>
+                                        </td>
+                                        <td class="anchotextbox">
+                                            <div class="input-group">
+                                                <span class="input-group-addon alert-info">
+                                                    <span class="glyphicon glyphicon-user"></span>
+                                                </span>
+                                                <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="Ingrese nombre de Usuario" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="anchotabla altotabla">
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="anchotabla">
+                                            <asp:Label ID="Label8" runat="server" Text="Label">Contraseña</asp:Label>
+                                        </td>
+                                        <td class="anchotextbox">
+                                            <div class="input-group">
+                                                <span class="input-group-addon alert-info">
+                                                    <span class="glyphicon glyphicon-lock"></span>
+                                                </span>
+                                                <asp:TextBox ID="txtRegistroContrasenia" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese una Contraseña" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="anchotabla altotabla">
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="anchotabla">
+                                            <asp:Label ID="Label9" runat="server" Text="Label">Nombre</asp:Label>
+                                        </td>
+                                        <td class="anchotextbox">
+                                            <div class="input-group">
+                                                <span class="input-group-addon alert-info">
+                                                    <span class="glyphicon glyphicon-edit"></span>
+                                                </span>
+                                                <asp:TextBox ID="txtRegistroNombre" runat="server" CssClass="form-control" placeholder="Ingrese su nombre" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="anchotabla altotabla">
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="anchotabla">
+                                            <asp:Label ID="Label3" runat="server" Text="Label">Apellido</asp:Label>
+                                        </td>
+                                        <td class="anchotextbox">
+                                            <div class="input-group">
+                                                <span class="input-group-addon alert-info">
+                                                    <span class="glyphicon glyphicon-edit"></span>
+                                                </span>
+                                                <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" placeholder="Ingrese su apellido" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="anchotabla altotabla">
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="anchotabla">
+                                            <asp:Label ID="Label4" runat="server" Text="Label">Correo Electronico</asp:Label>
+                                        </td>
+                                        <td class="anchotextbox">
+                                            <div class="input-group">
+                                                <span class="input-group-addon alert-info">
+                                                    <span class="glyphicon glyphicon-envelope"></span>
+                                                </span>
+                                                <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control" placeholder="Ingrese su Correo Electronico" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="anchotabla altotabla">
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="anchotabla">
+                                            <asp:Label ID="Label5" runat="server" Text="Label">Telefono</asp:Label>
+                                        </td>
+                                        <td class="anchotextbox">
+                                            <div class="input-group">
+                                                <span class="input-group-addon alert-info">
+                                                    <span class="glyphicon glyphicon-phone-alt"></span>
+                                                </span>
+                                                <asp:TextBox ID="TextBox4" runat="server" CssClass="form-control" placeholder="Ingrese su Telefono" />
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <%--<!--USUARIO Y CONTRASEÑA-->
                                 <div class="form-group col-md-12">
                                     <div class="col-md-6">
                                         <asp:Label ID="Label3" runat="server" Text="Label">Usuario</asp:Label>
                                     </div>
-                                    <div class="col-md-6">
-                                        <asp:Label ID="Label4" runat="server" Text="Label">Contraseña</asp:Label>
-                                    </div>
-                                </div>
-                                <div class="form-group col-md-12">
                                     <div class="col-md-6">
                                         <div class="input-group">
                                             <span class="input-group-addon alert-info">
@@ -103,47 +264,55 @@
                                             <asp:TextBox ID="txtRegistroUsuario" runat="server" CssClass="form-control" placeholder="Ingrese nombre de Usuario" />
                                         </div>
                                     </div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <div class="col-md-6">
+                                        <asp:Label ID="Label4" runat="server" Text="Label">Contraseña</asp:Label>
+                                    </div>
                                     <div class="col-md-6">
                                         <div class="input-group">
                                             <span class="input-group-addon alert-info">
-                                                <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                                <span class="glyphicon glyphicon-lock"></span>
                                             </span>
                                             <asp:TextBox ID="txtRegistroContrasenia" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese una Contraseña" />
                                         </div>
                                     </div>
-                                </div>
+                                </div>--%>
 
-
-                                <!--NOMBRE-->
-                                <div class="form-group">
-                                    <div class="col-md-6 col-md-offset-1">
-                                        <asp:Label ID="Label5" runat="server" Text="Label">Nombre</asp:Label>
+                                <%--<!--NOMBRE Y APELLIDO-->
+                                <div class="form-group col-md-12">
+                                    <div class="col-md-6">
+                                        <asp:Label ID="Label9" runat="server" Text="Label">Nombre</asp:Label>
+                                    </div>
+                                    <div class="col-md-6">
                                         <div class="input-group">
                                             <span class="input-group-addon alert-info">
-                                                <span class="glyphicon glyphicon-check"></span>
+                                                <span class="glyphicon glyphicon-edit"></span>
                                             </span>
                                             <asp:TextBox ID="txtRegistroNombre" runat="server" CssClass="form-control" placeholder="Ingrese su nombre" />
                                         </div>
                                     </div>
                                 </div>
-
-                                <!--APELLIDO-->
-                                <div class="form-group">
-                                    <div class="col-md-6 col-md-offset-1">
-                                        <asp:Label ID="Label6" runat="server" Text="Label">Apellido</asp:Label>
+                                <div class="form-group col-md-12">
+                                    <div class="col-md-6">
+                                        <asp:Label ID="Label10" runat="server" Text="Label">Apellido</asp:Label>
+                                    </div>
+                                    <div class="col-md-6">
                                         <div class="input-group">
                                             <span class="input-group-addon alert-info">
-                                                <span class="glyphicon glyphicon-check"></span>
+                                                <span class="glyphicon glyphicon-edit"></span>
                                             </span>
                                             <asp:TextBox ID="txtRegistroApellido" runat="server" CssClass="form-control" placeholder="Ingrese su apellido" />
                                         </div>
                                     </div>
-                                </div>
+                                </div>--%>
 
-                                <!--MAIL-->
-                                <div class="form-group">
-                                    <div class="col-md-6 col-md-offset-1">
-                                        <asp:Label ID="Label7" runat="server" Text="Label">Correo Electronico</asp:Label>
+                                <%--<!--MAIL Y TELEFONO-->
+                                <div class="form-group col-md-12">
+                                    <div class="col-md-6">
+                                        <asp:Label ID="Label5" runat="server" Text="Label">Correo Electronico</asp:Label>
+                                    </div>
+                                    <div class="col-md-6">
                                         <div class="input-group">
                                             <span class="input-group-addon alert-info">
                                                 <span class="glyphicon glyphicon-envelope"></span>
@@ -152,25 +321,41 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <!--TELEFONO-->
-                                <div class="form-group">
-                                    <div class="col-md-6 col-md-offset-1">
-                                        <asp:Label ID="Label8" runat="server" Text="Label">Telefono</asp:Label>
+                                <div class="form-group col-md-12">
+                                    <div class="col-md-6">
+                                        <asp:Label ID="Label6" runat="server" Text="Label">Telefono</asp:Label>
+                                    </div>
+                                    <div class="col-md-6">
                                         <div class="input-group">
                                             <span class="input-group-addon alert-info">
-                                                <span class="glyphicon glyphicon-phone"></span>
+                                                <span class="glyphicon glyphicon-phone-alt"></span>
                                             </span>
                                             <asp:TextBox ID="txtRegistroTelefono" runat="server" CssClass="form-control" placeholder="Ingrese su telefono" />
                                         </div>
                                     </div>
-                                </div>
+                                </div>--%>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <hr />
                                 <!--Boton de registro-->
                                 <div class="form-group">
                                     <div class="col-md-10 col-md-offset-1">
                                         <asp:Button ID="btnRegistro" runat="server"
-                                            Text="Enviar Datos" OnClick="btnRegistro_Click" CssClass="btn btn-default btn-lg btn-block" />
+                                            Text="Enviar Datos" OnClick="btnRegistro_Click" CssClass="boton_azul" />
                                     </div>
                                 </div>
                             </div>
@@ -187,7 +372,5 @@
     <script src="js/jquery-1.12.3.js"></script>
     <script src="js/bootstrap.js"></script>
 
-    <%--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>--%>
 </body>
 </html>
