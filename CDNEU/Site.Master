@@ -28,10 +28,6 @@
     <style>
         h3 {
             font-family: 'Oswald','sans-serif';
-            /*text-transform: capitalize;*/
-            /*letter-spacing:0px;*/
-            /*font-weight:500;*/
-            /*font-size: large;*/
         }
     </style>
 
@@ -66,17 +62,17 @@
             <div class="top-bar">
 
                 <ul class="top-info f-left">
-                    <li><i class="fa fa-envelope red-color"></i><b class="red-color"></b><a href="#">marcamone@neuquen.gov.ar</a></li>
-                    <li><i class="fa fa-phone red-color"></i><b class="red-color"></b><a href="#">(0299) 449 5661</a></li>
+                    <li><i class="fa fa-envelope main-color"></i><b class="main-color"></b><a href="#">marcamone@neuquen.gov.ar</a></li>
+                    <li><i class="fa fa-phone main-color"></i><b class="main-color"></b><a href="#">(0299) 449 5661</a></li>
                     <li class="dropdown language-selector">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-close-others="true"><i class="fa fa-flag red-color"></i>Centro Administrativo Ministerial (CAM) - Antártida Argentina 1245 - Ed. 2 - P°4</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-close-others="true"><i class="fa fa-flag main-color"></i>Centro Administrativo Ministerial (CAM) - Antártida Argentina 1245 - Ed. 2 - P°4</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <asp:Label ID="lbl18" Font-Bold="true" runat="server" CssClass="control-label AlineadoIzquierda"></asp:Label>
                         <%--<asp:Button ID="btnUsuarios" runat="server" Text="Usuarios" ForeColor="Black" OnClick="btnUsuarios_Click" />--%>
-                        <asp:Button ID="btnLogOff" CssClass="btn btn-danger" runat="server" Text="Cerrar Sesion" OnClick="btnLogOff_Click" OnClientClick="return confirm('¿Desea cerrar la sesion?');" />
+                        <asp:Button ID="btnLogOff" CssClass="btn btn-info" runat="server" Text="Cerrar Sesion" OnClick="btnLogOff_Click" OnClientClick="return confirm('¿Desea cerrar la sesion?');" />
                     </li>
                     <%--<li><a class="btn" href="/Login.aspx">SALIR <span class="glyphicon glyphicon-log-out"></span></a></li>--%>
                 </ul>
@@ -138,6 +134,7 @@
                 <asp:ContentPlaceHolder ID="MainContent" runat="server">
                 </asp:ContentPlaceHolder>
                 <footer>
+                    <%--<br />
                     <br />
                     <br />
                     <br />
@@ -149,6 +146,11 @@
                     <br />
                     <br />
                     <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />--%>
                     <br />
                     <br />
                     <p>CyT - COPADE - <%: DateTime.Now.Year %> - CDNEU - Registro de Diseñadores</p>
@@ -156,12 +158,17 @@
             </div>
         </div>
 
+
+        
+
+
+
+
+
+
+
         <!-- Back to top Link -->
         <a id="to-top" href="#"><span class="fa fa fa-angle-up"></span></a>
-
-        <!-- Load JS plugins -->
-        <%--<script type="text/javascript" src="assets/js/jquery-1.12.0.min.js"></script>--%>
-        <!--este no va!!!-->
 
         <script src="js/jquery-1.12.3.js"></script>
         <script src="js/bootstrap-datepicker.js"></script>
@@ -173,81 +180,5 @@
         <script type="text/javascript" src="assets/js/script.js"></script>
 
     </form>
-
-
-
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-<%--<!DOCTYPE html>
-
-<html lang="en">
-<head runat="server">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CDNEU - Registro de Personas</title>
-
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/bootstrap-datepicker.css" rel="stylesheet" />
-
-    <style>
-        h3 {
-            font-family: 'Oswald','sans-serif';            
-        }
-    </style>
-
-    <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/bundles/modernizr") %>
-    </asp:PlaceHolder>
-
-    <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
-</head>
-<body>
-    <form runat="server" class="form-horizontal form-control autoHeight">                    
-        <div class="navbar navbar-default">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">CDNEU</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Registro de Personas</a></li>
-                        <li><a runat="server" href="~/AltaPersona.aspx">Nuevo Diseñador</a></li>
-                        <li><a runat="server" href="~/EditarPersona.aspx">Editar Diseñador</a></li>
-                        <li runat="server" id="dropdownListarPersonas"><a runat="server" href="~/ListarPersonas.aspx">Lista de Diseñadores</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-            </footer>
-        </div>
-
-    </form>
-
-    <script src="js/jquery-1.12.3.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-
-</body>
-</html>--%>

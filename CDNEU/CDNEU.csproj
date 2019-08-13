@@ -39,6 +39,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -128,9 +132,9 @@
     <Content Include="assets\css\skins\5.css" />
     <Content Include="assets\css\skins\6.css" />
     <Content Include="assets\css\skins\7.css" />
-    <Content Include="assets\css\skins\default original cyt.css" />
-    <Content Include="assets\css\skins\default orig.css" />
     <Content Include="assets\css\skins\default.css" />
+    <Content Include="assets\css\skins\default orig.css" />
+    <Content Include="assets\css\skins\default ultimo.css" />
     <Content Include="assets\css\sliders\flexslider.css" />
     <Content Include="assets\css\sliders\owl.carousel.css" />
     <Content Include="assets\css\sliders\swiper.min.css" />
@@ -148,7 +152,6 @@
     <Content Include="assets\images\buildings-light.png" />
     <Content Include="assets\images\buildings.png" />
     <Content Include="assets\images\favicon.ico" />
-    <Content Include="assets\images\fondo.jpg" />
     <Content Include="assets\images\gmap_pin.png" />
     <Content Include="assets\images\gmap_pin_grey.png" />
     <Content Include="assets\images\gmap_pin_orange.png" />
@@ -206,6 +209,7 @@
     <Content Include="assets\images\testimonials\2.jpg" />
     <Content Include="assets\images\testimonials\3-lg.jpg" />
     <Content Include="assets\images\testimonials\3.jpg" />
+    <Content Include="assets\images\fondo.jpg" />
     <Content Include="assets\images\world.png" />
     <Content Include="assets\js\assets.js" />
     <Content Include="assets\js\charts.js" />
@@ -234,6 +238,7 @@
     <Content Include="css\estilo-textbox.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
+    <Content Include="EditarUsuario.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="imagenes\background01.jpg" />
     <Content Include="imagenes\bg02.jpg" />
@@ -245,6 +250,7 @@
     <Content Include="imagenes\copade.png" />
     <Content Include="imagenes\copade03.jpg" />
     <Content Include="imagenes\copade04.jpg" />
+    <Content Include="imagenes\img-01.png" />
     <Content Include="js\bootstrap-datepicker.js" />
     <Content Include="js\bootstrap-select.js" />
     <Content Include="js\bootstrap.js" />
@@ -320,6 +326,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditarUsuario.aspx.cs">
+      <DependentUpon>EditarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarUsuario.aspx.designer.cs">
+      <DependentUpon>EditarUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

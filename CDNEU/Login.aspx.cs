@@ -71,11 +71,11 @@ namespace CDNEU
             usuario.Activo = true;
 
             usuario.NombreUsuario = txtRegistroNombreUsuario.Text;
-            usuario.Contrasenia = txtRegistroContrasenia.Text;          
-            
+            usuario.Contrasenia = txtRegistroContrasenia.Text;
+
             usuario.Nombre = txtRegistroNombre.Text;
             usuario.Apellido = txtRegistroApellido.Text;
-            
+
             usuario.Telefono = txtRegistroTelefono.Text;
             usuario.CorreoElectronico = txtRegistroCorreoElectronico.Text;
             usuario.Domicilio = txtRegistroDomicilio.Text;

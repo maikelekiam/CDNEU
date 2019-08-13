@@ -3,7 +3,7 @@
 	color:#75CAFF
 }
 .main-color-import{
-	color:#75CAFF !important
+	color:#de3939 !important
 }
 
 .main-bg,.top-nav ul li li,.header-2 .top-nav > ul > li.selected > a,.header-2 > .container:before,.sticky-nav .top-nav > ul > li.selected > a,.head-border,.top-head.header-2 .top-nav > ul > li > a:before,.social-list-empty li a:after,
@@ -14,63 +14,63 @@
 .icon-boxes-1 [class*="col-md-"]:before,.icon-boxes-1 [class*="col-md-"]:after,.filter-by.style2 ul li.selected a span,.filter-by.style3 ul li.selected a span,.filter-by.style4 ul li.selected a span,
 .list-grid a.selected,.heading.main .head-sep:before,.heading.main .head-sep:after,.slick-prev:hover, .slick-next:hover,#to-top:hover,.swiper-button:hover,.section-bullets li.active a:after,.top-head.box-head.light-head > .container:before,
 .top-head.box-head.dark-head > .container:before,.on-sale-inner{
-	background-color:#75CAFF;
+	background-color:#de3939;
 	color:#fff
 }
 
 .main-border,.team-box.box-1:hover .team-img,.side-nav li.dl-back a,.light-sub.top-nav ul li ul,.dark-sub.top-nav ul li ul,.tags li:hover a,.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, 
 .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover,.accordion.colored.bottom-border h5.acc-head a,.tabs.bg-color .nav-tabs>li.active>a,.tabs.bottom.bg-color .nav-tabs, .tabs.bottom.bg-color .nav-tabs>li.active>a,
 .center-v-menu ul li.active a,.heading.style4,.form-control:focus{
-	border-color:#75CAFF
+	border-color:#de3939
 }
 .tabs.top-border .nav-tabs>li.active>a,.heading.style3:before, .tabs.top-border .nav-tabs>li.active>a:focus, .tabs.top-border .nav-tabs>li.active>a:hover,.bo_ribbon.bottom:before,.bo_ribbon.bottom:after,.top-nav ul li ul li:first-child,.top-nav .mega-menu .mega-content{
-	border-top-color:#75CAFF
+	border-top-color:#de3939
 }
 .tabs.bottom.top-border .nav-tabs>li.active>a, .tabs.bottom.top-border .nav-tabs>li.active>a:focus, .tabs.bottom.top-border .nav-tabs>li.active>a:hover,.tabs.bg-color .nav-tabs,.tabs.bg-color .nav-tabs>li.active>a,.bo_ribbon.top:before,.bo_ribbon.top:after,
 .accordion h5.acc-head a:not(.collapsed),.pagination.style2 > li > a, .pagination.style2 > li > span,.pagination.style3 > li > a, .pagination.style3 > li > span,.filter-by.style2,.filter-by.style3 ul,.toolsBar{
-	border-bottom-color:#75CAFF
+	border-bottom-color:#de3939
 }
 .bo_ribbon.right:before,.bo_ribbon.right:after,.heading.main .head-sep u:before{
-	border-left-color:#75CAFF
+	border-left-color:#de3939
 }
 .bo_ribbon.left:before,.bo_ribbon.left:after,.heading.main .head-sep u:after{
-	border-right-color:#75CAFF
+	border-right-color:#de3939
 }
 
 .steps-1 h4:after{
-	border-left: 1px #75CAFF dashed;
+	border-left: 1px #de3939 dashed;
 }
 .icon-box-2 .icon-desc.main-bg:after,.icon-box-3 .icon-desc.main-bg:before,.p-style3 figure .icon-links a:after{
-	border-color: #75CAFF transparent transparent transparent;
+	border-color: #de3939 transparent transparent transparent;
 }
 .breadcrumbs.style2 a.main-bg:before{
-	border-color: transparent transparent transparent #75CAFF;
+	border-color: transparent transparent transparent #de3939;
 }
 .p-style3 figure .icon-links a.zoom:after{
-	border-color: transparent transparent #75CAFF transparent;
+	border-color: transparent transparent #de3939 transparent;
 }
 .team-box.box-1 .team-socials:after{
-	box-shadow: inset 0 -50px 0 0 #75CAFF;
+	box-shadow: inset 0 -50px 0 0 #de3939;
 	color:#fff
 }
 .social-list li a.main-bg {
-    box-shadow: inset 0 0 0 1px #75CAFF;
+    box-shadow: inset 0 0 0 1px #de3939;
 }
 
 .header-1:not(.sticky-nav) .top-nav > ul > li:hover > a > span:before,.skew-nav > ul > li:hover > a > span:before,.skew-nav > ul > li.selected > a > span:before,.header-1:not(.sticky-nav) .top-nav > ul > li.selected > a > span:before,
 .header-1:not(.sticky-nav) .top-search:after,.header-1:not(.sticky-nav) .top-cart:after,.main-gradient{
 	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 86%, rgba(0, 0, 0, 0.27) 100%);
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 86%, rgba(0, 0, 0, 0.27) 100%);
-	background-color: #75CAFF;
+	background-color: #de3939;
 }
 .btn.main-bg.btn-3d:hover{
-	-webkit-box-shadow:0 4px 0 #75CAFF;
-	box-shadow:0 4px 0 #75CAFF;
+	-webkit-box-shadow:0 4px 0 #de3939;
+	box-shadow:0 4px 0 #de3939;
 }
 .icon-box-1 .box-number span.count-title:after{
 	background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.46) 0%, rgba(0, 0, 0, 0.14) 5%, rgba(0, 0, 0, 0.0) 9%, rgba(0, 0, 0, 0.13) 95%, rgba(0, 0, 0, 0.5) 100%);
 	background: linear-gradient(to right, rgba(0, 0, 0, 0.46) 0%, rgba(0, 0, 0, 0.14) 5%, rgba(0, 0, 0, 0) 9%, rgba(0, 0, 0, 0.13) 95%, rgba(0, 0, 0, 0.5) 100%);
-	background-color: #75CAFF;
+	background-color: #de3939;
 }
 
 

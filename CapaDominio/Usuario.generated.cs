@@ -18,6 +18,7 @@ using Telerik.OpenAccess.Metadata;
 using Telerik.OpenAccess.Data.Common;
 using Telerik.OpenAccess.Metadata.Fluent;
 using Telerik.OpenAccess.Metadata.Fluent.Advanced;
+using CapaDominio;
 
 namespace CapaDominio	
 {
@@ -163,6 +164,87 @@ namespace CapaDominio
 			set
 			{
 				this.domicilio = value;
+			}
+		}
+		
+		private IList<Vinculacion> vinculacions = new List<Vinculacion>();
+		public virtual IList<Vinculacion> Vinculacions
+		{
+			get
+			{
+				return this.vinculacions;
+			}
+		}
+		
+		private IList<ProduccionDeBiene> produccionDeBienes = new List<ProduccionDeBiene>();
+		public virtual IList<ProduccionDeBiene> ProduccionDeBienes
+		{
+			get
+			{
+				return this.produccionDeBienes;
+			}
+		}
+		
+		private IList<MateriasPrima> materiasPrimas = new List<MateriasPrima>();
+		public virtual IList<MateriasPrima> MateriasPrimas
+		{
+			get
+			{
+				return this.materiasPrimas;
+			}
+		}
+		
+		private IList<MaquinariasYProceso> maquinariasYProcesos = new List<MaquinariasYProceso>();
+		public virtual IList<MaquinariasYProceso> MaquinariasYProcesos
+		{
+			get
+			{
+				return this.maquinariasYProcesos;
+			}
+		}
+		
+		private IList<Innovacion> innovacions = new List<Innovacion>();
+		public virtual IList<Innovacion> Innovacions
+		{
+			get
+			{
+				return this.innovacions;
+			}
+		}
+		
+		private IList<IdentidadDisenio> identidadDisenios = new List<IdentidadDisenio>();
+		public virtual IList<IdentidadDisenio> IdentidadDisenios
+		{
+			get
+			{
+				return this.identidadDisenios;
+			}
+		}
+		
+		private IList<FormacionAcademica> formacionAcademicas = new List<FormacionAcademica>();
+		public virtual IList<FormacionAcademica> FormacionAcademicas
+		{
+			get
+			{
+				return this.formacionAcademicas;
+			}
+		}
+		
+		private IList<ActividadProfesional> actividadProfesionals = new List<ActividadProfesional>();
+		public virtual IList<ActividadProfesional> ActividadProfesionals
+		{
+			get
+			{
+				return this.actividadProfesionals;
+			}
+		}
+		
+		private IList<ActividadIndependiente> actividadIndependientes = new List<ActividadIndependiente>();
+		public virtual IList<ActividadIndependiente> ActividadIndependientes
+		{
+			get
+			{
+				return this.actividadIndependientes;
 			}
 		}
 		

@@ -6,10 +6,6 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-    <%--<script src="js/jquery-1.12.3.js"></script>--%>
-    <%--<link href="css/bootstrap.css" rel="stylesheet" />--%>
-    <%--<link href="css/font-awesome.css" rel="stylesheet" />--%>
-    <%--<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />--%>
 
     <link rel="stylesheet" href="assets/css/assets.css" />
 
@@ -32,7 +28,6 @@
             border-radius: 6px;
             border: 2px solid #6082ac;
             width: 180px;
-            /*text-align: left;*/
         }
 
             .boton_azul:hover {
@@ -40,15 +35,18 @@
                 background-color: #ffffff;
                 border-color: #6082ac;
             }
-            .anchotabla{
-                width: 200px;
-            }
-            .anchotextbox{
-                width: 300px;
-            }
-            .altotabla{
-                height: 5px;
-            }
+
+        .anchotabla {
+            width: 200px;
+        }
+
+        .anchotextbox {
+            width: 300px;
+        }
+
+        .altotabla {
+            height: 5px;
+        }
     </style>
 
 </head>
@@ -133,10 +131,8 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="anchotabla altotabla">
-                                        </td>
-                                        <td>
-                                        </td>
+                                        <td class="anchotabla altotabla"></td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td class="anchotabla">
@@ -153,9 +149,9 @@
                                     </tr>
                                     <tr>
                                         <td class="anchotabla altotabla">
+                                            <br />
                                         </td>
-                                        <td>
-                                        </td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td class="anchotabla">
@@ -171,10 +167,8 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="anchotabla altotabla">
-                                        </td>
-                                        <td>
-                                        </td>
+                                        <td class="anchotabla altotabla"></td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td class="anchotabla">
@@ -190,10 +184,8 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="anchotabla altotabla">
-                                        </td>
-                                        <td>
-                                        </td>
+                                        <td class="anchotabla altotabla"></td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td class="anchotabla">
@@ -209,10 +201,8 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="anchotabla altotabla">
-                                        </td>
-                                        <td>
-                                        </td>
+                                        <td class="anchotabla altotabla"></td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td class="anchotabla">
@@ -228,10 +218,8 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="anchotabla altotabla">
-                                        </td>
-                                        <td>
-                                        </td>
+                                        <td class="anchotabla altotabla"></td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td class="anchotabla">
@@ -247,10 +235,8 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="anchotabla altotabla">
-                                        </td>
-                                        <td>
-                                        </td>
+                                        <td class="anchotabla altotabla"></td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td class="anchotabla">
@@ -359,7 +345,7 @@
 
 
 
-                                <hr />
+                                <br />
                                 <!--Boton de registro-->
                                 <div class="form-group">
                                     <div class="col-md-10 col-md-offset-1">

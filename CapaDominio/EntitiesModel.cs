@@ -58,6 +58,78 @@ namespace CapaDominio
 			}
 		}
 		
+		public IQueryable<Vinculacion> Vinculacions 
+		{
+			get
+			{
+				return this.GetAll<Vinculacion>();
+			}
+		}
+		
+		public IQueryable<ProduccionDeBiene> ProduccionDeBienes 
+		{
+			get
+			{
+				return this.GetAll<ProduccionDeBiene>();
+			}
+		}
+		
+		public IQueryable<MateriasPrima> MateriasPrimas 
+		{
+			get
+			{
+				return this.GetAll<MateriasPrima>();
+			}
+		}
+		
+		public IQueryable<MaquinariasYProceso> MaquinariasYProcesos 
+		{
+			get
+			{
+				return this.GetAll<MaquinariasYProceso>();
+			}
+		}
+		
+		public IQueryable<Innovacion> Innovacions 
+		{
+			get
+			{
+				return this.GetAll<Innovacion>();
+			}
+		}
+		
+		public IQueryable<IdentidadDisenio> IdentidadDisenios 
+		{
+			get
+			{
+				return this.GetAll<IdentidadDisenio>();
+			}
+		}
+		
+		public IQueryable<FormacionAcademica> FormacionAcademicas 
+		{
+			get
+			{
+				return this.GetAll<FormacionAcademica>();
+			}
+		}
+		
+		public IQueryable<ActividadProfesional> ActividadProfesionals 
+		{
+			get
+			{
+				return this.GetAll<ActividadProfesional>();
+			}
+		}
+		
+		public IQueryable<ActividadIndependiente> ActividadIndependientes 
+		{
+			get
+			{
+				return this.GetAll<ActividadIndependiente>();
+			}
+		}
+		
 		public static BackendConfiguration GetBackendConfiguration()
 		{
 			BackendConfiguration backend = new BackendConfiguration();
@@ -80,6 +152,42 @@ namespace CapaDominio
 	public interface IModeloDeDominioUnitOfWork : IUnitOfWork
 	{
 		IQueryable<Usuario> Usuarios
+		{
+			get;
+		}
+		IQueryable<Vinculacion> Vinculacions
+		{
+			get;
+		}
+		IQueryable<ProduccionDeBiene> ProduccionDeBienes
+		{
+			get;
+		}
+		IQueryable<MateriasPrima> MateriasPrimas
+		{
+			get;
+		}
+		IQueryable<MaquinariasYProceso> MaquinariasYProcesos
+		{
+			get;
+		}
+		IQueryable<Innovacion> Innovacions
+		{
+			get;
+		}
+		IQueryable<IdentidadDisenio> IdentidadDisenios
+		{
+			get;
+		}
+		IQueryable<FormacionAcademica> FormacionAcademicas
+		{
+			get;
+		}
+		IQueryable<ActividadProfesional> ActividadProfesionals
+		{
+			get;
+		}
+		IQueryable<ActividadIndependiente> ActividadIndependientes
 		{
 			get;
 		}
