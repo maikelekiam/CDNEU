@@ -180,6 +180,19 @@ namespace CapaDominio
 			}
 		}
 		
+		private string estudiosOficialesOtro;
+		public virtual string EstudiosOficialesOtro
+		{
+			get
+			{
+				return this.estudiosOficialesOtro;
+			}
+			set
+			{
+				this.estudiosOficialesOtro = value;
+			}
+		}
+		
 		private Usuario usuario;
 		public virtual Usuario Usuario
 		{

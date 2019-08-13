@@ -339,6 +339,9 @@
         <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="b10a674f-3856-471d-a5ba-72a8fe24990b" type="System.Int32">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:field>
+        <orm:field name="estudiosOficialesOtro" property="EstudiosOficialesOtro" behavior="readwrite" uniqueId="e8522e4a-65ca-498c-a01a-bd4b76f10c82" type="System.String">
+          <orm:column name="estudiosOficialesOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
         <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="6e3fdfea-cafc-4ac8-87ec-aa464a8991c3" type="CapaDominio.Usuario">
           <orm:reference uniqueId="6c7e802a-6bf6-4410-b898-8f2ec3b4c350" association-name="FormacionAcademicaHasUsuario">
             <orm:sharedfield name="idUsuario" target-class="CapaDominio.Usuario" target-field="idUsuario" />
@@ -378,6 +381,12 @@
         </orm:field>
         <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="2cae321a-95c0-4509-be1c-007443dd89eb" type="System.Int32">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="tipoRelacionLaboralOtro" property="TipoRelacionLaboralOtro" behavior="readwrite" uniqueId="edd01723-463e-465b-b125-d1948056bd26" type="System.String">
+          <orm:column name="tipoRelacionLaboralOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="disciplinaProyectualOtra" property="DisciplinaProyectualOtra" behavior="readwrite" uniqueId="f3ac1919-0ea5-47cb-ac37-b80ac7bf75e7" type="System.String">
+          <orm:column name="disciplinaProyectualOtra" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
         <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="df3c4e2c-c956-4ba5-9e23-d97a94fcdb22" type="CapaDominio.Usuario">
           <orm:reference uniqueId="e6a025fd-2b46-4c76-be12-e357d76ae9a0" association-name="ActividadProfesionalHasUsuario">
@@ -547,6 +556,7 @@
         <orm:column name="carreraDuracion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="carreraInstitucion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="estudiosOficialesOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:constraint name="FK_FormacionAcademica_Usuario" delete-action="dbdefaultrule" destination-table="Usuario">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:constraint>
@@ -560,6 +570,8 @@
         <orm:column name="linkEmpresa" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="descripcion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="tipoRelacionLaboralOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="disciplinaProyectualOtra" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:constraint name="FK_ActividadProfesional_Usuario" delete-action="dbdefaultrule" destination-table="Usuario">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:constraint>
@@ -854,6 +866,7 @@
       <Property Id="492d17ad-5b5f-451d-93e2-6c58032f9048" name="InstitucionEmisoraTitulo" label="InstitucionEmisoraTitulo : String" kind="Persistent" fieldName="institucionEmisoraTitulo" />
       <Property Id="846bc279-c8c1-4d79-ae78-d73cd163051e" name="OtrosEstudios" label="OtrosEstudios : String" kind="Persistent" fieldName="otrosEstudios" />
       <Property Id="f7211708-92d9-4fce-a16b-d85c689de21e" name="TituloObtenido" label="TituloObtenido : String" kind="Persistent" fieldName="tituloObtenido" />
+      <Property Id="e8522e4a-65ca-498c-a01a-bd4b76f10c82" name="EstudiosOficialesOtro" label="EstudiosOficialesOtro : String" kind="Persistent" fieldName="estudiosOficialesOtro" />
       <AssociationTargets>
         <Association Id="6c7e802a-6bf6-4410-b898-8f2ec3b4c350" SourceMultiplicity="One" name="FormacionAcademicaHasUsuario">
           <DomainClassMoniker name="/ModeloDeDominio/Usuario" />
@@ -884,6 +897,8 @@
       <Property Id="e26696f8-210b-43c3-a67d-f388c0815d28" name="NombreEmpresa" label="NombreEmpresa : String" kind="Persistent" fieldName="nombreEmpresa" />
       <Property Id="b9358fc5-9e08-406a-8993-b501264b9d0a" name="SubSector" label="SubSector : String" kind="Persistent" fieldName="subSector" />
       <Property Id="1cb32d50-4e75-490b-bd82-badde61c1859" name="TipoRelacionLaboral" label="TipoRelacionLaboral : String" kind="Persistent" fieldName="tipoRelacionLaboral" />
+      <Property Id="edd01723-463e-465b-b125-d1948056bd26" name="TipoRelacionLaboralOtro" label="TipoRelacionLaboralOtro : String" kind="Persistent" fieldName="tipoRelacionLaboralOtro" />
+      <Property Id="f3ac1919-0ea5-47cb-ac37-b80ac7bf75e7" name="DisciplinaProyectualOtra" label="DisciplinaProyectualOtra : String" kind="Persistent" fieldName="disciplinaProyectualOtra" />
       <AssociationTargets>
         <Association Id="e6a025fd-2b46-4c76-be12-e357d76ae9a0" SourceMultiplicity="One" name="ActividadProfesionalHasUsuario">
           <DomainClassMoniker name="/ModeloDeDominio/Usuario" />

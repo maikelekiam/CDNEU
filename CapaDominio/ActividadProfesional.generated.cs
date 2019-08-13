@@ -128,6 +128,32 @@ namespace CapaDominio
 			}
 		}
 		
+		private string tipoRelacionLaboralOtro;
+		public virtual string TipoRelacionLaboralOtro
+		{
+			get
+			{
+				return this.tipoRelacionLaboralOtro;
+			}
+			set
+			{
+				this.tipoRelacionLaboralOtro = value;
+			}
+		}
+		
+		private string disciplinaProyectualOtra;
+		public virtual string DisciplinaProyectualOtra
+		{
+			get
+			{
+				return this.disciplinaProyectualOtra;
+			}
+			set
+			{
+				this.disciplinaProyectualOtra = value;
+			}
+		}
+		
 		private Usuario usuario;
 		public virtual Usuario Usuario
 		{
