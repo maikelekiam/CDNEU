@@ -93,6 +93,7 @@ select.selectpicker {
     float: none;
     display: inline-block;
     margin-left: 0;
+
 }
 
     .bootstrap-select.btn-group.dropdown-menu-right,
@@ -149,6 +150,8 @@ select.selectpicker {
     overflow: initial;
     width: 100%;
     text-align: left;
+    font-size: 14px;
+    font: bold;
 }
 
 .bootstrap-select.btn-group .dropdown-toggle .caret {

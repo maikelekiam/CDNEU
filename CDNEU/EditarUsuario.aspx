@@ -1,7 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditarUsuario.aspx.cs" Inherits="CDNEU.EditarUsuario" %>
 
-<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <style>
@@ -34,9 +32,11 @@
         .anchotablaActividadProfesional {
             width: 600px;
         }
+
         .anchotablaActividadIndependiente {
             width: 600px;
         }
+
         .anchotextbox {
             width: 300px;
         }
@@ -197,6 +197,10 @@
                             <td class="anchotabla altotabla"></td>
                             <td></td>
                         </tr>
+                        <tr>
+                            <td style="height: 30px"></td>
+                            <td></td>
+                        </tr>
                     </table>
                     <!--Boton de registro-->
                     <div class="form-group">
@@ -208,6 +212,7 @@
                 </div>
             </div>
         </div>
+
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
@@ -227,19 +232,15 @@
                                     <span class="input-group-addon alert-info">
                                         <span class="glyphicon glyphicon-edit"></span>
                                     </span>
-                                    <div class="col-md-3 ">
-                                        <asp:DropDownList ID="ddlEstudiosOficiales" runat="server"
-                                            CssClass="selectpicker form-control show-tick"
-                                            data-width="300">
-                                            <asp:ListItem Value="-1">&lt;Seleccione Estudio&gt;</asp:ListItem>
-                                            <asp:ListItem Value="Secundario">Secundario</asp:ListItem>
-                                            <asp:ListItem Value="Terciario">Terciario</asp:ListItem>
-                                            <asp:ListItem Value="Universitario">Universitario</asp:ListItem>
-                                            <asp:ListItem Value="Posgrado">Posgrado</asp:ListItem>
-                                            <asp:ListItem Value="Otro">Otro</asp:ListItem>
-                                        </asp:DropDownList>
-                                    </div>
-
+                                    <asp:DropDownList ID="ddlEstudiosOficiales" runat="server" CssClass="selectpicker show-tick"
+                                        data-width="300">
+                                        <asp:ListItem Value="-1">&lt;Seleccione Estudio&gt;</asp:ListItem>
+                                        <asp:ListItem Value="Secundario">Secundario</asp:ListItem>
+                                        <asp:ListItem Value="Terciario">Terciario</asp:ListItem>
+                                        <asp:ListItem Value="Universitario">Universitario</asp:ListItem>
+                                        <asp:ListItem Value="Posgrado">Posgrado</asp:ListItem>
+                                        <asp:ListItem Value="Otro">Otro</asp:ListItem>
+                                    </asp:DropDownList>
                                 </div>
                             </td>
                             <td>
@@ -304,9 +305,6 @@
                             <td></td>
                         </tr>
                     </table>
-
-
-
                     <table>
                         <tr>
                             <td style="height: 30px"></td>
@@ -400,6 +398,10 @@
                                 </div>
                             </td>
                         </tr>
+                        <tr>
+                            <td style="height: 30px"></td>
+                            <td></td>
+                        </tr>
                     </table>
                     <!--Boton de registro-->
                     <div class="form-group">
@@ -430,22 +432,20 @@
                                     <span class="input-group-addon alert-info">
                                         <span class="glyphicon glyphicon-edit"></span>
                                     </span>
-                                    <div class="col-md-3 ">
-                                        <asp:DropDownList ID="ddlDisciplinaProyectual" runat="server"
-                                            CssClass="selectpicker form-control show-tick"
-                                            data-width="300">
-                                            <asp:ListItem Value="-1">&lt;Seleccione Disciplina&gt;</asp:ListItem>
-                                            <asp:ListItem Value="1">Diseño de Interiores</asp:ListItem>
-                                            <asp:ListItem Value="2">Diseño Industrial</asp:ListItem>
-                                            <asp:ListItem Value="3">Diseño del Paisaje</asp:ListItem>
-                                            <asp:ListItem Value="4">Diseño de Indumentaria</asp:ListItem>
-                                            <asp:ListItem Value="5">Diseño Gráfico</asp:ListItem>
-                                            <asp:ListItem Value="6">Diseño Multimedia</asp:ListItem>
-                                            <asp:ListItem Value="7">Arquitectura</asp:ListItem>
-                                            <asp:ListItem Value="8">Artesanías</asp:ListItem>
-                                            <asp:ListItem Value="9">Otra</asp:ListItem>
-                                        </asp:DropDownList>
-                                    </div>
+                                    <asp:DropDownList ID="ddlDisciplinaProyectual" runat="server"
+                                        CssClass="selectpicker show-tick"
+                                        data-width="300">
+                                        <asp:ListItem Value="-1">&lt;Seleccione Disciplina&gt;</asp:ListItem>
+                                        <asp:ListItem Value="1">Diseño de Interiores</asp:ListItem>
+                                        <asp:ListItem Value="2">Diseño Industrial</asp:ListItem>
+                                        <asp:ListItem Value="3">Diseño del Paisaje</asp:ListItem>
+                                        <asp:ListItem Value="4">Diseño de Indumentaria</asp:ListItem>
+                                        <asp:ListItem Value="5">Diseño Gráfico</asp:ListItem>
+                                        <asp:ListItem Value="6">Diseño Multimedia</asp:ListItem>
+                                        <asp:ListItem Value="7">Arquitectura</asp:ListItem>
+                                        <asp:ListItem Value="8">Artesanías</asp:ListItem>
+                                        <asp:ListItem Value="9">Otra</asp:ListItem>
+                                    </asp:DropDownList>
                                 </div>
                             </td>
                             <td>
@@ -460,7 +460,7 @@
                             <td class="anchotabla">
                                 <asp:Label ID="Label19" runat="server" Text="Label">Sub Sector</asp:Label>
                             </td>
-                            <td class="anchotextbox">
+                            <td>
                                 <div class="input-group">
                                     <span class="input-group-addon alert-info">
                                         <span class="glyphicon glyphicon-edit"></span>
@@ -482,19 +482,17 @@
                                     <span class="input-group-addon alert-info">
                                         <span class="glyphicon glyphicon-edit"></span>
                                     </span>
-                                    <div class="col-md-3 ">
-                                        <asp:DropDownList ID="ddlTipoRelacionLaboral" runat="server"
-                                            CssClass="selectpicker form-control show-tick"
-                                            data-width="300">
-                                            <asp:ListItem Value="-1">&lt;Seleccione Tipo&gt;</asp:ListItem>
-                                            <asp:ListItem Value="1">Trabajador en relacion de dependencia</asp:ListItem>
-                                            <asp:ListItem Value="2">Trabajador Independiente proyecto propio</asp:ListItem>
-                                            <asp:ListItem Value="3">Por Proyecto</asp:ListItem>
-                                            <asp:ListItem Value="4">Free Lance</asp:ListItem>
-                                            <asp:ListItem Value="5">Abono mensual por horas dedicadas</asp:ListItem>
-                                            <asp:ListItem Value="6">Otro</asp:ListItem>
-                                        </asp:DropDownList>
-                                    </div>
+                                    <asp:DropDownList ID="ddlTipoRelacionLaboral" runat="server"
+                                        CssClass="selectpicker show-tick"
+                                        data-width="300">
+                                        <asp:ListItem Value="-1">&lt;Seleccione Tipo&gt;</asp:ListItem>
+                                        <asp:ListItem Value="1">Trabajador en relacion de dependencia</asp:ListItem>
+                                        <asp:ListItem Value="2">Trabajador Independiente proyecto propio</asp:ListItem>
+                                        <asp:ListItem Value="3">Por Proyecto</asp:ListItem>
+                                        <asp:ListItem Value="4">Free Lance</asp:ListItem>
+                                        <asp:ListItem Value="5">Abono mensual por horas dedicadas</asp:ListItem>
+                                        <asp:ListItem Value="6">Otro</asp:ListItem>
+                                    </asp:DropDownList>
                                 </div>
                             </td>
                             <td>
@@ -502,16 +500,24 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="anchotablaActividadProfesional" style="height:50px"></td>
+                            <td class="anchotablaActividadProfesional" style="height: 50px"></td>
                             <td></td>
                         </tr>
                     </table>
                     <table>
                         <tr>
-                            <td class="anchotablaActividadProfesional">
+                            <td>
                                 <asp:Label ID="Label21" runat="server" Text="Label">Nombre de la empresa/estudio/emprendimiento/institucion donde lleva adelante su actividad profesional</asp:Label>
                             </td>
-                            <td style="width:500px">
+                        </tr>
+                        <tr>
+                            <td style="height: 10px"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td style="width: 800px">
                                 <div class="input-group">
                                     <span class="input-group-addon alert-info">
                                         <span class="glyphicon glyphicon-asterisk"></span>
@@ -521,14 +527,24 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="anchotablaActividadProfesional" style="height:30px"></td>
+                            <td style="height: 10px"></td>
                             <td></td>
                         </tr>
+                    </table>
+                    <table>
                         <tr>
-                            <td class="anchotablaActividadProfesional">
+                            <td>
                                 <asp:Label ID="Label22" runat="server" Text="Label">Link de la empresa/estudio/emprendimiento/institucion donde lleva adelante su actividad profesional</asp:Label>
                             </td>
-                            <td style="width:500px">
+                        </tr>
+                        <tr>
+                            <td style="height: 10px"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td style="width: 800px">
                                 <div class="input-group">
                                     <span class="input-group-addon alert-info">
                                         <span class="glyphicon glyphicon-asterisk"></span>
@@ -538,40 +554,45 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="anchotablaActividadProfesional" style="height:30px"></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="anchotablaActividadProfesional">
-                                <asp:Label ID="Label23" runat="server" Text="Label">Describa brevemente la actividad profesional que realiza</asp:Label>
-                            </td>
-                            <td style="width:500px">
-                                <div class="input-group">
-                                    <span class="input-group-addon alert-info">
-                                        <span class="glyphicon glyphicon-asterisk"></span>
-                                    </span>
-                                    <asp:TextBox ID="txtDescripcion" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3"/>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="anchotablaActividadProfesional" style="height:30px"></td>
+                            <td style="height: 10px"></td>
                             <td></td>
                         </tr>
                     </table>
                     <table>
-
-
-
-
+                        <tr>
+                            <td>
+                                <asp:Label ID="Label23" runat="server" Text="Label">Describa brevemente la actividad profesional que realiza</asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td style="width: 800px">
+                                <div class="input-group">
+                                    <span class="input-group-addon alert-info">
+                                        <span class="glyphicon glyphicon-asterisk"></span>
+                                    </span>
+                                    <asp:TextBox ID="txtDescripcion" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px"></td>
+                            <td></td>
+                        </tr>
                     </table>
 
-
-
-
-
-
-
+                    <!--Boton de registro-->
+                    <div class="form-group">
+                        <div class="col-md-10 col-md-offset-1">
+                            <asp:Button ID="Button1" runat="server"
+                                Text="Enviar Datos" CssClass="boton_azul" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -584,10 +605,340 @@
             </div>
             <div id="collapse4" class="panel-collapse collapse">
                 <div class="panel-body">
-                    Si desarrolla su ACTIVIDAD de manera independiente
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:Label ID="Label24" runat="server" Text="Label">Es esta actividad su principal ingreso y sustento de vida?</asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:RadioButtonList ID="RadioButtonList1" runat="server"
+                                    CssClass="form-control" BorderStyle="None"
+                                    RepeatColumns="1"
+                                    RepeatLayout="Table"
+                                    CellPadding="10">
+                                    <asp:ListItem>Si</asp:ListItem>
+                                    <asp:ListItem>No</asp:ListItem>
+                                    <asp:ListItem>Otra</asp:ListItem>
+                                </asp:RadioButtonList>
+                            </td>
+                            <td style="vertical-align: bottom">
+                                <div class="input-group">
+                                    <asp:TextBox ID="txtSustentoDeVidaOtro" runat="server" CssClass="form-control" Width="800" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 30px"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:Label ID="Label25" runat="server" Text="Label">Tiempo durante el cual su actividad se ha mantenido en funcionamiento</asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:RadioButtonList ID="RadioButtonList2" runat="server"
+                                    CssClass="form-control" BorderStyle="None"
+                                    RepeatColumns="1"
+                                    RepeatLayout="Table"
+                                    CellPadding="10">
+                                    <asp:ListItem>0 a 1 año</asp:ListItem>
+                                    <asp:ListItem>1 a 3 años</asp:ListItem>
+                                    <asp:ListItem>3 a 5 años</asp:ListItem>
+                                    <asp:ListItem>mas de 5 años</asp:ListItem>
+                                </asp:RadioButtonList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 30px"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:Label ID="Label26" runat="server" Text="Label">Cuál es su situación tributaria?</asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:RadioButtonList ID="RadioButtonList3" runat="server"
+                                    CssClass="form-control" BorderStyle="None"
+                                    RepeatColumns="1"
+                                    RepeatLayout="Table"
+                                    CellPadding="10">
+                                    <asp:ListItem>Monotributo</asp:ListItem>
+                                    <asp:ListItem>Responsable Inscripto</asp:ListItem>
+                                    <asp:ListItem>Exento</asp:ListItem>
+                                    <asp:ListItem>No Inscripto</asp:ListItem>
+                                </asp:RadioButtonList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 30px"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:Label ID="Label27" runat="server" Text="Label">Tiene su marca/producto/nombre de empresa registrado?</asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:RadioButtonList ID="RadioButtonList4" runat="server"
+                                    CssClass="form-control" BorderStyle="None"
+                                    RepeatColumns="1"
+                                    RepeatLayout="Table"
+                                    CellPadding="10">
+                                    <asp:ListItem>Si</asp:ListItem>
+                                    <asp:ListItem>No</asp:ListItem>
+                                    <asp:ListItem>Otra</asp:ListItem>
+                                </asp:RadioButtonList>
+                            </td>
+                            <td style="vertical-align: bottom">
+                                <div class="input-group">
+                                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" Width="800" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 30px"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:Label ID="Label28" runat="server" Text="Label">Tiene empleados a su cargo?</asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:RadioButtonList ID="RadioButtonList5" runat="server"
+                                    CssClass="form-control" BorderStyle="None"
+                                    RepeatColumns="1"
+                                    RepeatLayout="Table"
+                                    CellPadding="10">
+                                    <asp:ListItem>Si</asp:ListItem>
+                                    <asp:ListItem>No</asp:ListItem>
+                                </asp:RadioButtonList>
+                            </td>
+                            <td style="vertical-align: top">
+                                <div class="input-group">
+                                    <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control" placeholder="Ingrese la cantidad" Width="800" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 30px"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:Label ID="Label29" runat="server" Text="Label">Cómo comercializa/ofrece sus productos/servicios?</asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:RadioButtonList ID="RadioButtonList6" runat="server"
+                                    CssClass="form-control" BorderStyle="None"
+                                    RepeatColumns="1"
+                                    RepeatLayout="Table"
+                                    CellPadding="10">
+                                    <asp:ListItem>Local/Estudio propio</asp:ListItem>
+                                    <asp:ListItem>Oficina privada/Showroom</asp:ListItem>
+                                    <asp:ListItem>Ferias Itinerantes</asp:ListItem>
+                                    <asp:ListItem>Locales/Oficinas de terceros</asp:ListItem>
+                                    <asp:ListItem>Internet (WEB)</asp:ListItem>
+                                    <asp:ListItem>Internet (Redes Sociales)</asp:ListItem>
+                                    <asp:ListItem>Otro</asp:ListItem>
+                                </asp:RadioButtonList>
+                            </td>
+                            <td style="vertical-align: bottom">
+                                <div class="input-group">
+                                    <asp:TextBox ID="TextBox4" runat="server" CssClass="form-control" Width="800" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 30px"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:Label ID="Label30" runat="server" Text="Label">Nombre del espacio donde comercializa/ofrece sus productos/servicios</asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td style="width: 800px">
+                                <div class="input-group">
+                                    <span class="input-group-addon alert-info">
+                                        <span class="glyphicon glyphicon-asterisk"></span>
+                                    </span>
+                                    <asp:TextBox ID="TextBox5" runat="server" CssClass="form-control" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:Label ID="Label31" runat="server" Text="Label">Link del espacio donde comercializa/ofrece sus productos/servicios</asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td style="width: 800px">
+                                <div class="input-group">
+                                    <span class="input-group-addon alert-info">
+                                        <span class="glyphicon glyphicon-asterisk"></span>
+                                    </span>
+                                    <asp:TextBox ID="TextBox6" runat="server" CssClass="form-control" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:Label ID="Label32" runat="server" Text="Label">Ubicacion del espacio donde comercializa/ofrece/otorga sus productos/servicios</asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td style="width: 800px">
+                                <div class="input-group">
+                                    <span class="input-group-addon alert-info">
+                                        <span class="glyphicon glyphicon-asterisk"></span>
+                                    </span>
+                                    <asp:TextBox ID="TextBox7" runat="server" CssClass="form-control" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:Label ID="Label33" runat="server" Text="Label">Cómo financia su actividad profesional?</asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:RadioButtonList ID="RadioButtonList7" runat="server"
+                                    CssClass="form-control" BorderStyle="None"
+                                    RepeatColumns="1"
+                                    RepeatLayout="Table"
+                                    CellPadding="10">
+                                    <asp:ListItem>Fondos Propios</asp:ListItem>
+                                    <asp:ListItem>Prestamos de entidades privadas o públicas</asp:ListItem>
+                                    <asp:ListItem>Socios capitalistas</asp:ListItem>
+                                    <asp:ListItem>A través de las ganancias generadas</asp:ListItem>
+                                    <asp:ListItem>Otro</asp:ListItem>
+                                </asp:RadioButtonList>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td style="vertical-align: bottom">
+                                <div class="input-group">
+                                    <asp:TextBox ID="TextBox8" runat="server" CssClass="form-control" Width="800" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 30px"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:Label ID="Label34" runat="server" Text="Label">Realiza ventas/ofrece servicios a otras provincias/paises?</asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:RadioButtonList ID="RadioButtonList8" runat="server"
+                                    CssClass="form-control" BorderStyle="None"
+                                    RepeatColumns="1"
+                                    RepeatLayout="Table"
+                                    CellPadding="10">
+                                    <asp:ListItem>Si</asp:ListItem>
+                                    <asp:ListItem>No</asp:ListItem>
+                                </asp:RadioButtonList>
+                            </td>
+                            <td style="vertical-align: top">
+                                <div class="input-group">
+                                    <asp:TextBox ID="TextBox9" runat="server" CssClass="form-control" placeholder="Cuáles?" Width="800" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 30px"></td>
+                            <td></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
+
+        <%--En relacion a la PRODUCCION DE BIENES--%>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
@@ -598,6 +949,7 @@
             <div id="collapse5" class="panel-collapse collapse">
                 <div class="panel-body">
                     En relacion a la PRODUCCION DE BIENES
+               
                 </div>
             </div>
         </div>
@@ -611,6 +963,7 @@
             <div id="collapse6" class="panel-collapse collapse">
                 <div class="panel-body">
                     En relacion a la IDENTIDAD de Diseño
+               
                 </div>
             </div>
         </div>
