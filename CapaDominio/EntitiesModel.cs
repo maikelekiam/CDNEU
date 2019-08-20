@@ -50,19 +50,19 @@ namespace CapaDominio
 			:base(connection, backendConfiguration, metadataSource)
 		{ }
 			
-		public IQueryable<Usuario> Usuarios 
-		{
-			get
-			{
-				return this.GetAll<Usuario>();
-			}
-		}
-		
 		public IQueryable<Vinculacion> Vinculacions 
 		{
 			get
 			{
 				return this.GetAll<Vinculacion>();
+			}
+		}
+		
+		public IQueryable<Usuario> Usuarios 
+		{
+			get
+			{
+				return this.GetAll<Usuario>();
 			}
 		}
 		
@@ -95,6 +95,14 @@ namespace CapaDominio
 			get
 			{
 				return this.GetAll<Innovacion>();
+			}
+		}
+		
+		public IQueryable<Imagen> Imagens 
+		{
+			get
+			{
+				return this.GetAll<Imagen>();
 			}
 		}
 		
@@ -151,11 +159,11 @@ namespace CapaDominio
 	
 	public interface IModeloDeDominioUnitOfWork : IUnitOfWork
 	{
-		IQueryable<Usuario> Usuarios
+		IQueryable<Vinculacion> Vinculacions
 		{
 			get;
 		}
-		IQueryable<Vinculacion> Vinculacions
+		IQueryable<Usuario> Usuarios
 		{
 			get;
 		}
@@ -172,6 +180,10 @@ namespace CapaDominio
 			get;
 		}
 		IQueryable<Innovacion> Innovacions
+		{
+			get;
+		}
+		IQueryable<Imagen> Imagens
 		{
 			get;
 		}

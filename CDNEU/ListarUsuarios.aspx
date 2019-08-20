@@ -2,31 +2,50 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="container">
-        <asp:Panel ID="PanelListar" CssClass="panel panel-default" runat="server">
-            <div class="panel-heading">
-                <h3>Listado de Diseñadores</h3>
-            </div>
+    <div>
+        <table border="1">
+            <tr>
+                <td colspan="2">
+                    <h1>Agregar Imagen en SQL Server</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Label runat="server" Text="Id"></asp:Label></td>
+                <td>
+                    <asp:TextBox ID="txtId" runat="server"></asp:TextBox></td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Label runat="server" Text="Imagen"></asp:Label></td>
+                <td>
+                    <asp:FileUpload ID="fuImagen" runat="server"></asp:FileUpload></td>
+            </tr>
+            <tr>
+                <td style="text-align: center" colspan="2">
+                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" OnClick="btnGuardar_Click" />
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center" colspan="2">
+                    <asp:Label ID="lblMensaje" runat="server" Text="" />
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center" colspan="2">
+                    <asp:Button ID="btnVer" runat="server" Text="Ver Imagen" OnClick="btnVer_Click" />
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center" colspan="2">
+                    <asp:Image ID="imgURL" runat="server" style="width:500px; border:solid; " />
+                </td>
+            </tr>
 
-            <!--GRILLA-->
 
-            <div class="form-group">
-                <div class="col-md-9 col-md-offset-1">
-                    <asp:GridView ID="dgvUsuario" runat="server" AutoGenerateColumns="false"
-                        CssClass="table table-hover table-striped" BorderWidth="2px"
-                        GridLines="Both" EmptyDataText="No existen usuarios registrados" ShowHeaderWhenEmpty="true">
-                        <Columns>
-                            <asp:BoundField HeaderText="Nombre" DataField="nombreUsuario" ItemStyle-HorizontalAlign="Left" HeaderStyle-BackColor="#cccccc" />
-                            <asp:BoundField HeaderText="Contraseña" DataField="contrasenia" ItemStyle-HorizontalAlign="Left" HeaderStyle-BackColor="#cccccc" />
-                            <asp:BoundField HeaderText="Grupo" DataField="grupo" ItemStyle-HorizontalAlign="Left" HeaderStyle-BackColor="#cccccc" />
-                            <asp:TemplateField HeaderStyle-BackColor="#cccccc" HeaderText="Activo" ItemStyle-HorizontalAlign="Left" ControlStyle-Font-Size="Small" HeaderStyle-Width="100">
-                                <ItemTemplate><%# (Boolean.Parse(Eval("Activo").ToString())) ? "Si" : "No" %></ItemTemplate>
-                            </asp:TemplateField>
-                            <asp:BoundField HeaderText="Correo" DataField="correoElectronico" ItemStyle-HorizontalAlign="Left" HeaderStyle-BackColor="#cccccc" />
-                        </Columns>
-                    </asp:GridView>
-                </div>
-            </div>
-        </asp:Panel>
+
+        </table>
     </div>
+
+
 </asp:Content>

@@ -50,6 +50,19 @@ namespace CapaDominio
 			}
 		}
 		
+		private string estudiosOficialesOtro;
+		public virtual string EstudiosOficialesOtro
+		{
+			get
+			{
+				return this.estudiosOficialesOtro;
+			}
+			set
+			{
+				this.estudiosOficialesOtro = value;
+			}
+		}
+		
 		private string tituloObtenido;
 		public virtual string TituloObtenido
 		{
@@ -177,19 +190,6 @@ namespace CapaDominio
 			set
 			{
 				this.idUsuario = value;
-			}
-		}
-		
-		private string estudiosOficialesOtro;
-		public virtual string EstudiosOficialesOtro
-		{
-			get
-			{
-				return this.estudiosOficialesOtro;
-			}
-			set
-			{
-				this.estudiosOficialesOtro = value;
 			}
 		}
 		

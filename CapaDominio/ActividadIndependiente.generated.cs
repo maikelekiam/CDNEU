@@ -50,6 +50,19 @@ namespace CapaDominio
 			}
 		}
 		
+		private string sustentoDeVidaOtro;
+		public virtual string SustentoDeVidaOtro
+		{
+			get
+			{
+				return this.sustentoDeVidaOtro;
+			}
+			set
+			{
+				this.sustentoDeVidaOtro = value;
+			}
+		}
+		
 		private string tiempoActividadFuncionamiento;
 		public virtual string TiempoActividadFuncionamiento
 		{

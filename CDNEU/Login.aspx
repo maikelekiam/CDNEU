@@ -228,7 +228,7 @@
                                         <td class="anchotextbox">
                                             <div class="input-group">
                                                 <span class="input-group-addon alert-info">
-                                                    <span class="glyphicon glyphicon-edit"></span>
+                                                    <span class="glyphicon glyphicon-calendar"></span>
                                                 </span>
                                                 <asp:TextBox ID="txtRegistroEdad" runat="server" CssClass="form-control" placeholder="Ingrese su Edad" />
                                             </div>
@@ -245,7 +245,7 @@
                                         <td class="anchotextbox">
                                             <div class="input-group">
                                                 <span class="input-group-addon alert-info">
-                                                    <span class="glyphicon glyphicon-edit"></span>
+                                                    <span class="glyphicon glyphicon-home"></span>
                                                 </span>
                                                 <asp:TextBox ID="txtRegistroDomicilio" runat="server" CssClass="form-control" placeholder="Ingrese su Domicilio" />
                                             </div>

@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditarUsuario.aspx.cs" Inherits="CDNEU.EditarUsuario" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
     <style>
         input[type="radio"] + label {
             margin-left: 10px;
@@ -64,148 +63,378 @@
             </div>
             <div id="collapse1" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <table>
-                        <tr>
-                            <td class="anchotabla">
-                                <asp:Label ID="Label7" runat="server" Text="Label">Usuario</asp:Label>
-                            </td>
-                            <td class="anchotextbox">
-                                <div class="input-group">
-                                    <span class="input-group-addon alert-info">
-                                        <span class="glyphicon glyphicon-user"></span>
-                                    </span>
-                                    <asp:TextBox ID="txtRegistroNombreUsuario" runat="server" CssClass="form-control" placeholder="Ingrese un nombre de Usuario" />
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="anchotabla altotabla"></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="anchotabla">
-                                <asp:Label ID="Label8" runat="server" Text="Label">Contraseña</asp:Label>
-                            </td>
-                            <td class="anchotextbox">
-                                <div class="input-group">
-                                    <span class="input-group-addon alert-info">
-                                        <span class="glyphicon glyphicon-lock"></span>
-                                    </span>
-                                    <asp:TextBox ID="txtRegistroContrasenia" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese una Contraseña" />
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="anchotabla altotabla"></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="anchotabla">
-                                <asp:Label ID="Label9" runat="server" Text="Label">Nombre</asp:Label>
-                            </td>
-                            <td class="anchotextbox">
-                                <div class="input-group">
-                                    <span class="input-group-addon alert-info">
-                                        <span class="glyphicon glyphicon-edit"></span>
-                                    </span>
-                                    <asp:TextBox ID="txtRegistroNombre" runat="server" CssClass="form-control" placeholder="Ingrese su nombre" />
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="anchotabla altotabla"></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="anchotabla">
-                                <asp:Label ID="Label4" runat="server" Text="Label">Apellido</asp:Label>
-                            </td>
-                            <td class="anchotextbox">
-                                <div class="input-group">
-                                    <span class="input-group-addon alert-info">
-                                        <span class="glyphicon glyphicon-edit"></span>
-                                    </span>
-                                    <asp:TextBox ID="txtRegistroApellido" runat="server" CssClass="form-control" placeholder="Ingrese su apellido" />
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="anchotabla altotabla"></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="anchotabla">
-                                <asp:Label ID="Label5" runat="server" Text="Label">Correo Electronico</asp:Label>
-                            </td>
-                            <td class="anchotextbox">
-                                <div class="input-group">
-                                    <span class="input-group-addon alert-info">
-                                        <span class="glyphicon glyphicon-envelope"></span>
-                                    </span>
-                                    <asp:TextBox ID="txtRegistroCorreoElectronico" runat="server" CssClass="form-control" placeholder="Ingrese su Correo Electronico" />
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="anchotabla altotabla"></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="anchotabla">
-                                <asp:Label ID="Label6" runat="server" Text="Label">Telefono</asp:Label>
-                            </td>
-                            <td class="anchotextbox">
-                                <div class="input-group">
-                                    <span class="input-group-addon alert-info">
-                                        <span class="glyphicon glyphicon-phone-alt"></span>
-                                    </span>
-                                    <asp:TextBox ID="txtRegistroTelefono" runat="server" CssClass="form-control" placeholder="Ingrese su Telefono" />
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="anchotabla altotabla"></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="anchotabla">
-                                <asp:Label ID="Label10" runat="server" Text="Label">Edad</asp:Label>
-                            </td>
-                            <td class="anchotextbox">
-                                <div class="input-group">
-                                    <span class="input-group-addon alert-info">
-                                        <span class="glyphicon glyphicon-edit"></span>
-                                    </span>
-                                    <asp:TextBox ID="txtRegistroEdad" runat="server" CssClass="form-control" placeholder="Ingrese su Edad" />
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="anchotabla altotabla"></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="anchotabla">
-                                <asp:Label ID="Label11" runat="server" Text="Label">Domicilio</asp:Label>
-                            </td>
-                            <td class="anchotextbox">
-                                <div class="input-group">
-                                    <span class="input-group-addon alert-info">
-                                        <span class="glyphicon glyphicon-edit"></span>
-                                    </span>
-                                    <asp:TextBox ID="txtRegistroDomicilio" runat="server" CssClass="form-control" placeholder="Ingrese su Domicilio" />
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="anchotabla altotabla"></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td style="height: 30px"></td>
-                            <td></td>
-                        </tr>
-                    </table>
+
+
+                    <div class="row">
+                        <div class="col-md-6">
+
+
+
+
+
+
+
+
+                            <table>
+                                <tr>
+                                    <td class="anchotabla">
+                                        <asp:Label ID="Label7" runat="server" Text="Label">Usuario</asp:Label>
+                                    </td>
+                                    <td class="anchotextbox">
+                                        <div class="input-group">
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-user"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtRegistroNombreUsuario" runat="server" CssClass="form-control" placeholder="Ingrese un nombre de Usuario" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla altotabla"></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla">
+                                        <asp:Label ID="Label8" runat="server" Text="Label">Contraseña</asp:Label>
+                                    </td>
+                                    <td class="anchotextbox">
+                                        <div class="input-group">
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-lock"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtRegistroContrasenia" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese una Contraseña" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla altotabla"></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                            <hr />
+                            <table>
+                                <tr>
+                                    <td class="anchotabla">
+                                        <asp:Label ID="Label9" runat="server" Text="Label">Nombre</asp:Label>
+                                    </td>
+                                    <td class="anchotextbox">
+                                        <div class="input-group">
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-edit"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtRegistroNombre" runat="server" CssClass="form-control" placeholder="Ingrese su nombre" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla altotabla"></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla">
+                                        <asp:Label ID="Label4" runat="server" Text="Label">Apellido</asp:Label>
+                                    </td>
+                                    <td class="anchotextbox">
+                                        <div class="input-group">
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-edit"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtRegistroApellido" runat="server" CssClass="form-control" placeholder="Ingrese su apellido" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla altotabla"></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla">
+                                        <asp:Label ID="Label5" runat="server" Text="Label">Correo Electronico</asp:Label>
+                                    </td>
+                                    <td class="anchotextbox">
+                                        <div class="input-group">
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-envelope"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtRegistroCorreoElectronico" runat="server" CssClass="form-control" placeholder="Ingrese su Correo Electronico" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla altotabla"></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla">
+                                        <asp:Label ID="Label6" runat="server" Text="Label">Telefono / Celular</asp:Label>
+                                    </td>
+                                    <td class="anchotextbox">
+                                        <div class="input-group">
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-phone-alt"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtRegistroTelefono" runat="server" CssClass="form-control" placeholder="Ingrese su Telefono" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla altotabla"></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla">
+                                        <asp:Label ID="Label10" runat="server" Text="Label">Edad</asp:Label>
+                                    </td>
+                                    <td class="anchotextbox">
+                                        <div class="input-group">
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtRegistroEdad" runat="server" CssClass="form-control" placeholder="Ingrese su Edad" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla altotabla"></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla">
+                                        <asp:Label ID="Label11" runat="server" Text="Label">Domicilio</asp:Label>
+                                    </td>
+                                    <td class="anchotextbox">
+                                        <div class="input-group">
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-home"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtRegistroDomicilio" runat="server" CssClass="form-control" placeholder="Ingrese su Domicilio" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla altotabla"></td>
+                                </tr>
+                                <tr>
+                                    <td style="height: 30px"></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    <td class="anchotabla">
+                                        <asp:Label ID="Label57" runat="server" Text="Label">Localidad</asp:Label>
+                                    </td>
+                                    <td class="anchotextbox">
+                                        <div class="input-group">
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-road"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtLocalidad" runat="server" CssClass="form-control" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla altotabla"></td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    <td class="anchotabla">
+                                        <asp:Label ID="Label58" runat="server" Text="Label">Provincia</asp:Label>
+                                    </td>
+                                    <td class="anchotextbox">
+                                        <div class="input-group">
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-map-marker"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtProvincia" runat="server" CssClass="form-control" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla altotabla"></td>
+                                </tr>
+                                <tr>
+                                    <td style="height: 30px"></td>
+                                </tr>
+                            </table>
+                            <hr />
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h4>REDES SOCIALES</h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla">
+                                        <asp:Label ID="Label59" runat="server">Facebook</asp:Label>
+                                    </td>
+                                    <td class="anchotextbox">
+                                        <div class="input-group">
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-user"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtFacebook" runat="server" CssClass="form-control" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla altotabla"></td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla">
+                                        <asp:Label ID="Label60" runat="server">Instagram</asp:Label>
+                                    </td>
+                                    <td class="anchotextbox">
+                                        <div class="input-group">
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-user"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtInstagram" runat="server" CssClass="form-control" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla altotabla"></td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla">
+                                        <asp:Label ID="Label61" runat="server">Twitter</asp:Label>
+                                    </td>
+                                    <td class="anchotextbox">
+                                        <div class="input-group">
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-user"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtTwitter" runat="server" CssClass="form-control" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla altotabla"></td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla">
+                                        <asp:Label ID="Label62" runat="server">YouTube</asp:Label>
+                                    </td>
+                                    <td class="anchotextbox">
+                                        <div class="input-group">
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-user"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtYouTube" runat="server" CssClass="form-control" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla altotabla"></td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla">
+                                        <asp:Label ID="Label63" runat="server">Flicker</asp:Label>
+                                    </td>
+                                    <td class="anchotextbox">
+                                        <div class="input-group">
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-user"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtFlicker" runat="server" CssClass="form-control" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="anchotabla altotabla"></td>
+                                </tr>
+                            </table>
+                            <hr />
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h3>Plataforma de Comercialización</h3>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <asp:RadioButtonList ID="RBPlataformaComercializacion" runat="server"
+                                            CssClass="form-control" BorderStyle="None"
+                                            RepeatColumns="1"
+                                            RepeatLayout="Table"
+                                            CellPadding="10">
+                                            <asp:ListItem>Mercado Libre</asp:ListItem>
+                                            <asp:ListItem>Tienda Nube</asp:ListItem>
+                                            <asp:ListItem>Otro</asp:ListItem>
+                                        </asp:RadioButtonList>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="vertical-align: bottom">
+                                        <div class="input-group">
+                                            <asp:TextBox ID="txtPlataformaComercializacionOtro" runat="server" CssClass="form-control" Width="800" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="height: 30px"></td>
+                                </tr>
+                            </table>
+                        </div>
+
+
+
+                        <%--FOTO DE PERFIL--%>
+                        <div class="col-md-6">
+                            <div>
+                                <table border="0">
+                                    <tr>
+                                        <td colspan="2">
+                                            <h2>Foto de Perfil</h2>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center" colspan="2">
+                                            <asp:Image ID="imgURL" runat="server" Style="width: 500px; border: solid;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:Label runat="server" Text="Id" CssClass="form-control col-md-2"></asp:Label></td>
+                                        <td>
+                                            <asp:TextBox ID="txtId" runat="server" CssClass="form-control col-md-4"></asp:TextBox></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:Label runat="server" Text="Subir Foto" CssClass="form-control col-md-2" BorderStyle="None"></asp:Label></td>
+                                        <td>
+
+                                        <td>
+                                            <asp:FileUpload ID="fuImagen" runat="server" CssClass="form-control col-md-4" BorderStyle="Dashed"></asp:FileUpload></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center" colspan="1">
+                                            <asp:Button ID="btnGuardar" runat="server" Text="Guardar Foto" CssClass="boton_azul" OnClick="btnGuardar_Click" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center" colspan="2">
+                                            <asp:Label ID="lblMensaje" runat="server" Text="" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <hr />
                     <!--Boton de registro-->
                     <div class="form-group">
                         <div class="col-md-10 col-md-offset-1">
@@ -215,6 +444,17 @@
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
 
         <%--PANEL FORMACION ACADEMICA--%>
         <div class="panel panel-default">
@@ -229,7 +469,8 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label41" runat="server" Text="Label">Estudios Oficiales (maximo nivel alcanzado)</asp:Label>
+                                <h4>Estudios Oficiales (maximo nivel alcanzado)</h4>
+                                <%--<asp:Label ID="Label41" runat="server">Estudios Oficiales (maximo nivel alcanzado)</asp:Label>--%>
                             </td>
                         </tr>
                     </table>
@@ -263,7 +504,8 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label1" runat="server" Text="Label">Título Obtenido</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label1" runat="server" Text="Label">Título Obtenido</asp:Label></h4>
                             </td>
                         </tr>
                         <tr>
@@ -286,7 +528,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label2" runat="server" Text="Label">Institución que emitió el Título</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label2" runat="server" Text="Label">Institución que emitió el Título</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                         <tr>
@@ -309,7 +553,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label3" runat="server" Text="Label">Indique si posee otros estudios vinculados al diseño</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label3" runat="server" Text="Label">Indique si posee otros estudios vinculados al diseño</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                         <tr>
@@ -332,7 +578,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="lblEsEstudiante" runat="server" Text="Label">Es usted estudiante de una carrera/curso vinculada al diseño?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="lblEsEstudiante" runat="server" Text="Label">Es usted estudiante de una carrera/curso vinculada al diseño?</asp:Label>
+                                </h4>
                             </td>
                             <td>
                                 <div class="col-md-3">
@@ -444,7 +692,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label12" runat="server" Text="Label">Disciplina proyectual en que se enmarca su actividad profesional</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label12" runat="server" Text="Label">Disciplina proyectual en que se enmarca su actividad profesional</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -482,7 +732,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label18" runat="server" Text="Label">Sub Sector</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label18" runat="server" Text="Label">Sub Sector</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -519,7 +771,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label19" runat="server" Text="Label">Tipo de Relación Laboral</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label19" runat="server" Text="Label">Tipo de Relación Laboral</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -554,7 +808,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label21" runat="server">Nombre de la empresa/estudio/emprendimiento/institucion donde lleva adelante su actividad profesional</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label21" runat="server">Nombre de la empresa/estudio/emprendimiento/institucion donde lleva adelante su actividad profesional</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                         <tr>
@@ -577,7 +833,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label22" runat="server">Link de la empresa/estudio/emprendimiento/institucion donde lleva adelante su actividad profesional</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label22" runat="server">Link de la empresa/estudio/emprendimiento/institucion donde lleva adelante su actividad profesional</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                         <tr>
@@ -600,7 +858,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label23" runat="server">Describa brevemente la actividad profesional que realiza</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label23" runat="server">Describa brevemente la actividad profesional que realiza</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                         <tr>
@@ -644,7 +904,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label24" runat="server">¿Es esta actividad su principal ingreso y sustento de vida?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label24" runat="server">¿Es esta actividad su principal ingreso y sustento de vida?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -676,7 +938,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label25" runat="server">Tiempo durante el cual su actividad se ha mantenido en funcionamiento</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label25" runat="server">Tiempo durante el cual su actividad se ha mantenido en funcionamiento</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -702,7 +966,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label26" runat="server">¿Cuál es su situación tributaria?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label26" runat="server">¿Cuál es su situación tributaria?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -728,7 +994,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label27" runat="server">¿Tiene su marca/producto/nombre de empresa registrado?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label27" runat="server">¿Tiene su marca/producto/nombre de empresa registrado?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -760,7 +1028,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label28" runat="server">¿Tiene empleados a su cargo?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label28" runat="server">¿Tiene empleados a su cargo?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -791,7 +1061,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label29" runat="server">¿Cómo comercializa/ofrece sus productos/servicios?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label29" runat="server">¿Cómo comercializa/ofrece sus productos/servicios?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -827,7 +1099,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label30" runat="server">Nombre del espacio donde comercializa/ofrece sus productos/servicios</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label30" runat="server">Nombre del espacio donde comercializa/ofrece sus productos/servicios</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                         <tr>
@@ -850,7 +1124,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label31" runat="server">Link del espacio donde comercializa/ofrece sus productos/servicios</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label31" runat="server">Link del espacio donde comercializa/ofrece sus productos/servicios</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                         <tr>
@@ -873,7 +1149,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label32" runat="server">Ubicación del espacio donde comercializa/ofrece/otorga sus productos/servicios</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label32" runat="server">Ubicación del espacio donde comercializa/ofrece/otorga sus productos/servicios</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                         <tr>
@@ -896,7 +1174,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label33" runat="server">¿Cómo financia su actividad profesional?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label33" runat="server">¿Cómo financia su actividad profesional?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -932,7 +1212,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label34" runat="server">¿Realiza ventas/ofrece servicios a otras provincias/países?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label34" runat="server">¿Realiza ventas/ofrece servicios a otras provincias/países?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -983,8 +1265,12 @@
                     <table>
                         <tr>
                             <td style="width: 300px">
-                                <asp:Label ID="Label35" runat="server">¿Qué cantidad de productos realiza al año?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label35" runat="server">¿Qué cantidad de productos realiza al año?</asp:Label>
+                                </h4>
                             </td>
+                        </tr>
+                        <tr>
                             <td>
                                 <div class="input-group">
                                     <asp:TextBox ID="txtCantidadProductosAnio" placeholder="Ingrese aquí la cantidad" runat="server" CssClass="form-control" Width="300" />
@@ -998,7 +1284,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label36" runat="server">¿Dónde realiza su producción?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label36" runat="server">¿Dónde realiza su producción?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -1032,7 +1320,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label37" runat="server">¿Qué porcentaje del proceso productivo realiza en la Provincia del Neuquén?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label37" runat="server">¿Qué porcentaje del proceso productivo realiza en la Provincia del Neuquén?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -1078,7 +1368,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label38" runat="server">¿Qué porcentaje adquiere en la Provincia del Neuquén?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label38" runat="server">¿Qué porcentaje adquiere en la Provincia del Neuquén?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -1104,7 +1396,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label39" runat="server">¿Tiene dificultades para adquirir las materias primas? Cuáles son? Cómo podría resolverlas?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label39" runat="server">¿Tiene dificultades para adquirir las materias primas? Cuáles son? Cómo podría resolverlas?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                         <tr>
@@ -1149,7 +1443,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label40" runat="server">¿Dispone de equipos para el proceso?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label40" runat="server">¿Dispone de equipos para el proceso?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -1196,7 +1492,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label20" runat="server">¿Cuál es la principal falencia en el proceso de producción de objetos?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label20" runat="server">¿Cuál es la principal falencia en el proceso de producción de objetos?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -1253,7 +1551,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label42" runat="server">Nombre al menos 3 (tres) atributos/valores diferenciales de su trabajo</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label42" runat="server">Nombre al menos 3 (tres) atributos/valores diferenciales de su trabajo</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                         <tr>
@@ -1276,7 +1576,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label43" runat="server">Nombre al menos 3 (tres) rasgos identitarios del diseño neuquino</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label43" runat="server">Nombre al menos 3 (tres) rasgos identitarios del diseño neuquino</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                         <tr>
@@ -1299,7 +1601,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label44" runat="server">De las siguientes opciones, indicar a su criterio qué aspecto es más relevante para abordar en relación al diseño en la Provincia del Neuquén</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label44" runat="server">De las siguientes opciones, indicar a su criterio qué aspecto es más relevante para abordar en relación al diseño en la Provincia del Neuquén</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -1335,7 +1639,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label45" runat="server">¿En qué temas cree importante capacitarse para mejorar su actividad como diseñador?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label45" runat="server">¿En qué temas cree importante capacitarse para mejorar su actividad como diseñador?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                         <tr>
@@ -1372,7 +1678,7 @@
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">
-                        <span class="glyphicon glyphicon-arrow-down" style="width: 20px"></span>En relación a la INNOVACION</a>
+                        <span class="glyphicon glyphicon-arrow-down" style="width: 20px"></span>EN RELACION A LA INNOVACION</a>
                 </h4>
             </div>
             <div id="collapse9" class="panel-collapse collapse">
@@ -1380,7 +1686,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label46" runat="server">¿De qué manera incorpora la innovación en el desarrollo de su labor?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label46" runat="server">¿De qué manera incorpora la innovación en el desarrollo de su labor?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -1416,7 +1724,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label47" runat="server">¿Cuáles son sus dificultades o barreras a la hora de innovar?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label47" runat="server">¿Cuáles son sus dificultades o barreras a la hora de innovar?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -1452,7 +1762,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label48" runat="server">¿Cómo han sido tomadas las innovaciones propuestas en su medio de acción (socios, destinatarios, público general, etc.)?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label48" runat="server">¿Cómo han sido tomadas las innovaciones propuestas en su medio de acción (socios, destinatarios, público general, etc.)?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -1471,7 +1783,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label49" runat="server">¿Qué puede contarnos en relación esto? ¿Hay alguna experiencia?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label49" runat="server">¿Qué puede contarnos en relación esto? ¿Hay alguna experiencia?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -1510,7 +1824,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label50" runat="server">¿Ha recibido apoyo de alguna área del gobierno nacional, provincial o municipal?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label50" runat="server">¿Ha recibido apoyo de alguna área del gobierno nacional, provincial o municipal?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -1555,7 +1871,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label51" runat="server">Organismo que brindó el apoyo</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label51" runat="server">Organismo que brindó el apoyo</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -1574,7 +1892,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label52" runat="server">Año en que brindó el apoyo</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label52" runat="server">Año en que brindó el apoyo</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -1593,7 +1913,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label53" runat="server">¿Ha participado del Sello de Buen Diseño Argentino?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label53" runat="server">¿Ha participado del Sello de Buen Diseño Argentino?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -1625,7 +1947,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label54" runat="server">¿Ha participado del Mercado de Industrias Creativas Argentinas (MICA)?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label54" runat="server">¿Ha participado del Mercado de Industrias Creativas Argentinas (MICA)?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -1657,7 +1981,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label55" runat="server">¿Cuál considera que puede ser el mayor aporte que el CDNEU puede hacerle para fortalecer su actividad?</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label55" runat="server">¿Cuál considera que puede ser el mayor aporte que el CDNEU puede hacerle para fortalecer su actividad?</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                     </table>
@@ -1696,7 +2022,9 @@
                     <table>
                         <tr>
                             <td>
-                                <asp:Label ID="Label56" runat="server">Comentarios Finales</asp:Label>
+                                <h4>
+                                    <asp:Label ID="Label56" runat="server">Comentarios Finales</asp:Label>
+                                </h4>
                             </td>
                         </tr>
                         <tr>

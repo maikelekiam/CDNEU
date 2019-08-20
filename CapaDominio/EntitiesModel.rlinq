@@ -2,77 +2,7 @@
 <DomainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="2.0.0.0" name="ModeloDeDominio" namespace="CapaDominio" showPropertiesCompartment="true" xmlns="http://www.telerik.com/ORM">
   <orm:orm name="ModeloDeDominio" backend="mssql" default-schema="dbo" xmlns:orm="http://tempuri.org/ORM">
     <orm:namespace name="CapaDominio" default="true">
-      <orm:class name="Usuario" uniqueId="2839b0b4-026f-48f2-a72e-95866f704474">
-        <orm:table name="Usuario" />
-        <orm:identity>
-          <orm:key-generator name="autoinc">
-            <orm:key-generator-member property-name="IdUsuario" />
-          </orm:key-generator>
-          <orm:single-field field-name="idUsuario" />
-        </orm:identity>
-        <orm:concurrency strategy="changed" />
-        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="8a8e103e-4efa-4d90-8a61-ccaf891a3476" type="System.Int32">
-          <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
-        </orm:field>
-        <orm:field name="nombreUsuario" property="NombreUsuario" behavior="readwrite" uniqueId="ff072cf4-1243-40b1-b55d-0887f94e55bb" type="System.String">
-          <orm:column name="nombreUsuario" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="contrasenia" property="Contrasenia" behavior="readwrite" uniqueId="9a583383-ca5b-46ee-9435-4146cf7f9ff1" type="System.String">
-          <orm:column name="contrasenia" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="grupo" property="Grupo" behavior="readwrite" uniqueId="48599582-9e52-46b1-8a90-86a282d93743" type="System.Int32">
-          <orm:column name="grupo" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
-        </orm:field>
-        <orm:field name="correoElectronico" property="CorreoElectronico" behavior="readwrite" uniqueId="6d04352c-52de-4dc3-b7ff-10562c1fe2a2" type="System.String">
-          <orm:column name="correoElectronico" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="activo" property="Activo" behavior="readwrite" uniqueId="285b435c-3b46-48f5-9d75-8fcb859fdaa8" type="System.Boolean">
-          <orm:column name="activo" sql-type="bit" nullable="false" length="0" scale="0" ado-type="Bit" />
-        </orm:field>
-        <orm:field name="nombre" property="Nombre" behavior="readwrite" uniqueId="9bf83a4e-9ea8-4edc-96dc-a2f523bb6622" type="System.String">
-          <orm:column name="nombre" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="apellido" property="Apellido" behavior="readwrite" uniqueId="ece2e8d5-b1d6-49a1-9897-f1c37d3857f8" type="System.String">
-          <orm:column name="apellido" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="telefono" property="Telefono" behavior="readwrite" uniqueId="816ed9f9-4e05-4c70-b8da-bab125154075" type="System.String">
-          <orm:column name="telefono" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="edad" property="Edad" behavior="readwrite" uniqueId="72596da1-5037-49da-b70c-e0659a59d33a" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
-          <orm:column name="edad" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
-        </orm:field>
-        <orm:field name="domicilio" property="Domicilio" behavior="readwrite" uniqueId="9e03d6c7-ff95-44e2-9df6-36e4b01a01e3" type="System.String">
-          <orm:column name="domicilio" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="vinculacions" property="Vinculacions" behavior="readwrite" uniqueId="1647d6a7-5edc-43da-a7bb-1d37875f71b5" type="CapaDominio.Vinculacion">
-          <orm:collection element-class="CapaDominio.Vinculacion" inverse-field="usuario" order-by="" uniqueId="12445550-0ac7-416e-8907-bd26129a93e0" />
-        </orm:field>
-        <orm:field name="produccionDeBienes" property="ProduccionDeBienes" behavior="readwrite" uniqueId="03dea842-d0e3-44bd-8471-f9d9efac8bec" type="CapaDominio.ProduccionDeBiene">
-          <orm:collection element-class="CapaDominio.ProduccionDeBiene" inverse-field="usuario" order-by="" uniqueId="16141937-d68c-4837-8cc5-65662ccb277e" />
-        </orm:field>
-        <orm:field name="materiasPrimas" property="MateriasPrimas" behavior="readwrite" uniqueId="fc105a3f-ea35-4f08-9e79-0244d7cad92b" type="CapaDominio.MateriasPrima">
-          <orm:collection element-class="CapaDominio.MateriasPrima" inverse-field="usuario" order-by="" uniqueId="df0b7cbc-ecab-4cea-84e7-052dccf13379" />
-        </orm:field>
-        <orm:field name="maquinariasYProcesos" property="MaquinariasYProcesos" behavior="readwrite" uniqueId="69810527-db79-4b07-bef8-acd71304aa56" type="CapaDominio.MaquinariasYProceso">
-          <orm:collection element-class="CapaDominio.MaquinariasYProceso" inverse-field="usuario" order-by="" uniqueId="29ac737f-9f51-4e51-9732-453cc3b054ee" />
-        </orm:field>
-        <orm:field name="innovacions" property="Innovacions" behavior="readwrite" uniqueId="d8b21fe7-22bf-461e-a535-969ff55b7d81" type="CapaDominio.Innovacion">
-          <orm:collection element-class="CapaDominio.Innovacion" inverse-field="usuario" order-by="" uniqueId="aa144cf9-b1cf-4e88-99f1-43e9d8b302b8" />
-        </orm:field>
-        <orm:field name="identidadDisenios" property="IdentidadDisenios" behavior="readwrite" uniqueId="5c44b3b7-6727-468c-bdaf-64f8d640b359" type="CapaDominio.IdentidadDisenio">
-          <orm:collection element-class="CapaDominio.IdentidadDisenio" inverse-field="usuario" order-by="" uniqueId="887b1ba1-9a7e-4931-ae02-5cfc3d4cbade" />
-        </orm:field>
-        <orm:field name="formacionAcademicas" property="FormacionAcademicas" behavior="readwrite" uniqueId="1d0444bc-8608-4267-a6b8-052bf8877951" type="CapaDominio.FormacionAcademica">
-          <orm:collection element-class="CapaDominio.FormacionAcademica" inverse-field="usuario" order-by="" uniqueId="6c7e802a-6bf6-4410-b898-8f2ec3b4c350" />
-        </orm:field>
-        <orm:field name="actividadProfesionals" property="ActividadProfesionals" behavior="readwrite" uniqueId="e965688f-7082-424d-86d2-af33b0288c23" type="CapaDominio.ActividadProfesional">
-          <orm:collection element-class="CapaDominio.ActividadProfesional" inverse-field="usuario" order-by="" uniqueId="e6a025fd-2b46-4c76-be12-e357d76ae9a0" />
-        </orm:field>
-        <orm:field name="actividadIndependientes" property="ActividadIndependientes" behavior="readwrite" uniqueId="bcc5b9d8-e7e1-4de3-be87-aa39363eeaea" type="CapaDominio.ActividadIndependiente">
-          <orm:collection element-class="CapaDominio.ActividadIndependiente" inverse-field="usuario" order-by="" uniqueId="a172086c-938b-46bb-9a8b-2d6983ede3d0" />
-        </orm:field>
-      </orm:class>
-      <orm:class name="Vinculacion" uniqueId="1e3b2daa-5cf5-401b-8bfd-895694c94273">
+      <orm:class name="Vinculacion" uniqueId="f49b9667-44ef-4677-bffb-3101f6efc255">
         <orm:table name="Vinculacion" />
         <orm:identity>
           <orm:key-generator name="autoinc">
@@ -81,50 +11,120 @@
           <orm:single-field field-name="idVinculacion" />
         </orm:identity>
         <orm:concurrency strategy="changed" />
-        <orm:field name="idVinculacion" property="IdVinculacion" behavior="readwrite" uniqueId="2f5f1c74-b0e6-42ac-a052-6aee4e5e0e60" type="System.Int32">
+        <orm:field name="idVinculacion" property="IdVinculacion" behavior="readwrite" uniqueId="e753ae76-ac4c-4cc4-9ad0-a57443628643" type="System.Int32">
           <orm:column name="idVinculacion" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         </orm:field>
-        <orm:field name="recibioApoyo" property="RecibioApoyo" behavior="readwrite" uniqueId="2e0d89e7-7638-4e3c-9837-7d21e8caff9b" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+        <orm:field name="recibioApoyo" property="RecibioApoyo" behavior="readwrite" uniqueId="d007932b-ea0e-4da8-bc9f-ea426ce385e7" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
           <orm:column name="recibioApoyo" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
         </orm:field>
-        <orm:field name="apoyo" property="Apoyo" behavior="readwrite" uniqueId="70b99960-fb42-4e0e-8422-be8f878102f6" type="System.String">
+        <orm:field name="apoyo" property="Apoyo" behavior="readwrite" uniqueId="90e366ce-a9fc-4480-870f-e03cd9d387aa" type="System.String">
           <orm:column name="apoyo" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="otroApoyo" property="OtroApoyo" behavior="readwrite" uniqueId="428fbee2-3216-4b7d-9963-a7d2a2b3d701" type="System.String">
+        <orm:field name="otroApoyo" property="OtroApoyo" behavior="readwrite" uniqueId="b7fb5047-bd38-4153-99dc-4227b7839d7d" type="System.String">
           <orm:column name="otroApoyo" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="organismoApoyo" property="OrganismoApoyo" behavior="readwrite" uniqueId="75b0dd2d-cb61-4709-9c91-9adbca29f2db" type="System.String">
+        <orm:field name="organismoApoyo" property="OrganismoApoyo" behavior="readwrite" uniqueId="4f080b1d-73d7-4ea9-bba0-19e040132171" type="System.String">
           <orm:column name="organismoApoyo" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="organismoApoyoAnio" property="OrganismoApoyoAnio" behavior="readwrite" uniqueId="d18b86f9-325c-4603-8fc9-5eb2036fdf68" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+        <orm:field name="organismoApoyoAnio" property="OrganismoApoyoAnio" behavior="readwrite" uniqueId="2a589f77-3a6b-42c9-b427-279b371d98be" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
           <orm:column name="organismoApoyoAnio" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
         </orm:field>
-        <orm:field name="selloBuenDisenioArgentino" property="SelloBuenDisenioArgentino" behavior="readwrite" uniqueId="cb534d10-ffbf-4134-bd2c-7de5d9b18225" type="System.String">
+        <orm:field name="selloBuenDisenioArgentino" property="SelloBuenDisenioArgentino" behavior="readwrite" uniqueId="bb281573-9feb-47a5-8219-e14b99bbebb7" type="System.String">
           <orm:column name="selloBuenDisenioArgentino" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="mercadoIndustriasCreativasArgentinas" property="MercadoIndustriasCreativasArgentinas" behavior="readwrite" uniqueId="da7889b1-1ee8-4644-a478-a799cf321e5c" type="System.String">
+        <orm:field name="mercadoIndustriasCreativasArgentinas" property="MercadoIndustriasCreativasArgentinas" behavior="readwrite" uniqueId="2caec9d8-526a-4543-87fa-21caa32c4d6d" type="System.String">
           <orm:column name="mercadoIndustriasCreativasArgentinas" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="aporteCdneu" property="AporteCdneu" behavior="readwrite" uniqueId="e47e9a07-3bac-4a4c-bdfa-870312ce081d" type="System.String">
+        <orm:field name="aporteCdneu" property="AporteCdneu" behavior="readwrite" uniqueId="b751b2d0-257b-4b7a-9959-b0447d6b035e" type="System.String">
           <orm:column name="aporteCdneu" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="otroAporteCdneu" property="OtroAporteCdneu" behavior="readwrite" uniqueId="36dffb3f-28f2-4936-a2d3-2d8488f21756" type="System.String">
+        <orm:field name="otroAporteCdneu" property="OtroAporteCdneu" behavior="readwrite" uniqueId="98074b6c-b5b8-4354-b4c2-e136082456f1" type="System.String">
           <orm:column name="otroAporteCdneu" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="comentariosFinales" property="ComentariosFinales" behavior="readwrite" uniqueId="28d673e7-b2af-4297-aacf-6fb8ef5ef259" type="System.String">
+        <orm:field name="comentariosFinales" property="ComentariosFinales" behavior="readwrite" uniqueId="c4a9ec2f-ec2a-4aa8-9963-8e7034c5b41b" type="System.String">
           <orm:column name="comentariosFinales" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="3553bee5-a04f-4c64-bdd1-7f62e4b9333c" type="System.Int32">
+        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="18178ec1-6d34-4b93-b63f-9ab931f7c0f4" type="System.Int32">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:field>
-        <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="b42da374-8bf0-4e57-b3d9-e875be1cd8f8" type="CapaDominio.Usuario">
-          <orm:reference uniqueId="12445550-0ac7-416e-8907-bd26129a93e0" association-name="VinculacionHasUsuario">
+        <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="8bccd2c8-78fc-4db1-b99b-45275f256605" type="CapaDominio.Usuario">
+          <orm:reference uniqueId="50c5148d-f6be-4920-8426-d8ee3be041e9" association-name="VinculacionHasUsuario">
             <orm:sharedfield name="idUsuario" target-class="CapaDominio.Usuario" target-field="idUsuario" />
             <orm:constraint name="FK_Vinculacion_Usuario" delete-action="dbdefaultrule" destination-table="Usuario" />
           </orm:reference>
         </orm:field>
       </orm:class>
-      <orm:class name="ProduccionDeBiene" uniqueId="12807290-f77d-4b47-baa8-3e2b264d7e82">
+      <orm:class name="Usuario" uniqueId="1ea60113-b36e-4dd4-99e3-0edc195bf648">
+        <orm:table name="Usuario" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="IdUsuario" />
+          </orm:key-generator>
+          <orm:single-field field-name="idUsuario" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="e9df5c51-2c0c-423c-a655-5d27cb64b84d" type="System.Int32">
+          <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="nombreUsuario" property="NombreUsuario" behavior="readwrite" uniqueId="24adc16a-da84-47cc-ab36-b1ae8442df96" type="System.String">
+          <orm:column name="nombreUsuario" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="contrasenia" property="Contrasenia" behavior="readwrite" uniqueId="e0c2d2dd-1327-47fb-94c7-21bf4d86760c" type="System.String">
+          <orm:column name="contrasenia" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="grupo" property="Grupo" behavior="readwrite" uniqueId="ae6a0f07-b63e-41fa-a5f5-32c355e489ef" type="System.Int32">
+          <orm:column name="grupo" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="correoElectronico" property="CorreoElectronico" behavior="readwrite" uniqueId="0be296dc-1005-452d-917d-663737ea1c42" type="System.String">
+          <orm:column name="correoElectronico" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="activo" property="Activo" behavior="readwrite" uniqueId="6d8bd8bf-4018-4820-b702-3c22ca1c7a69" type="System.Boolean">
+          <orm:column name="activo" sql-type="bit" nullable="false" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="nombre" property="Nombre" behavior="readwrite" uniqueId="dd320d4f-1f93-4f49-a8e1-c2238b16b28b" type="System.String">
+          <orm:column name="nombre" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="apellido" property="Apellido" behavior="readwrite" uniqueId="76fc00ad-f731-4164-8457-e2b3003c5eff" type="System.String">
+          <orm:column name="apellido" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="telefono" property="Telefono" behavior="readwrite" uniqueId="29337358-8f17-48e9-92ce-cf038b355671" type="System.String">
+          <orm:column name="telefono" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="edad" property="Edad" behavior="readwrite" uniqueId="71e189e1-1ba5-4373-8c06-1fbff510a664" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="edad" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="domicilio" property="Domicilio" behavior="readwrite" uniqueId="75465b12-9602-43d8-a4ae-23b19da2e1e6" type="System.String">
+          <orm:column name="domicilio" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="vinculacions" property="Vinculacions" behavior="readwrite" uniqueId="201c6e60-6575-44b4-85da-69f79829c5a3" type="CapaDominio.Vinculacion">
+          <orm:collection element-class="CapaDominio.Vinculacion" inverse-field="usuario" order-by="" uniqueId="50c5148d-f6be-4920-8426-d8ee3be041e9" />
+        </orm:field>
+        <orm:field name="produccionDeBienes" property="ProduccionDeBienes" behavior="readwrite" uniqueId="9613e800-00eb-4ac8-b455-852ae7b895a5" type="CapaDominio.ProduccionDeBiene">
+          <orm:collection element-class="CapaDominio.ProduccionDeBiene" inverse-field="usuario" order-by="" uniqueId="756c7a35-ba2f-48f8-a0a6-1ff5154ebdfd" />
+        </orm:field>
+        <orm:field name="materiasPrimas" property="MateriasPrimas" behavior="readwrite" uniqueId="40b97037-7c86-4203-a624-40ec81833209" type="CapaDominio.MateriasPrima">
+          <orm:collection element-class="CapaDominio.MateriasPrima" inverse-field="usuario" order-by="" uniqueId="2645462b-f024-428b-94e0-41a66eca75d9" />
+        </orm:field>
+        <orm:field name="maquinariasYProcesos" property="MaquinariasYProcesos" behavior="readwrite" uniqueId="94e848d9-d019-4863-869c-cfd8f8a8bf6a" type="CapaDominio.MaquinariasYProceso">
+          <orm:collection element-class="CapaDominio.MaquinariasYProceso" inverse-field="usuario" order-by="" uniqueId="6eb45ab0-9ef1-475e-bf4d-ff61783d8196" />
+        </orm:field>
+        <orm:field name="innovacions" property="Innovacions" behavior="readwrite" uniqueId="6d37c218-d8eb-4275-8a17-62457a86d9af" type="CapaDominio.Innovacion">
+          <orm:collection element-class="CapaDominio.Innovacion" inverse-field="usuario" order-by="" uniqueId="2cb3b09c-15f2-4b0d-aac4-d6a1051cd933" />
+        </orm:field>
+        <orm:field name="identidadDisenios" property="IdentidadDisenios" behavior="readwrite" uniqueId="cbb10edf-383a-4591-9372-378a39f0adb5" type="CapaDominio.IdentidadDisenio">
+          <orm:collection element-class="CapaDominio.IdentidadDisenio" inverse-field="usuario" order-by="" uniqueId="b2abda11-b246-4984-993e-d93cddda8a2b" />
+        </orm:field>
+        <orm:field name="formacionAcademicas" property="FormacionAcademicas" behavior="readwrite" uniqueId="91aa507c-830c-4484-8671-a844dd2b51b8" type="CapaDominio.FormacionAcademica">
+          <orm:collection element-class="CapaDominio.FormacionAcademica" inverse-field="usuario" order-by="" uniqueId="790c0de7-8038-4531-a1b8-1b5631a83fac" />
+        </orm:field>
+        <orm:field name="actividadProfesionals" property="ActividadProfesionals" behavior="readwrite" uniqueId="24d68152-7e49-46c2-8dda-3bbaa94abe44" type="CapaDominio.ActividadProfesional">
+          <orm:collection element-class="CapaDominio.ActividadProfesional" inverse-field="usuario" order-by="" uniqueId="c6ce416e-849c-4b60-ac18-0ca4334cd7dd" />
+        </orm:field>
+        <orm:field name="actividadIndependientes" property="ActividadIndependientes" behavior="readwrite" uniqueId="d5b0852d-619f-4828-bb8d-b4ff78c7dce0" type="CapaDominio.ActividadIndependiente">
+          <orm:collection element-class="CapaDominio.ActividadIndependiente" inverse-field="usuario" order-by="" uniqueId="495d58b3-9a7d-4f74-b1c4-ddfe66a40ce2" />
+        </orm:field>
+      </orm:class>
+      <orm:class name="ProduccionDeBiene" uniqueId="bd71c293-cef7-4146-a696-3d47eb8c7a57">
         <orm:table name="ProduccionDeBienes" />
         <orm:identity>
           <orm:key-generator name="autoinc">
@@ -133,29 +133,29 @@
           <orm:single-field field-name="idProduccionDeBienes" />
         </orm:identity>
         <orm:concurrency strategy="changed" />
-        <orm:field name="idProduccionDeBienes" property="IdProduccionDeBienes" behavior="readwrite" uniqueId="5a82f305-a425-4f28-aa59-9884ebf99c45" type="System.Int32">
+        <orm:field name="idProduccionDeBienes" property="IdProduccionDeBienes" behavior="readwrite" uniqueId="03155f5a-536f-4303-b4a9-dd9f3e18605f" type="System.Int32">
           <orm:column name="idProduccionDeBienes" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         </orm:field>
-        <orm:field name="cantidadProductosAnio" property="CantidadProductosAnio" behavior="readwrite" uniqueId="77f01c28-18a2-4c82-8a1e-8da6785a8014" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+        <orm:field name="cantidadProductosAnio" property="CantidadProductosAnio" behavior="readwrite" uniqueId="8512b96e-9b77-4358-beb2-9f2692be1a69" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
           <orm:column name="cantidadProductosAnio" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
         </orm:field>
-        <orm:field name="dondeRealizaProduccion" property="DondeRealizaProduccion" behavior="readwrite" uniqueId="f508849c-752c-4b1c-97f8-3977d85cf153" type="System.String">
+        <orm:field name="dondeRealizaProduccion" property="DondeRealizaProduccion" behavior="readwrite" uniqueId="a83fba53-7ba4-4f4b-b779-977a97774449" type="System.String">
           <orm:column name="dondeRealizaProduccion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="porcentajeNeuquen" property="PorcentajeNeuquen" behavior="readwrite" uniqueId="cafd1f45-feb1-4c4b-b1b2-bb59c633e34b" type="System.String">
+        <orm:field name="porcentajeNeuquen" property="PorcentajeNeuquen" behavior="readwrite" uniqueId="4ef34f85-93de-4ca7-a0a9-d9ae3edaec29" type="System.String">
           <orm:column name="porcentajeNeuquen" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="a07eca61-bb86-4041-9d38-7d217684656c" type="System.Int32">
+        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="d344841a-d522-4920-bb4a-8f70929622c6" type="System.Int32">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:field>
-        <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="998578e1-bd9b-407f-bae6-a722d8787dec" type="CapaDominio.Usuario">
-          <orm:reference uniqueId="16141937-d68c-4837-8cc5-65662ccb277e" association-name="ProduccionDeBieneHasUsuario">
+        <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="27d31e58-ef0c-45ce-b57a-7cd591840b12" type="CapaDominio.Usuario">
+          <orm:reference uniqueId="756c7a35-ba2f-48f8-a0a6-1ff5154ebdfd" association-name="ProduccionDeBieneHasUsuario">
             <orm:sharedfield name="idUsuario" target-class="CapaDominio.Usuario" target-field="idUsuario" />
             <orm:constraint name="FK_ProduccionDeBienes_Usuario" delete-action="dbdefaultrule" destination-table="Usuario" />
           </orm:reference>
         </orm:field>
       </orm:class>
-      <orm:class name="MateriasPrima" uniqueId="44034850-226d-47f0-a956-38214686c0d3">
+      <orm:class name="MateriasPrima" uniqueId="474e5042-c288-45d1-8d40-5fe19e1aa9f9">
         <orm:table name="MateriasPrimas" />
         <orm:identity>
           <orm:key-generator name="autoinc">
@@ -164,26 +164,26 @@
           <orm:single-field field-name="idMateriasPrimas" />
         </orm:identity>
         <orm:concurrency strategy="changed" />
-        <orm:field name="idMateriasPrimas" property="IdMateriasPrimas" behavior="readwrite" uniqueId="3d182ea7-021c-46b3-aba9-4e76e8ce8724" type="System.Int32">
+        <orm:field name="idMateriasPrimas" property="IdMateriasPrimas" behavior="readwrite" uniqueId="9c532bbd-9663-4441-9536-793fdef6f472" type="System.Int32">
           <orm:column name="idMateriasPrimas" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         </orm:field>
-        <orm:field name="porcentajeNeuquen" property="PorcentajeNeuquen" behavior="readwrite" uniqueId="cff7abcd-cd77-4341-9d3d-dbe4ec83b5fb" type="System.String">
+        <orm:field name="porcentajeNeuquen" property="PorcentajeNeuquen" behavior="readwrite" uniqueId="df0ab402-9aaa-41a9-93bd-d080d2bf1af0" type="System.String">
           <orm:column name="porcentajeNeuquen" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="dificultades" property="Dificultades" behavior="readwrite" uniqueId="fedfd2b7-b3c5-46de-b4e7-c320b5e3be68" type="System.String">
+        <orm:field name="dificultades" property="Dificultades" behavior="readwrite" uniqueId="3acec987-9897-4808-960d-d0731b57c952" type="System.String">
           <orm:column name="dificultades" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="ff200bf9-4ba1-4de4-a2db-d1aa1bd124fc" type="System.Int32">
+        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="985a3686-c09a-4fbc-bca2-e99bde1fa995" type="System.Int32">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:field>
-        <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="a6815b5d-6ff8-473e-b963-4504cf9490f7" type="CapaDominio.Usuario">
-          <orm:reference uniqueId="df0b7cbc-ecab-4cea-84e7-052dccf13379" association-name="MateriasPrimaHasUsuario">
+        <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="729adc6e-43b3-428f-99b4-483d5fb34aef" type="CapaDominio.Usuario">
+          <orm:reference uniqueId="2645462b-f024-428b-94e0-41a66eca75d9" association-name="MateriasPrimaHasUsuario">
             <orm:sharedfield name="idUsuario" target-class="CapaDominio.Usuario" target-field="idUsuario" />
             <orm:constraint name="FK_MateriasPrimas_Usuario" delete-action="dbdefaultrule" destination-table="Usuario" />
           </orm:reference>
         </orm:field>
       </orm:class>
-      <orm:class name="MaquinariasYProceso" uniqueId="4d0a4158-ca11-422a-a709-c07a78db2d2e">
+      <orm:class name="MaquinariasYProceso" uniqueId="51a25f63-2564-442c-bce5-04452b8bd243">
         <orm:table name="MaquinariasYProcesos" />
         <orm:identity>
           <orm:key-generator name="autoinc">
@@ -192,35 +192,35 @@
           <orm:single-field field-name="idMaquinariasYProcesos" />
         </orm:identity>
         <orm:concurrency strategy="changed" />
-        <orm:field name="idMaquinariasYProcesos" property="IdMaquinariasYProcesos" behavior="readwrite" uniqueId="b2a5a7a5-250a-4d81-a01c-b4b867e67d22" type="System.Int32">
+        <orm:field name="idMaquinariasYProcesos" property="IdMaquinariasYProcesos" behavior="readwrite" uniqueId="2fcbef50-8677-4160-8bee-73b1eef0f38e" type="System.Int32">
           <orm:column name="idMaquinariasYProcesos" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         </orm:field>
-        <orm:field name="disponeDeEquipos" property="DisponeDeEquipos" behavior="readwrite" uniqueId="7fb66050-07b1-471d-a924-379d2886a2f7" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+        <orm:field name="disponeDeEquipos" property="DisponeDeEquipos" behavior="readwrite" uniqueId="87bdc32b-0940-4564-8d7d-1c9cede20f31" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
           <orm:column name="disponeDeEquipos" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
         </orm:field>
-        <orm:field name="equipos" property="Equipos" behavior="readwrite" uniqueId="ad71e013-da50-4e4c-9af0-6a3a924ad1c3" type="System.String">
+        <orm:field name="equipos" property="Equipos" behavior="readwrite" uniqueId="cd4343b2-40b6-43ac-a97d-88963bd3292f" type="System.String">
           <orm:column name="equipos" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="otrosEquipos" property="OtrosEquipos" behavior="readwrite" uniqueId="f4148a71-3a4c-4ec0-9f34-a5caf4c24ff6" type="System.String">
+        <orm:field name="otrosEquipos" property="OtrosEquipos" behavior="readwrite" uniqueId="6d54af80-6886-4d4e-8837-5f2af7ea2f04" type="System.String">
           <orm:column name="otrosEquipos" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="falencia" property="Falencia" behavior="readwrite" uniqueId="3ad07f4b-9e31-4021-9cbd-49c9fa3853f8" type="System.String">
+        <orm:field name="falencia" property="Falencia" behavior="readwrite" uniqueId="086c362d-2f6d-4100-85f0-6a803046ff6a" type="System.String">
           <orm:column name="falencia" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="otraFalencia" property="OtraFalencia" behavior="readwrite" uniqueId="197faa26-7b30-4319-b507-1b26e739427e" type="System.String">
+        <orm:field name="otraFalencia" property="OtraFalencia" behavior="readwrite" uniqueId="e059b0d6-f875-4a53-9e36-599222a3583f" type="System.String">
           <orm:column name="otraFalencia" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="5ec9cd31-79dc-4db8-913d-99f2354691a5" type="System.Int32">
+        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="70c5c518-aec7-4459-b7a0-d62e5194eaac" type="System.Int32">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:field>
-        <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="4c24b9d5-056e-4f07-9e7d-4fc4433e2543" type="CapaDominio.Usuario">
-          <orm:reference uniqueId="29ac737f-9f51-4e51-9732-453cc3b054ee" association-name="MaquinariasYProcesoHasUsuario">
+        <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="28f747f7-fb43-48b3-9c50-cb2940af0ed9" type="CapaDominio.Usuario">
+          <orm:reference uniqueId="6eb45ab0-9ef1-475e-bf4d-ff61783d8196" association-name="MaquinariasYProcesoHasUsuario">
             <orm:sharedfield name="idUsuario" target-class="CapaDominio.Usuario" target-field="idUsuario" />
             <orm:constraint name="FK_MaquinariasYProcesos_Usuario" delete-action="dbdefaultrule" destination-table="Usuario" />
           </orm:reference>
         </orm:field>
       </orm:class>
-      <orm:class name="Innovacion" uniqueId="c1e071b3-cbcd-4f62-905b-43d5da317610">
+      <orm:class name="Innovacion" uniqueId="1e1b4c50-38f9-45a2-916f-ab7af713e4a2">
         <orm:table name="Innovacion" />
         <orm:identity>
           <orm:key-generator name="autoinc">
@@ -229,38 +229,51 @@
           <orm:single-field field-name="idInnovacion" />
         </orm:identity>
         <orm:concurrency strategy="changed" />
-        <orm:field name="idInnovacion" property="IdInnovacion" behavior="readwrite" uniqueId="ddceb26b-d0bc-4f5d-bd6e-9769199e71b8" type="System.Int32">
+        <orm:field name="idInnovacion" property="IdInnovacion" behavior="readwrite" uniqueId="c052e151-a695-448e-b191-e25ee473c0b4" type="System.Int32">
           <orm:column name="idInnovacion" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         </orm:field>
-        <orm:field name="incorporaInnovacion" property="IncorporaInnovacion" behavior="readwrite" uniqueId="b691f9e6-55a8-4571-82c1-afeee3e97977" type="System.String">
+        <orm:field name="incorporaInnovacion" property="IncorporaInnovacion" behavior="readwrite" uniqueId="e48dbdaf-cb7e-4887-b938-dfd8e9368d4e" type="System.String">
           <orm:column name="incorporaInnovacion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="otraIncorporaInnovacion" property="OtraIncorporaInnovacion" behavior="readwrite" uniqueId="895c0cf5-4145-4f1c-8b9e-3d88b385c337" type="System.String">
+        <orm:field name="otraIncorporaInnovacion" property="OtraIncorporaInnovacion" behavior="readwrite" uniqueId="a497dfb5-f197-4f97-b717-f1f15ff3346a" type="System.String">
           <orm:column name="otraIncorporaInnovacion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="dificultades" property="Dificultades" behavior="readwrite" uniqueId="273c1692-40c7-465a-8ba3-3cf46ecc0e32" type="System.String">
+        <orm:field name="dificultades" property="Dificultades" behavior="readwrite" uniqueId="77823e04-4f65-401c-9aea-d4f2def1a285" type="System.String">
           <orm:column name="dificultades" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="otraDificultad" property="OtraDificultad" behavior="readwrite" uniqueId="0648d2ee-0f93-4449-8082-80bacd686939" type="System.String">
+        <orm:field name="otraDificultad" property="OtraDificultad" behavior="readwrite" uniqueId="585b2d67-8396-49fd-a4fb-b5bdcb202ff0" type="System.String">
           <orm:column name="otraDificultad" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="comoTomaronInnovacion" property="ComoTomaronInnovacion" behavior="readwrite" uniqueId="5bd8fdff-527e-4fc5-834c-cd2587a51bc4" type="System.String">
+        <orm:field name="comoTomaronInnovacion" property="ComoTomaronInnovacion" behavior="readwrite" uniqueId="b7ba64fc-11a3-44f3-b088-073f797c609d" type="System.String">
           <orm:column name="comoTomaronInnovacion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="contarExperiencia" property="ContarExperiencia" behavior="readwrite" uniqueId="d221b6c4-0a35-4b5c-868f-cd6aba08120b" type="System.String">
+        <orm:field name="contarExperiencia" property="ContarExperiencia" behavior="readwrite" uniqueId="9f2f456c-a164-4f45-895d-9db584beaeb7" type="System.String">
           <orm:column name="contarExperiencia" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="7ce8e184-8a6e-4cf9-a180-51bf165a0ab8" type="System.Int32">
+        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="bddc4e2b-e61e-4ba9-b111-69bd9169f959" type="System.Int32">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:field>
-        <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="bf3b5e49-5449-4753-96ec-1e135f3d2f54" type="CapaDominio.Usuario">
-          <orm:reference uniqueId="aa144cf9-b1cf-4e88-99f1-43e9d8b302b8" association-name="InnovacionHasUsuario">
+        <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="75563d90-2561-4e1c-b947-2f33f92468b9" type="CapaDominio.Usuario">
+          <orm:reference uniqueId="2cb3b09c-15f2-4b0d-aac4-d6a1051cd933" association-name="InnovacionHasUsuario">
             <orm:sharedfield name="idUsuario" target-class="CapaDominio.Usuario" target-field="idUsuario" />
             <orm:constraint name="FK_Innovacion_Usuario" delete-action="dbdefaultrule" destination-table="Usuario" />
           </orm:reference>
         </orm:field>
       </orm:class>
-      <orm:class name="IdentidadDisenio" uniqueId="2df865c2-121d-471e-9258-ba855632baf7">
+      <orm:class name="Imagen" uniqueId="830a27b6-eff3-4b5f-a5af-58b66fbf3ab2">
+        <orm:table name="Imagen" />
+        <orm:identity>
+          <orm:single-field field-name="id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="id" property="Id" behavior="readwrite" uniqueId="52ce09da-3163-47ad-8f01-81a088a7c3cb" type="System.String">
+          <orm:column name="id" sql-type="char" nullable="false" length="3" scale="0" primary-key="true" ado-type="StringFixedLength" />
+        </orm:field>
+        <orm:field name="img" property="Img" behavior="readwrite" uniqueId="3b14df87-1784-4d32-be01-ba347080d96f" type="System.Byte[]">
+          <orm:column name="img" sql-type="varbinary(max)" nullable="false" length="0" scale="0" ado-type="LongVarBinary" />
+        </orm:field>
+      </orm:class>
+      <orm:class name="IdentidadDisenio" uniqueId="563c3016-ce17-4794-97a1-df5ef1a09320">
         <orm:table name="IdentidadDisenio" />
         <orm:identity>
           <orm:key-generator name="autoinc">
@@ -269,32 +282,32 @@
           <orm:single-field field-name="idIdentidadDisenio" />
         </orm:identity>
         <orm:concurrency strategy="changed" />
-        <orm:field name="idIdentidadDisenio" property="IdIdentidadDisenio" behavior="readwrite" uniqueId="03500ba8-a6c4-4d9b-9833-e815de56aff6" type="System.Int32">
+        <orm:field name="idIdentidadDisenio" property="IdIdentidadDisenio" behavior="readwrite" uniqueId="b5e501fe-f08c-4793-a6c4-1dc99ec451d3" type="System.Int32">
           <orm:column name="idIdentidadDisenio" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         </orm:field>
-        <orm:field name="atributos" property="Atributos" behavior="readwrite" uniqueId="15178feb-caba-4ec7-87f5-f2502d9d3161" type="System.String">
+        <orm:field name="atributos" property="Atributos" behavior="readwrite" uniqueId="a254f8d6-970c-4358-814f-0649bf89257b" type="System.String">
           <orm:column name="atributos" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="rasgos" property="Rasgos" behavior="readwrite" uniqueId="81979b93-c375-428e-a6b0-aae0872975a4" type="System.String">
+        <orm:field name="rasgos" property="Rasgos" behavior="readwrite" uniqueId="83118fa8-72e9-4b2c-9ea9-4ba28b71301c" type="System.String">
           <orm:column name="rasgos" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="aspectoRelevante" property="AspectoRelevante" behavior="readwrite" uniqueId="2389f537-9596-49a0-b7b0-e3630e7c8ba9" type="System.String">
+        <orm:field name="aspectoRelevante" property="AspectoRelevante" behavior="readwrite" uniqueId="a069c89e-8cc0-4c5c-8af6-84e430cfcb6a" type="System.String">
           <orm:column name="aspectoRelevante" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="temasParaCapacitarse" property="TemasParaCapacitarse" behavior="readwrite" uniqueId="c83f78da-f805-4daa-aea9-f54909bccbab" type="System.String">
+        <orm:field name="temasParaCapacitarse" property="TemasParaCapacitarse" behavior="readwrite" uniqueId="8de5d421-6d86-4f5d-935b-4bf72feafdae" type="System.String">
           <orm:column name="temasParaCapacitarse" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="e54e7425-ab48-45cd-a437-2d0683dc0b4a" type="System.Int32">
+        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="f1f9ac8d-90b9-4383-ae6d-9ca1e34d2ed9" type="System.Int32">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:field>
-        <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="25cc0030-135c-473c-9c4e-93991ce7a709" type="CapaDominio.Usuario">
-          <orm:reference uniqueId="887b1ba1-9a7e-4931-ae02-5cfc3d4cbade" association-name="IdentidadDisenioHasUsuario">
+        <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="10ab588e-8ee4-434c-96c1-8bcda8a32fe2" type="CapaDominio.Usuario">
+          <orm:reference uniqueId="b2abda11-b246-4984-993e-d93cddda8a2b" association-name="IdentidadDisenioHasUsuario">
             <orm:sharedfield name="idUsuario" target-class="CapaDominio.Usuario" target-field="idUsuario" />
             <orm:constraint name="FK_IdentidadDisenio_Usuario" delete-action="dbdefaultrule" destination-table="Usuario" />
           </orm:reference>
         </orm:field>
       </orm:class>
-      <orm:class name="FormacionAcademica" uniqueId="b576d834-4f79-48df-b2fc-7c80ee7e7d40">
+      <orm:class name="FormacionAcademica" uniqueId="f5811604-8d09-49ac-b8ee-e70f69b5728f">
         <orm:table name="FormacionAcademica" />
         <orm:identity>
           <orm:key-generator name="autoinc">
@@ -303,53 +316,53 @@
           <orm:single-field field-name="idFormacionAcademica" />
         </orm:identity>
         <orm:concurrency strategy="changed" />
-        <orm:field name="idFormacionAcademica" property="IdFormacionAcademica" behavior="readwrite" uniqueId="377c06b7-9205-4b1a-9d0c-6c05665febb2" type="System.Int32">
+        <orm:field name="idFormacionAcademica" property="IdFormacionAcademica" behavior="readwrite" uniqueId="df05ead9-5a3f-47a1-a1c5-c3d378ab3719" type="System.Int32">
           <orm:column name="idFormacionAcademica" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         </orm:field>
-        <orm:field name="estudiosOficiales" property="EstudiosOficiales" behavior="readwrite" uniqueId="f14a98b3-6022-4773-8117-748badc8854e" type="System.String">
+        <orm:field name="estudiosOficiales" property="EstudiosOficiales" behavior="readwrite" uniqueId="501a1c70-839e-45b2-aa5a-4f6bb3f8a01d" type="System.String">
           <orm:column name="estudiosOficiales" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="tituloObtenido" property="TituloObtenido" behavior="readwrite" uniqueId="f7211708-92d9-4fce-a16b-d85c689de21e" type="System.String">
-          <orm:column name="tituloObtenido" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="institucionEmisoraTitulo" property="InstitucionEmisoraTitulo" behavior="readwrite" uniqueId="492d17ad-5b5f-451d-93e2-6c58032f9048" type="System.String">
-          <orm:column name="institucionEmisoraTitulo" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="otrosEstudios" property="OtrosEstudios" behavior="readwrite" uniqueId="846bc279-c8c1-4d79-ae78-d73cd163051e" type="System.String">
-          <orm:column name="otrosEstudios" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="esEstudiante" property="EsEstudiante" behavior="readwrite" uniqueId="410280e9-1a8c-42d1-8fe7-2a4034c0f789" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
-          <orm:column name="esEstudiante" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
-        </orm:field>
-        <orm:field name="carreraNombre" property="CarreraNombre" behavior="readwrite" uniqueId="4a9a39fe-9652-4ecb-a50b-4d5f77742579" type="System.String">
-          <orm:column name="carreraNombre" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="carreraAnioIngreso" property="CarreraAnioIngreso" behavior="readwrite" uniqueId="5a692211-977e-4482-94d1-5c41bd3228ea" type="System.String">
-          <orm:column name="carreraAnioIngreso" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="carreraAnioCursada" property="CarreraAnioCursada" behavior="readwrite" uniqueId="a40def04-9262-4917-8640-579cbbf46763" type="System.String">
-          <orm:column name="carreraAnioCursada" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="carreraDuracion" property="CarreraDuracion" behavior="readwrite" uniqueId="af0fa623-b9d4-4224-85bf-1cec9b7afcf7" type="System.String">
-          <orm:column name="carreraDuracion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="carreraInstitucion" property="CarreraInstitucion" behavior="readwrite" uniqueId="00c76e5a-2bf6-4773-be54-263916004be5" type="System.String">
-          <orm:column name="carreraInstitucion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="b10a674f-3856-471d-a5ba-72a8fe24990b" type="System.Int32">
-          <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
-        </orm:field>
-        <orm:field name="estudiosOficialesOtro" property="EstudiosOficialesOtro" behavior="readwrite" uniqueId="e8522e4a-65ca-498c-a01a-bd4b76f10c82" type="System.String">
+        <orm:field name="estudiosOficialesOtro" property="EstudiosOficialesOtro" behavior="readwrite" uniqueId="49b40688-1a6c-489f-b8b3-668e738769c8" type="System.String">
           <orm:column name="estudiosOficialesOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="6e3fdfea-cafc-4ac8-87ec-aa464a8991c3" type="CapaDominio.Usuario">
-          <orm:reference uniqueId="6c7e802a-6bf6-4410-b898-8f2ec3b4c350" association-name="FormacionAcademicaHasUsuario">
+        <orm:field name="tituloObtenido" property="TituloObtenido" behavior="readwrite" uniqueId="b0deee33-c4de-422e-95c7-cbb75e671ba9" type="System.String">
+          <orm:column name="tituloObtenido" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="institucionEmisoraTitulo" property="InstitucionEmisoraTitulo" behavior="readwrite" uniqueId="65af74ad-8969-4e94-90ba-2f289444eed6" type="System.String">
+          <orm:column name="institucionEmisoraTitulo" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="otrosEstudios" property="OtrosEstudios" behavior="readwrite" uniqueId="a6ddd341-1971-4aa7-9a11-822ae930e820" type="System.String">
+          <orm:column name="otrosEstudios" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="esEstudiante" property="EsEstudiante" behavior="readwrite" uniqueId="e77a8f43-bd4a-4561-9546-4b0e2cd7d6bf" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="esEstudiante" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="carreraNombre" property="CarreraNombre" behavior="readwrite" uniqueId="aa5e0551-3b8f-4c9a-83bd-9032d7822019" type="System.String">
+          <orm:column name="carreraNombre" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="carreraAnioIngreso" property="CarreraAnioIngreso" behavior="readwrite" uniqueId="24f91177-5ff9-4aee-a7a9-54e75b21883e" type="System.String">
+          <orm:column name="carreraAnioIngreso" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="carreraAnioCursada" property="CarreraAnioCursada" behavior="readwrite" uniqueId="fcac4e40-b587-45dc-a24b-2e71511b6b46" type="System.String">
+          <orm:column name="carreraAnioCursada" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="carreraDuracion" property="CarreraDuracion" behavior="readwrite" uniqueId="86a87afc-6f23-4eed-bb6e-d9ada918641d" type="System.String">
+          <orm:column name="carreraDuracion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="carreraInstitucion" property="CarreraInstitucion" behavior="readwrite" uniqueId="bafb0305-1b25-46f3-9731-8d8a0517aabd" type="System.String">
+          <orm:column name="carreraInstitucion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="0eed1582-03d4-4a99-b6af-0a721b7c6044" type="System.Int32">
+          <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="1280fa91-3701-414d-a591-479c3b6b74ff" type="CapaDominio.Usuario">
+          <orm:reference uniqueId="790c0de7-8038-4531-a1b8-1b5631a83fac" association-name="FormacionAcademicaHasUsuario">
             <orm:sharedfield name="idUsuario" target-class="CapaDominio.Usuario" target-field="idUsuario" />
             <orm:constraint name="FK_FormacionAcademica_Usuario" delete-action="dbdefaultrule" destination-table="Usuario" />
           </orm:reference>
         </orm:field>
       </orm:class>
-      <orm:class name="ActividadProfesional" uniqueId="2e8363eb-8863-4e3c-b454-7fb1078e35b9">
+      <orm:class name="ActividadProfesional" uniqueId="a8935c77-959e-43b3-bfb7-643f47bdc0dd">
         <orm:table name="ActividadProfesional" />
         <orm:identity>
           <orm:key-generator name="autoinc">
@@ -358,44 +371,44 @@
           <orm:single-field field-name="idActividadProfesional" />
         </orm:identity>
         <orm:concurrency strategy="changed" />
-        <orm:field name="idActividadProfesional" property="IdActividadProfesional" behavior="readwrite" uniqueId="63a89f22-4ad7-4503-8026-ec4738381ffc" type="System.Int32">
+        <orm:field name="idActividadProfesional" property="IdActividadProfesional" behavior="readwrite" uniqueId="3d4d6024-5984-43bc-af41-be0625ce446b" type="System.Int32">
           <orm:column name="idActividadProfesional" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         </orm:field>
-        <orm:field name="disciplinaProyectual" property="DisciplinaProyectual" behavior="readwrite" uniqueId="3944ec61-fe58-4901-bd7c-ebd6c12021c8" type="System.String">
+        <orm:field name="disciplinaProyectual" property="DisciplinaProyectual" behavior="readwrite" uniqueId="95fde095-80d2-4123-b203-7979b934c824" type="System.String">
           <orm:column name="disciplinaProyectual" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="subSector" property="SubSector" behavior="readwrite" uniqueId="b9358fc5-9e08-406a-8993-b501264b9d0a" type="System.String">
-          <orm:column name="subSector" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="tipoRelacionLaboral" property="TipoRelacionLaboral" behavior="readwrite" uniqueId="1cb32d50-4e75-490b-bd82-badde61c1859" type="System.String">
-          <orm:column name="tipoRelacionLaboral" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="nombreEmpresa" property="NombreEmpresa" behavior="readwrite" uniqueId="e26696f8-210b-43c3-a67d-f388c0815d28" type="System.String">
-          <orm:column name="nombreEmpresa" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="linkEmpresa" property="LinkEmpresa" behavior="readwrite" uniqueId="6b044059-64d8-4801-89c9-740ff49266f1" type="System.String">
-          <orm:column name="linkEmpresa" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="descripcion" property="Descripcion" behavior="readwrite" uniqueId="0e59f6f6-da29-4a5a-ab76-be8b49ceb81d" type="System.String">
-          <orm:column name="descripcion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="2cae321a-95c0-4509-be1c-007443dd89eb" type="System.Int32">
-          <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
-        </orm:field>
-        <orm:field name="tipoRelacionLaboralOtro" property="TipoRelacionLaboralOtro" behavior="readwrite" uniqueId="edd01723-463e-465b-b125-d1948056bd26" type="System.String">
-          <orm:column name="tipoRelacionLaboralOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="disciplinaProyectualOtra" property="DisciplinaProyectualOtra" behavior="readwrite" uniqueId="f3ac1919-0ea5-47cb-ac37-b80ac7bf75e7" type="System.String">
+        <orm:field name="disciplinaProyectualOtra" property="DisciplinaProyectualOtra" behavior="readwrite" uniqueId="65a4991f-d923-4c8d-a641-ee5e305ab6a7" type="System.String">
           <orm:column name="disciplinaProyectualOtra" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="df3c4e2c-c956-4ba5-9e23-d97a94fcdb22" type="CapaDominio.Usuario">
-          <orm:reference uniqueId="e6a025fd-2b46-4c76-be12-e357d76ae9a0" association-name="ActividadProfesionalHasUsuario">
+        <orm:field name="subSector" property="SubSector" behavior="readwrite" uniqueId="ae1dc099-c281-46ad-a48f-782b84485eb9" type="System.String">
+          <orm:column name="subSector" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="tipoRelacionLaboral" property="TipoRelacionLaboral" behavior="readwrite" uniqueId="889749a9-5384-44c4-afba-3f70b0bc4f92" type="System.String">
+          <orm:column name="tipoRelacionLaboral" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="tipoRelacionLaboralOtro" property="TipoRelacionLaboralOtro" behavior="readwrite" uniqueId="e6f6e6ce-4ea2-4eac-8e0c-88795f579cb2" type="System.String">
+          <orm:column name="tipoRelacionLaboralOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="nombreEmpresa" property="NombreEmpresa" behavior="readwrite" uniqueId="d2f63c88-ca9f-4173-8f2f-c648c992a377" type="System.String">
+          <orm:column name="nombreEmpresa" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="linkEmpresa" property="LinkEmpresa" behavior="readwrite" uniqueId="9b665e0f-1b37-475d-abd0-06b320d73908" type="System.String">
+          <orm:column name="linkEmpresa" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="descripcion" property="Descripcion" behavior="readwrite" uniqueId="f96f010c-22f8-41c7-a007-9e5baafa7c51" type="System.String">
+          <orm:column name="descripcion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="c46f1058-af7e-42d0-baf0-a1a6271431d2" type="System.Int32">
+          <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="132550c0-8241-4793-aa31-449216f39028" type="CapaDominio.Usuario">
+          <orm:reference uniqueId="c6ce416e-849c-4b60-ac18-0ca4334cd7dd" association-name="ActividadProfesionalHasUsuario">
             <orm:sharedfield name="idUsuario" target-class="CapaDominio.Usuario" target-field="idUsuario" />
             <orm:constraint name="FK_ActividadProfesional_Usuario" delete-action="dbdefaultrule" destination-table="Usuario" />
           </orm:reference>
         </orm:field>
       </orm:class>
-      <orm:class name="ActividadIndependiente" uniqueId="30dc482e-db90-44b3-9da1-4f01241cec49">
+      <orm:class name="ActividadIndependiente" uniqueId="74ea2a9d-896c-443a-bf00-dabb21918a12">
         <orm:table name="ActividadIndependiente" />
         <orm:identity>
           <orm:key-generator name="autoinc">
@@ -404,53 +417,56 @@
           <orm:single-field field-name="idActividadIndependiente" />
         </orm:identity>
         <orm:concurrency strategy="changed" />
-        <orm:field name="idActividadIndependiente" property="IdActividadIndependiente" behavior="readwrite" uniqueId="e7843ae8-e0ef-4778-8a0d-0164307a344b" type="System.Int32">
+        <orm:field name="idActividadIndependiente" property="IdActividadIndependiente" behavior="readwrite" uniqueId="d927c270-64da-463b-81e3-9b09b2ece8f3" type="System.Int32">
           <orm:column name="idActividadIndependiente" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         </orm:field>
-        <orm:field name="sustentoDeVida" property="SustentoDeVida" behavior="readwrite" uniqueId="1a5fb54b-f9d3-44a6-9e88-88d6b0978446" type="System.String">
+        <orm:field name="sustentoDeVida" property="SustentoDeVida" behavior="readwrite" uniqueId="00ef336a-c058-45b0-a46a-1f0bc34b0060" type="System.String">
           <orm:column name="sustentoDeVida" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="tiempoActividadFuncionamiento" property="TiempoActividadFuncionamiento" behavior="readwrite" uniqueId="3f1244a3-b698-4ccd-816c-02716067f6dc" type="System.String">
+        <orm:field name="sustentoDeVidaOtro" property="SustentoDeVidaOtro" behavior="readwrite" uniqueId="f98bbf7c-8c65-4192-89c0-dc688fb831be" type="System.String">
+          <orm:column name="sustentoDeVidaOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="tiempoActividadFuncionamiento" property="TiempoActividadFuncionamiento" behavior="readwrite" uniqueId="c81b9b4c-6d25-42d1-84b1-e43b6fee8e90" type="System.String">
           <orm:column name="tiempoActividadFuncionamiento" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="situacionTributaria" property="SituacionTributaria" behavior="readwrite" uniqueId="56034c5e-a477-4296-9d48-69711b812742" type="System.String">
+        <orm:field name="situacionTributaria" property="SituacionTributaria" behavior="readwrite" uniqueId="b984d84a-9bb7-418b-96a5-e2b40dd7a2c4" type="System.String">
           <orm:column name="situacionTributaria" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="estaRegistrado" property="EstaRegistrado" behavior="readwrite" uniqueId="e2b66f2f-5be2-4d64-8e86-0899adb8da83" type="System.String">
+        <orm:field name="estaRegistrado" property="EstaRegistrado" behavior="readwrite" uniqueId="bee9e578-b85e-4489-92fb-51ee8e30dca7" type="System.String">
           <orm:column name="estaRegistrado" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="tieneEmpleadosACargo" property="TieneEmpleadosACargo" behavior="readwrite" uniqueId="270210d0-1e94-41a6-b274-c46b8cca0ba3" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+        <orm:field name="tieneEmpleadosACargo" property="TieneEmpleadosACargo" behavior="readwrite" uniqueId="295f9629-ce62-4234-b91e-26ba1aec8c4c" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
           <orm:column name="tieneEmpleadosACargo" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
         </orm:field>
-        <orm:field name="cantidadEmpleadosACargo" property="CantidadEmpleadosACargo" behavior="readwrite" uniqueId="56feb33c-30c5-4f00-9c18-34e71831fac8" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+        <orm:field name="cantidadEmpleadosACargo" property="CantidadEmpleadosACargo" behavior="readwrite" uniqueId="80c63afa-78a3-41fc-8ebe-ce91d27d8731" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
           <orm:column name="cantidadEmpleadosACargo" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
         </orm:field>
-        <orm:field name="comoComercializa" property="ComoComercializa" behavior="readwrite" uniqueId="983f2e23-4bd7-4b83-b53a-c2a598b0be9a" type="System.String">
+        <orm:field name="comoComercializa" property="ComoComercializa" behavior="readwrite" uniqueId="520607ca-746d-4a19-a267-eb121df97963" type="System.String">
           <orm:column name="comoComercializa" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="nombreEspacio" property="NombreEspacio" behavior="readwrite" uniqueId="cf937ad0-f1f4-4a1f-bde3-0ccf243eaf85" type="System.String">
+        <orm:field name="nombreEspacio" property="NombreEspacio" behavior="readwrite" uniqueId="40462ad3-5600-41f3-ad09-326ddcf5947f" type="System.String">
           <orm:column name="nombreEspacio" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="linkEspacio" property="LinkEspacio" behavior="readwrite" uniqueId="296a5ed4-fca0-492d-a39e-599c721b4e95" type="System.String">
+        <orm:field name="linkEspacio" property="LinkEspacio" behavior="readwrite" uniqueId="2fbe6d1b-060a-4aa9-a0a8-7dfd267e8814" type="System.String">
           <orm:column name="linkEspacio" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="ubicacionEspacio" property="UbicacionEspacio" behavior="readwrite" uniqueId="b17092fd-7680-4ee0-b2d5-5c2e0c23a97e" type="System.String">
+        <orm:field name="ubicacionEspacio" property="UbicacionEspacio" behavior="readwrite" uniqueId="2f1ff70e-1dd9-40bf-a454-3942dfdb3472" type="System.String">
           <orm:column name="ubicacionEspacio" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="comoFinanciaActividadProfesional" property="ComoFinanciaActividadProfesional" behavior="readwrite" uniqueId="15a1c0fb-847a-4a91-986c-ca0d8fb4030e" type="System.String">
+        <orm:field name="comoFinanciaActividadProfesional" property="ComoFinanciaActividadProfesional" behavior="readwrite" uniqueId="45c88ea3-a536-45fc-9feb-d516a9c49e01" type="System.String">
           <orm:column name="comoFinanciaActividadProfesional" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="realizaVentasServicios" property="RealizaVentasServicios" behavior="readwrite" uniqueId="9f6e0eed-d89e-4e8a-a1b7-ab916898eb9a" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+        <orm:field name="realizaVentasServicios" property="RealizaVentasServicios" behavior="readwrite" uniqueId="1a3351f5-fcbc-4c7d-b638-6189a4958bdb" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
           <orm:column name="realizaVentasServicios" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
         </orm:field>
-        <orm:field name="cuales" property="Cuales" behavior="readwrite" uniqueId="a84ff36e-91ee-4602-92c9-8f7c5cb83877" type="System.String">
+        <orm:field name="cuales" property="Cuales" behavior="readwrite" uniqueId="999b83f2-89ac-48ae-adb5-8bf78a934cf6" type="System.String">
           <orm:column name="cuales" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="600984d8-7820-4956-9cab-65a381f9fc58" type="System.Int32">
+        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="4ebfdea8-57a9-45bc-8f45-9eaccd17ed0a" type="System.Int32">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:field>
-        <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="fef686e5-f66c-4bbf-a2d1-0f8b4cbfa2a3" type="CapaDominio.Usuario">
-          <orm:reference uniqueId="a172086c-938b-46bb-9a8b-2d6983ede3d0" association-name="ActividadIndependienteHasUsuario">
+        <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="2cbae501-0081-408c-99c3-51b4e0109e55" type="CapaDominio.Usuario">
+          <orm:reference uniqueId="495d58b3-9a7d-4f74-b1c4-ddfe66a40ce2" association-name="ActividadIndependienteHasUsuario">
             <orm:sharedfield name="idUsuario" target-class="CapaDominio.Usuario" target-field="idUsuario" />
             <orm:constraint name="FK_ActividadIndependiente_Usuario" delete-action="dbdefaultrule" destination-table="Usuario" />
           </orm:reference>
@@ -458,19 +474,6 @@
       </orm:class>
     </orm:namespace>
     <orm:schema schema="">
-      <orm:table name="Usuario">
-        <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
-        <orm:column name="nombreUsuario" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="contrasenia" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="grupo" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
-        <orm:column name="correoElectronico" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="activo" sql-type="bit" nullable="false" length="0" scale="0" ado-type="Bit" />
-        <orm:column name="nombre" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="apellido" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="telefono" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="edad" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
-        <orm:column name="domicilio" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-      </orm:table>
       <orm:table name="Vinculacion">
         <orm:column name="idVinculacion" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         <orm:column name="recibioApoyo" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
@@ -487,6 +490,19 @@
         <orm:constraint name="FK_Vinculacion_Usuario" delete-action="dbdefaultrule" destination-table="Usuario">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:constraint>
+      </orm:table>
+      <orm:table name="Usuario">
+        <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="nombreUsuario" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="contrasenia" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="grupo" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="correoElectronico" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="activo" sql-type="bit" nullable="false" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="nombre" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="apellido" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="telefono" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="edad" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="domicilio" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
       </orm:table>
       <orm:table name="ProduccionDeBienes">
         <orm:column name="idProduccionDeBienes" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
@@ -532,6 +548,10 @@
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:constraint>
       </orm:table>
+      <orm:table name="Imagen">
+        <orm:column name="id" sql-type="char" nullable="false" length="3" scale="0" primary-key="true" ado-type="StringFixedLength" />
+        <orm:column name="img" sql-type="varbinary(max)" nullable="false" length="0" scale="0" ado-type="LongVarBinary" />
+      </orm:table>
       <orm:table name="IdentidadDisenio">
         <orm:column name="idIdentidadDisenio" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         <orm:column name="atributos" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
@@ -546,6 +566,7 @@
       <orm:table name="FormacionAcademica">
         <orm:column name="idFormacionAcademica" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         <orm:column name="estudiosOficiales" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="estudiosOficialesOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="tituloObtenido" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="institucionEmisoraTitulo" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="otrosEstudios" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
@@ -556,7 +577,6 @@
         <orm:column name="carreraDuracion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="carreraInstitucion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
-        <orm:column name="estudiosOficialesOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:constraint name="FK_FormacionAcademica_Usuario" delete-action="dbdefaultrule" destination-table="Usuario">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:constraint>
@@ -564,14 +584,14 @@
       <orm:table name="ActividadProfesional">
         <orm:column name="idActividadProfesional" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         <orm:column name="disciplinaProyectual" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="disciplinaProyectualOtra" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="subSector" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="tipoRelacionLaboral" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="tipoRelacionLaboralOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="nombreEmpresa" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="linkEmpresa" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="descripcion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
-        <orm:column name="tipoRelacionLaboralOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="disciplinaProyectualOtra" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:constraint name="FK_ActividadProfesional_Usuario" delete-action="dbdefaultrule" destination-table="Usuario">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:constraint>
@@ -579,6 +599,7 @@
       <orm:table name="ActividadIndependiente">
         <orm:column name="idActividadIndependiente" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         <orm:column name="sustentoDeVida" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="sustentoDeVidaOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="tiempoActividadFuncionamiento" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="situacionTributaria" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="estaRegistrado" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
@@ -596,9 +617,6 @@
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:constraint>
       </orm:table>
-      <orm:procedure name="fn_diagramobjects" is-function="true" return-type="int">
-        <orm:result-sets />
-      </orm:procedure>
     </orm:schema>
     <orm:relational-naming-settings>
       <orm:source-strategy>Property</orm:source-strategy>
@@ -607,7 +625,7 @@
   </orm:orm>
   <ModelSettings xmlns="">
     <AppConfigConnectionPropertyName>Conn</AppConfigConnectionPropertyName>
-    <AppConfigConnectionString>data source=COPADE_077\SQLEXPRESS;initial catalog=CDNEU;integrated security=True</AppConfigConnectionString>
+    <AppConfigConnectionString>Data Source=COPADE_077\SQLEXPRESS;Initial Catalog=CDNEU;Integrated Security=True</AppConfigConnectionString>
     <InitialCatalog>CDNEU</InitialCatalog>
     <NamingSettings>
       <ClassRules>
@@ -620,9 +638,7 @@
       <PropertyRules>
         <CaseMode>PascalCase</CaseMode>
       </PropertyRules>
-      <NavigationPropertyRules>
-        <IsPrefixSuffixEnabled>false</IsPrefixSuffixEnabled>
-      </NavigationPropertyRules>
+      <NavigationPropertyRules />
     </NamingSettings>
     <CodeGenerationSettings>
       <OutputProjectName>CapaDominio</OutputProjectName>
@@ -637,336 +653,342 @@
     </BackendConfigurationSettings>
   </ModelSettings>
   <Types>
-    <DomainClass Id="2839b0b4-026f-48f2-a72e-95866f704474" name="Usuario" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdUsuario">
-      <Property Id="8a8e103e-4efa-4d90-8a61-ccaf891a3476" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" identity="true" fieldName="idUsuario" />
-      <Property Id="285b435c-3b46-48f5-9d75-8fcb859fdaa8" name="Activo" type="Boolean" label="Activo : Boolean" kind="Persistent" fieldName="activo" />
-      <Property Id="ece2e8d5-b1d6-49a1-9897-f1c37d3857f8" name="Apellido" label="Apellido : String" kind="Persistent" fieldName="apellido" />
-      <Property Id="9a583383-ca5b-46ee-9435-4146cf7f9ff1" name="Contrasenia" label="Contrasenia : String" kind="Persistent" fieldName="contrasenia" />
-      <Property Id="6d04352c-52de-4dc3-b7ff-10562c1fe2a2" name="CorreoElectronico" label="CorreoElectronico : String" kind="Persistent" fieldName="correoElectronico" />
-      <Property Id="9e03d6c7-ff95-44e2-9df6-36e4b01a01e3" name="Domicilio" label="Domicilio : String" kind="Persistent" fieldName="domicilio" />
-      <Property Id="72596da1-5037-49da-b70c-e0659a59d33a" name="Edad" type="Int32" label="Edad : Int32" nullable="true" kind="Persistent" fieldName="edad" />
-      <Property Id="48599582-9e52-46b1-8a90-86a282d93743" name="Grupo" type="Int32" label="Grupo : Int32" kind="Persistent" fieldName="grupo" />
-      <Property Id="9bf83a4e-9ea8-4edc-96dc-a2f523bb6622" name="Nombre" label="Nombre : String" kind="Persistent" fieldName="nombre" />
-      <Property Id="ff072cf4-1243-40b1-b55d-0887f94e55bb" name="NombreUsuario" label="NombreUsuario : String" kind="Persistent" fieldName="nombreUsuario" />
-      <Property Id="816ed9f9-4e05-4c70-b8da-bab125154075" name="Telefono" label="Telefono : String" kind="Persistent" fieldName="telefono" />
-      <navigationalProperties>
-        <classHasNavigationalProperties Id="5071b125-c9f1-4246-ae0a-e11f96beb5a6">
-          <NavigationalProperty Id="1647d6a7-5edc-43da-a7bb-1d37875f71b5" name="Vinculacions" type="IList&lt;Vinculacion&gt;" label="Vinculacions : IList&lt;Vinculacion&gt;" nullable="true" kind="Persistent" fieldName="vinculacions" isDependent="false" isManaged="false" />
-        </classHasNavigationalProperties>
-        <classHasNavigationalProperties Id="45b090f7-3307-4007-a051-b55236bf5e0e">
-          <NavigationalProperty Id="03dea842-d0e3-44bd-8471-f9d9efac8bec" name="ProduccionDeBienes" type="IList&lt;ProduccionDeBiene&gt;" label="ProduccionDeBienes : IList&lt;ProduccionDeBiene&gt;" nullable="true" kind="Persistent" fieldName="produccionDeBienes" isDependent="false" isManaged="false" />
-        </classHasNavigationalProperties>
-        <classHasNavigationalProperties Id="45022600-7e06-41bb-baaa-663933e7e744">
-          <NavigationalProperty Id="fc105a3f-ea35-4f08-9e79-0244d7cad92b" name="MateriasPrimas" type="IList&lt;MateriasPrima&gt;" label="MateriasPrimas : IList&lt;MateriasPrima&gt;" nullable="true" kind="Persistent" fieldName="materiasPrimas" isDependent="false" isManaged="false" />
-        </classHasNavigationalProperties>
-        <classHasNavigationalProperties Id="6b5e5094-c6d3-4b3b-9a06-c87f2336d592">
-          <NavigationalProperty Id="69810527-db79-4b07-bef8-acd71304aa56" name="MaquinariasYProcesos" type="IList&lt;MaquinariasYProceso&gt;" label="MaquinariasYProcesos : IList&lt;MaquinariasYProceso&gt;" nullable="true" kind="Persistent" fieldName="maquinariasYProcesos" isDependent="false" isManaged="false" />
-        </classHasNavigationalProperties>
-        <classHasNavigationalProperties Id="8dafc772-0dbb-49dc-b9d8-8e1ab87def6d">
-          <NavigationalProperty Id="d8b21fe7-22bf-461e-a535-969ff55b7d81" name="Innovacions" type="IList&lt;Innovacion&gt;" label="Innovacions : IList&lt;Innovacion&gt;" nullable="true" kind="Persistent" fieldName="innovacions" isDependent="false" isManaged="false" />
-        </classHasNavigationalProperties>
-        <classHasNavigationalProperties Id="95183db8-6f44-4802-bdf4-fe7f36f36dba">
-          <NavigationalProperty Id="5c44b3b7-6727-468c-bdaf-64f8d640b359" name="IdentidadDisenios" type="IList&lt;IdentidadDisenio&gt;" label="IdentidadDisenios : IList&lt;IdentidadDisenio&gt;" nullable="true" kind="Persistent" fieldName="identidadDisenios" isDependent="false" isManaged="false" />
-        </classHasNavigationalProperties>
-        <classHasNavigationalProperties Id="c9b16ce2-80a8-486f-89d2-2dde8912a2b4">
-          <NavigationalProperty Id="1d0444bc-8608-4267-a6b8-052bf8877951" name="FormacionAcademicas" type="IList&lt;FormacionAcademica&gt;" label="FormacionAcademicas : IList&lt;FormacionAcademica&gt;" nullable="true" kind="Persistent" fieldName="formacionAcademicas" isDependent="false" isManaged="false" />
-        </classHasNavigationalProperties>
-        <classHasNavigationalProperties Id="c193ff30-3f94-47ab-bb51-02cfc508162f">
-          <NavigationalProperty Id="e965688f-7082-424d-86d2-af33b0288c23" name="ActividadProfesionals" type="IList&lt;ActividadProfesional&gt;" label="ActividadProfesionals : IList&lt;ActividadProfesional&gt;" nullable="true" kind="Persistent" fieldName="actividadProfesionals" isDependent="false" isManaged="false" />
-        </classHasNavigationalProperties>
-        <classHasNavigationalProperties Id="d60fcd53-e94e-48da-80ba-ef9ba620e8de">
-          <NavigationalProperty Id="bcc5b9d8-e7e1-4de3-be87-aa39363eeaea" name="ActividadIndependientes" type="IList&lt;ActividadIndependiente&gt;" label="ActividadIndependientes : IList&lt;ActividadIndependiente&gt;" nullable="true" kind="Persistent" fieldName="actividadIndependientes" isDependent="false" isManaged="false" />
-        </classHasNavigationalProperties>
-      </navigationalProperties>
-    </DomainClass>
-    <DomainClass Id="1e3b2daa-5cf5-401b-8bfd-895694c94273" name="Vinculacion" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdVinculacion">
-      <Property Id="2f5f1c74-b0e6-42ac-a052-6aee4e5e0e60" name="IdVinculacion" type="Int32" label="IdVinculacion : Int32" kind="Persistent" identity="true" fieldName="idVinculacion" />
-      <Property Id="e47e9a07-3bac-4a4c-bdfa-870312ce081d" name="AporteCdneu" label="AporteCdneu : String" kind="Persistent" fieldName="aporteCdneu" />
-      <Property Id="70b99960-fb42-4e0e-8422-be8f878102f6" name="Apoyo" label="Apoyo : String" kind="Persistent" fieldName="apoyo" />
-      <Property Id="28d673e7-b2af-4297-aacf-6fb8ef5ef259" name="ComentariosFinales" label="ComentariosFinales : String" kind="Persistent" fieldName="comentariosFinales" />
-      <Property Id="3553bee5-a04f-4c64-bdd1-7f62e4b9333c" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
-      <Property Id="da7889b1-1ee8-4644-a478-a799cf321e5c" name="MercadoIndustriasCreativasArgentinas" label="MercadoIndustriasCreativasArgentinas : String" kind="Persistent" fieldName="mercadoIndustriasCreativasArgentinas" />
-      <Property Id="75b0dd2d-cb61-4709-9c91-9adbca29f2db" name="OrganismoApoyo" label="OrganismoApoyo : String" kind="Persistent" fieldName="organismoApoyo" />
-      <Property Id="d18b86f9-325c-4603-8fc9-5eb2036fdf68" name="OrganismoApoyoAnio" type="Int32" label="OrganismoApoyoAnio : Int32" nullable="true" kind="Persistent" fieldName="organismoApoyoAnio" />
-      <Property Id="36dffb3f-28f2-4936-a2d3-2d8488f21756" name="OtroAporteCdneu" label="OtroAporteCdneu : String" kind="Persistent" fieldName="otroAporteCdneu" />
-      <Property Id="428fbee2-3216-4b7d-9963-a7d2a2b3d701" name="OtroApoyo" label="OtroApoyo : String" kind="Persistent" fieldName="otroApoyo" />
-      <Property Id="2e0d89e7-7638-4e3c-9837-7d21e8caff9b" name="RecibioApoyo" type="Boolean" label="RecibioApoyo : Boolean" nullable="true" kind="Persistent" fieldName="recibioApoyo" />
-      <Property Id="cb534d10-ffbf-4134-bd2c-7de5d9b18225" name="SelloBuenDisenioArgentino" label="SelloBuenDisenioArgentino : String" kind="Persistent" fieldName="selloBuenDisenioArgentino" />
+    <DomainClass Id="f49b9667-44ef-4677-bffb-3101f6efc255" name="Vinculacion" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdVinculacion">
+      <Property Id="e753ae76-ac4c-4cc4-9ad0-a57443628643" name="IdVinculacion" type="Int32" label="IdVinculacion : Int32" kind="Persistent" identity="true" fieldName="idVinculacion" />
+      <Property Id="b751b2d0-257b-4b7a-9959-b0447d6b035e" name="AporteCdneu" label="AporteCdneu : String" kind="Persistent" fieldName="aporteCdneu" />
+      <Property Id="90e366ce-a9fc-4480-870f-e03cd9d387aa" name="Apoyo" label="Apoyo : String" kind="Persistent" fieldName="apoyo" />
+      <Property Id="c4a9ec2f-ec2a-4aa8-9963-8e7034c5b41b" name="ComentariosFinales" label="ComentariosFinales : String" kind="Persistent" fieldName="comentariosFinales" />
+      <Property Id="18178ec1-6d34-4b93-b63f-9ab931f7c0f4" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
+      <Property Id="2caec9d8-526a-4543-87fa-21caa32c4d6d" name="MercadoIndustriasCreativasArgentinas" label="MercadoIndustriasCreativasArgentinas : String" kind="Persistent" fieldName="mercadoIndustriasCreativasArgentinas" />
+      <Property Id="4f080b1d-73d7-4ea9-bba0-19e040132171" name="OrganismoApoyo" label="OrganismoApoyo : String" kind="Persistent" fieldName="organismoApoyo" />
+      <Property Id="2a589f77-3a6b-42c9-b427-279b371d98be" name="OrganismoApoyoAnio" type="Int32" label="OrganismoApoyoAnio : Int32" nullable="true" kind="Persistent" fieldName="organismoApoyoAnio" />
+      <Property Id="98074b6c-b5b8-4354-b4c2-e136082456f1" name="OtroAporteCdneu" label="OtroAporteCdneu : String" kind="Persistent" fieldName="otroAporteCdneu" />
+      <Property Id="b7fb5047-bd38-4153-99dc-4227b7839d7d" name="OtroApoyo" label="OtroApoyo : String" kind="Persistent" fieldName="otroApoyo" />
+      <Property Id="d007932b-ea0e-4da8-bc9f-ea426ce385e7" name="RecibioApoyo" type="Boolean" label="RecibioApoyo : Boolean" nullable="true" kind="Persistent" fieldName="recibioApoyo" />
+      <Property Id="bb281573-9feb-47a5-8219-e14b99bbebb7" name="SelloBuenDisenioArgentino" label="SelloBuenDisenioArgentino : String" kind="Persistent" fieldName="selloBuenDisenioArgentino" />
       <AssociationTargets>
-        <Association Id="12445550-0ac7-416e-8907-bd26129a93e0" SourceMultiplicity="One" name="VinculacionHasUsuario">
+        <Association Id="50c5148d-f6be-4920-8426-d8ee3be041e9" SourceMultiplicity="One" name="VinculacionHasUsuario">
           <DomainClassMoniker name="/ModeloDeDominio/Usuario" />
           <targetNavigationalProperty>
-            <associationDefinesTargetProperty Id="2e58c186-f664-405a-a98f-6098ede5a8c4">
+            <associationDefinesTargetProperty Id="ff81ee1e-c0ae-45e5-861b-092a70dffb15">
               <NavigationalPropertyMoniker name="/ModeloDeDominio/Usuario/Vinculacions" />
             </associationDefinesTargetProperty>
           </targetNavigationalProperty>
           <sourceNavigationalProperty>
-            <associationDefinesSourceProperty Id="0ca5fc31-6646-4a9b-87ed-0c121d08fd6f">
+            <associationDefinesSourceProperty Id="90800aa5-10dc-4a73-b468-f9757072703f">
               <NavigationalPropertyMoniker name="/ModeloDeDominio/Vinculacion/Usuario" />
             </associationDefinesSourceProperty>
           </sourceNavigationalProperty>
         </Association>
       </AssociationTargets>
       <navigationalProperties>
-        <classHasNavigationalProperties Id="6e72733f-f125-4e16-9832-be5b54c1a107">
-          <NavigationalProperty Id="b42da374-8bf0-4e57-b3d9-e875be1cd8f8" name="Usuario" type="Usuario" label="Usuario : Usuario" nullable="true" kind="Persistent" fieldName="usuario" isDependent="false" isManaged="false" />
+        <classHasNavigationalProperties Id="984e7c6a-0d1c-4064-a1f7-e694a7c498ea">
+          <NavigationalProperty Id="8bccd2c8-78fc-4db1-b99b-45275f256605" name="Usuario" type="Usuario" label="Usuario : Usuario" nullable="true" kind="Persistent" fieldName="usuario" isDependent="false" isManaged="false" />
         </classHasNavigationalProperties>
       </navigationalProperties>
     </DomainClass>
-    <DomainClass Id="12807290-f77d-4b47-baa8-3e2b264d7e82" name="ProduccionDeBiene" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdProduccionDeBienes">
-      <Property Id="5a82f305-a425-4f28-aa59-9884ebf99c45" name="IdProduccionDeBienes" type="Int32" label="IdProduccionDeBienes : Int32" kind="Persistent" identity="true" fieldName="idProduccionDeBienes" />
-      <Property Id="77f01c28-18a2-4c82-8a1e-8da6785a8014" name="CantidadProductosAnio" type="Int32" label="CantidadProductosAnio : Int32" nullable="true" kind="Persistent" fieldName="cantidadProductosAnio" />
-      <Property Id="f508849c-752c-4b1c-97f8-3977d85cf153" name="DondeRealizaProduccion" label="DondeRealizaProduccion : String" kind="Persistent" fieldName="dondeRealizaProduccion" />
-      <Property Id="a07eca61-bb86-4041-9d38-7d217684656c" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
-      <Property Id="cafd1f45-feb1-4c4b-b1b2-bb59c633e34b" name="PorcentajeNeuquen" label="PorcentajeNeuquen : String" kind="Persistent" fieldName="porcentajeNeuquen" />
+    <DomainClass Id="1ea60113-b36e-4dd4-99e3-0edc195bf648" name="Usuario" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdUsuario">
+      <Property Id="e9df5c51-2c0c-423c-a655-5d27cb64b84d" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" identity="true" fieldName="idUsuario" />
+      <Property Id="6d8bd8bf-4018-4820-b702-3c22ca1c7a69" name="Activo" type="Boolean" label="Activo : Boolean" kind="Persistent" fieldName="activo" />
+      <Property Id="76fc00ad-f731-4164-8457-e2b3003c5eff" name="Apellido" label="Apellido : String" kind="Persistent" fieldName="apellido" />
+      <Property Id="e0c2d2dd-1327-47fb-94c7-21bf4d86760c" name="Contrasenia" label="Contrasenia : String" kind="Persistent" fieldName="contrasenia" />
+      <Property Id="0be296dc-1005-452d-917d-663737ea1c42" name="CorreoElectronico" label="CorreoElectronico : String" kind="Persistent" fieldName="correoElectronico" />
+      <Property Id="75465b12-9602-43d8-a4ae-23b19da2e1e6" name="Domicilio" label="Domicilio : String" kind="Persistent" fieldName="domicilio" />
+      <Property Id="71e189e1-1ba5-4373-8c06-1fbff510a664" name="Edad" type="Int32" label="Edad : Int32" nullable="true" kind="Persistent" fieldName="edad" />
+      <Property Id="ae6a0f07-b63e-41fa-a5f5-32c355e489ef" name="Grupo" type="Int32" label="Grupo : Int32" kind="Persistent" fieldName="grupo" />
+      <Property Id="dd320d4f-1f93-4f49-a8e1-c2238b16b28b" name="Nombre" label="Nombre : String" kind="Persistent" fieldName="nombre" />
+      <Property Id="24adc16a-da84-47cc-ab36-b1ae8442df96" name="NombreUsuario" label="NombreUsuario : String" kind="Persistent" fieldName="nombreUsuario" />
+      <Property Id="29337358-8f17-48e9-92ce-cf038b355671" name="Telefono" label="Telefono : String" kind="Persistent" fieldName="telefono" />
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="312deb57-a1eb-4de1-96e3-d5e822165aa7">
+          <NavigationalProperty Id="201c6e60-6575-44b4-85da-69f79829c5a3" name="Vinculacions" type="IList&lt;Vinculacion&gt;" label="Vinculacions : IList&lt;Vinculacion&gt;" nullable="true" kind="Persistent" fieldName="vinculacions" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="3f66714c-41a0-4b93-86b2-e8c1d6229921">
+          <NavigationalProperty Id="9613e800-00eb-4ac8-b455-852ae7b895a5" name="ProduccionDeBienes" type="IList&lt;ProduccionDeBiene&gt;" label="ProduccionDeBienes : IList&lt;ProduccionDeBiene&gt;" nullable="true" kind="Persistent" fieldName="produccionDeBienes" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="ae8cdaf2-87ff-4b29-b784-2f5ded38b33f">
+          <NavigationalProperty Id="40b97037-7c86-4203-a624-40ec81833209" name="MateriasPrimas" type="IList&lt;MateriasPrima&gt;" label="MateriasPrimas : IList&lt;MateriasPrima&gt;" nullable="true" kind="Persistent" fieldName="materiasPrimas" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="927c57c8-da65-4f6b-88fb-bb4d16a8b963">
+          <NavigationalProperty Id="94e848d9-d019-4863-869c-cfd8f8a8bf6a" name="MaquinariasYProcesos" type="IList&lt;MaquinariasYProceso&gt;" label="MaquinariasYProcesos : IList&lt;MaquinariasYProceso&gt;" nullable="true" kind="Persistent" fieldName="maquinariasYProcesos" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="b94776df-179d-42d0-9b13-695373d74deb">
+          <NavigationalProperty Id="6d37c218-d8eb-4275-8a17-62457a86d9af" name="Innovacions" type="IList&lt;Innovacion&gt;" label="Innovacions : IList&lt;Innovacion&gt;" nullable="true" kind="Persistent" fieldName="innovacions" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="82f8d141-5246-4d97-ac4b-44083db68cca">
+          <NavigationalProperty Id="cbb10edf-383a-4591-9372-378a39f0adb5" name="IdentidadDisenios" type="IList&lt;IdentidadDisenio&gt;" label="IdentidadDisenios : IList&lt;IdentidadDisenio&gt;" nullable="true" kind="Persistent" fieldName="identidadDisenios" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="12a4660d-64de-44d6-b97d-0cf762100466">
+          <NavigationalProperty Id="91aa507c-830c-4484-8671-a844dd2b51b8" name="FormacionAcademicas" type="IList&lt;FormacionAcademica&gt;" label="FormacionAcademicas : IList&lt;FormacionAcademica&gt;" nullable="true" kind="Persistent" fieldName="formacionAcademicas" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="43583145-ee5d-4f37-b919-57e1da560cf2">
+          <NavigationalProperty Id="24d68152-7e49-46c2-8dda-3bbaa94abe44" name="ActividadProfesionals" type="IList&lt;ActividadProfesional&gt;" label="ActividadProfesionals : IList&lt;ActividadProfesional&gt;" nullable="true" kind="Persistent" fieldName="actividadProfesionals" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="5a9ba6e8-4fbf-43fd-94c4-0895a5eedf82">
+          <NavigationalProperty Id="d5b0852d-619f-4828-bb8d-b4ff78c7dce0" name="ActividadIndependientes" type="IList&lt;ActividadIndependiente&gt;" label="ActividadIndependientes : IList&lt;ActividadIndependiente&gt;" nullable="true" kind="Persistent" fieldName="actividadIndependientes" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="bd71c293-cef7-4146-a696-3d47eb8c7a57" name="ProduccionDeBiene" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdProduccionDeBienes">
+      <Property Id="03155f5a-536f-4303-b4a9-dd9f3e18605f" name="IdProduccionDeBienes" type="Int32" label="IdProduccionDeBienes : Int32" kind="Persistent" identity="true" fieldName="idProduccionDeBienes" />
+      <Property Id="8512b96e-9b77-4358-beb2-9f2692be1a69" name="CantidadProductosAnio" type="Int32" label="CantidadProductosAnio : Int32" nullable="true" kind="Persistent" fieldName="cantidadProductosAnio" />
+      <Property Id="a83fba53-7ba4-4f4b-b779-977a97774449" name="DondeRealizaProduccion" label="DondeRealizaProduccion : String" kind="Persistent" fieldName="dondeRealizaProduccion" />
+      <Property Id="d344841a-d522-4920-bb4a-8f70929622c6" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
+      <Property Id="4ef34f85-93de-4ca7-a0a9-d9ae3edaec29" name="PorcentajeNeuquen" label="PorcentajeNeuquen : String" kind="Persistent" fieldName="porcentajeNeuquen" />
       <AssociationTargets>
-        <Association Id="16141937-d68c-4837-8cc5-65662ccb277e" SourceMultiplicity="One" name="ProduccionDeBieneHasUsuario">
+        <Association Id="756c7a35-ba2f-48f8-a0a6-1ff5154ebdfd" SourceMultiplicity="One" name="ProduccionDeBieneHasUsuario">
           <DomainClassMoniker name="/ModeloDeDominio/Usuario" />
           <targetNavigationalProperty>
-            <associationDefinesTargetProperty Id="d953a50e-17d7-472a-a3f1-2fc78560d0c8">
+            <associationDefinesTargetProperty Id="d60c99f2-f38a-41b8-a87a-94bbb66018c6">
               <NavigationalPropertyMoniker name="/ModeloDeDominio/Usuario/ProduccionDeBienes" />
             </associationDefinesTargetProperty>
           </targetNavigationalProperty>
           <sourceNavigationalProperty>
-            <associationDefinesSourceProperty Id="2ab0b543-ea16-46a1-8606-c80f092aa370">
+            <associationDefinesSourceProperty Id="f4f421b3-2012-4011-8533-a8efa8900b74">
               <NavigationalPropertyMoniker name="/ModeloDeDominio/ProduccionDeBiene/Usuario" />
             </associationDefinesSourceProperty>
           </sourceNavigationalProperty>
         </Association>
       </AssociationTargets>
       <navigationalProperties>
-        <classHasNavigationalProperties Id="fe7ffb1c-69e6-4b2e-a744-cdd5a9b6ae7b">
-          <NavigationalProperty Id="998578e1-bd9b-407f-bae6-a722d8787dec" name="Usuario" type="Usuario" label="Usuario : Usuario" nullable="true" kind="Persistent" fieldName="usuario" isDependent="false" isManaged="false" />
+        <classHasNavigationalProperties Id="2e724f12-7e39-47af-b8ac-3784605a19e6">
+          <NavigationalProperty Id="27d31e58-ef0c-45ce-b57a-7cd591840b12" name="Usuario" type="Usuario" label="Usuario : Usuario" nullable="true" kind="Persistent" fieldName="usuario" isDependent="false" isManaged="false" />
         </classHasNavigationalProperties>
       </navigationalProperties>
     </DomainClass>
-    <DomainClass Id="44034850-226d-47f0-a956-38214686c0d3" name="MateriasPrima" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdMateriasPrimas">
-      <Property Id="3d182ea7-021c-46b3-aba9-4e76e8ce8724" name="IdMateriasPrimas" type="Int32" label="IdMateriasPrimas : Int32" kind="Persistent" identity="true" fieldName="idMateriasPrimas" />
-      <Property Id="fedfd2b7-b3c5-46de-b4e7-c320b5e3be68" name="Dificultades" label="Dificultades : String" kind="Persistent" fieldName="dificultades" />
-      <Property Id="ff200bf9-4ba1-4de4-a2db-d1aa1bd124fc" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
-      <Property Id="cff7abcd-cd77-4341-9d3d-dbe4ec83b5fb" name="PorcentajeNeuquen" label="PorcentajeNeuquen : String" kind="Persistent" fieldName="porcentajeNeuquen" />
+    <DomainClass Id="474e5042-c288-45d1-8d40-5fe19e1aa9f9" name="MateriasPrima" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdMateriasPrimas">
+      <Property Id="9c532bbd-9663-4441-9536-793fdef6f472" name="IdMateriasPrimas" type="Int32" label="IdMateriasPrimas : Int32" kind="Persistent" identity="true" fieldName="idMateriasPrimas" />
+      <Property Id="3acec987-9897-4808-960d-d0731b57c952" name="Dificultades" label="Dificultades : String" kind="Persistent" fieldName="dificultades" />
+      <Property Id="985a3686-c09a-4fbc-bca2-e99bde1fa995" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
+      <Property Id="df0ab402-9aaa-41a9-93bd-d080d2bf1af0" name="PorcentajeNeuquen" label="PorcentajeNeuquen : String" kind="Persistent" fieldName="porcentajeNeuquen" />
       <AssociationTargets>
-        <Association Id="df0b7cbc-ecab-4cea-84e7-052dccf13379" SourceMultiplicity="One" name="MateriasPrimaHasUsuario">
+        <Association Id="2645462b-f024-428b-94e0-41a66eca75d9" SourceMultiplicity="One" name="MateriasPrimaHasUsuario">
           <DomainClassMoniker name="/ModeloDeDominio/Usuario" />
           <targetNavigationalProperty>
-            <associationDefinesTargetProperty Id="7b46f30d-a1ee-43ea-acb9-27fcaa3855cf">
+            <associationDefinesTargetProperty Id="4abc7471-f260-4986-958f-125fba3b725e">
               <NavigationalPropertyMoniker name="/ModeloDeDominio/Usuario/MateriasPrimas" />
             </associationDefinesTargetProperty>
           </targetNavigationalProperty>
           <sourceNavigationalProperty>
-            <associationDefinesSourceProperty Id="4a3519c5-ec9a-496b-bbea-e598b8e7c997">
+            <associationDefinesSourceProperty Id="19d63e2a-ecac-48f9-996e-3b30ba634d2d">
               <NavigationalPropertyMoniker name="/ModeloDeDominio/MateriasPrima/Usuario" />
             </associationDefinesSourceProperty>
           </sourceNavigationalProperty>
         </Association>
       </AssociationTargets>
       <navigationalProperties>
-        <classHasNavigationalProperties Id="a0c53d12-a23c-4bd1-898f-b28e23259684">
-          <NavigationalProperty Id="a6815b5d-6ff8-473e-b963-4504cf9490f7" name="Usuario" type="Usuario" label="Usuario : Usuario" nullable="true" kind="Persistent" fieldName="usuario" isDependent="false" isManaged="false" />
+        <classHasNavigationalProperties Id="b93ae7c4-b663-4154-be2e-2653ecbe44df">
+          <NavigationalProperty Id="729adc6e-43b3-428f-99b4-483d5fb34aef" name="Usuario" type="Usuario" label="Usuario : Usuario" nullable="true" kind="Persistent" fieldName="usuario" isDependent="false" isManaged="false" />
         </classHasNavigationalProperties>
       </navigationalProperties>
     </DomainClass>
-    <DomainClass Id="4d0a4158-ca11-422a-a709-c07a78db2d2e" name="MaquinariasYProceso" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdMaquinariasYProcesos">
-      <Property Id="b2a5a7a5-250a-4d81-a01c-b4b867e67d22" name="IdMaquinariasYProcesos" type="Int32" label="IdMaquinariasYProcesos : Int32" kind="Persistent" identity="true" fieldName="idMaquinariasYProcesos" />
-      <Property Id="7fb66050-07b1-471d-a924-379d2886a2f7" name="DisponeDeEquipos" type="Boolean" label="DisponeDeEquipos : Boolean" nullable="true" kind="Persistent" fieldName="disponeDeEquipos" />
-      <Property Id="ad71e013-da50-4e4c-9af0-6a3a924ad1c3" name="Equipos" label="Equipos : String" kind="Persistent" fieldName="equipos" />
-      <Property Id="3ad07f4b-9e31-4021-9cbd-49c9fa3853f8" name="Falencia" label="Falencia : String" kind="Persistent" fieldName="falencia" />
-      <Property Id="5ec9cd31-79dc-4db8-913d-99f2354691a5" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
-      <Property Id="197faa26-7b30-4319-b507-1b26e739427e" name="OtraFalencia" label="OtraFalencia : String" kind="Persistent" fieldName="otraFalencia" />
-      <Property Id="f4148a71-3a4c-4ec0-9f34-a5caf4c24ff6" name="OtrosEquipos" label="OtrosEquipos : String" kind="Persistent" fieldName="otrosEquipos" />
+    <DomainClass Id="51a25f63-2564-442c-bce5-04452b8bd243" name="MaquinariasYProceso" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdMaquinariasYProcesos">
+      <Property Id="2fcbef50-8677-4160-8bee-73b1eef0f38e" name="IdMaquinariasYProcesos" type="Int32" label="IdMaquinariasYProcesos : Int32" kind="Persistent" identity="true" fieldName="idMaquinariasYProcesos" />
+      <Property Id="87bdc32b-0940-4564-8d7d-1c9cede20f31" name="DisponeDeEquipos" type="Boolean" label="DisponeDeEquipos : Boolean" nullable="true" kind="Persistent" fieldName="disponeDeEquipos" />
+      <Property Id="cd4343b2-40b6-43ac-a97d-88963bd3292f" name="Equipos" label="Equipos : String" kind="Persistent" fieldName="equipos" />
+      <Property Id="086c362d-2f6d-4100-85f0-6a803046ff6a" name="Falencia" label="Falencia : String" kind="Persistent" fieldName="falencia" />
+      <Property Id="70c5c518-aec7-4459-b7a0-d62e5194eaac" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
+      <Property Id="e059b0d6-f875-4a53-9e36-599222a3583f" name="OtraFalencia" label="OtraFalencia : String" kind="Persistent" fieldName="otraFalencia" />
+      <Property Id="6d54af80-6886-4d4e-8837-5f2af7ea2f04" name="OtrosEquipos" label="OtrosEquipos : String" kind="Persistent" fieldName="otrosEquipos" />
       <AssociationTargets>
-        <Association Id="29ac737f-9f51-4e51-9732-453cc3b054ee" SourceMultiplicity="One" name="MaquinariasYProcesoHasUsuario">
+        <Association Id="6eb45ab0-9ef1-475e-bf4d-ff61783d8196" SourceMultiplicity="One" name="MaquinariasYProcesoHasUsuario">
           <DomainClassMoniker name="/ModeloDeDominio/Usuario" />
           <targetNavigationalProperty>
-            <associationDefinesTargetProperty Id="25ef869d-cd13-4649-8b9a-0d9b53ebba62">
+            <associationDefinesTargetProperty Id="95404000-0cda-4504-9cf6-28daba218a9f">
               <NavigationalPropertyMoniker name="/ModeloDeDominio/Usuario/MaquinariasYProcesos" />
             </associationDefinesTargetProperty>
           </targetNavigationalProperty>
           <sourceNavigationalProperty>
-            <associationDefinesSourceProperty Id="bc9e8ba3-f8df-42b1-8869-d5e06e083ca4">
+            <associationDefinesSourceProperty Id="05948e10-5c0d-4d81-b8ea-6ffe1c90bf4f">
               <NavigationalPropertyMoniker name="/ModeloDeDominio/MaquinariasYProceso/Usuario" />
             </associationDefinesSourceProperty>
           </sourceNavigationalProperty>
         </Association>
       </AssociationTargets>
       <navigationalProperties>
-        <classHasNavigationalProperties Id="b26f9e09-339d-4eff-827b-cdf8c9489e19">
-          <NavigationalProperty Id="4c24b9d5-056e-4f07-9e7d-4fc4433e2543" name="Usuario" type="Usuario" label="Usuario : Usuario" nullable="true" kind="Persistent" fieldName="usuario" isDependent="false" isManaged="false" />
+        <classHasNavigationalProperties Id="9c716905-abf7-4055-954d-5af304419509">
+          <NavigationalProperty Id="28f747f7-fb43-48b3-9c50-cb2940af0ed9" name="Usuario" type="Usuario" label="Usuario : Usuario" nullable="true" kind="Persistent" fieldName="usuario" isDependent="false" isManaged="false" />
         </classHasNavigationalProperties>
       </navigationalProperties>
     </DomainClass>
-    <DomainClass Id="c1e071b3-cbcd-4f62-905b-43d5da317610" name="Innovacion" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdInnovacion">
-      <Property Id="ddceb26b-d0bc-4f5d-bd6e-9769199e71b8" name="IdInnovacion" type="Int32" label="IdInnovacion : Int32" kind="Persistent" identity="true" fieldName="idInnovacion" />
-      <Property Id="5bd8fdff-527e-4fc5-834c-cd2587a51bc4" name="ComoTomaronInnovacion" label="ComoTomaronInnovacion : String" kind="Persistent" fieldName="comoTomaronInnovacion" />
-      <Property Id="d221b6c4-0a35-4b5c-868f-cd6aba08120b" name="ContarExperiencia" label="ContarExperiencia : String" kind="Persistent" fieldName="contarExperiencia" />
-      <Property Id="273c1692-40c7-465a-8ba3-3cf46ecc0e32" name="Dificultades" label="Dificultades : String" kind="Persistent" fieldName="dificultades" />
-      <Property Id="7ce8e184-8a6e-4cf9-a180-51bf165a0ab8" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
-      <Property Id="b691f9e6-55a8-4571-82c1-afeee3e97977" name="IncorporaInnovacion" label="IncorporaInnovacion : String" kind="Persistent" fieldName="incorporaInnovacion" />
-      <Property Id="0648d2ee-0f93-4449-8082-80bacd686939" name="OtraDificultad" label="OtraDificultad : String" kind="Persistent" fieldName="otraDificultad" />
-      <Property Id="895c0cf5-4145-4f1c-8b9e-3d88b385c337" name="OtraIncorporaInnovacion" label="OtraIncorporaInnovacion : String" kind="Persistent" fieldName="otraIncorporaInnovacion" />
+    <DomainClass Id="1e1b4c50-38f9-45a2-916f-ab7af713e4a2" name="Innovacion" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdInnovacion">
+      <Property Id="c052e151-a695-448e-b191-e25ee473c0b4" name="IdInnovacion" type="Int32" label="IdInnovacion : Int32" kind="Persistent" identity="true" fieldName="idInnovacion" />
+      <Property Id="b7ba64fc-11a3-44f3-b088-073f797c609d" name="ComoTomaronInnovacion" label="ComoTomaronInnovacion : String" kind="Persistent" fieldName="comoTomaronInnovacion" />
+      <Property Id="9f2f456c-a164-4f45-895d-9db584beaeb7" name="ContarExperiencia" label="ContarExperiencia : String" kind="Persistent" fieldName="contarExperiencia" />
+      <Property Id="77823e04-4f65-401c-9aea-d4f2def1a285" name="Dificultades" label="Dificultades : String" kind="Persistent" fieldName="dificultades" />
+      <Property Id="bddc4e2b-e61e-4ba9-b111-69bd9169f959" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
+      <Property Id="e48dbdaf-cb7e-4887-b938-dfd8e9368d4e" name="IncorporaInnovacion" label="IncorporaInnovacion : String" kind="Persistent" fieldName="incorporaInnovacion" />
+      <Property Id="585b2d67-8396-49fd-a4fb-b5bdcb202ff0" name="OtraDificultad" label="OtraDificultad : String" kind="Persistent" fieldName="otraDificultad" />
+      <Property Id="a497dfb5-f197-4f97-b717-f1f15ff3346a" name="OtraIncorporaInnovacion" label="OtraIncorporaInnovacion : String" kind="Persistent" fieldName="otraIncorporaInnovacion" />
       <AssociationTargets>
-        <Association Id="aa144cf9-b1cf-4e88-99f1-43e9d8b302b8" SourceMultiplicity="One" name="InnovacionHasUsuario">
+        <Association Id="2cb3b09c-15f2-4b0d-aac4-d6a1051cd933" SourceMultiplicity="One" name="InnovacionHasUsuario">
           <DomainClassMoniker name="/ModeloDeDominio/Usuario" />
           <targetNavigationalProperty>
-            <associationDefinesTargetProperty Id="9933b2a3-8dfc-41c5-8aa8-77ead6fdf6ea">
+            <associationDefinesTargetProperty Id="4240f846-ac71-490b-8daf-539c61aa29b3">
               <NavigationalPropertyMoniker name="/ModeloDeDominio/Usuario/Innovacions" />
             </associationDefinesTargetProperty>
           </targetNavigationalProperty>
           <sourceNavigationalProperty>
-            <associationDefinesSourceProperty Id="6f3d21a7-45d6-4c81-b7ae-1bd15a2834a7">
+            <associationDefinesSourceProperty Id="18d097a7-a335-4c5d-9959-f584163fa78d">
               <NavigationalPropertyMoniker name="/ModeloDeDominio/Innovacion/Usuario" />
             </associationDefinesSourceProperty>
           </sourceNavigationalProperty>
         </Association>
       </AssociationTargets>
       <navigationalProperties>
-        <classHasNavigationalProperties Id="c5111915-a436-4fcf-8e97-f2f8f339eee3">
-          <NavigationalProperty Id="bf3b5e49-5449-4753-96ec-1e135f3d2f54" name="Usuario" type="Usuario" label="Usuario : Usuario" nullable="true" kind="Persistent" fieldName="usuario" isDependent="false" isManaged="false" />
+        <classHasNavigationalProperties Id="5fd3072e-cc96-45c4-ac0e-9b1cee944090">
+          <NavigationalProperty Id="75563d90-2561-4e1c-b947-2f33f92468b9" name="Usuario" type="Usuario" label="Usuario : Usuario" nullable="true" kind="Persistent" fieldName="usuario" isDependent="false" isManaged="false" />
         </classHasNavigationalProperties>
       </navigationalProperties>
     </DomainClass>
-    <DomainClass Id="2df865c2-121d-471e-9258-ba855632baf7" name="IdentidadDisenio" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdIdentidadDisenio">
-      <Property Id="03500ba8-a6c4-4d9b-9833-e815de56aff6" name="IdIdentidadDisenio" type="Int32" label="IdIdentidadDisenio : Int32" kind="Persistent" identity="true" fieldName="idIdentidadDisenio" />
-      <Property Id="2389f537-9596-49a0-b7b0-e3630e7c8ba9" name="AspectoRelevante" label="AspectoRelevante : String" kind="Persistent" fieldName="aspectoRelevante" />
-      <Property Id="15178feb-caba-4ec7-87f5-f2502d9d3161" name="Atributos" label="Atributos : String" kind="Persistent" fieldName="atributos" />
-      <Property Id="e54e7425-ab48-45cd-a437-2d0683dc0b4a" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
-      <Property Id="81979b93-c375-428e-a6b0-aae0872975a4" name="Rasgos" label="Rasgos : String" kind="Persistent" fieldName="rasgos" />
-      <Property Id="c83f78da-f805-4daa-aea9-f54909bccbab" name="TemasParaCapacitarse" label="TemasParaCapacitarse : String" kind="Persistent" fieldName="temasParaCapacitarse" />
+    <DomainClass Id="830a27b6-eff3-4b5f-a5af-58b66fbf3ab2" name="Imagen" namespace="CapaDominio" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="52ce09da-3163-47ad-8f01-81a088a7c3cb" name="Id" label="Id : String" kind="Persistent" identity="true" fieldName="id" />
+      <Property Id="3b14df87-1784-4d32-be01-ba347080d96f" name="Img" type="Byte[]" label="Img : Byte[]" kind="Persistent" fieldName="img" />
+    </DomainClass>
+    <DomainClass Id="563c3016-ce17-4794-97a1-df5ef1a09320" name="IdentidadDisenio" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdIdentidadDisenio">
+      <Property Id="b5e501fe-f08c-4793-a6c4-1dc99ec451d3" name="IdIdentidadDisenio" type="Int32" label="IdIdentidadDisenio : Int32" kind="Persistent" identity="true" fieldName="idIdentidadDisenio" />
+      <Property Id="a069c89e-8cc0-4c5c-8af6-84e430cfcb6a" name="AspectoRelevante" label="AspectoRelevante : String" kind="Persistent" fieldName="aspectoRelevante" />
+      <Property Id="a254f8d6-970c-4358-814f-0649bf89257b" name="Atributos" label="Atributos : String" kind="Persistent" fieldName="atributos" />
+      <Property Id="f1f9ac8d-90b9-4383-ae6d-9ca1e34d2ed9" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
+      <Property Id="83118fa8-72e9-4b2c-9ea9-4ba28b71301c" name="Rasgos" label="Rasgos : String" kind="Persistent" fieldName="rasgos" />
+      <Property Id="8de5d421-6d86-4f5d-935b-4bf72feafdae" name="TemasParaCapacitarse" label="TemasParaCapacitarse : String" kind="Persistent" fieldName="temasParaCapacitarse" />
       <AssociationTargets>
-        <Association Id="887b1ba1-9a7e-4931-ae02-5cfc3d4cbade" SourceMultiplicity="One" name="IdentidadDisenioHasUsuario">
+        <Association Id="b2abda11-b246-4984-993e-d93cddda8a2b" SourceMultiplicity="One" name="IdentidadDisenioHasUsuario">
           <DomainClassMoniker name="/ModeloDeDominio/Usuario" />
           <targetNavigationalProperty>
-            <associationDefinesTargetProperty Id="4dbc8516-6fea-409d-9518-698193c8b62d">
+            <associationDefinesTargetProperty Id="33eb6ade-040d-40c2-ad64-bd7532ec55c1">
               <NavigationalPropertyMoniker name="/ModeloDeDominio/Usuario/IdentidadDisenios" />
             </associationDefinesTargetProperty>
           </targetNavigationalProperty>
           <sourceNavigationalProperty>
-            <associationDefinesSourceProperty Id="7993e711-5d71-4e10-9d0d-d6941be28bc8">
+            <associationDefinesSourceProperty Id="1ce79ad8-1406-4a4e-9461-5e16f6d80d98">
               <NavigationalPropertyMoniker name="/ModeloDeDominio/IdentidadDisenio/Usuario" />
             </associationDefinesSourceProperty>
           </sourceNavigationalProperty>
         </Association>
       </AssociationTargets>
       <navigationalProperties>
-        <classHasNavigationalProperties Id="afa4bfd3-6d0e-4776-831e-0f2e4cee95bd">
-          <NavigationalProperty Id="25cc0030-135c-473c-9c4e-93991ce7a709" name="Usuario" type="Usuario" label="Usuario : Usuario" nullable="true" kind="Persistent" fieldName="usuario" isDependent="false" isManaged="false" />
+        <classHasNavigationalProperties Id="79a77427-366e-428c-a528-00d516a07f58">
+          <NavigationalProperty Id="10ab588e-8ee4-434c-96c1-8bcda8a32fe2" name="Usuario" type="Usuario" label="Usuario : Usuario" nullable="true" kind="Persistent" fieldName="usuario" isDependent="false" isManaged="false" />
         </classHasNavigationalProperties>
       </navigationalProperties>
     </DomainClass>
-    <DomainClass Id="b576d834-4f79-48df-b2fc-7c80ee7e7d40" name="FormacionAcademica" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdFormacionAcademica">
-      <Property Id="377c06b7-9205-4b1a-9d0c-6c05665febb2" name="IdFormacionAcademica" type="Int32" label="IdFormacionAcademica : Int32" kind="Persistent" identity="true" fieldName="idFormacionAcademica" />
-      <Property Id="a40def04-9262-4917-8640-579cbbf46763" name="CarreraAnioCursada" label="CarreraAnioCursada : String" kind="Persistent" fieldName="carreraAnioCursada" />
-      <Property Id="5a692211-977e-4482-94d1-5c41bd3228ea" name="CarreraAnioIngreso" label="CarreraAnioIngreso : String" kind="Persistent" fieldName="carreraAnioIngreso" />
-      <Property Id="af0fa623-b9d4-4224-85bf-1cec9b7afcf7" name="CarreraDuracion" label="CarreraDuracion : String" kind="Persistent" fieldName="carreraDuracion" />
-      <Property Id="00c76e5a-2bf6-4773-be54-263916004be5" name="CarreraInstitucion" label="CarreraInstitucion : String" kind="Persistent" fieldName="carreraInstitucion" />
-      <Property Id="4a9a39fe-9652-4ecb-a50b-4d5f77742579" name="CarreraNombre" label="CarreraNombre : String" kind="Persistent" fieldName="carreraNombre" />
-      <Property Id="410280e9-1a8c-42d1-8fe7-2a4034c0f789" name="EsEstudiante" type="Boolean" label="EsEstudiante : Boolean" nullable="true" kind="Persistent" fieldName="esEstudiante" />
-      <Property Id="f14a98b3-6022-4773-8117-748badc8854e" name="EstudiosOficiales" label="EstudiosOficiales : String" kind="Persistent" fieldName="estudiosOficiales" />
-      <Property Id="b10a674f-3856-471d-a5ba-72a8fe24990b" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
-      <Property Id="492d17ad-5b5f-451d-93e2-6c58032f9048" name="InstitucionEmisoraTitulo" label="InstitucionEmisoraTitulo : String" kind="Persistent" fieldName="institucionEmisoraTitulo" />
-      <Property Id="846bc279-c8c1-4d79-ae78-d73cd163051e" name="OtrosEstudios" label="OtrosEstudios : String" kind="Persistent" fieldName="otrosEstudios" />
-      <Property Id="f7211708-92d9-4fce-a16b-d85c689de21e" name="TituloObtenido" label="TituloObtenido : String" kind="Persistent" fieldName="tituloObtenido" />
-      <Property Id="e8522e4a-65ca-498c-a01a-bd4b76f10c82" name="EstudiosOficialesOtro" label="EstudiosOficialesOtro : String" kind="Persistent" fieldName="estudiosOficialesOtro" />
+    <DomainClass Id="f5811604-8d09-49ac-b8ee-e70f69b5728f" name="FormacionAcademica" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdFormacionAcademica">
+      <Property Id="df05ead9-5a3f-47a1-a1c5-c3d378ab3719" name="IdFormacionAcademica" type="Int32" label="IdFormacionAcademica : Int32" kind="Persistent" identity="true" fieldName="idFormacionAcademica" />
+      <Property Id="fcac4e40-b587-45dc-a24b-2e71511b6b46" name="CarreraAnioCursada" label="CarreraAnioCursada : String" kind="Persistent" fieldName="carreraAnioCursada" />
+      <Property Id="24f91177-5ff9-4aee-a7a9-54e75b21883e" name="CarreraAnioIngreso" label="CarreraAnioIngreso : String" kind="Persistent" fieldName="carreraAnioIngreso" />
+      <Property Id="86a87afc-6f23-4eed-bb6e-d9ada918641d" name="CarreraDuracion" label="CarreraDuracion : String" kind="Persistent" fieldName="carreraDuracion" />
+      <Property Id="bafb0305-1b25-46f3-9731-8d8a0517aabd" name="CarreraInstitucion" label="CarreraInstitucion : String" kind="Persistent" fieldName="carreraInstitucion" />
+      <Property Id="aa5e0551-3b8f-4c9a-83bd-9032d7822019" name="CarreraNombre" label="CarreraNombre : String" kind="Persistent" fieldName="carreraNombre" />
+      <Property Id="e77a8f43-bd4a-4561-9546-4b0e2cd7d6bf" name="EsEstudiante" type="Boolean" label="EsEstudiante : Boolean" nullable="true" kind="Persistent" fieldName="esEstudiante" />
+      <Property Id="501a1c70-839e-45b2-aa5a-4f6bb3f8a01d" name="EstudiosOficiales" label="EstudiosOficiales : String" kind="Persistent" fieldName="estudiosOficiales" />
+      <Property Id="49b40688-1a6c-489f-b8b3-668e738769c8" name="EstudiosOficialesOtro" label="EstudiosOficialesOtro : String" kind="Persistent" fieldName="estudiosOficialesOtro" />
+      <Property Id="0eed1582-03d4-4a99-b6af-0a721b7c6044" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
+      <Property Id="65af74ad-8969-4e94-90ba-2f289444eed6" name="InstitucionEmisoraTitulo" label="InstitucionEmisoraTitulo : String" kind="Persistent" fieldName="institucionEmisoraTitulo" />
+      <Property Id="a6ddd341-1971-4aa7-9a11-822ae930e820" name="OtrosEstudios" label="OtrosEstudios : String" kind="Persistent" fieldName="otrosEstudios" />
+      <Property Id="b0deee33-c4de-422e-95c7-cbb75e671ba9" name="TituloObtenido" label="TituloObtenido : String" kind="Persistent" fieldName="tituloObtenido" />
       <AssociationTargets>
-        <Association Id="6c7e802a-6bf6-4410-b898-8f2ec3b4c350" SourceMultiplicity="One" name="FormacionAcademicaHasUsuario">
+        <Association Id="790c0de7-8038-4531-a1b8-1b5631a83fac" SourceMultiplicity="One" name="FormacionAcademicaHasUsuario">
           <DomainClassMoniker name="/ModeloDeDominio/Usuario" />
           <targetNavigationalProperty>
-            <associationDefinesTargetProperty Id="5e7fba3b-4482-46ef-8940-a32ff42ad232">
+            <associationDefinesTargetProperty Id="67935d77-4d3b-4e89-ad9d-61a1f8d2d044">
               <NavigationalPropertyMoniker name="/ModeloDeDominio/Usuario/FormacionAcademicas" />
             </associationDefinesTargetProperty>
           </targetNavigationalProperty>
           <sourceNavigationalProperty>
-            <associationDefinesSourceProperty Id="855cfd4c-da35-447a-8876-7d588069f239">
+            <associationDefinesSourceProperty Id="56e962ce-98c0-4d4e-bafc-cf164cd0cfd0">
               <NavigationalPropertyMoniker name="/ModeloDeDominio/FormacionAcademica/Usuario" />
             </associationDefinesSourceProperty>
           </sourceNavigationalProperty>
         </Association>
       </AssociationTargets>
       <navigationalProperties>
-        <classHasNavigationalProperties Id="50db0954-87a5-467a-b062-b3e06d8c09f1">
-          <NavigationalProperty Id="6e3fdfea-cafc-4ac8-87ec-aa464a8991c3" name="Usuario" type="Usuario" label="Usuario : Usuario" nullable="true" kind="Persistent" fieldName="usuario" isDependent="false" isManaged="false" />
+        <classHasNavigationalProperties Id="b4e475c4-6184-4b51-8f35-c0683a4dd0a0">
+          <NavigationalProperty Id="1280fa91-3701-414d-a591-479c3b6b74ff" name="Usuario" type="Usuario" label="Usuario : Usuario" nullable="true" kind="Persistent" fieldName="usuario" isDependent="false" isManaged="false" />
         </classHasNavigationalProperties>
       </navigationalProperties>
     </DomainClass>
-    <DomainClass Id="2e8363eb-8863-4e3c-b454-7fb1078e35b9" name="ActividadProfesional" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdActividadProfesional">
-      <Property Id="63a89f22-4ad7-4503-8026-ec4738381ffc" name="IdActividadProfesional" type="Int32" label="IdActividadProfesional : Int32" kind="Persistent" identity="true" fieldName="idActividadProfesional" />
-      <Property Id="0e59f6f6-da29-4a5a-ab76-be8b49ceb81d" name="Descripcion" label="Descripcion : String" kind="Persistent" fieldName="descripcion" />
-      <Property Id="3944ec61-fe58-4901-bd7c-ebd6c12021c8" name="DisciplinaProyectual" label="DisciplinaProyectual : String" kind="Persistent" fieldName="disciplinaProyectual" />
-      <Property Id="2cae321a-95c0-4509-be1c-007443dd89eb" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
-      <Property Id="6b044059-64d8-4801-89c9-740ff49266f1" name="LinkEmpresa" label="LinkEmpresa : String" kind="Persistent" fieldName="linkEmpresa" />
-      <Property Id="e26696f8-210b-43c3-a67d-f388c0815d28" name="NombreEmpresa" label="NombreEmpresa : String" kind="Persistent" fieldName="nombreEmpresa" />
-      <Property Id="b9358fc5-9e08-406a-8993-b501264b9d0a" name="SubSector" label="SubSector : String" kind="Persistent" fieldName="subSector" />
-      <Property Id="1cb32d50-4e75-490b-bd82-badde61c1859" name="TipoRelacionLaboral" label="TipoRelacionLaboral : String" kind="Persistent" fieldName="tipoRelacionLaboral" />
-      <Property Id="edd01723-463e-465b-b125-d1948056bd26" name="TipoRelacionLaboralOtro" label="TipoRelacionLaboralOtro : String" kind="Persistent" fieldName="tipoRelacionLaboralOtro" />
-      <Property Id="f3ac1919-0ea5-47cb-ac37-b80ac7bf75e7" name="DisciplinaProyectualOtra" label="DisciplinaProyectualOtra : String" kind="Persistent" fieldName="disciplinaProyectualOtra" />
+    <DomainClass Id="a8935c77-959e-43b3-bfb7-643f47bdc0dd" name="ActividadProfesional" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdActividadProfesional">
+      <Property Id="3d4d6024-5984-43bc-af41-be0625ce446b" name="IdActividadProfesional" type="Int32" label="IdActividadProfesional : Int32" kind="Persistent" identity="true" fieldName="idActividadProfesional" />
+      <Property Id="f96f010c-22f8-41c7-a007-9e5baafa7c51" name="Descripcion" label="Descripcion : String" kind="Persistent" fieldName="descripcion" />
+      <Property Id="95fde095-80d2-4123-b203-7979b934c824" name="DisciplinaProyectual" label="DisciplinaProyectual : String" kind="Persistent" fieldName="disciplinaProyectual" />
+      <Property Id="65a4991f-d923-4c8d-a641-ee5e305ab6a7" name="DisciplinaProyectualOtra" label="DisciplinaProyectualOtra : String" kind="Persistent" fieldName="disciplinaProyectualOtra" />
+      <Property Id="c46f1058-af7e-42d0-baf0-a1a6271431d2" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
+      <Property Id="9b665e0f-1b37-475d-abd0-06b320d73908" name="LinkEmpresa" label="LinkEmpresa : String" kind="Persistent" fieldName="linkEmpresa" />
+      <Property Id="d2f63c88-ca9f-4173-8f2f-c648c992a377" name="NombreEmpresa" label="NombreEmpresa : String" kind="Persistent" fieldName="nombreEmpresa" />
+      <Property Id="ae1dc099-c281-46ad-a48f-782b84485eb9" name="SubSector" label="SubSector : String" kind="Persistent" fieldName="subSector" />
+      <Property Id="889749a9-5384-44c4-afba-3f70b0bc4f92" name="TipoRelacionLaboral" label="TipoRelacionLaboral : String" kind="Persistent" fieldName="tipoRelacionLaboral" />
+      <Property Id="e6f6e6ce-4ea2-4eac-8e0c-88795f579cb2" name="TipoRelacionLaboralOtro" label="TipoRelacionLaboralOtro : String" kind="Persistent" fieldName="tipoRelacionLaboralOtro" />
       <AssociationTargets>
-        <Association Id="e6a025fd-2b46-4c76-be12-e357d76ae9a0" SourceMultiplicity="One" name="ActividadProfesionalHasUsuario">
+        <Association Id="c6ce416e-849c-4b60-ac18-0ca4334cd7dd" SourceMultiplicity="One" name="ActividadProfesionalHasUsuario">
           <DomainClassMoniker name="/ModeloDeDominio/Usuario" />
           <targetNavigationalProperty>
-            <associationDefinesTargetProperty Id="e75a6e9c-c023-475a-b418-2caec524add0">
+            <associationDefinesTargetProperty Id="04574a72-b641-4f7c-a862-34dfd8985295">
               <NavigationalPropertyMoniker name="/ModeloDeDominio/Usuario/ActividadProfesionals" />
             </associationDefinesTargetProperty>
           </targetNavigationalProperty>
           <sourceNavigationalProperty>
-            <associationDefinesSourceProperty Id="63802720-414a-43d7-985b-dca01d815e2b">
+            <associationDefinesSourceProperty Id="f80fdffe-9184-4f4d-baa7-687e7389f6c7">
               <NavigationalPropertyMoniker name="/ModeloDeDominio/ActividadProfesional/Usuario" />
             </associationDefinesSourceProperty>
           </sourceNavigationalProperty>
         </Association>
       </AssociationTargets>
       <navigationalProperties>
-        <classHasNavigationalProperties Id="fc1ebc5f-4703-4249-94ce-8cccdc891986">
-          <NavigationalProperty Id="df3c4e2c-c956-4ba5-9e23-d97a94fcdb22" name="Usuario" type="Usuario" label="Usuario : Usuario" nullable="true" kind="Persistent" fieldName="usuario" isDependent="false" isManaged="false" />
+        <classHasNavigationalProperties Id="729076b0-e173-442b-a09c-cd8f667f290c">
+          <NavigationalProperty Id="132550c0-8241-4793-aa31-449216f39028" name="Usuario" type="Usuario" label="Usuario : Usuario" nullable="true" kind="Persistent" fieldName="usuario" isDependent="false" isManaged="false" />
         </classHasNavigationalProperties>
       </navigationalProperties>
     </DomainClass>
-    <DomainClass Id="30dc482e-db90-44b3-9da1-4f01241cec49" name="ActividadIndependiente" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdActividadIndependiente">
-      <Property Id="e7843ae8-e0ef-4778-8a0d-0164307a344b" name="IdActividadIndependiente" type="Int32" label="IdActividadIndependiente : Int32" kind="Persistent" identity="true" fieldName="idActividadIndependiente" />
-      <Property Id="56feb33c-30c5-4f00-9c18-34e71831fac8" name="CantidadEmpleadosACargo" type="Int32" label="CantidadEmpleadosACargo : Int32" nullable="true" kind="Persistent" fieldName="cantidadEmpleadosACargo" />
-      <Property Id="983f2e23-4bd7-4b83-b53a-c2a598b0be9a" name="ComoComercializa" label="ComoComercializa : String" kind="Persistent" fieldName="comoComercializa" />
-      <Property Id="15a1c0fb-847a-4a91-986c-ca0d8fb4030e" name="ComoFinanciaActividadProfesional" label="ComoFinanciaActividadProfesional : String" kind="Persistent" fieldName="comoFinanciaActividadProfesional" />
-      <Property Id="a84ff36e-91ee-4602-92c9-8f7c5cb83877" name="Cuales" label="Cuales : String" kind="Persistent" fieldName="cuales" />
-      <Property Id="e2b66f2f-5be2-4d64-8e86-0899adb8da83" name="EstaRegistrado" label="EstaRegistrado : String" kind="Persistent" fieldName="estaRegistrado" />
-      <Property Id="600984d8-7820-4956-9cab-65a381f9fc58" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
-      <Property Id="296a5ed4-fca0-492d-a39e-599c721b4e95" name="LinkEspacio" label="LinkEspacio : String" kind="Persistent" fieldName="linkEspacio" />
-      <Property Id="cf937ad0-f1f4-4a1f-bde3-0ccf243eaf85" name="NombreEspacio" label="NombreEspacio : String" kind="Persistent" fieldName="nombreEspacio" />
-      <Property Id="9f6e0eed-d89e-4e8a-a1b7-ab916898eb9a" name="RealizaVentasServicios" type="Boolean" label="RealizaVentasServicios : Boolean" nullable="true" kind="Persistent" fieldName="realizaVentasServicios" />
-      <Property Id="56034c5e-a477-4296-9d48-69711b812742" name="SituacionTributaria" label="SituacionTributaria : String" kind="Persistent" fieldName="situacionTributaria" />
-      <Property Id="1a5fb54b-f9d3-44a6-9e88-88d6b0978446" name="SustentoDeVida" label="SustentoDeVida : String" kind="Persistent" fieldName="sustentoDeVida" />
-      <Property Id="3f1244a3-b698-4ccd-816c-02716067f6dc" name="TiempoActividadFuncionamiento" label="TiempoActividadFuncionamiento : String" kind="Persistent" fieldName="tiempoActividadFuncionamiento" />
-      <Property Id="270210d0-1e94-41a6-b274-c46b8cca0ba3" name="TieneEmpleadosACargo" type="Boolean" label="TieneEmpleadosACargo : Boolean" nullable="true" kind="Persistent" fieldName="tieneEmpleadosACargo" />
-      <Property Id="b17092fd-7680-4ee0-b2d5-5c2e0c23a97e" name="UbicacionEspacio" label="UbicacionEspacio : String" kind="Persistent" fieldName="ubicacionEspacio" />
+    <DomainClass Id="74ea2a9d-896c-443a-bf00-dabb21918a12" name="ActividadIndependiente" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdActividadIndependiente">
+      <Property Id="d927c270-64da-463b-81e3-9b09b2ece8f3" name="IdActividadIndependiente" type="Int32" label="IdActividadIndependiente : Int32" kind="Persistent" identity="true" fieldName="idActividadIndependiente" />
+      <Property Id="80c63afa-78a3-41fc-8ebe-ce91d27d8731" name="CantidadEmpleadosACargo" type="Int32" label="CantidadEmpleadosACargo : Int32" nullable="true" kind="Persistent" fieldName="cantidadEmpleadosACargo" />
+      <Property Id="520607ca-746d-4a19-a267-eb121df97963" name="ComoComercializa" label="ComoComercializa : String" kind="Persistent" fieldName="comoComercializa" />
+      <Property Id="45c88ea3-a536-45fc-9feb-d516a9c49e01" name="ComoFinanciaActividadProfesional" label="ComoFinanciaActividadProfesional : String" kind="Persistent" fieldName="comoFinanciaActividadProfesional" />
+      <Property Id="999b83f2-89ac-48ae-adb5-8bf78a934cf6" name="Cuales" label="Cuales : String" kind="Persistent" fieldName="cuales" />
+      <Property Id="bee9e578-b85e-4489-92fb-51ee8e30dca7" name="EstaRegistrado" label="EstaRegistrado : String" kind="Persistent" fieldName="estaRegistrado" />
+      <Property Id="4ebfdea8-57a9-45bc-8f45-9eaccd17ed0a" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
+      <Property Id="2fbe6d1b-060a-4aa9-a0a8-7dfd267e8814" name="LinkEspacio" label="LinkEspacio : String" kind="Persistent" fieldName="linkEspacio" />
+      <Property Id="40462ad3-5600-41f3-ad09-326ddcf5947f" name="NombreEspacio" label="NombreEspacio : String" kind="Persistent" fieldName="nombreEspacio" />
+      <Property Id="1a3351f5-fcbc-4c7d-b638-6189a4958bdb" name="RealizaVentasServicios" type="Boolean" label="RealizaVentasServicios : Boolean" nullable="true" kind="Persistent" fieldName="realizaVentasServicios" />
+      <Property Id="b984d84a-9bb7-418b-96a5-e2b40dd7a2c4" name="SituacionTributaria" label="SituacionTributaria : String" kind="Persistent" fieldName="situacionTributaria" />
+      <Property Id="00ef336a-c058-45b0-a46a-1f0bc34b0060" name="SustentoDeVida" label="SustentoDeVida : String" kind="Persistent" fieldName="sustentoDeVida" />
+      <Property Id="f98bbf7c-8c65-4192-89c0-dc688fb831be" name="SustentoDeVidaOtro" label="SustentoDeVidaOtro : String" kind="Persistent" fieldName="sustentoDeVidaOtro" />
+      <Property Id="c81b9b4c-6d25-42d1-84b1-e43b6fee8e90" name="TiempoActividadFuncionamiento" label="TiempoActividadFuncionamiento : String" kind="Persistent" fieldName="tiempoActividadFuncionamiento" />
+      <Property Id="295f9629-ce62-4234-b91e-26ba1aec8c4c" name="TieneEmpleadosACargo" type="Boolean" label="TieneEmpleadosACargo : Boolean" nullable="true" kind="Persistent" fieldName="tieneEmpleadosACargo" />
+      <Property Id="2f1ff70e-1dd9-40bf-a454-3942dfdb3472" name="UbicacionEspacio" label="UbicacionEspacio : String" kind="Persistent" fieldName="ubicacionEspacio" />
       <AssociationTargets>
-        <Association Id="a172086c-938b-46bb-9a8b-2d6983ede3d0" SourceMultiplicity="One" name="ActividadIndependienteHasUsuario">
+        <Association Id="495d58b3-9a7d-4f74-b1c4-ddfe66a40ce2" SourceMultiplicity="One" name="ActividadIndependienteHasUsuario">
           <DomainClassMoniker name="/ModeloDeDominio/Usuario" />
           <targetNavigationalProperty>
-            <associationDefinesTargetProperty Id="77856a86-687e-4b6a-af6f-57b775d2f080">
+            <associationDefinesTargetProperty Id="67bd30d5-9f33-48be-8aca-a637c945a239">
               <NavigationalPropertyMoniker name="/ModeloDeDominio/Usuario/ActividadIndependientes" />
             </associationDefinesTargetProperty>
           </targetNavigationalProperty>
           <sourceNavigationalProperty>
-            <associationDefinesSourceProperty Id="e8281d94-8413-4619-bd06-cbfebe66f095">
+            <associationDefinesSourceProperty Id="e6d030a5-5c88-41bd-a13f-ac6c8fc5ad75">
               <NavigationalPropertyMoniker name="/ModeloDeDominio/ActividadIndependiente/Usuario" />
             </associationDefinesSourceProperty>
           </sourceNavigationalProperty>
         </Association>
       </AssociationTargets>
       <navigationalProperties>
-        <classHasNavigationalProperties Id="172cef3d-59a2-4799-b416-9064b890dea2">
-          <NavigationalProperty Id="fef686e5-f66c-4bbf-a2d1-0f8b4cbfa2a3" name="Usuario" type="Usuario" label="Usuario : Usuario" nullable="true" kind="Persistent" fieldName="usuario" isDependent="false" isManaged="false" />
+        <classHasNavigationalProperties Id="d7e4a818-baf1-4019-a0e2-48362217c58b">
+          <NavigationalProperty Id="2cbae501-0081-408c-99c3-51b4e0109e55" name="Usuario" type="Usuario" label="Usuario : Usuario" nullable="true" kind="Persistent" fieldName="usuario" isDependent="false" isManaged="false" />
         </classHasNavigationalProperties>
       </navigationalProperties>
     </DomainClass>
   </Types>
   <domainContext>
-    <domainModelHasDomainContext Id="4ef7f7c8-b1c8-4259-b4e2-c01c850b4553">
+    <domainModelHasDomainContext Id="178b001a-bd49-4994-92ec-c93cc1e8ef69">
       <domainContainer name="ModeloDeDominio" namespace="CapaDominio" showPropertiesCompartment="true">
-        <entitySetProperty name="Usuarios" namespace="CapaDominio" type="Usuario" label="Usuarios : IQueryable&lt;CapaDominio.Usuario&gt;" />
         <entitySetProperty name="Vinculacions" namespace="CapaDominio" type="Vinculacion" label="Vinculacions : IQueryable&lt;CapaDominio.Vinculacion&gt;" />
+        <entitySetProperty name="Usuarios" namespace="CapaDominio" type="Usuario" label="Usuarios : IQueryable&lt;CapaDominio.Usuario&gt;" />
         <entitySetProperty name="ProduccionDeBienes" namespace="CapaDominio" type="ProduccionDeBiene" label="ProduccionDeBienes : IQueryable&lt;CapaDominio.ProduccionDeBiene&gt;" />
         <entitySetProperty name="MateriasPrimas" namespace="CapaDominio" type="MateriasPrima" label="MateriasPrimas : IQueryable&lt;CapaDominio.MateriasPrima&gt;" />
         <entitySetProperty name="MaquinariasYProcesos" namespace="CapaDominio" type="MaquinariasYProceso" label="MaquinariasYProcesos : IQueryable&lt;CapaDominio.MaquinariasYProceso&gt;" />
         <entitySetProperty name="Innovacions" namespace="CapaDominio" type="Innovacion" label="Innovacions : IQueryable&lt;CapaDominio.Innovacion&gt;" />
+        <entitySetProperty name="Imagens" namespace="CapaDominio" type="Imagen" label="Imagens : IQueryable&lt;CapaDominio.Imagen&gt;" />
         <entitySetProperty name="IdentidadDisenios" namespace="CapaDominio" type="IdentidadDisenio" label="IdentidadDisenios : IQueryable&lt;CapaDominio.IdentidadDisenio&gt;" />
         <entitySetProperty name="FormacionAcademicas" namespace="CapaDominio" type="FormacionAcademica" label="FormacionAcademicas : IQueryable&lt;CapaDominio.FormacionAcademica&gt;" />
         <entitySetProperty name="ActividadProfesionals" namespace="CapaDominio" type="ActividadProfesional" label="ActividadProfesionals : IQueryable&lt;CapaDominio.ActividadProfesional&gt;" />

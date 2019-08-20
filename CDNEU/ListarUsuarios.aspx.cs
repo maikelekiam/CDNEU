@@ -6,33 +6,42 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using CapaDominio;
 using CapaNegocio;
+using System.IO;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace CDNEU
 {
     public partial class ListarUsuarios : System.Web.UI.Page
     {
-        UsuarioNego usuarioNego = new UsuarioNego();
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
+
+        }
+
+        protected void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
             {
-                if ((string)Session["usergrupo"].ToString() == "1")
+                SqlConnection conectar = new ConectarSQLServer().conectarSQL();
+                String comandoInsertar = "INSERT INTO Imagen(id, img) VALUES(@id, @img)";
+                SqlCommand comando = new SqlCommand(comandoInsertar, conectar);
+                comando.Parameters.Add("@id", SqlDbType.Char, 3).Value = txtId.Text;
+                comando.Parameters.Add("@img", SqlDbType.VarBinary).Value = fuImagen.FileBytes;
+                comando.ExecuteNonQuery();
+                lblMensaje.Text = "Se registro correctamente.";
+            }
+            catch (Exception ex)
                 {
-                    PanelListar.Visible = true;
-                }
-                else
-                {
-                    PanelListar.Visible = false;
+                    lblMensaje.Text = ex.Message;
                 }
 
-                MostrarGrillaUsuarios();
-            }
+
         }
-        public void MostrarGrillaUsuarios()
+
+        protected void btnVer_Click(object sender, EventArgs e)
         {
-            dgvUsuario.DataSource = usuarioNego.MostrarUsuarios().ToList().OrderBy(c => c.NombreUsuario);
-            dgvUsuario.DataBind();
+            imgURL.ImageUrl = "~/MostrarUsuario.aspx?id=" + txtId.Text;
         }
     }
 }
