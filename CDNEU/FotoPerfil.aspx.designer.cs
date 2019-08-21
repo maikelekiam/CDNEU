@@ -10,60 +10,60 @@
 namespace CDNEU {
     
     
-    public partial class SiteMaster {
+    public partial class FotoPerfil {
         
         /// <summary>
-        /// lbl18 control.
+        /// imgURL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl18;
+        protected global::System.Web.UI.WebControls.Image imgURL;
         
         /// <summary>
-        /// btnLogOff control.
+        /// txtId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogOff;
+        protected global::System.Web.UI.WebControls.TextBox txtId;
         
         /// <summary>
-        /// dropdownAltaUsuario control.
+        /// fuImagen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dropdownAltaUsuario;
+        protected global::System.Web.UI.WebControls.FileUpload fuImagen;
         
         /// <summary>
-        /// dropdownListarUsuarios control.
+        /// btnGuardarFoto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dropdownListarUsuarios;
+        protected global::System.Web.UI.WebControls.Button btnGuardarFoto;
         
         /// <summary>
-        /// dropdownFotoPerfil control.
+        /// lblMensaje control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dropdownFotoPerfil;
+        protected global::System.Web.UI.WebControls.Label lblMensaje;
         
         /// <summary>
-        /// MainContent control.
+        /// btnVer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Button btnVer;
     }
 }

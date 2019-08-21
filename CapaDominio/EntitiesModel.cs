@@ -138,6 +138,14 @@ namespace CapaDominio
 			}
 		}
 		
+		public IQueryable<FotoUsuario> FotoUsuarios 
+		{
+			get
+			{
+				return this.GetAll<FotoUsuario>();
+			}
+		}
+		
 		public static BackendConfiguration GetBackendConfiguration()
 		{
 			BackendConfiguration backend = new BackendConfiguration();
@@ -200,6 +208,10 @@ namespace CapaDominio
 			get;
 		}
 		IQueryable<ActividadIndependiente> ActividadIndependientes
+		{
+			get;
+		}
+		IQueryable<FotoUsuario> FotoUsuarios
 		{
 			get;
 		}

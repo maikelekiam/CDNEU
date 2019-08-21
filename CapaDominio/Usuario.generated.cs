@@ -248,6 +248,15 @@ namespace CapaDominio
 			}
 		}
 		
+		private IList<FotoUsuario> fotoUsuarios = new List<FotoUsuario>();
+		public virtual IList<FotoUsuario> FotoUsuarios
+		{
+			get
+			{
+				return this.fotoUsuarios;
+			}
+		}
+		
 	}
 }
 #pragma warning restore 1591

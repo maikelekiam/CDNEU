@@ -33,12 +33,13 @@ namespace CapaRepositorio
                 return result;
             }
         }
-        public void GuardarUsuario(Usuario usuario)
+        public int GuardarUsuario(Usuario usuario)
         {
             using (ModeloDeDominio modeloDeDominio = new ModeloDeDominio())
             {
                 modeloDeDominio.Add(usuario);
                 modeloDeDominio.SaveChanges();
+                return usuario.IdUsuario;
             }
         }
         public Usuario ObtenerUsuario(int id)

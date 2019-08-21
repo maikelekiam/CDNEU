@@ -107,10 +107,10 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="EditarUsuario.aspx"><span>Editar Diseñador</span></a>
+                                    <a href="EditarUsuario.aspx"><span>Editar Perfil</span></a>
                                     <ul>
                                         <li>
-                                            <a runat="server" href="~/EditarUsuario.aspx"><span class="glyphicon glyphicon-plus fa-fw"></span>Editar Diseñador</a>
+                                            <a runat="server" href="~/EditarUsuario.aspx"><span class="glyphicon glyphicon-plus fa-fw"></span>Editar Perfil</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -119,6 +119,14 @@
                                     <ul>
                                         <li>
                                             <a runat="server" href="~/ListarUsuarios.aspx"><span class="glyphicon glyphicon-credit-card fa-fw"></span>Listado de Diseñadores</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li runat="server" id="dropdownFotoPerfil">
+                                    <a href="FotoPerfil.aspx"><span>Foto de Perfil</span></a>
+                                    <ul>
+                                        <li>
+                                            <a runat="server" href="~/FotoPerfil.aspx"><span class="glyphicon glyphicon-credit-card fa-fw"></span>Cargar Foto de Perfil</a>
                                         </li>
                                     </ul>
                                 </li>

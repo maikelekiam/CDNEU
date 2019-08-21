@@ -63,18 +63,8 @@
             </div>
             <div id="collapse1" class="panel-collapse collapse">
                 <div class="panel-body">
-
-
                     <div class="row">
                         <div class="col-md-6">
-
-
-
-
-
-
-
-
                             <table>
                                 <tr>
                                     <td class="anchotabla">
@@ -406,7 +396,7 @@
                                         <td>
                                             <asp:Label runat="server" Text="Id" CssClass="form-control col-md-2"></asp:Label></td>
                                         <td>
-                                            <asp:TextBox ID="txtId" runat="server" CssClass="form-control col-md-4"></asp:TextBox></td>
+                                            <asp:Label Id="lblIdFotoPerfil" runat="server" CssClass="form-control col-md-4"></asp:Label></td>
                                     </tr>
                                     <tr>
                                         <td>

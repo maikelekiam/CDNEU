@@ -24,9 +24,9 @@ namespace CapaNegocio
         {
             return usuarioRepo.MostrarUsuarios();
         }
-        public void GuardarUsuario(Usuario usuario)
+        public int GuardarUsuario(Usuario usuario)
         {
-            usuarioRepo.GuardarUsuario(usuario);
+            return usuarioRepo.GuardarUsuario(usuario);
         }
         public Usuario ObtenerUsuario(int id)
         {

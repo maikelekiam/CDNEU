@@ -116,6 +116,9 @@
                                 <h3>Registro de Nuevo Usuario</h3>
                                 <hr />
 
+
+
+                                <asp:image id="setincode" width="250" runat="server" Visible="false"/>
                                 <table>
                                     <tr>
                                         <td class="anchotabla">

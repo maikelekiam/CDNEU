@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
+using System.Data.SqlClient;
+using System.Data;
 using CapaDominio;
 using CapaNegocio;
 
@@ -12,9 +15,10 @@ namespace CDNEU
     public partial class Login : System.Web.UI.Page
     {
         UsuarioNego usuarioNego = new UsuarioNego();
+        public static int idUsuarioTemporal;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            MostrarFoto();
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -90,10 +94,40 @@ namespace CDNEU
             //    persona.Localidad = localidadNego.TraerLocalidadIdSegunItem(ddlLocalidad.SelectedItem.ToString());
             //}
 
-            usuarioNego.GuardarUsuario(usuario);
+            idUsuarioTemporal = usuarioNego.GuardarUsuario(usuario);
+
+            GuardarFotoPerfil();
+        }
+        private void GuardarFotoPerfil()
+        {
+            try
+            {
+                SqlConnection conectar = new ConectarSQLServer().conectarSQL();
+
+                String comandoInsertar = "INSERT INTO FotoUsuario(fotoUsuarioCodigo, idUsuario) VALUES(@fotoUsuarioCodigo, @idUsuario)";
+                SqlCommand comando = new SqlCommand(comandoInsertar, conectar);
+
+                FileUpload fu = new FileUpload();
+                fu.SaveAs("../imagenes/FotoUsuariosx2.png");
+
+                comando.Parameters.Add("@fotoUsuarioCodigo", SqlDbType.VarBinary).Value = fu.FileBytes;
+                comando.Parameters.Add("@idUsuario", SqlDbType.Int).Value = idUsuarioTemporal; //Session["userid"].ToString();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
+        private void MostrarFoto()
+        {
+            Image img = (Image)FindControl("setincode");
+            img.ImageUrl = "../imagenes/FotoUsuariosx2.png";
 
+            //FileUpload fu = new FileUpload();
+            //fu.SaveAs("../imagenes/FotoUsuariosx2.png");
+        }
 
     }
 }

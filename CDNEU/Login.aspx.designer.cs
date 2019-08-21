@@ -67,6 +67,15 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.Button btnLogin;
         
         /// <summary>
+        /// setincode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image setincode;
+        
+        /// <summary>
         /// Label7 control.
         /// </summary>
         /// <remarks>
