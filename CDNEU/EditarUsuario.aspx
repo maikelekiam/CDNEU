@@ -387,11 +387,11 @@
                                             <asp:Image ID="imgURL" runat="server" Style="width: 500px; border: solid;" />
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <%--<tr>
                                         <td style="height: 30px"></td>
-                                    </tr>
+                                    </tr>--%>
                                 </table>
-                                <table>
+                                <%--<table>
                                     <tr>
                                         <td>
                                             <asp:Label runat="server" Text="Id" CssClass="form-control col-md-2"></asp:Label></td>
@@ -416,7 +416,7 @@
                                             <asp:Label ID="lblMensaje" runat="server" Text="" />
                                         </td>
                                     </tr>
-                                </table>
+                                </table>--%>
                             </div>
                         </div>
                     </div>

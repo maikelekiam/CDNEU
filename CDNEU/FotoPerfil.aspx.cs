@@ -20,14 +20,11 @@ namespace CDNEU
             Ver();
         }
 
-
         protected void btnGuardarFoto_Click(object sender, EventArgs e)
         {
             //BorrarFoto();
             GuardarFoto();
             Ver();
-
-
         }
 
         //private void BorrarFoto()
@@ -57,7 +54,7 @@ namespace CDNEU
                 comando.Parameters.Add("@fotoUsuarioCodigo", SqlDbType.VarBinary).Value = fuImagen.FileBytes;
                 comando.Parameters.Add("@idUsuario", SqlDbType.Int).Value = Session["userid"].ToString();
                 comando.ExecuteNonQuery();
-                lblMensaje.Text = "Se registro correctamente.";
+                lblMensaje.Text = "La foto se guardó correctamente.";
 
                 //SqlConnection conectar = new ConectarSQLServer().conectarSQL();
                 //String codigoBorrar = txtId.Text;
