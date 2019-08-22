@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditarUsuario.aspx.cs" Inherits="CDNEU.EditarUsuario" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+
     <style>
         input[type="radio"] + label {
             margin-left: 10px;
@@ -53,11 +54,15 @@
         }
     </style>
 
+
+
+
+
     <div class="panel-group" id="accordion">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" onclick="scrollWin1()">
                         <span class="glyphicon glyphicon-arrow-down" style="width: 20px"></span>DATOS PERSONALES</a>
                 </h4>
             </div>
@@ -450,7 +455,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" onclick="scrollWin2()">
                         <span class="glyphicon glyphicon-arrow-down" style="width: 20px"></span>FORMACION ACADEMICA</a>
                 </h4>
             </div>
@@ -673,7 +678,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" onclick="scrollWin3()">
                         <span class="glyphicon glyphicon-arrow-down" style="width: 20px"></span>ACTIVIDAD PROFESIONAL</a>
                 </h4>
             </div>
@@ -885,7 +890,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" onclick="scrollWin4()">
                         <span class="glyphicon glyphicon-arrow-down" style="width: 20px"></span>Si desarrolla su ACTIVIDAD de manera independiente</a>
                 </h4>
             </div>
@@ -1246,7 +1251,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" onclick="scrollWin5()">
                         <span class="glyphicon glyphicon-arrow-down" style="width: 20px"></span>PRODUCTOS</a>
                 </h4>
             </div>
@@ -1349,7 +1354,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" onclick="scrollWin6()">
                         <span class="glyphicon glyphicon-arrow-down" style="width: 20px"></span>MATERIAS PRIMAS</a>
                 </h4>
             </div>
@@ -1424,7 +1429,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse7" onclick="scrollWin7()">
                         <span class="glyphicon glyphicon-arrow-down" style="width: 20px"></span>MAQUINARIAS Y PROCESOS DE PRODUCCION</a>
                 </h4>
             </div>
@@ -1532,7 +1537,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse8" onclick="scrollWin8()">
                         <span class="glyphicon glyphicon-arrow-down" style="width: 20px"></span>En relación a la IDENTIDAD DEL DISEÑO</a>
                 </h4>
             </div>
@@ -1667,7 +1672,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse9" onclick="scrollWin9()">
                         <span class="glyphicon glyphicon-arrow-down" style="width: 20px"></span>EN RELACION A LA INNOVACION</a>
                 </h4>
             </div>
@@ -1805,7 +1810,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse10" onclick="scrollWin10()">
                         <span class="glyphicon glyphicon-arrow-down" style="width: 20px"></span>VINCULACION</a>
                 </h4>
             </div>
@@ -2047,8 +2052,38 @@
     </div>
 
 
-
-
+    <script>
+        function scrollWin1() {
+            window.scrollTo(0, 0);
+        }
+        function scrollWin2() {
+            window.scrollTo(0, 100);
+        }
+        function scrollWin3() {
+            window.scrollTo(0, 150);
+        }
+        function scrollWin4() {
+            window.scrollTo(0, 200);
+        }
+        function scrollWin5() {
+            window.scrollTo(0,250);
+        }
+        function scrollWin6() {
+            window.scrollTo(0, 300);
+        }
+        function scrollWin7() {
+            window.scrollTo(0, 350);
+        }
+        function scrollWin8() {
+            window.scrollTo(0, 400);
+        }
+        function scrollWin9() {
+            window.scrollTo(0, 450);
+        }
+        function scrollWin10() {
+            window.scrollTo(0, 500);
+        }
+    </script>
 
 
 </asp:Content>
