@@ -167,6 +167,32 @@ namespace CapaDominio
 			}
 		}
 		
+		private string provincia;
+		public virtual string Provincia
+		{
+			get
+			{
+				return this.provincia;
+			}
+			set
+			{
+				this.provincia = value;
+			}
+		}
+		
+		private string localidad;
+		public virtual string Localidad
+		{
+			get
+			{
+				return this.localidad;
+			}
+			set
+			{
+				this.localidad = value;
+			}
+		}
+		
 		private IList<Vinculacion> vinculacions = new List<Vinculacion>();
 		public virtual IList<Vinculacion> Vinculacions
 		{
@@ -254,6 +280,15 @@ namespace CapaDominio
 			get
 			{
 				return this.fotoUsuarios;
+			}
+		}
+		
+		private IList<RedesSociale> redesSociales = new List<RedesSociale>();
+		public virtual IList<RedesSociale> RedesSociales
+		{
+			get
+			{
+				return this.redesSociales;
 			}
 		}
 		

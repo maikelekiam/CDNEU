@@ -238,6 +238,7 @@
     <Content Include="css\estilo-textbox.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
+    <Content Include="CuentaUsuario.aspx" />
     <Content Include="EditarUsuario.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="FotoPerfil.aspx" />
@@ -260,6 +261,7 @@
     <Content Include="ListarUsuarios.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MostrarFotoPerfil.aspx" />
+    <Content Include="MostrarFotoTemporal.aspx" />
     <Content Include="MostrarUsuario.aspx" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -325,6 +327,13 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CuentaUsuario.aspx.cs">
+      <DependentUpon>CuentaUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CuentaUsuario.aspx.designer.cs">
+      <DependentUpon>CuentaUsuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -369,6 +378,13 @@
     </Compile>
     <Compile Include="MostrarFotoPerfil.aspx.designer.cs">
       <DependentUpon>MostrarFotoPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarFotoTemporal.aspx.cs">
+      <DependentUpon>MostrarFotoTemporal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MostrarFotoTemporal.aspx.designer.cs">
+      <DependentUpon>MostrarFotoTemporal.aspx</DependentUpon>
     </Compile>
     <Compile Include="MostrarUsuario.aspx.cs">
       <DependentUpon>MostrarUsuario.aspx</DependentUpon>

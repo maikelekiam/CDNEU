@@ -96,6 +96,12 @@
         <orm:field name="domicilio" property="Domicilio" behavior="readwrite" uniqueId="75465b12-9602-43d8-a4ae-23b19da2e1e6" type="System.String">
           <orm:column name="domicilio" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
+        <orm:field name="provincia" property="Provincia" behavior="readwrite" uniqueId="9682abac-d626-43e5-9018-012290f89a01" type="System.String">
+          <orm:column name="provincia" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="localidad" property="Localidad" behavior="readwrite" uniqueId="35990198-251b-4cf4-a0f5-d85c2ec4a6ca" type="System.String">
+          <orm:column name="localidad" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
         <orm:field name="vinculacions" property="Vinculacions" behavior="readwrite" uniqueId="201c6e60-6575-44b4-85da-69f79829c5a3" type="CapaDominio.Vinculacion">
           <orm:collection element-class="CapaDominio.Vinculacion" inverse-field="usuario" order-by="" uniqueId="50c5148d-f6be-4920-8426-d8ee3be041e9" />
         </orm:field>
@@ -125,6 +131,9 @@
         </orm:field>
         <orm:field name="fotoUsuarios" property="FotoUsuarios" behavior="readwrite" uniqueId="73f6f7ad-e031-4511-9d78-04255f262586" type="CapaDominio.FotoUsuario">
           <orm:collection element-class="CapaDominio.FotoUsuario" inverse-field="usuario" order-by="" uniqueId="ffa3959b-b858-4fdb-9251-b9db23b27bc6" />
+        </orm:field>
+        <orm:field name="redesSociales" property="RedesSociales" behavior="readwrite" uniqueId="46b2a328-66c2-44ad-b3ef-bda5de4421c1" type="CapaDominio.RedesSociale">
+          <orm:collection element-class="CapaDominio.RedesSociale" inverse-field="usuario" order-by="" uniqueId="41af31f6-59a3-4093-9e8a-000dd3480946" />
         </orm:field>
       </orm:class>
       <orm:class name="ProduccionDeBiene" uniqueId="bd71c293-cef7-4146-a696-3d47eb8c7a57">
@@ -493,10 +502,59 @@
         <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="bb7b383e-5c6c-476f-8608-42ae6b800e21" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
           <orm:column name="idUsuario" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
         </orm:field>
+        <orm:field name="fotoTemporal" property="FotoTemporal" behavior="readwrite" uniqueId="c5d35775-ab79-4581-9a4b-c7a4cad0ee87" type="System.Byte[]">
+          <orm:column name="fotoTemporal" sql-type="varbinary(max)" nullable="true" length="0" scale="0" ado-type="LongVarBinary" />
+        </orm:field>
         <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="d7b875d3-6ddb-49d3-9609-997160c0f081" type="CapaDominio.Usuario">
           <orm:reference uniqueId="ffa3959b-b858-4fdb-9251-b9db23b27bc6" association-name="FotoUsuarioHasUsuario">
             <orm:sharedfield name="idUsuario" target-class="CapaDominio.Usuario" target-field="idUsuario" />
             <orm:constraint name="FK_FotoUsuario_Usuario" delete-action="dbdefaultrule" destination-table="Usuario" />
+          </orm:reference>
+        </orm:field>
+      </orm:class>
+      <orm:class name="RedesSociale" uniqueId="5d9cb48d-03a7-4578-8529-1dafa7692d68">
+        <orm:table name="RedesSociales" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="IdRedesSociales" />
+          </orm:key-generator>
+          <orm:single-field field-name="idRedesSociales" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="idRedesSociales" property="IdRedesSociales" behavior="readwrite" uniqueId="1db4b88c-252d-4c39-a898-0f8f7d9416b7" type="System.Int32">
+          <orm:column name="idRedesSociales" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="facebook" property="Facebook" behavior="readwrite" uniqueId="d7bd9b19-54ff-4521-a2dd-a8122c11b048" type="System.String">
+          <orm:column name="facebook" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="instagram" property="Instagram" behavior="readwrite" uniqueId="c90388e9-f4a7-4549-b6a9-97717e172b5b" type="System.String">
+          <orm:column name="instagram" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="twitter" property="Twitter" behavior="readwrite" uniqueId="b8c3b989-b485-45f1-8c2e-6d4a2adf6e89" type="System.String">
+          <orm:column name="twitter" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="youtube" property="Youtube" behavior="readwrite" uniqueId="80e1e073-1f84-4bae-859b-6f4e5c34d29e" type="System.String">
+          <orm:column name="youtube" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="flicker" property="Flicker" behavior="readwrite" uniqueId="109f1732-df1d-4251-a8b4-4ff54677fe46" type="System.String">
+          <orm:column name="flicker" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="mercadoLibre" property="MercadoLibre" behavior="readwrite" uniqueId="1c75b510-e9e4-49f7-8b1d-ec71360d83fa" type="System.String">
+          <orm:column name="mercadoLibre" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="tiendaNube" property="TiendaNube" behavior="readwrite" uniqueId="b4075f5a-a6d8-4695-9f60-d867ecc8d3a1" type="System.String">
+          <orm:column name="tiendaNube" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="plataformaOtra" property="PlataformaOtra" behavior="readwrite" uniqueId="243954a2-8999-4a39-adfd-831a2020f30e" type="System.String">
+          <orm:column name="plataformaOtra" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="14e738ef-85e4-42f5-9a42-df11774ab904" type="System.Int32">
+          <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="7622792b-1f95-4e22-beed-0d60adfc858c" type="CapaDominio.Usuario">
+          <orm:reference uniqueId="41af31f6-59a3-4093-9e8a-000dd3480946" association-name="RedesSocialeHasUsuario">
+            <orm:sharedfield name="idUsuario" target-class="CapaDominio.Usuario" target-field="idUsuario" />
+            <orm:constraint name="FK_RedesSociales_Usuario" delete-action="dbdefaultrule" destination-table="Usuario" />
           </orm:reference>
         </orm:field>
       </orm:class>
@@ -531,6 +589,8 @@
         <orm:column name="telefono" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="edad" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
         <orm:column name="domicilio" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="provincia" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="localidad" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
       </orm:table>
       <orm:table name="ProduccionDeBienes">
         <orm:column name="idProduccionDeBienes" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
@@ -649,10 +709,29 @@
         <orm:column name="idFotoUsuario" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         <orm:column name="fotoUsuarioCodigo" sql-type="varbinary(max)" nullable="true" length="0" scale="0" ado-type="LongVarBinary" />
         <orm:column name="idUsuario" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="fotoTemporal" sql-type="varbinary(max)" nullable="true" length="0" scale="0" ado-type="LongVarBinary" />
         <orm:constraint name="FK_FotoUsuario_Usuario" delete-action="dbdefaultrule" destination-table="Usuario">
           <orm:column name="idUsuario" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
         </orm:constraint>
       </orm:table>
+      <orm:table name="RedesSociales">
+        <orm:column name="idRedesSociales" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="facebook" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="instagram" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="twitter" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="youtube" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="flicker" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="mercadoLibre" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="tiendaNube" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="plataformaOtra" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:constraint name="FK_RedesSociales_Usuario" delete-action="dbdefaultrule" destination-table="Usuario">
+          <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:constraint>
+      </orm:table>
+      <orm:procedure name="fn_diagramobjects" is-function="true" return-type="int">
+        <orm:result-sets />
+      </orm:procedure>
     </orm:schema>
     <orm:relational-naming-settings>
       <orm:source-strategy>Property</orm:source-strategy>
@@ -735,6 +814,8 @@
       <Property Id="dd320d4f-1f93-4f49-a8e1-c2238b16b28b" name="Nombre" label="Nombre : String" kind="Persistent" fieldName="nombre" />
       <Property Id="24adc16a-da84-47cc-ab36-b1ae8442df96" name="NombreUsuario" label="NombreUsuario : String" kind="Persistent" fieldName="nombreUsuario" />
       <Property Id="29337358-8f17-48e9-92ce-cf038b355671" name="Telefono" label="Telefono : String" kind="Persistent" fieldName="telefono" />
+      <Property Id="9682abac-d626-43e5-9018-012290f89a01" name="Provincia" label="Provincia : String" kind="Persistent" fieldName="provincia" />
+      <Property Id="35990198-251b-4cf4-a0f5-d85c2ec4a6ca" name="Localidad" label="Localidad : String" kind="Persistent" fieldName="localidad" />
       <navigationalProperties>
         <classHasNavigationalProperties Id="312deb57-a1eb-4de1-96e3-d5e822165aa7">
           <NavigationalProperty Id="201c6e60-6575-44b4-85da-69f79829c5a3" name="Vinculacions" type="IList&lt;Vinculacion&gt;" label="Vinculacions : IList&lt;Vinculacion&gt;" nullable="true" kind="Persistent" fieldName="vinculacions" isDependent="false" isManaged="false" />
@@ -765,6 +846,9 @@
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="21cd8473-5aaa-4cdd-ba57-2613833e073a">
           <NavigationalProperty Id="73f6f7ad-e031-4511-9d78-04255f262586" name="FotoUsuarios" type="IList&lt;FotoUsuario&gt;" label="FotoUsuarios : IList&lt;FotoUsuario&gt;" nullable="true" kind="Persistent" fieldName="fotoUsuarios" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="e8fe59f2-3797-496f-8655-404c9ca754f6">
+          <NavigationalProperty Id="46b2a328-66c2-44ad-b3ef-bda5de4421c1" name="RedesSociales" type="IList&lt;RedesSociale&gt;" label="RedesSociales : IList&lt;RedesSociale&gt;" nullable="true" kind="Persistent" fieldName="redesSociales" isDependent="false" isManaged="false" />
         </classHasNavigationalProperties>
       </navigationalProperties>
     </DomainClass>
@@ -1021,6 +1105,7 @@
       <Property Id="5df87333-f545-4922-9779-8cacb94eea5a" name="IdFotoUsuario" type="Int32" label="IdFotoUsuario : Int32" kind="Persistent" identity="true" fieldName="idFotoUsuario" />
       <Property Id="314a3990-21d3-476e-8540-8223657d8d4d" name="FotoUsuarioCodigo" type="Byte[]" label="FotoUsuarioCodigo : Byte[]" kind="Persistent" fieldName="fotoUsuarioCodigo" />
       <Property Id="bb7b383e-5c6c-476f-8608-42ae6b800e21" name="IdUsuario" type="Int32" label="IdUsuario : Int32" nullable="true" kind="Persistent" fieldName="idUsuario" />
+      <Property Id="c5d35775-ab79-4581-9a4b-c7a4cad0ee87" name="FotoTemporal" type="Byte[]" label="FotoTemporal : Byte[]" kind="Persistent" fieldName="fotoTemporal" />
       <AssociationTargets>
         <Association Id="ffa3959b-b858-4fdb-9251-b9db23b27bc6" SourceMultiplicity="ZeroOne" name="FotoUsuarioHasUsuario">
           <DomainClassMoniker name="/ModeloDeDominio/Usuario" />
@@ -1042,6 +1127,38 @@
         </classHasNavigationalProperties>
       </navigationalProperties>
     </DomainClass>
+    <DomainClass Id="5d9cb48d-03a7-4578-8529-1dafa7692d68" name="RedesSociale" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdRedesSociales">
+      <Property Id="1db4b88c-252d-4c39-a898-0f8f7d9416b7" name="IdRedesSociales" type="Int32" label="IdRedesSociales : Int32" kind="Persistent" identity="true" fieldName="idRedesSociales" />
+      <Property Id="d7bd9b19-54ff-4521-a2dd-a8122c11b048" name="Facebook" label="Facebook : String" kind="Persistent" fieldName="facebook" />
+      <Property Id="109f1732-df1d-4251-a8b4-4ff54677fe46" name="Flicker" label="Flicker : String" kind="Persistent" fieldName="flicker" />
+      <Property Id="14e738ef-85e4-42f5-9a42-df11774ab904" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
+      <Property Id="c90388e9-f4a7-4549-b6a9-97717e172b5b" name="Instagram" label="Instagram : String" kind="Persistent" fieldName="instagram" />
+      <Property Id="1c75b510-e9e4-49f7-8b1d-ec71360d83fa" name="MercadoLibre" label="MercadoLibre : String" kind="Persistent" fieldName="mercadoLibre" />
+      <Property Id="243954a2-8999-4a39-adfd-831a2020f30e" name="PlataformaOtra" label="PlataformaOtra : String" kind="Persistent" fieldName="plataformaOtra" />
+      <Property Id="b4075f5a-a6d8-4695-9f60-d867ecc8d3a1" name="TiendaNube" label="TiendaNube : String" kind="Persistent" fieldName="tiendaNube" />
+      <Property Id="b8c3b989-b485-45f1-8c2e-6d4a2adf6e89" name="Twitter" label="Twitter : String" kind="Persistent" fieldName="twitter" />
+      <Property Id="80e1e073-1f84-4bae-859b-6f4e5c34d29e" name="Youtube" label="Youtube : String" kind="Persistent" fieldName="youtube" />
+      <AssociationTargets>
+        <Association Id="41af31f6-59a3-4093-9e8a-000dd3480946" SourceMultiplicity="One" name="RedesSocialeHasUsuario">
+          <DomainClassMoniker name="/ModeloDeDominio/Usuario" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="a7a46291-e309-403f-af20-d9660a819930">
+              <NavigationalPropertyMoniker name="/ModeloDeDominio/Usuario/RedesSociales" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="dad06843-737f-4cc3-90f6-99719326f7e3">
+              <NavigationalPropertyMoniker name="/ModeloDeDominio/RedesSociale/Usuario" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+      </AssociationTargets>
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="b447f657-4ea8-4a60-8acb-8e7d1d3e7092">
+          <NavigationalProperty Id="7622792b-1f95-4e22-beed-0d60adfc858c" name="Usuario" type="Usuario" label="Usuario : Usuario" nullable="true" kind="Persistent" fieldName="usuario" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
   </Types>
   <domainContext>
     <domainModelHasDomainContext Id="178b001a-bd49-4994-92ec-c93cc1e8ef69">
@@ -1058,6 +1175,7 @@
         <entitySetProperty name="ActividadProfesionals" namespace="CapaDominio" type="ActividadProfesional" label="ActividadProfesionals : IQueryable&lt;CapaDominio.ActividadProfesional&gt;" />
         <entitySetProperty name="ActividadIndependientes" namespace="CapaDominio" type="ActividadIndependiente" label="ActividadIndependientes : IQueryable&lt;CapaDominio.ActividadIndependiente&gt;" />
         <entitySetProperty name="FotoUsuarios" namespace="CapaDominio" type="FotoUsuario" label="FotoUsuarios : IQueryable&lt;CapaDominio.FotoUsuario&gt;" />
+        <entitySetProperty name="RedesSociales" namespace="CapaDominio" type="RedesSociale" label="RedesSociales : IQueryable&lt;CapaDominio.RedesSociale&gt;" />
       </domainContainer>
     </domainModelHasDomainContext>
   </domainContext>

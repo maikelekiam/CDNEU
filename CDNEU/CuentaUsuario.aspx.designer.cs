@@ -10,69 +10,60 @@
 namespace CDNEU {
     
     
-    public partial class FotoPerfil {
+    public partial class CuentaUsuario {
         
         /// <summary>
-        /// imgURL control.
+        /// Panel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgURL;
+        protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
-        /// txtId control.
+        /// Label7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtId;
+        protected global::System.Web.UI.WebControls.Label Label7;
         
         /// <summary>
-        /// fuImagen control.
+        /// txtRegistroNombreUsuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fuImagen;
+        protected global::System.Web.UI.WebControls.TextBox txtRegistroNombreUsuario;
         
         /// <summary>
-        /// imgTemporal control.
+        /// Label8 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgTemporal;
+        protected global::System.Web.UI.WebControls.Label Label8;
         
         /// <summary>
-        /// btnMostrarFotoTemporal control.
+        /// txtRegistroContrasenia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMostrarFotoTemporal;
+        protected global::System.Web.UI.WebControls.TextBox txtRegistroContrasenia;
         
         /// <summary>
-        /// lblMensaje control.
+        /// btnGuardar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensaje;
-        
-        /// <summary>
-        /// btnGuardarFoto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGuardarFoto;
+        protected global::System.Web.UI.WebControls.Button btnGuardar;
     }
 }

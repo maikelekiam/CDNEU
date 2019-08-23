@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditarUsuario.aspx.cs" Inherits="CDNEU.EditarUsuario" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
     <style>
         input[type="radio"] + label {
             margin-left: 10px;
@@ -53,11 +52,6 @@
             height: 5px;
         }
     </style>
-
-
-
-
-
     <div class="panel-group" id="accordion">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -70,7 +64,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <table>
+                            <%--<table>
                                 <tr>
                                     <td class="anchotabla">
                                         <asp:Label ID="Label7" runat="server" Text="Label">Usuario</asp:Label>
@@ -106,7 +100,7 @@
                                     <td></td>
                                 </tr>
                             </table>
-                            <hr />
+                            <hr />--%>
                             <table>
                                 <tr>
                                     <td class="anchotabla">
@@ -2066,7 +2060,7 @@
             window.scrollTo(0, 200);
         }
         function scrollWin5() {
-            window.scrollTo(0,250);
+            window.scrollTo(0, 250);
         }
         function scrollWin6() {
             window.scrollTo(0, 300);

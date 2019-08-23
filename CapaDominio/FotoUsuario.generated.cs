@@ -63,6 +63,19 @@ namespace CapaDominio
 			}
 		}
 		
+		private byte[] fotoTemporal;
+		public virtual byte[] FotoTemporal
+		{
+			get
+			{
+				return this.fotoTemporal;
+			}
+			set
+			{
+				this.fotoTemporal = value;
+			}
+		}
+		
 		private Usuario usuario;
 		public virtual Usuario Usuario
 		{

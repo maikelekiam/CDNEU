@@ -13,7 +13,8 @@ namespace CDNEU
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            imgURL.ImageUrl = "~/MostrarFotoPerfil.aspx?idUsuario=" + Session["userid"].ToString(); 
+            imgURL.ImageUrl = "~/MostrarFotoPerfil.aspx?idUsuario=" + Session["userid"].ToString();
+            
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)

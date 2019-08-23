@@ -146,6 +146,14 @@ namespace CapaDominio
 			}
 		}
 		
+		public IQueryable<RedesSociale> RedesSociales 
+		{
+			get
+			{
+				return this.GetAll<RedesSociale>();
+			}
+		}
+		
 		public static BackendConfiguration GetBackendConfiguration()
 		{
 			BackendConfiguration backend = new BackendConfiguration();
@@ -212,6 +220,10 @@ namespace CapaDominio
 			get;
 		}
 		IQueryable<FotoUsuario> FotoUsuarios
+		{
+			get;
+		}
+		IQueryable<RedesSociale> RedesSociales
 		{
 			get;
 		}

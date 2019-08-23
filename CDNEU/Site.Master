@@ -128,6 +128,14 @@
                                         </li>
                                     </ul>
                                 </li>
+                                <li runat="server" id="Li1">
+                                    <a href="CuentaUsuario.aspx"><span>Cuenta de Usuario</span></a>
+                                    <ul>
+                                        <li>
+                                            <a runat="server" href="~/CuentaUsuario.aspx"><span class="glyphicon glyphicon-user fa-fw"></span>Cuenta de Usuario</a>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </nav>
                     </div>
