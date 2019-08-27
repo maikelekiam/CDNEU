@@ -202,24 +202,6 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.TextBox txtRegistroEdad;
         
         /// <summary>
-        /// Label10 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
-        
-        /// <summary>
-        /// txtRegistroDomicilio control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRegistroDomicilio;
-        
-        /// <summary>
         /// btnRegistro control.
         /// </summary>
         /// <remarks>

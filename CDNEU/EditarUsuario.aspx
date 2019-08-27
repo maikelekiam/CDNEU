@@ -6,6 +6,59 @@
             margin-left: 10px;
         }
 
+        .parpadea {
+            animation-name: parpadeo;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            -webkit-animation-name: parpadeo;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: infinite;
+        }
+
+        @-moz-keyframes parpadeo {
+            0% {
+                opacity: 1.0;
+            }
+
+            50% {
+                opacity: 0.0;
+            }
+
+            100% {
+                opacity: 1.0;
+            }
+        }
+
+        @-webkit-keyframes parpadeo {
+            0% {
+                opacity: 1.0;
+            }
+
+            50% {
+                opacity: 0.0;
+            }
+
+            100% {
+                opacity: 1.0;
+            }
+        }
+
+        @keyframes parpadeo {
+            0% {
+                opacity: 1.0;
+            }
+
+            50% {
+                opacity: 0.0;
+            }
+
+            100% {
+                opacity: 1.0;
+            }
+        }
+
         .boton_azul {
             text-decoration: none;
             padding: 2px;
@@ -23,6 +76,25 @@
                 background-color: #ffffff;
                 border-color: #6082ac;
             }
+
+        .boton_rojo {
+            text-decoration: none;
+            padding: 2px;
+            font-weight: 400;
+            font-size: 15px;
+            color: #ffffff;
+            background-color: #fb5d5d;
+            border-radius: 6px;
+            border: 2px solid #fb5d5d;
+            width: 180px;
+        }
+
+            .boton_rojo:hover {
+                color: #fb5d5d;
+                background-color: #ffffff;
+                border-color: #fb5d5d;
+            }
+
 
         .anchotabla {
             width: 200px;
@@ -52,6 +124,9 @@
             height: 5px;
         }
     </style>
+
+
+
     <div class="panel-group" id="accordion">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -64,54 +139,17 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <%--<table>
-                                <tr>
-                                    <td class="anchotabla">
-                                        <asp:Label ID="Label7" runat="server" Text="Label">Usuario</asp:Label>
-                                    </td>
-                                    <td class="anchotextbox">
-                                        <div class="input-group">
-                                            <span class="input-group-addon alert-info">
-                                                <span class="glyphicon glyphicon-user"></span>
-                                            </span>
-                                            <asp:TextBox ID="txtRegistroNombreUsuario" runat="server" CssClass="form-control" placeholder="Ingrese un nombre de Usuario" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="anchotabla altotabla"></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td class="anchotabla">
-                                        <asp:Label ID="Label8" runat="server" Text="Label">Contraseña</asp:Label>
-                                    </td>
-                                    <td class="anchotextbox">
-                                        <div class="input-group">
-                                            <span class="input-group-addon alert-info">
-                                                <span class="glyphicon glyphicon-lock"></span>
-                                            </span>
-                                            <asp:TextBox ID="txtRegistroContrasenia" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese una Contraseña" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="anchotabla altotabla"></td>
-                                    <td></td>
-                                </tr>
-                            </table>
-                            <hr />--%>
                             <table>
                                 <tr>
                                     <td class="anchotabla">
-                                        <asp:Label ID="Label9" runat="server" Text="Label">Nombre</asp:Label>
+                                        <asp:Label ID="lblDatosPersonalesNombre" runat="server" Text="Label">Nombre</asp:Label>
                                     </td>
                                     <td class="anchotextbox">
                                         <div class="input-group">
                                             <span class="input-group-addon alert-info">
                                                 <span class="glyphicon glyphicon-edit"></span>
                                             </span>
-                                            <asp:TextBox ID="txtRegistroNombre" runat="server" CssClass="form-control" placeholder="Ingrese su nombre" />
+                                            <asp:TextBox ID="txtDatosPersonalesNombre" runat="server" CssClass="form-control" placeholder="Ingrese su nombre" />
                                         </div>
                                     </td>
                                 </tr>
@@ -128,7 +166,7 @@
                                             <span class="input-group-addon alert-info">
                                                 <span class="glyphicon glyphicon-edit"></span>
                                             </span>
-                                            <asp:TextBox ID="txtRegistroApellido" runat="server" CssClass="form-control" placeholder="Ingrese su apellido" />
+                                            <asp:TextBox ID="txtDatosPersonalesApellido" runat="server" CssClass="form-control" placeholder="Ingrese su apellido" />
                                         </div>
                                     </td>
                                 </tr>
@@ -145,7 +183,7 @@
                                             <span class="input-group-addon alert-info">
                                                 <span class="glyphicon glyphicon-envelope"></span>
                                             </span>
-                                            <asp:TextBox ID="txtRegistroCorreoElectronico" runat="server" CssClass="form-control" placeholder="Ingrese su Correo Electronico" />
+                                            <asp:TextBox ID="txtDatosPersonalesCorreoElectronico" runat="server" CssClass="form-control" placeholder="Ingrese su Correo Electronico" />
                                         </div>
                                     </td>
                                 </tr>
@@ -162,7 +200,7 @@
                                             <span class="input-group-addon alert-info">
                                                 <span class="glyphicon glyphicon-phone-alt"></span>
                                             </span>
-                                            <asp:TextBox ID="txtRegistroTelefono" runat="server" CssClass="form-control" placeholder="Ingrese su Telefono" />
+                                            <asp:TextBox ID="txtDatosPersonalesTelefono" runat="server" CssClass="form-control" placeholder="Ingrese su Telefono" />
                                         </div>
                                     </td>
                                 </tr>
@@ -179,7 +217,7 @@
                                             <span class="input-group-addon alert-info">
                                                 <span class="glyphicon glyphicon-calendar"></span>
                                             </span>
-                                            <asp:TextBox ID="txtRegistroEdad" runat="server" CssClass="form-control" placeholder="Ingrese su Edad" />
+                                            <asp:TextBox ID="txtDatosPersonalesEdad" onkeypress="return validarSoloNumeros(event);" MaxLength="2" runat="server" CssClass="form-control" placeholder="Ingrese su Edad" />
                                         </div>
                                     </td>
                                 </tr>
@@ -196,7 +234,7 @@
                                             <span class="input-group-addon alert-info">
                                                 <span class="glyphicon glyphicon-home"></span>
                                             </span>
-                                            <asp:TextBox ID="txtRegistroDomicilio" runat="server" CssClass="form-control" placeholder="Ingrese su Domicilio" />
+                                            <asp:TextBox ID="txtDatosPersonalesDomicilio" runat="server" CssClass="form-control" placeholder="Ingrese su Domicilio" />
                                         </div>
                                     </td>
                                 </tr>
@@ -218,7 +256,7 @@
                                             <span class="input-group-addon alert-info">
                                                 <span class="glyphicon glyphicon-road"></span>
                                             </span>
-                                            <asp:TextBox ID="txtLocalidad" runat="server" CssClass="form-control" />
+                                            <asp:TextBox ID="txtDatosPersonalesLocalidad" runat="server" CssClass="form-control" />
                                         </div>
                                     </td>
                                 </tr>
@@ -236,7 +274,7 @@
                                             <span class="input-group-addon alert-info">
                                                 <span class="glyphicon glyphicon-map-marker"></span>
                                             </span>
-                                            <asp:TextBox ID="txtProvincia" runat="server" CssClass="form-control" />
+                                            <asp:TextBox ID="txtDatosPersonalesProvincia" runat="server" CssClass="form-control" />
                                         </div>
                                     </td>
                                 </tr>
@@ -346,6 +384,28 @@
                             <table>
                                 <tr>
                                     <td>
+                                        <div class="form-group">
+                                            <asp:Label ID="lblMercadoLibre" runat="server" Text="Mercado Libre" CssClass="col-md-2 control-label"></asp:Label>
+                                            <div class="col-md-2 col-md-offset-6">
+                                                <asp:CheckBox ID="chkMercadoLibre" runat="server" />
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-group">
+                                                <asp:Label ID="lblTiendaNube" runat="server" Text="Tienda Nube" CssClass="col-md-2 control-label"></asp:Label>
+                                                <div class="col-md-2 col-md-offset-6">
+                                                    <asp:CheckBox ID="chkTiendaNube" runat="server" />
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                            </table>
+
+
+                            <%--<td>
                                         <asp:RadioButtonList ID="RBPlataformaComercializacion" runat="server"
                                             CssClass="form-control" BorderStyle="None"
                                             RepeatColumns="1"
@@ -355,7 +415,7 @@
                                             <asp:ListItem>Tienda Nube</asp:ListItem>
                                             <asp:ListItem>Otro</asp:ListItem>
                                         </asp:RadioButtonList>
-                                    </td>
+                                    </td>--%>
                                 </tr>
                                 <tr>
                                     <td style="vertical-align: bottom">
@@ -364,14 +424,11 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td style="height: 30px"></td>
-                                </tr>
+                            <tr>
+                                <td style="height: 30px"></td>
+                            </tr>
                             </table>
                         </div>
-
-
-
                         <%--FOTO DE PERFIL--%>
                         <div class="col-md-6">
                             <div>
@@ -419,15 +476,11 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
                     <hr />
                     <!--Boton de registro-->
                     <div class="form-group">
                         <div class="col-md-10 col-md-offset-1">
-                            <asp:Button ID="btnEnviarDatosPersonales" runat="server" Text="Enviar Datos" CssClass="boton_azul" />
+                            <asp:Button ID="btnGuardarDatosPersonales" runat="server" Text="Guardar Datos" CssClass="boton_azul parpadea" OnClick="btnGuardarDatosPersonales_Click" />
                         </div>
                     </div>
                 </div>
@@ -661,7 +714,7 @@
                     <div class="form-group">
                         <div class="col-md-10 col-md-offset-1">
                             <asp:Button ID="btnEnviarDatosFormacionAcademica" runat="server"
-                                Text="Enviar Datos" CssClass="boton_azul" />
+                                Text="Enviar Datos" CssClass="boton_rojo parpadea" />
                         </div>
                     </div>
                 </div>
@@ -2078,6 +2131,7 @@
             window.scrollTo(0, 500);
         }
     </script>
+
 
 
 </asp:Content>

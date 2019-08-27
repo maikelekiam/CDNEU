@@ -233,7 +233,7 @@
                                                 <span class="input-group-addon alert-info">
                                                     <span class="glyphicon glyphicon-calendar"></span>
                                                 </span>
-                                                <asp:TextBox ID="txtRegistroEdad" runat="server" CssClass="form-control" placeholder="Ingrese su Edad" />
+                                                <asp:TextBox ID="txtRegistroEdad" onkeypress="return validarSoloNumeros(event);" MaxLength="2" runat="server" CssClass="form-control" placeholder="Ingrese su Edad" />
                                             </div>
                                         </td>
                                     </tr>
@@ -241,7 +241,7 @@
                                         <td class="anchotabla altotabla"></td>
                                         <td></td>
                                     </tr>
-                                    <tr>
+                                    <%--<tr>
                                         <td class="anchotabla">
                                             <asp:Label ID="Label10" runat="server" Text="Label">Domicilio</asp:Label>
                                         </td>
@@ -253,7 +253,7 @@
                                                 <asp:TextBox ID="txtRegistroDomicilio" runat="server" CssClass="form-control" placeholder="Ingrese su Domicilio" />
                                             </div>
                                         </td>
-                                    </tr>
+                                    </tr>--%>
                                 </table>
 
 

@@ -15,6 +15,8 @@ namespace CDNEU
     public partial class Login : System.Web.UI.Page
     {
         UsuarioNego usuarioNego = new UsuarioNego();
+        RedesSocialesNego redesSocialesNego = new RedesSocialesNego();
+
         public static int idUsuarioTemporal;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -29,11 +31,15 @@ namespace CDNEU
             {
                 Session["userlogin"] = txtLoginNombreUsuario.Text;
 
+                Session["usercontrasenia"] = txtLoginContrasenia.Text;
+
                 Session["userid"] = Convert.ToString(usuario.IdUsuario);
 
                 Session["usergrupo"] = Convert.ToString(usuario.Grupo);
 
-                Session["userCorreoElectronico"] = Convert.ToString(usuario.CorreoElectronico);
+                Session["userActivo"] = usuario.Activo;
+
+                //Session["userCorreoElectronico"] = Convert.ToString(usuario.CorreoElectronico);
 
                 //Session["usertelefono"] = txtTelefonoid.Text;
 
@@ -55,7 +61,7 @@ namespace CDNEU
             //Aca hay que guardar los datos de Registro del Usuario NUEVO
 
             if ((txtRegistroNombreUsuario.Text != "") && (txtRegistroContrasenia.Text != "") && (txtRegistroNombre.Text != "")
-                && (txtRegistroApellido.Text != "") && (txtRegistroCorreoElectronico.Text != "") && (txtRegistroDomicilio.Text != "")
+                && (txtRegistroApellido.Text != "") && (txtRegistroCorreoElectronico.Text != "") 
                 && (txtRegistroEdad.Text != "") && (txtRegistroTelefono.Text != ""))
             {
                 GuardarUsuario();
@@ -79,10 +85,8 @@ namespace CDNEU
 
             usuario.Nombre = txtRegistroNombre.Text;
             usuario.Apellido = txtRegistroApellido.Text;
-
             usuario.Telefono = txtRegistroTelefono.Text;
             usuario.CorreoElectronico = txtRegistroCorreoElectronico.Text;
-            usuario.Domicilio = txtRegistroDomicilio.Text;
             usuario.Edad = Convert.ToInt32(txtRegistroEdad.Text);
 
             //usuario.Observaciones = txtObservaciones.Text;
@@ -97,6 +101,17 @@ namespace CDNEU
             idUsuarioTemporal = usuarioNego.GuardarUsuario(usuario);
 
             GuardarFotoPerfil();
+
+            //Creo un objeto de tipo RedesSociales
+            RedesSociale redesSociale = new RedesSociale();
+            redesSociale.IdUsuario = idUsuarioTemporal;
+            redesSociale.Facebook = null;
+            redesSociale.Instagram = null;
+            redesSociale.Twitter = null;
+            redesSociale.Youtube = null;
+            redesSociale.Flicker = null;
+
+            redesSocialesNego.GuardarRedesSociales(redesSociale);
         }
         private void GuardarFotoPerfil()
         {

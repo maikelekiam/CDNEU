@@ -83,7 +83,7 @@ namespace CDNEU
                 bait = fuImagen.FileBytes;
                 comando.Parameters.Add("@idUsuario", SqlDbType.Int).Value = Session["userid"].ToString();
                 comando.ExecuteNonQuery();
-                lblMensaje.Text = "La foto temporal se guardo.";
+                lblMensaje.Text = "La foto se cargó correctamente.";
 
                 //SqlConnection conectar = new ConectarSQLServer().conectarSQL();
                 //String codigoBorrar = txtId.Text;

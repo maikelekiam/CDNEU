@@ -539,11 +539,11 @@
         <orm:field name="flicker" property="Flicker" behavior="readwrite" uniqueId="109f1732-df1d-4251-a8b4-4ff54677fe46" type="System.String">
           <orm:column name="flicker" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="mercadoLibre" property="MercadoLibre" behavior="readwrite" uniqueId="1c75b510-e9e4-49f7-8b1d-ec71360d83fa" type="System.String">
-          <orm:column name="mercadoLibre" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:field name="mercadoLibre" property="MercadoLibre" behavior="readwrite" uniqueId="1c75b510-e9e4-49f7-8b1d-ec71360d83fa" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="mercadoLibre" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
         </orm:field>
-        <orm:field name="tiendaNube" property="TiendaNube" behavior="readwrite" uniqueId="b4075f5a-a6d8-4695-9f60-d867ecc8d3a1" type="System.String">
-          <orm:column name="tiendaNube" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:field name="tiendaNube" property="TiendaNube" behavior="readwrite" uniqueId="b4075f5a-a6d8-4695-9f60-d867ecc8d3a1" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="tiendaNube" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
         </orm:field>
         <orm:field name="plataformaOtra" property="PlataformaOtra" behavior="readwrite" uniqueId="243954a2-8999-4a39-adfd-831a2020f30e" type="System.String">
           <orm:column name="plataformaOtra" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
@@ -721,8 +721,8 @@
         <orm:column name="twitter" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="youtube" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="flicker" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="mercadoLibre" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="tiendaNube" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="mercadoLibre" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="tiendaNube" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
         <orm:column name="plataformaOtra" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         <orm:constraint name="FK_RedesSociales_Usuario" delete-action="dbdefaultrule" destination-table="Usuario">
@@ -1133,9 +1133,9 @@
       <Property Id="109f1732-df1d-4251-a8b4-4ff54677fe46" name="Flicker" label="Flicker : String" kind="Persistent" fieldName="flicker" />
       <Property Id="14e738ef-85e4-42f5-9a42-df11774ab904" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
       <Property Id="c90388e9-f4a7-4549-b6a9-97717e172b5b" name="Instagram" label="Instagram : String" kind="Persistent" fieldName="instagram" />
-      <Property Id="1c75b510-e9e4-49f7-8b1d-ec71360d83fa" name="MercadoLibre" label="MercadoLibre : String" kind="Persistent" fieldName="mercadoLibre" />
+      <Property Id="1c75b510-e9e4-49f7-8b1d-ec71360d83fa" name="MercadoLibre" type="Boolean" label="MercadoLibre : Boolean" kind="Persistent" fieldName="mercadoLibre" />
       <Property Id="243954a2-8999-4a39-adfd-831a2020f30e" name="PlataformaOtra" label="PlataformaOtra : String" kind="Persistent" fieldName="plataformaOtra" />
-      <Property Id="b4075f5a-a6d8-4695-9f60-d867ecc8d3a1" name="TiendaNube" label="TiendaNube : String" kind="Persistent" fieldName="tiendaNube" />
+      <Property Id="b4075f5a-a6d8-4695-9f60-d867ecc8d3a1" name="TiendaNube" type="Boolean" label="TiendaNube : Boolean" kind="Persistent" fieldName="tiendaNube" />
       <Property Id="b8c3b989-b485-45f1-8c2e-6d4a2adf6e89" name="Twitter" label="Twitter : String" kind="Persistent" fieldName="twitter" />
       <Property Id="80e1e073-1f84-4bae-859b-6f4e5c34d29e" name="Youtube" label="Youtube : String" kind="Persistent" fieldName="youtube" />
       <AssociationTargets>

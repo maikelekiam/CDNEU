@@ -102,8 +102,8 @@ namespace CapaDominio
 			}
 		}
 		
-		private string mercadoLibre;
-		public virtual string MercadoLibre
+		private bool? mercadoLibre;
+		public virtual bool? MercadoLibre
 		{
 			get
 			{
@@ -115,8 +115,8 @@ namespace CapaDominio
 			}
 		}
 		
-		private string tiendaNube;
-		public virtual string TiendaNube
+		private bool? tiendaNube;
+		public virtual bool? TiendaNube
 		{
 			get
 			{

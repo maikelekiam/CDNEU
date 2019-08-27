@@ -29,9 +29,6 @@
         }
     </style>
 
-
-
-
     <!-- Template CSS files -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/shortcodes.css">
@@ -42,9 +39,6 @@
 
 <body class="gry-bg pattern-3">
     <form runat="server" class="form-horizontal form-control autoHeight">
-
-
-
 
         <asp:ScriptManager EnablePageMethods="true" runat="server">
             <Scripts>
@@ -172,15 +166,6 @@
             </div>
         </div>
 
-
-        
-
-
-
-
-
-
-
         <!-- Back to top Link -->
         <a id="to-top" href="#"><span class="fa fa fa-angle-up"></span></a>
 
@@ -193,6 +178,15 @@
         <!-- general script file -->
         <script type="text/javascript" src="assets/js/script.js"></script>
 
+        <%--PARA VALIDAR SOLO NUMEROS--%>
+        <script>
+            function validarSoloNumeros(e) {
+                tecla = (document.all) ? e.keyCode : e.which;
+                if (tecla == 8) return true;
+                patron = /\d/;
+                return patron.test(String.fromCharCode(tecla));
+            }
+        </script>
     </form>
 </body>
 </html>
