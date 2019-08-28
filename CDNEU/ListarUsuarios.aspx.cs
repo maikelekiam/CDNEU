@@ -19,29 +19,29 @@ namespace CDNEU
 
         }
 
-        protected void btnGuardar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                SqlConnection conectar = new ConectarSQLServer().conectarSQL();
-                String comandoInsertar = "INSERT INTO Imagen(id, img) VALUES(@id, @img)";
-                SqlCommand comando = new SqlCommand(comandoInsertar, conectar);
-                comando.Parameters.Add("@id", SqlDbType.Char, 3).Value = txtId.Text;
-                comando.Parameters.Add("@img", SqlDbType.VarBinary).Value = fuImagen.FileBytes;
-                comando.ExecuteNonQuery();
-                lblMensaje.Text = "Se registro correctamente.";
-            }
-            catch (Exception ex)
-                {
-                    lblMensaje.Text = ex.Message;
-                }
+        //protected void btnGuardar_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        SqlConnection conectar = new ConectarSQLServer().conectarSQL();
+        //        String comandoInsertar = "INSERT INTO Imagen(id, img) VALUES(@id, @img)";
+        //        SqlCommand comando = new SqlCommand(comandoInsertar, conectar);
+        //        comando.Parameters.Add("@id", SqlDbType.Char, 3).Value = txtId.Text;
+        //        comando.Parameters.Add("@img", SqlDbType.VarBinary).Value = fuImagen.FileBytes;
+        //        comando.ExecuteNonQuery();
+        //        lblMensaje.Text = "Se registro correctamente.";
+        //    }
+        //    catch (Exception ex)
+        //        {
+        //            lblMensaje.Text = ex.Message;
+        //        }
 
 
-        }
+        //}
 
-        protected void btnVer_Click(object sender, EventArgs e)
-        {
-            imgURL.ImageUrl = "~/MostrarUsuario.aspx?id=" + txtId.Text;
-        }
+        //protected void btnVer_Click(object sender, EventArgs e)
+        //{
+        //    imgURL.ImageUrl = "~/MostrarUsuario.aspx?id=" + txtId.Text;
+        //}
     }
 }

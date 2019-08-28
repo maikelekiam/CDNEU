@@ -253,6 +253,11 @@
     <Content Include="imagenes\copade03.jpg" />
     <Content Include="imagenes\copade04.jpg" />
     <Content Include="imagenes\FotoUsuariosx2.png" />
+    <Content Include="imagenes\icono-facebook.jpg" />
+    <Content Include="imagenes\icono-flickr.jpg" />
+    <Content Include="imagenes\icono-instagram.jpg" />
+    <Content Include="imagenes\icono-twitter.jpg" />
+    <Content Include="imagenes\icono-youtube.jpg" />
     <Content Include="imagenes\img-01.png" />
     <Content Include="js\bootstrap-datepicker.js" />
     <Content Include="js\bootstrap-select.js" />
@@ -295,6 +300,7 @@
     <Content Include="assets\php\sendemail.php" />
     <None Include="Project_Readme.html" />
     <Content Include="Site.Mobile.Master" />
+    <None Include="Properties\PublishProfiles\cdneu.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

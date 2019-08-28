@@ -1,7 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditarUsuario.aspx.cs" Inherits="CDNEU.EditarUsuario" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+
     <style>
+        .estiloRedesSociales {
+            background-position: left;
+            background-repeat: no-repeat;
+            padding-left: 50px;
+            padding-right: 50px;
+            background-size: contain;
+        }
+
         input[type="radio"] + label {
             margin-left: 10px;
         }
@@ -95,7 +104,6 @@
                 border-color: #fb5d5d;
             }
 
-
         .anchotabla {
             width: 200px;
         }
@@ -125,8 +133,6 @@
         }
     </style>
 
-
-
     <div class="panel-group" id="accordion">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -146,7 +152,7 @@
                                     </td>
                                     <td class="anchotextbox">
                                         <div class="input-group">
-                                            <span class="input-group-addon alert-info">
+                                            <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-edit"></span>
                                             </span>
                                             <asp:TextBox ID="txtDatosPersonalesNombre" runat="server" CssClass="form-control" placeholder="Ingrese su nombre" />
@@ -163,7 +169,7 @@
                                     </td>
                                     <td class="anchotextbox">
                                         <div class="input-group">
-                                            <span class="input-group-addon alert-info">
+                                            <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-edit"></span>
                                             </span>
                                             <asp:TextBox ID="txtDatosPersonalesApellido" runat="server" CssClass="form-control" placeholder="Ingrese su apellido" />
@@ -180,7 +186,7 @@
                                     </td>
                                     <td class="anchotextbox">
                                         <div class="input-group">
-                                            <span class="input-group-addon alert-info">
+                                            <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-envelope"></span>
                                             </span>
                                             <asp:TextBox ID="txtDatosPersonalesCorreoElectronico" runat="server" CssClass="form-control" placeholder="Ingrese su Correo Electronico" />
@@ -197,7 +203,7 @@
                                     </td>
                                     <td class="anchotextbox">
                                         <div class="input-group">
-                                            <span class="input-group-addon alert-info">
+                                            <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-phone-alt"></span>
                                             </span>
                                             <asp:TextBox ID="txtDatosPersonalesTelefono" runat="server" CssClass="form-control" placeholder="Ingrese su Telefono" />
@@ -214,7 +220,7 @@
                                     </td>
                                     <td class="anchotextbox">
                                         <div class="input-group">
-                                            <span class="input-group-addon alert-info">
+                                            <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-calendar"></span>
                                             </span>
                                             <asp:TextBox ID="txtDatosPersonalesEdad" onkeypress="return validarSoloNumeros(event);" MaxLength="2" runat="server" CssClass="form-control" placeholder="Ingrese su Edad" />
@@ -231,7 +237,7 @@
                                     </td>
                                     <td class="anchotextbox">
                                         <div class="input-group">
-                                            <span class="input-group-addon alert-info">
+                                            <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-home"></span>
                                             </span>
                                             <asp:TextBox ID="txtDatosPersonalesDomicilio" runat="server" CssClass="form-control" placeholder="Ingrese su Domicilio" />
@@ -253,7 +259,7 @@
                                     </td>
                                     <td class="anchotextbox">
                                         <div class="input-group">
-                                            <span class="input-group-addon alert-info">
+                                            <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-road"></span>
                                             </span>
                                             <asp:TextBox ID="txtDatosPersonalesLocalidad" runat="server" CssClass="form-control" />
@@ -271,7 +277,7 @@
                                     </td>
                                     <td class="anchotextbox">
                                         <div class="input-group">
-                                            <span class="input-group-addon alert-info">
+                                            <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-map-marker"></span>
                                             </span>
                                             <asp:TextBox ID="txtDatosPersonalesProvincia" runat="server" CssClass="form-control" />
@@ -297,12 +303,7 @@
                                         <asp:Label ID="Label59" runat="server">Facebook</asp:Label>
                                     </td>
                                     <td class="anchotextbox">
-                                        <div class="input-group">
-                                            <span class="input-group-addon alert-info">
-                                                <span class="glyphicon glyphicon-user"></span>
-                                            </span>
-                                            <asp:TextBox ID="txtFacebook" runat="server" CssClass="form-control" />
-                                        </div>
+                                        <asp:TextBox ID="txtFacebook" Width="400px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-facebook.jpg);" runat="server" CssClass="form-control estiloRedesSociales" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -313,12 +314,7 @@
                                         <asp:Label ID="Label60" runat="server">Instagram</asp:Label>
                                     </td>
                                     <td class="anchotextbox">
-                                        <div class="input-group">
-                                            <span class="input-group-addon alert-info">
-                                                <span class="glyphicon glyphicon-user"></span>
-                                            </span>
-                                            <asp:TextBox ID="txtInstagram" runat="server" CssClass="form-control" />
-                                        </div>
+                                        <asp:TextBox ID="txtInstagram" Width="400px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-instagram.jpg);" runat="server" CssClass="form-control estiloRedesSociales" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -329,12 +325,7 @@
                                         <asp:Label ID="Label61" runat="server">Twitter</asp:Label>
                                     </td>
                                     <td class="anchotextbox">
-                                        <div class="input-group">
-                                            <span class="input-group-addon alert-info">
-                                                <span class="glyphicon glyphicon-user"></span>
-                                            </span>
-                                            <asp:TextBox ID="txtTwitter" runat="server" CssClass="form-control" />
-                                        </div>
+                                        <asp:TextBox ID="txtTwitter" Width="400px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-twitter.jpg);" runat="server" CssClass="form-control estiloRedesSociales" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -345,12 +336,7 @@
                                         <asp:Label ID="Label62" runat="server">YouTube</asp:Label>
                                     </td>
                                     <td class="anchotextbox">
-                                        <div class="input-group">
-                                            <span class="input-group-addon alert-info">
-                                                <span class="glyphicon glyphicon-user"></span>
-                                            </span>
-                                            <asp:TextBox ID="txtYouTube" runat="server" CssClass="form-control" />
-                                        </div>
+                                        <asp:TextBox ID="txtYouTube" Width="400px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-youtube.jpg);" runat="server" CssClass="form-control estiloRedesSociales" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -358,15 +344,10 @@
                                 </tr>
                                 <tr>
                                     <td class="anchotabla">
-                                        <asp:Label ID="Label63" runat="server">Flicker</asp:Label>
+                                        <asp:Label ID="Label63" runat="server">Flickr</asp:Label>
                                     </td>
                                     <td class="anchotextbox">
-                                        <div class="input-group">
-                                            <span class="input-group-addon alert-info">
-                                                <span class="glyphicon glyphicon-user"></span>
-                                            </span>
-                                            <asp:TextBox ID="txtFlicker" runat="server" CssClass="form-control" />
-                                        </div>
+                                        <asp:TextBox ID="txtFlicker" Width="400px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-flickr.jpg);" runat="server" CssClass="form-control estiloRedesSociales" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -385,50 +366,32 @@
                                 <tr>
                                     <td>
                                         <div class="form-group">
-                                            <asp:Label ID="lblMercadoLibre" runat="server" Text="Mercado Libre" CssClass="col-md-2 control-label"></asp:Label>
-                                            <div class="col-md-2 col-md-offset-6">
-                                                <asp:CheckBox ID="chkMercadoLibre" runat="server" />
-                                            </div>
+                                            <asp:CheckBox ID="chkMercadoLibre" runat="server" Width="20px" />
+                                            <asp:Label ID="lblMercadoLibre" runat="server" Text="Mercado Libre"></asp:Label>
                                         </div>
                                     </td>
-
-                                    <tr>
-                                        <td>
-                                            <div class="form-group">
-                                                <asp:Label ID="lblTiendaNube" runat="server" Text="Tienda Nube" CssClass="col-md-2 control-label"></asp:Label>
-                                                <div class="col-md-2 col-md-offset-6">
-                                                    <asp:CheckBox ID="chkTiendaNube" runat="server" />
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                            </table>
-
-
-                            <%--<td>
-                                        <asp:RadioButtonList ID="RBPlataformaComercializacion" runat="server"
-                                            CssClass="form-control" BorderStyle="None"
-                                            RepeatColumns="1"
-                                            RepeatLayout="Table"
-                                            CellPadding="10">
-                                            <asp:ListItem>Mercado Libre</asp:ListItem>
-                                            <asp:ListItem>Tienda Nube</asp:ListItem>
-                                            <asp:ListItem>Otro</asp:ListItem>
-                                        </asp:RadioButtonList>
-                                    </td>--%>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <asp:CheckBox ID="chkTiendaNube" runat="server" Width="20px" />
+                                            <asp:Label ID="lblTiendaNube" runat="server" Text="Tienda Nube"></asp:Label>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td style="vertical-align: bottom">
                                         <div class="input-group">
-                                            <asp:TextBox ID="txtPlataformaComercializacionOtro" runat="server" CssClass="form-control" Width="800" />
+                                            <asp:TextBox ID="txtPlataformaComercializacionOtro" placeholder="Otro" runat="server" CssClass="form-control" Width="800" />
                                         </div>
                                     </td>
                                 </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
+                                <tr>
+                                    <td style="height: 30px"></td>
+                                </tr>
                             </table>
                         </div>
+
                         <%--FOTO DE PERFIL--%>
                         <div class="col-md-6">
                             <div>

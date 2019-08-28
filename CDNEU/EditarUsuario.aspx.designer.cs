@@ -247,15 +247,6 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.TextBox txtFlicker;
         
         /// <summary>
-        /// lblMercadoLibre control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMercadoLibre;
-        
-        /// <summary>
         /// chkMercadoLibre control.
         /// </summary>
         /// <remarks>
@@ -265,13 +256,13 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.CheckBox chkMercadoLibre;
         
         /// <summary>
-        /// lblTiendaNube control.
+        /// lblMercadoLibre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTiendaNube;
+        protected global::System.Web.UI.WebControls.Label lblMercadoLibre;
         
         /// <summary>
         /// chkTiendaNube control.
@@ -281,6 +272,15 @@ namespace CDNEU {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkTiendaNube;
+        
+        /// <summary>
+        /// lblTiendaNube control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTiendaNube;
         
         /// <summary>
         /// txtPlataformaComercializacionOtro control.

@@ -2,7 +2,18 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div>
+   
+
+
+
+
+
+
+
+
+
+
+    <%--<div>
         <table border="1">
             <tr>
                 <td colspan="2">
@@ -45,7 +56,5 @@
 
 
         </table>
-    </div>
-
-
+    </div>--%>
 </asp:Content>
