@@ -16,6 +16,7 @@ namespace CDNEU
     {
         UsuarioNego usuarioNego = new UsuarioNego();
         RedesSocialesNego redesSocialesNego = new RedesSocialesNego();
+        FormacionAcademicaNego formacionAcademicaNego = new FormacionAcademicaNego();
 
         public static int idUsuarioTemporal;
         protected void Page_Load(object sender, EventArgs e)
@@ -30,19 +31,10 @@ namespace CDNEU
             if (usuario != null)
             {
                 Session["userlogin"] = txtLoginNombreUsuario.Text;
-
                 Session["usercontrasenia"] = txtLoginContrasenia.Text;
-
                 Session["userid"] = Convert.ToString(usuario.IdUsuario);
-
                 Session["usergrupo"] = Convert.ToString(usuario.Grupo);
-
                 Session["userActivo"] = usuario.Activo;
-
-                //Session["userCorreoElectronico"] = Convert.ToString(usuario.CorreoElectronico);
-
-                //Session["usertelefono"] = txtTelefonoid.Text;
-
                 Response.Redirect("Default.aspx");
             }
             else
@@ -89,14 +81,6 @@ namespace CDNEU
             usuario.CorreoElectronico = txtRegistroCorreoElectronico.Text;
             usuario.Edad = Convert.ToInt32(txtRegistroEdad.Text);
 
-            //usuario.Observaciones = txtObservaciones.Text;
-            //usuario.TipoDocumento = ddlTipoDocumento.SelectedValue.ToString();
-            //usuario.Documento = txtDocumento.Text;
-
-            //if (ddlLocalidad.SelectedValue != "-1")
-            //{
-            //    persona.Localidad = localidadNego.TraerLocalidadIdSegunItem(ddlLocalidad.SelectedItem.ToString());
-            //}
 
             idUsuarioTemporal = usuarioNego.GuardarUsuario(usuario);
 
@@ -110,8 +94,24 @@ namespace CDNEU
             redesSociale.Twitter = null;
             redesSociale.Youtube = null;
             redesSociale.Flicker = null;
-
             redesSocialesNego.GuardarRedesSociales(redesSociale);
+
+            //Creo un objeto de tipo FormacionAcademica
+            FormacionAcademica formacionAcademica = new FormacionAcademica();
+            formacionAcademica.IdUsuario = idUsuarioTemporal;
+            formacionAcademica.EstudiosOficiales = null;
+            formacionAcademica.EstudiosOficialesOtro = null;
+            formacionAcademica.TituloObtenido = null;
+            formacionAcademica.InstitucionEmisoraTitulo = null;
+            formacionAcademica.OtrosEstudios = null;
+            formacionAcademica.EsEstudiante = null;
+            formacionAcademica.CarreraNombre = null;
+            formacionAcademica.CarreraAnioIngreso = null;
+            formacionAcademica.CarreraAnioCursada = null;
+            formacionAcademica.CarreraDuracion = null;
+            formacionAcademica.CarreraInstitucion = null;
+            formacionAcademicaNego.GuardarFormacionAcademica(formacionAcademica);
+
         }
         private void GuardarFotoPerfil()
         {

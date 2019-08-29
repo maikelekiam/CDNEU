@@ -407,11 +407,14 @@
         <orm:field name="linkEmpresa" property="LinkEmpresa" behavior="readwrite" uniqueId="9b665e0f-1b37-475d-abd0-06b320d73908" type="System.String">
           <orm:column name="linkEmpresa" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="descripcion" property="Descripcion" behavior="readwrite" uniqueId="f96f010c-22f8-41c7-a007-9e5baafa7c51" type="System.String">
-          <orm:column name="descripcion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
         <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="c46f1058-af7e-42d0-baf0-a1a6271431d2" type="System.Int32">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="subSectorOtro" property="SubSectorOtro" behavior="readwrite" uniqueId="619e3fc5-35e6-4887-92fd-2e19ddfb7c36" type="System.String">
+          <orm:column name="subSectorOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="descripcionActividadProfesional" property="DescripcionActividadProfesional" behavior="readwrite" uniqueId="446ce371-81f2-4473-91f5-d37ed34cda60" type="System.String">
+          <orm:column name="descripcionActividadProfesional" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
         <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="132550c0-8241-4793-aa31-449216f39028" type="CapaDominio.Usuario">
           <orm:reference uniqueId="c6ce416e-849c-4b60-ac18-0ca4334cd7dd" association-name="ActividadProfesionalHasUsuario">
@@ -678,8 +681,9 @@
         <orm:column name="tipoRelacionLaboralOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="nombreEmpresa" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="linkEmpresa" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="descripcion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="subSectorOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="descripcionActividadProfesional" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:constraint name="FK_ActividadProfesional_Usuario" delete-action="dbdefaultrule" destination-table="Usuario">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:constraint>
@@ -1033,7 +1037,6 @@
     </DomainClass>
     <DomainClass Id="a8935c77-959e-43b3-bfb7-643f47bdc0dd" name="ActividadProfesional" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdActividadProfesional">
       <Property Id="3d4d6024-5984-43bc-af41-be0625ce446b" name="IdActividadProfesional" type="Int32" label="IdActividadProfesional : Int32" kind="Persistent" identity="true" fieldName="idActividadProfesional" />
-      <Property Id="f96f010c-22f8-41c7-a007-9e5baafa7c51" name="Descripcion" label="Descripcion : String" kind="Persistent" fieldName="descripcion" />
       <Property Id="95fde095-80d2-4123-b203-7979b934c824" name="DisciplinaProyectual" label="DisciplinaProyectual : String" kind="Persistent" fieldName="disciplinaProyectual" />
       <Property Id="65a4991f-d923-4c8d-a641-ee5e305ab6a7" name="DisciplinaProyectualOtra" label="DisciplinaProyectualOtra : String" kind="Persistent" fieldName="disciplinaProyectualOtra" />
       <Property Id="c46f1058-af7e-42d0-baf0-a1a6271431d2" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
@@ -1042,6 +1045,8 @@
       <Property Id="ae1dc099-c281-46ad-a48f-782b84485eb9" name="SubSector" label="SubSector : String" kind="Persistent" fieldName="subSector" />
       <Property Id="889749a9-5384-44c4-afba-3f70b0bc4f92" name="TipoRelacionLaboral" label="TipoRelacionLaboral : String" kind="Persistent" fieldName="tipoRelacionLaboral" />
       <Property Id="e6f6e6ce-4ea2-4eac-8e0c-88795f579cb2" name="TipoRelacionLaboralOtro" label="TipoRelacionLaboralOtro : String" kind="Persistent" fieldName="tipoRelacionLaboralOtro" />
+      <Property Id="619e3fc5-35e6-4887-92fd-2e19ddfb7c36" name="SubSectorOtro" label="SubSectorOtro : String" kind="Persistent" fieldName="subSectorOtro" />
+      <Property Id="446ce371-81f2-4473-91f5-d37ed34cda60" name="DescripcionActividadProfesional" label="DescripcionActividadProfesional : String" kind="Persistent" fieldName="descripcionActividadProfesional" />
       <AssociationTargets>
         <Association Id="c6ce416e-849c-4b60-ac18-0ca4334cd7dd" SourceMultiplicity="One" name="ActividadProfesionalHasUsuario">
           <DomainClassMoniker name="/ModeloDeDominio/Usuario" />

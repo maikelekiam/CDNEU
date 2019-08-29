@@ -63,7 +63,7 @@
 
                         <ul class="nav nav-pills">
                             <li class="active">
-                                <a href="#1b" data-toggle="tab">Login</a>
+                                <a href="#1b" data-toggle="tab">Ingreso</a>
                             </li>
                             <li><a href="#2b" data-toggle="tab">Registro</a>
                             </li>
@@ -73,7 +73,7 @@
 
                             <%--Inicio del tab-pane del Login--%>
                             <div class="tab-pane active" id="1b">
-                                <h3>Ingreso al Sistema</h3>
+                                <h3>Ingreso al Sistema CDNEU</h3>
                                 <hr />
                                 <div class="form-group">
                                     <div class="col-md-6 col-md-offset-1">
@@ -118,7 +118,7 @@
 
 
 
-                                <asp:image id="setincode" width="250" runat="server" Visible="false"/>
+                                <asp:Image ID="setincode" Width="250" runat="server" Visible="false" />
                                 <table>
                                     <tr>
                                         <td class="anchotabla">
@@ -369,6 +369,14 @@
 
     <script src="js/jquery-1.12.3.js"></script>
     <script src="js/bootstrap.js"></script>
-
+    <%--PARA VALIDAR SOLO NUMEROS--%>
+    <script>
+        function validarSoloNumeros(e) {
+            tecla = (document.all) ? e.keyCode : e.which;
+            if (tecla == 8) return true;
+            patron = /\d/;
+            return patron.test(String.fromCharCode(tecla));
+        }
+    </script>
 </body>
 </html>

@@ -262,7 +262,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-road"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDatosPersonalesLocalidad" runat="server" CssClass="form-control" />
+                                            <asp:TextBox ID="txtDatosPersonalesLocalidad" runat="server" CssClass="form-control" placeholder="Ingrese Localidad" />
                                         </div>
                                     </td>
                                 </tr>
@@ -280,7 +280,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-map-marker"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDatosPersonalesProvincia" runat="server" CssClass="form-control" />
+                                            <asp:TextBox ID="txtDatosPersonalesProvincia" runat="server" CssClass="form-control" placeholder="Ingrese Provincia" />
                                         </div>
                                     </td>
                                 </tr>
@@ -303,7 +303,7 @@
                                         <asp:Label ID="Label59" runat="server">Facebook</asp:Label>
                                     </td>
                                     <td class="anchotextbox">
-                                        <asp:TextBox ID="txtFacebook" Width="400px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-facebook.jpg);" runat="server" CssClass="form-control estiloRedesSociales" />
+                                        <asp:TextBox ID="txtFacebook" Width="400px" Height="35px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-facebook.jpg);" runat="server" CssClass="form-control estiloRedesSociales" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -314,7 +314,7 @@
                                         <asp:Label ID="Label60" runat="server">Instagram</asp:Label>
                                     </td>
                                     <td class="anchotextbox">
-                                        <asp:TextBox ID="txtInstagram" Width="400px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-instagram.jpg);" runat="server" CssClass="form-control estiloRedesSociales" />
+                                        <asp:TextBox ID="txtInstagram" Width="400px" Height="35px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-instagram.jpg);" runat="server" CssClass="form-control estiloRedesSociales" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -325,7 +325,7 @@
                                         <asp:Label ID="Label61" runat="server">Twitter</asp:Label>
                                     </td>
                                     <td class="anchotextbox">
-                                        <asp:TextBox ID="txtTwitter" Width="400px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-twitter.jpg);" runat="server" CssClass="form-control estiloRedesSociales" />
+                                        <asp:TextBox ID="txtTwitter" Width="400px" Height="35px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-twitter.jpg);" runat="server" CssClass="form-control estiloRedesSociales" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -336,7 +336,7 @@
                                         <asp:Label ID="Label62" runat="server">YouTube</asp:Label>
                                     </td>
                                     <td class="anchotextbox">
-                                        <asp:TextBox ID="txtYouTube" Width="400px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-youtube.jpg);" runat="server" CssClass="form-control estiloRedesSociales" />
+                                        <asp:TextBox ID="txtYouTube" Width="400px" Height="35px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-youtube.jpg);" runat="server" CssClass="form-control estiloRedesSociales" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -347,7 +347,7 @@
                                         <asp:Label ID="Label63" runat="server">Flickr</asp:Label>
                                     </td>
                                     <td class="anchotextbox">
-                                        <asp:TextBox ID="txtFlicker" Width="400px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-flickr.jpg);" runat="server" CssClass="form-control estiloRedesSociales" />
+                                        <asp:TextBox ID="txtFlicker" Width="400px" Height="35px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-flickr.jpg);" runat="server" CssClass="form-control estiloRedesSociales" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -677,7 +677,7 @@
                     <div class="form-group">
                         <div class="col-md-10 col-md-offset-1">
                             <asp:Button ID="btnEnviarDatosFormacionAcademica" runat="server"
-                                Text="Enviar Datos" CssClass="boton_rojo parpadea" />
+                                Text="Enviar Datos" CssClass="boton_azul parpadea" OnClick="btnEnviarDatosFormacionAcademica_Click" />
                         </div>
                     </div>
                 </div>

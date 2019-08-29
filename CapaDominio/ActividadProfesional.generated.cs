@@ -128,19 +128,6 @@ namespace CapaDominio
 			}
 		}
 		
-		private string descripcion;
-		public virtual string Descripcion
-		{
-			get
-			{
-				return this.descripcion;
-			}
-			set
-			{
-				this.descripcion = value;
-			}
-		}
-		
 		private int idUsuario;
 		public virtual int IdUsuario
 		{
@@ -151,6 +138,32 @@ namespace CapaDominio
 			set
 			{
 				this.idUsuario = value;
+			}
+		}
+		
+		private string subSectorOtro;
+		public virtual string SubSectorOtro
+		{
+			get
+			{
+				return this.subSectorOtro;
+			}
+			set
+			{
+				this.subSectorOtro = value;
+			}
+		}
+		
+		private string descripcionActividadProfesional;
+		public virtual string DescripcionActividadProfesional
+		{
+			get
+			{
+				return this.descripcionActividadProfesional;
+			}
+			set
+			{
+				this.descripcionActividadProfesional = value;
 			}
 		}
 		
