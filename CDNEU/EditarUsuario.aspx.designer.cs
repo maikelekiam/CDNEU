@@ -310,6 +310,15 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.Button btnGuardarDatosPersonales;
         
         /// <summary>
+        /// UPEstudiosOficiales control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UPEstudiosOficiales;
+        
+        /// <summary>
         /// RBEstudiosOficiales control.
         /// </summary>
         /// <remarks>
@@ -398,6 +407,24 @@ namespace CDNEU {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkEstudianteVinculado;
+        
+        /// <summary>
+        /// UPEstudianteVinculado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UPEstudianteVinculado;
+        
+        /// <summary>
+        /// PanelEstudianteVinculado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelEstudianteVinculado;
         
         /// <summary>
         /// Label13 control.

@@ -83,11 +83,6 @@ namespace CDNEU
             redesSociale.TiendaNube = chkTiendaNube.Checked;
             redesSociale.PlataformaOtra = txtPlataformaComercializacionOtro.Text;
             redesSocialesNego.ActualizarRedesSociales(redesSociale);
-
-            
-
-            //ACTIVIDAD PROFESIONAL
-
         }
 
         private void ObtenerUsuario()
@@ -130,16 +125,16 @@ namespace CDNEU
             else if (formacionAcademica.EstudiosOficiales == "Universitario") { RBEstudiosOficiales.SelectedValue = "Universitario"; }
             else if (formacionAcademica.EstudiosOficiales == "Posgrado") { RBEstudiosOficiales.SelectedValue = "Posgrado"; }
             else if (formacionAcademica.EstudiosOficiales == "Otro") { RBEstudiosOficiales.SelectedValue = "Otro"; }
-            if (formacionAcademica.OtrosEstudios == null) { txtEstudiosOficialesOtro.Text = ""; }
-            else { txtEstudiosOficialesOtro.Text = formacionAcademica.OtrosEstudios; }
+            if (formacionAcademica.EstudiosOficialesOtro == null) { txtEstudiosOficialesOtro.Text = ""; }
+            else { txtEstudiosOficialesOtro.Text = formacionAcademica.EstudiosOficialesOtro; txtEstudiosOficialesOtro.Visible = true; }
             if (formacionAcademica.TituloObtenido == null) { txtTituloObtenido.Text = ""; }
             else { txtTituloObtenido.Text = formacionAcademica.TituloObtenido; }
             if (formacionAcademica.InstitucionEmisoraTitulo == null) { txtInstitucionEmisoraTitulo.Text = ""; }
             else { txtInstitucionEmisoraTitulo.Text = formacionAcademica.InstitucionEmisoraTitulo; }
             if (formacionAcademica.OtrosEstudios == null) { txtOtrosEstudios.Text = ""; }
-            else { txtOtrosEstudios.Text = formacionAcademica.OtrosEstudios; }
-            if (formacionAcademica.EsEstudiante == true) { chkEstudianteVinculado.Checked = true; }
-            else { chkEstudianteVinculado.Checked = false; }
+            else { txtOtrosEstudios.Text = formacionAcademica.OtrosEstudios;  }
+            if (formacionAcademica.EsEstudiante == true) { chkEstudianteVinculado.Checked = true; PanelEstudianteVinculado.Visible = true; }
+            else { chkEstudianteVinculado.Checked = false; PanelEstudianteVinculado.Visible = false; }
 
             txtCarreraNombre.Text = formacionAcademica.CarreraNombre;
             txtCarreraAnioIngreso.Text = formacionAcademica.CarreraAnioIngreso;
@@ -147,7 +142,7 @@ namespace CDNEU
             txtCarreraDuracion.Text = formacionAcademica.CarreraDuracion;
             txtCarreraInstitucion.Text = formacionAcademica.CarreraInstitucion;
 
-
+            //PROXIMA: ACTIVIDAD PROFESIONAL
 
 
 
@@ -172,9 +167,36 @@ namespace CDNEU
             formacionAcademica.CarreraDuracion = txtCarreraDuracion.Text;
             formacionAcademica.CarreraInstitucion = txtCarreraInstitucion.Text;
 
+            if (RBEstudiosOficiales.SelectedValue != "Otro") { formacionAcademica.EstudiosOficialesOtro = null; }
+
+            if (chkEstudianteVinculado.Checked == false)
+            {
+                formacionAcademica.CarreraNombre = null;
+                formacionAcademica.CarreraAnioIngreso = null;
+                formacionAcademica.CarreraAnioCursada = null;
+                formacionAcademica.CarreraDuracion = null;
+                formacionAcademica.CarreraInstitucion = null;
+            }
+
             formacionAcademicaNego.ActualizarFormacionAcademica(formacionAcademica);
 
             Response.Redirect("EditarUsuario.aspx");
         }
+
+        protected void RBEstudiosOficiales_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (RBEstudiosOficiales.SelectedValue == "Otro") { txtEstudiosOficialesOtro.Visible = true; }
+            else { txtEstudiosOficialesOtro.Visible = false; }
+        }
+
+        protected void chkEstudianteVinculado_CheckedChanged(object sender, EventArgs e)
+        {
+            PanelEstudianteVinculado.Visible = chkEstudianteVinculado.Checked;
+            //if (chkEstudianteVinculado.Checked == true) { PanelEstudianteVinculado.Visible = true; }
+            //if (chkEstudianteVinculado.Checked == false) { PanelEstudianteVinculado.Visible = false; }
+        }
+
+
+
     }
 }

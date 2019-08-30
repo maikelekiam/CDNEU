@@ -475,37 +475,47 @@
                         <tr>
                             <td>
                                 <h4>Estudios Oficiales (maximo nivel alcanzado)</h4>
-                                <%--<asp:Label ID="Label41" runat="server">Estudios Oficiales (maximo nivel alcanzado)</asp:Label>--%>
                             </td>
                         </tr>
                     </table>
-                    <table>
-                        <tr>
-                            <td>
-                                <asp:RadioButtonList ID="RBEstudiosOficiales" runat="server"
-                                    CssClass="form-control" BorderStyle="None"
-                                    RepeatColumns="1"
-                                    RepeatLayout="Table"
-                                    CellPadding="10">
-                                    <asp:ListItem>Secundario</asp:ListItem>
-                                    <asp:ListItem>Terciario</asp:ListItem>
-                                    <asp:ListItem>Universitario</asp:ListItem>
-                                    <asp:ListItem>Posgrado</asp:ListItem>
-                                    <asp:ListItem>Otro</asp:ListItem>
-                                </asp:RadioButtonList>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: bottom">
-                                <div class="input-group">
-                                    <asp:TextBox ID="txtEstudiosOficialesOtro" runat="server" CssClass="form-control" Width="800" />
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="height: 30px"></td>
-                        </tr>
-                    </table>
+                    <asp:UpdatePanel ID="UPEstudiosOficiales" runat="server">
+                        <ContentTemplate>
+                            <fieldset style="background-color: White;">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBEstudiosOficiales" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10"
+                                                AutoPostBack="True"
+                                                OnSelectedIndexChanged="RBEstudiosOficiales_SelectedIndexChanged">
+                                                <asp:ListItem>Secundario</asp:ListItem>
+                                                <asp:ListItem>Terciario</asp:ListItem>
+                                                <asp:ListItem>Universitario</asp:ListItem>
+                                                <asp:ListItem>Posgrado</asp:ListItem>
+                                                <asp:ListItem>Otro</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="vertical-align: bottom">
+                                            <div class="input-group">
+                                                <asp:TextBox ID="txtEstudiosOficialesOtro" runat="server" CssClass="form-control" Width="800" Visible="false" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                            </fieldset>
+                        </ContentTemplate>
+                        <Triggers>
+                            <asp:AsyncPostBackTrigger ControlID="RBEstudiosOficiales" EventName="SelectedIndexChanged" />
+                        </Triggers>
+                    </asp:UpdatePanel>
                     <table>
                         <tr>
                             <td>
@@ -589,7 +599,7 @@
                             </td>
                             <td>
                                 <div class="col-md-3">
-                                    <asp:CheckBox ID="chkEstudianteVinculado" runat="server" BorderStyle="None" Checked="false" />
+                                    <asp:CheckBox ID="chkEstudianteVinculado" runat="server" BorderStyle="None" OnCheckedChanged="chkEstudianteVinculado_CheckedChanged" AutoPostBack="true" />
                                 </div>
                             </td>
                         </tr>
@@ -597,7 +607,101 @@
                             <td style="height: 10px"></td>
                         </tr>
                     </table>
-                    <table id="TablaEstudianteVinculado">
+
+                    <%--ACA VA EL UPDATEPANEL--%>
+                    <asp:UpdatePanel ID="UPEstudianteVinculado" runat="server" UpdateMode="Conditional">
+                        <Triggers>
+                            <asp:AsyncPostBackTrigger ControlID="chkEstudianteVinculado" />
+                        </Triggers>
+                        <ContentTemplate>
+                            <asp:Panel ID="PanelEstudianteVinculado" runat="server" Visible="false">
+                                <table>
+                                    <tr>
+                                        <td style="width: 100px"></td>
+                                        <td class="anchotabla">
+                                            <asp:Label ID="Label13" runat="server" Text="Label">Qué curso/carrera sigue</asp:Label>
+                                        </td>
+                                        <td class="anchotextboxCarrera">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-asterisk"></span>
+                                                </span>
+                                                <asp:TextBox ID="txtCarreraNombre" runat="server" CssClass="form-control" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100px"></td>
+                                        <td class="anchotabla">
+                                            <asp:Label ID="Label14" runat="server" Text="Label">Año de Ingreso</asp:Label>
+                                        </td>
+                                        <td class="anchotextboxCarrera">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-asterisk"></span>
+                                                </span>
+                                                <asp:TextBox ID="txtCarreraAnioIngreso" runat="server" CssClass="form-control" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100px"></td>
+                                        <td class="anchotabla">
+                                            <asp:Label ID="Label15" runat="server" Text="Label">Año de Cursada</asp:Label>
+                                        </td>
+                                        <td class="anchotextboxCarrera">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-asterisk"></span>
+                                                </span>
+                                                <asp:TextBox ID="txtCarreraAnioCursada" runat="server" CssClass="form-control" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100px"></td>
+                                        <td class="anchotabla">
+                                            <asp:Label ID="Label16" runat="server" Text="Label">Duración del curso/carrera</asp:Label>
+                                        </td>
+                                        <td class="anchotextboxCarrera">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-asterisk"></span>
+                                                </span>
+                                                <asp:TextBox ID="txtCarreraDuracion" runat="server" CssClass="form-control" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100px"></td>
+                                        <td class="anchotabla">
+                                            <asp:Label ID="Label17" runat="server" Text="Label">Institución</asp:Label>
+                                        </td>
+                                        <td class="anchotextboxCarrera">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-asterisk"></span>
+                                                </span>
+                                                <asp:TextBox ID="txtCarreraInstitucion" runat="server" CssClass="form-control" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </asp:Panel>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+
+
+
+
+
+
+
+                    <%--<table>
                         <tr>
                             <td style="width: 100px"></td>
                             <td class="anchotabla">
@@ -672,7 +776,11 @@
                             <td style="height: 30px"></td>
                             <td></td>
                         </tr>
-                    </table>
+                    </table>--%>
+
+
+
+
                     <!--Boton de registro-->
                     <div class="form-group">
                         <div class="col-md-10 col-md-offset-1">
