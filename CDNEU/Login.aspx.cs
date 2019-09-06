@@ -17,11 +17,11 @@ namespace CDNEU
         UsuarioNego usuarioNego = new UsuarioNego();
         RedesSocialesNego redesSocialesNego = new RedesSocialesNego();
         FormacionAcademicaNego formacionAcademicaNego = new FormacionAcademicaNego();
+        FotoUsuarioNego fotoUsuarioNego = new FotoUsuarioNego();
 
         public static int idUsuarioTemporal;
         protected void Page_Load(object sender, EventArgs e)
         {
-           // MostrarFoto();
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -117,32 +117,22 @@ namespace CDNEU
         {
             try
             {
-                SqlConnection conectar = new ConectarSQLServer().conectarSQL();
-
-                String comandoInsertar = "INSERT INTO FotoUsuario(fotoUsuarioCodigo, idUsuario) VALUES(@fotoUsuarioCodigo, @idUsuario)";
-                SqlCommand comando = new SqlCommand(comandoInsertar, conectar);
+                FotoUsuario fotoUsuarioNuevo = new FotoUsuario();
 
                 FileUpload fu = new FileUpload();
                 fu.SaveAs("../imagenes/FotoUsuariosx2.png");
 
-                comando.Parameters.Add("@fotoUsuarioCodigo", SqlDbType.VarBinary).Value = fu.FileBytes;
-                comando.Parameters.Add("@idUsuario", SqlDbType.Int).Value = idUsuarioTemporal; //Session["userid"].ToString();
-                comando.ExecuteNonQuery();
+                fotoUsuarioNuevo.FotoUsuarioCodigo = fu.FileBytes;
+                fotoUsuarioNuevo.IdUsuario = idUsuarioTemporal;
+                fotoUsuarioNuevo.FotoTemporal = fu.FileBytes;
+
+                fotoUsuarioNego.GuardarFotoUsuario(fotoUsuarioNuevo);
+
             }
             catch (Exception ex)
             {
 
             }
         }
-
-        //private void MostrarFoto()
-        //{
-        //    Image img = (Image)FindControl("setincode");
-        //    img.ImageUrl = "../imagenes/FotoUsuariosx2.png";
-
-        //    //FileUpload fu = new FileUpload();
-        //    //fu.SaveAs("../imagenes/FotoUsuariosx2.png");
-        //}
-
     }
 }
