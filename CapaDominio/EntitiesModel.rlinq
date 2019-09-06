@@ -17,9 +17,6 @@
         <orm:field name="recibioApoyo" property="RecibioApoyo" behavior="readwrite" uniqueId="d007932b-ea0e-4da8-bc9f-ea426ce385e7" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
           <orm:column name="recibioApoyo" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
         </orm:field>
-        <orm:field name="apoyo" property="Apoyo" behavior="readwrite" uniqueId="90e366ce-a9fc-4480-870f-e03cd9d387aa" type="System.String">
-          <orm:column name="apoyo" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
         <orm:field name="otroApoyo" property="OtroApoyo" behavior="readwrite" uniqueId="b7fb5047-bd38-4153-99dc-4227b7839d7d" type="System.String">
           <orm:column name="otroApoyo" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
@@ -29,11 +26,11 @@
         <orm:field name="organismoApoyoAnio" property="OrganismoApoyoAnio" behavior="readwrite" uniqueId="2a589f77-3a6b-42c9-b427-279b371d98be" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
           <orm:column name="organismoApoyoAnio" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
         </orm:field>
-        <orm:field name="selloBuenDisenioArgentino" property="SelloBuenDisenioArgentino" behavior="readwrite" uniqueId="bb281573-9feb-47a5-8219-e14b99bbebb7" type="System.String">
-          <orm:column name="selloBuenDisenioArgentino" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:field name="selloBuenDisenioArgentino" property="SelloBuenDisenioArgentino" behavior="readwrite" uniqueId="bb281573-9feb-47a5-8219-e14b99bbebb7" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="selloBuenDisenioArgentino" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
         </orm:field>
-        <orm:field name="mercadoIndustriasCreativasArgentinas" property="MercadoIndustriasCreativasArgentinas" behavior="readwrite" uniqueId="2caec9d8-526a-4543-87fa-21caa32c4d6d" type="System.String">
-          <orm:column name="mercadoIndustriasCreativasArgentinas" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:field name="mercadoIndustriasCreativasArgentinas" property="MercadoIndustriasCreativasArgentinas" behavior="readwrite" uniqueId="2caec9d8-526a-4543-87fa-21caa32c4d6d" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="mercadoIndustriasCreativasArgentinas" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
         </orm:field>
         <orm:field name="aporteCdneu" property="AporteCdneu" behavior="readwrite" uniqueId="b751b2d0-257b-4b7a-9959-b0447d6b035e" type="System.String">
           <orm:column name="aporteCdneu" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
@@ -46,6 +43,18 @@
         </orm:field>
         <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="18178ec1-6d34-4b93-b63f-9ab931f7c0f4" type="System.Int32">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="selloBuenDisenioArgentinoOtro" property="SelloBuenDisenioArgentinoOtro" behavior="readwrite" uniqueId="834379c1-12fe-4b50-b2a6-6e72795a0c01" type="System.String">
+          <orm:column name="selloBuenDisenioArgentinoOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="mercadoIndustriasCreativasArgentinasOtro" property="MercadoIndustriasCreativasArgentinasOtro" behavior="readwrite" uniqueId="ee8d6f99-2326-4307-b4c7-36d0d16c4f7e" type="System.String">
+          <orm:column name="mercadoIndustriasCreativasArgentinasOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="apoyoTecnico" property="ApoyoTecnico" behavior="readwrite" uniqueId="f4becebf-2009-4108-854f-1399db8ab35f" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="apoyoTecnico" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="apoyoFinanciero" property="ApoyoFinanciero" behavior="readwrite" uniqueId="749ce663-3254-4c68-8343-1b4c21cd462c" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="apoyoFinanciero" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
         </orm:field>
         <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="8bccd2c8-78fc-4db1-b99b-45275f256605" type="CapaDominio.Usuario">
           <orm:reference uniqueId="50c5148d-f6be-4920-8426-d8ee3be041e9" association-name="VinculacionHasUsuario">
@@ -247,14 +256,8 @@
         <orm:field name="incorporaInnovacion" property="IncorporaInnovacion" behavior="readwrite" uniqueId="e48dbdaf-cb7e-4887-b938-dfd8e9368d4e" type="System.String">
           <orm:column name="incorporaInnovacion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="otraIncorporaInnovacion" property="OtraIncorporaInnovacion" behavior="readwrite" uniqueId="a497dfb5-f197-4f97-b717-f1f15ff3346a" type="System.String">
-          <orm:column name="otraIncorporaInnovacion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
         <orm:field name="dificultades" property="Dificultades" behavior="readwrite" uniqueId="77823e04-4f65-401c-9aea-d4f2def1a285" type="System.String">
           <orm:column name="dificultades" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="otraDificultad" property="OtraDificultad" behavior="readwrite" uniqueId="585b2d67-8396-49fd-a4fb-b5bdcb202ff0" type="System.String">
-          <orm:column name="otraDificultad" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
         <orm:field name="comoTomaronInnovacion" property="ComoTomaronInnovacion" behavior="readwrite" uniqueId="b7ba64fc-11a3-44f3-b088-073f797c609d" type="System.String">
           <orm:column name="comoTomaronInnovacion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
@@ -264,6 +267,12 @@
         </orm:field>
         <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="bddc4e2b-e61e-4ba9-b111-69bd9169f959" type="System.Int32">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="incorporaInnovacionOtra" property="IncorporaInnovacionOtra" behavior="readwrite" uniqueId="feb75345-454e-4aa5-a6e1-89b74977e4b3" type="System.String">
+          <orm:column name="incorporaInnovacionOtra" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="dificultadesOtra" property="DificultadesOtra" behavior="readwrite" uniqueId="f0b2e345-9bc9-4c80-9362-4681aa15088c" type="System.String">
+          <orm:column name="dificultadesOtra" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
         <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="75563d90-2561-4e1c-b947-2f33f92468b9" type="CapaDominio.Usuario">
           <orm:reference uniqueId="2cb3b09c-15f2-4b0d-aac4-d6a1051cd933" association-name="InnovacionHasUsuario">
@@ -566,16 +575,19 @@
       <orm:table name="Vinculacion">
         <orm:column name="idVinculacion" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         <orm:column name="recibioApoyo" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
-        <orm:column name="apoyo" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="otroApoyo" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="organismoApoyo" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="organismoApoyoAnio" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
-        <orm:column name="selloBuenDisenioArgentino" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="mercadoIndustriasCreativasArgentinas" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="selloBuenDisenioArgentino" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="mercadoIndustriasCreativasArgentinas" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
         <orm:column name="aporteCdneu" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="otroAporteCdneu" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="comentariosFinales" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="selloBuenDisenioArgentinoOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="mercadoIndustriasCreativasArgentinasOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="apoyoTecnico" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="apoyoFinanciero" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
         <orm:constraint name="FK_Vinculacion_Usuario" delete-action="dbdefaultrule" destination-table="Usuario">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:constraint>
@@ -629,12 +641,12 @@
       <orm:table name="Innovacion">
         <orm:column name="idInnovacion" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         <orm:column name="incorporaInnovacion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="otraIncorporaInnovacion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="dificultades" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="otraDificultad" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="comoTomaronInnovacion" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="contarExperiencia" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="incorporaInnovacionOtra" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="dificultadesOtra" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:constraint name="FK_Innovacion_Usuario" delete-action="dbdefaultrule" destination-table="Usuario">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:constraint>
@@ -775,16 +787,19 @@
     <DomainClass Id="f49b9667-44ef-4677-bffb-3101f6efc255" name="Vinculacion" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdVinculacion">
       <Property Id="e753ae76-ac4c-4cc4-9ad0-a57443628643" name="IdVinculacion" type="Int32" label="IdVinculacion : Int32" kind="Persistent" identity="true" fieldName="idVinculacion" />
       <Property Id="b751b2d0-257b-4b7a-9959-b0447d6b035e" name="AporteCdneu" label="AporteCdneu : String" kind="Persistent" fieldName="aporteCdneu" />
-      <Property Id="90e366ce-a9fc-4480-870f-e03cd9d387aa" name="Apoyo" label="Apoyo : String" kind="Persistent" fieldName="apoyo" />
       <Property Id="c4a9ec2f-ec2a-4aa8-9963-8e7034c5b41b" name="ComentariosFinales" label="ComentariosFinales : String" kind="Persistent" fieldName="comentariosFinales" />
       <Property Id="18178ec1-6d34-4b93-b63f-9ab931f7c0f4" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
-      <Property Id="2caec9d8-526a-4543-87fa-21caa32c4d6d" name="MercadoIndustriasCreativasArgentinas" label="MercadoIndustriasCreativasArgentinas : String" kind="Persistent" fieldName="mercadoIndustriasCreativasArgentinas" />
+      <Property Id="2caec9d8-526a-4543-87fa-21caa32c4d6d" name="MercadoIndustriasCreativasArgentinas" type="Boolean" label="MercadoIndustriasCreativasArgentinas : Boolean" kind="Persistent" fieldName="mercadoIndustriasCreativasArgentinas" />
       <Property Id="4f080b1d-73d7-4ea9-bba0-19e040132171" name="OrganismoApoyo" label="OrganismoApoyo : String" kind="Persistent" fieldName="organismoApoyo" />
       <Property Id="2a589f77-3a6b-42c9-b427-279b371d98be" name="OrganismoApoyoAnio" type="Int32" label="OrganismoApoyoAnio : Int32" nullable="true" kind="Persistent" fieldName="organismoApoyoAnio" />
       <Property Id="98074b6c-b5b8-4354-b4c2-e136082456f1" name="OtroAporteCdneu" label="OtroAporteCdneu : String" kind="Persistent" fieldName="otroAporteCdneu" />
       <Property Id="b7fb5047-bd38-4153-99dc-4227b7839d7d" name="OtroApoyo" label="OtroApoyo : String" kind="Persistent" fieldName="otroApoyo" />
       <Property Id="d007932b-ea0e-4da8-bc9f-ea426ce385e7" name="RecibioApoyo" type="Boolean" label="RecibioApoyo : Boolean" nullable="true" kind="Persistent" fieldName="recibioApoyo" />
-      <Property Id="bb281573-9feb-47a5-8219-e14b99bbebb7" name="SelloBuenDisenioArgentino" label="SelloBuenDisenioArgentino : String" kind="Persistent" fieldName="selloBuenDisenioArgentino" />
+      <Property Id="bb281573-9feb-47a5-8219-e14b99bbebb7" name="SelloBuenDisenioArgentino" type="Boolean" label="SelloBuenDisenioArgentino : Boolean" kind="Persistent" fieldName="selloBuenDisenioArgentino" />
+      <Property Id="834379c1-12fe-4b50-b2a6-6e72795a0c01" name="SelloBuenDisenioArgentinoOtro" label="SelloBuenDisenioArgentinoOtro : String" kind="Persistent" fieldName="selloBuenDisenioArgentinoOtro" />
+      <Property Id="ee8d6f99-2326-4307-b4c7-36d0d16c4f7e" name="MercadoIndustriasCreativasArgentinasOtro" label="MercadoIndustriasCreativasArgentinasOtro : String" kind="Persistent" fieldName="mercadoIndustriasCreativasArgentinasOtro" />
+      <Property Id="f4becebf-2009-4108-854f-1399db8ab35f" name="ApoyoTecnico" type="Boolean" label="ApoyoTecnico : Boolean" nullable="true" kind="Persistent" fieldName="apoyoTecnico" />
+      <Property Id="749ce663-3254-4c68-8343-1b4c21cd462c" name="ApoyoFinanciero" type="Boolean" label="ApoyoFinanciero : Boolean" nullable="true" kind="Persistent" fieldName="apoyoFinanciero" />
       <AssociationTargets>
         <Association Id="50c5148d-f6be-4920-8426-d8ee3be041e9" SourceMultiplicity="One" name="VinculacionHasUsuario">
           <DomainClassMoniker name="/ModeloDeDominio/Usuario" />
@@ -945,8 +960,8 @@
       <Property Id="77823e04-4f65-401c-9aea-d4f2def1a285" name="Dificultades" label="Dificultades : String" kind="Persistent" fieldName="dificultades" />
       <Property Id="bddc4e2b-e61e-4ba9-b111-69bd9169f959" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
       <Property Id="e48dbdaf-cb7e-4887-b938-dfd8e9368d4e" name="IncorporaInnovacion" label="IncorporaInnovacion : String" kind="Persistent" fieldName="incorporaInnovacion" />
-      <Property Id="585b2d67-8396-49fd-a4fb-b5bdcb202ff0" name="OtraDificultad" label="OtraDificultad : String" kind="Persistent" fieldName="otraDificultad" />
-      <Property Id="a497dfb5-f197-4f97-b717-f1f15ff3346a" name="OtraIncorporaInnovacion" label="OtraIncorporaInnovacion : String" kind="Persistent" fieldName="otraIncorporaInnovacion" />
+      <Property Id="feb75345-454e-4aa5-a6e1-89b74977e4b3" name="IncorporaInnovacionOtra" label="IncorporaInnovacionOtra : String" kind="Persistent" fieldName="incorporaInnovacionOtra" />
+      <Property Id="f0b2e345-9bc9-4c80-9362-4681aa15088c" name="DificultadesOtra" label="DificultadesOtra : String" kind="Persistent" fieldName="dificultadesOtra" />
       <AssociationTargets>
         <Association Id="2cb3b09c-15f2-4b0d-aac4-d6a1051cd933" SourceMultiplicity="One" name="InnovacionHasUsuario">
           <DomainClassMoniker name="/ModeloDeDominio/Usuario" />

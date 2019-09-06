@@ -50,19 +50,6 @@ namespace CapaDominio
 			}
 		}
 		
-		private string apoyo;
-		public virtual string Apoyo
-		{
-			get
-			{
-				return this.apoyo;
-			}
-			set
-			{
-				this.apoyo = value;
-			}
-		}
-		
 		private string otroApoyo;
 		public virtual string OtroApoyo
 		{
@@ -102,8 +89,8 @@ namespace CapaDominio
 			}
 		}
 		
-		private string selloBuenDisenioArgentino;
-		public virtual string SelloBuenDisenioArgentino
+		private bool? selloBuenDisenioArgentino;
+		public virtual bool? SelloBuenDisenioArgentino
 		{
 			get
 			{
@@ -115,8 +102,8 @@ namespace CapaDominio
 			}
 		}
 		
-		private string mercadoIndustriasCreativasArgentinas;
-		public virtual string MercadoIndustriasCreativasArgentinas
+		private bool? mercadoIndustriasCreativasArgentinas;
+		public virtual bool? MercadoIndustriasCreativasArgentinas
 		{
 			get
 			{
@@ -177,6 +164,58 @@ namespace CapaDominio
 			set
 			{
 				this.idUsuario = value;
+			}
+		}
+		
+		private string selloBuenDisenioArgentinoOtro;
+		public virtual string SelloBuenDisenioArgentinoOtro
+		{
+			get
+			{
+				return this.selloBuenDisenioArgentinoOtro;
+			}
+			set
+			{
+				this.selloBuenDisenioArgentinoOtro = value;
+			}
+		}
+		
+		private string mercadoIndustriasCreativasArgentinasOtro;
+		public virtual string MercadoIndustriasCreativasArgentinasOtro
+		{
+			get
+			{
+				return this.mercadoIndustriasCreativasArgentinasOtro;
+			}
+			set
+			{
+				this.mercadoIndustriasCreativasArgentinasOtro = value;
+			}
+		}
+		
+		private bool? apoyoTecnico;
+		public virtual bool? ApoyoTecnico
+		{
+			get
+			{
+				return this.apoyoTecnico;
+			}
+			set
+			{
+				this.apoyoTecnico = value;
+			}
+		}
+		
+		private bool? apoyoFinanciero;
+		public virtual bool? ApoyoFinanciero
+		{
+			get
+			{
+				return this.apoyoFinanciero;
+			}
+			set
+			{
+				this.apoyoFinanciero = value;
 			}
 		}
 		

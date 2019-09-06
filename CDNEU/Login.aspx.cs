@@ -21,7 +21,7 @@ namespace CDNEU
         public static int idUsuarioTemporal;
         protected void Page_Load(object sender, EventArgs e)
         {
-            MostrarFoto();
+           // MostrarFoto();
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -135,14 +135,14 @@ namespace CDNEU
             }
         }
 
-        private void MostrarFoto()
-        {
-            Image img = (Image)FindControl("setincode");
-            img.ImageUrl = "../imagenes/FotoUsuariosx2.png";
+        //private void MostrarFoto()
+        //{
+        //    Image img = (Image)FindControl("setincode");
+        //    img.ImageUrl = "../imagenes/FotoUsuariosx2.png";
 
-            //FileUpload fu = new FileUpload();
-            //fu.SaveAs("../imagenes/FotoUsuariosx2.png");
-        }
+        //    //FileUpload fu = new FileUpload();
+        //    //fu.SaveAs("../imagenes/FotoUsuariosx2.png");
+        //}
 
     }
 }

@@ -50,19 +50,6 @@ namespace CapaDominio
 			}
 		}
 		
-		private string otraIncorporaInnovacion;
-		public virtual string OtraIncorporaInnovacion
-		{
-			get
-			{
-				return this.otraIncorporaInnovacion;
-			}
-			set
-			{
-				this.otraIncorporaInnovacion = value;
-			}
-		}
-		
 		private string dificultades;
 		public virtual string Dificultades
 		{
@@ -73,19 +60,6 @@ namespace CapaDominio
 			set
 			{
 				this.dificultades = value;
-			}
-		}
-		
-		private string otraDificultad;
-		public virtual string OtraDificultad
-		{
-			get
-			{
-				return this.otraDificultad;
-			}
-			set
-			{
-				this.otraDificultad = value;
 			}
 		}
 		
@@ -125,6 +99,32 @@ namespace CapaDominio
 			set
 			{
 				this.idUsuario = value;
+			}
+		}
+		
+		private string incorporaInnovacionOtra;
+		public virtual string IncorporaInnovacionOtra
+		{
+			get
+			{
+				return this.incorporaInnovacionOtra;
+			}
+			set
+			{
+				this.incorporaInnovacionOtra = value;
+			}
+		}
+		
+		private string dificultadesOtra;
+		public virtual string DificultadesOtra
+		{
+			get
+			{
+				return this.dificultadesOtra;
+			}
+			set
+			{
+				this.dificultadesOtra = value;
 			}
 		}
 		
