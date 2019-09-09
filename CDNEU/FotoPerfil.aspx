@@ -19,8 +19,8 @@
         <div class="col-md-6">
             <table>
                 <tr>
-                    <h2>Subir Foto</h2>
-                    <asp:FileUpload ID="fuImagen" runat="server" CssClass="col-md-4 form-control" BorderStyle="None"></asp:FileUpload>
+                    <h2>Subir Nueva Foto</h2>
+                    <asp:FileUpload ID="fuImagen" runat="server" CssClass="col-md-4 form-control" BorderStyle="Dashed"></asp:FileUpload>
                 </tr>
                 <tr>
                     <td style="border: none; border-width: thin" colspan="2">
