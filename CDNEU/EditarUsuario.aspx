@@ -10,11 +10,9 @@
             padding-right: 50px;
             background-size: contain;
         }
-
         input[type="radio"] + label {
             margin-left: 10px;
         }
-
         .parpadea {
             animation-name: parpadeo;
             animation-duration: 1s;
@@ -25,49 +23,39 @@
             -webkit-animation-timing-function: linear;
             -webkit-animation-iteration-count: infinite;
         }
-
         @-moz-keyframes parpadeo {
             0% {
                 opacity: 1.0;
             }
-
             50% {
                 opacity: 0.0;
             }
-
             100% {
                 opacity: 1.0;
             }
         }
-
         @-webkit-keyframes parpadeo {
             0% {
                 opacity: 1.0;
             }
-
             50% {
                 opacity: 0.0;
             }
-
             100% {
                 opacity: 1.0;
             }
         }
-
         @keyframes parpadeo {
             0% {
                 opacity: 1.0;
             }
-
             50% {
                 opacity: 0.0;
             }
-
             100% {
                 opacity: 1.0;
             }
         }
-
         .boton_azul {
             text-decoration: none;
             padding: 2px;
@@ -79,13 +67,11 @@
             border: 2px solid #6082ac;
             width: 180px;
         }
-
             .boton_azul:hover {
                 color: #6082ac;
                 background-color: #ffffff;
                 border-color: #6082ac;
             }
-
         .boton_rojo {
             text-decoration: none;
             padding: 2px;
@@ -97,37 +83,29 @@
             border: 2px solid #fb5d5d;
             width: 180px;
         }
-
             .boton_rojo:hover {
                 color: #fb5d5d;
                 background-color: #ffffff;
                 border-color: #fb5d5d;
             }
-
         .anchotabla {
             width: 200px;
         }
-
         .anchotablaFormacionAcademica {
             width: 300px;
         }
-
         .anchotablaActividadProfesional {
             width: 600px;
         }
-
         .anchotablaActividadIndependiente {
             width: 600px;
         }
-
         .anchotextbox {
             width: 300px;
         }
-
         .anchotextboxCarrera {
             width: 500px;
         }
-
         .altotabla {
             height: 15px;
         }

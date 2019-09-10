@@ -132,7 +132,7 @@ namespace CDNEU
             if (formacionAcademica.InstitucionEmisoraTitulo == null) { txtInstitucionEmisoraTitulo.Text = ""; }
             else { txtInstitucionEmisoraTitulo.Text = formacionAcademica.InstitucionEmisoraTitulo; }
             if (formacionAcademica.OtrosEstudios == null) { txtOtrosEstudios.Text = ""; }
-            else { txtOtrosEstudios.Text = formacionAcademica.OtrosEstudios;  }
+            else { txtOtrosEstudios.Text = formacionAcademica.OtrosEstudios; }
             if (formacionAcademica.EsEstudiante == true) { chkEstudianteVinculado.Checked = true; PanelEstudianteVinculado.Visible = true; }
             else { chkEstudianteVinculado.Checked = false; PanelEstudianteVinculado.Visible = false; }
 
