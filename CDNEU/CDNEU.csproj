@@ -242,6 +242,7 @@
     <Content Include="EditarUsuario.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="FotoPerfil.aspx" />
+    <Content Include="FotoProducto.aspx" />
     <Content Include="imagenes\background01.jpg" />
     <Content Include="imagenes\bg02.jpg" />
     <Content Include="imagenes\bg03.png" />
@@ -360,6 +361,13 @@
     </Compile>
     <Compile Include="FotoPerfil.aspx.designer.cs">
       <DependentUpon>FotoPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FotoProducto.aspx.cs">
+      <DependentUpon>FotoProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FotoProducto.aspx.designer.cs">
+      <DependentUpon>FotoProducto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

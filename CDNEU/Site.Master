@@ -27,6 +27,9 @@
         h3 {
             font-family: 'Oswald','sans-serif';
         }
+
+
+
     </style>
 
     <!-- Template CSS files -->
@@ -53,13 +56,13 @@
 
             <div class="top-bar">
 
-                <ul class="top-info f-left">
+                <%--<ul class="top-info f-left">
                     <li><i class="fa fa-envelope main-color"></i><b class="main-color"></b><a href="#">marcamone@neuquen.gov.ar</a></li>
                     <li><i class="fa fa-phone main-color"></i><b class="main-color"></b><a href="#">(0299) 449 5661</a></li>
                     <li class="dropdown language-selector">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-close-others="true"><i class="fa fa-flag main-color"></i>Centro Administrativo Ministerial (CAM) - Antártida Argentina 1245 - Ed. 2 - P°4</a>
                     </li>
-                </ul>
+                </ul>--%>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <asp:Label ID="lbl18" Font-Bold="true" runat="server" CssClass="control-label AlineadoIzquierda"></asp:Label>
@@ -99,10 +102,10 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="EditarUsuario.aspx"><span>Editar Perfil</span></a>
+                                    <a href="EditarUsuario.aspx"><span>Registrate</span></a>
                                     <ul>
                                         <li>
-                                            <a runat="server" href="~/EditarUsuario.aspx"><span class="glyphicon glyphicon-plus fa-fw"></span>Editar Perfil</a>
+                                            <a runat="server" href="~/EditarUsuario.aspx"><span class="glyphicon glyphicon-plus fa-fw"></span>Registrate</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -115,10 +118,13 @@
                                     </ul>
                                 </li>
                                 <li runat="server" id="dropdownFotoPerfil">
-                                    <a href="FotoPerfil.aspx"><span>Foto de Perfil</span></a>
+                                    <a><span>Cargar Fotos</span></a>
                                     <ul>
                                         <li>
-                                            <a runat="server" href="~/FotoPerfil.aspx"><span class="glyphicon glyphicon-credit-card fa-fw"></span>Cargar Foto de Perfil</a>
+                                            <a runat="server" href="~/FotoPerfil.aspx"><span class="glyphicon glyphicon-credit-card fa-fw"></span> Foto de Perfil</a>
+                                        </li>
+                                        <li>
+                                            <a runat="server" href="~/FotoProducto.aspx"><span class="glyphicon glyphicon-credit-card fa-fw"></span> Foto del Producto</a>
                                         </li>
                                     </ul>
                                 </li>

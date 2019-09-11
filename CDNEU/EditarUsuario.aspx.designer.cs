@@ -310,15 +310,6 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.Button btnGuardarDatosPersonales;
         
         /// <summary>
-        /// UPEstudiosOficiales control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UPEstudiosOficiales;
-        
-        /// <summary>
         /// RBEstudiosOficiales control.
         /// </summary>
         /// <remarks>
@@ -407,15 +398,6 @@ namespace CDNEU {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkEstudianteVinculado;
-        
-        /// <summary>
-        /// UPEstudianteVinculado control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UPEstudianteVinculado;
         
         /// <summary>
         /// PanelEstudianteVinculado control.
@@ -526,15 +508,6 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.Button btnEnviarDatosFormacionAcademica;
         
         /// <summary>
-        /// Label12 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label12;
-        
-        /// <summary>
         /// RBDisciplinaProyectual control.
         /// </summary>
         /// <remarks>
@@ -551,15 +524,6 @@ namespace CDNEU {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDisciplinaProyectualOtra;
-        
-        /// <summary>
-        /// Label18 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label18;
         
         /// <summary>
         /// RBSubSector control.
@@ -580,15 +544,6 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.TextBox txtSubSectorOtro;
         
         /// <summary>
-        /// Label19 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label19;
-        
-        /// <summary>
         /// RBTipoRelacionLaboral control.
         /// </summary>
         /// <remarks>
@@ -607,15 +562,6 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.TextBox txtTipoRelacionLaboralOtro;
         
         /// <summary>
-        /// Label21 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label21;
-        
-        /// <summary>
         /// txtNombreEmpresa control.
         /// </summary>
         /// <remarks>
@@ -625,15 +571,6 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.TextBox txtNombreEmpresa;
         
         /// <summary>
-        /// Label22 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label22;
-        
-        /// <summary>
         /// txtLinkEmpresa control.
         /// </summary>
         /// <remarks>
@@ -641,15 +578,6 @@ namespace CDNEU {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLinkEmpresa;
-        
-        /// <summary>
-        /// Label23 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label23;
         
         /// <summary>
         /// txtDescripcion control.
@@ -670,15 +598,6 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.Button btnEnviarDatosActividadProfesional;
         
         /// <summary>
-        /// Label24 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label24;
-        
-        /// <summary>
         /// RBSustentoDeVida control.
         /// </summary>
         /// <remarks>
@@ -697,15 +616,6 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.TextBox txtSustentoDeVidaOtro;
         
         /// <summary>
-        /// Label25 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label25;
-        
-        /// <summary>
         /// RBActividadFuncionamiento control.
         /// </summary>
         /// <remarks>
@@ -715,15 +625,6 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.RadioButtonList RBActividadFuncionamiento;
         
         /// <summary>
-        /// Label26 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label26;
-        
-        /// <summary>
         /// RBSituacionTributaria control.
         /// </summary>
         /// <remarks>
@@ -731,15 +632,6 @@ namespace CDNEU {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList RBSituacionTributaria;
-        
-        /// <summary>
-        /// Label27 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label27;
         
         /// <summary>
         /// RBNombreRegistrado control.
@@ -760,15 +652,6 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.TextBox txtNombreRegistradoOtro;
         
         /// <summary>
-        /// Label28 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label28;
-        
-        /// <summary>
         /// RBEmpleadosACargo control.
         /// </summary>
         /// <remarks>
@@ -785,15 +668,6 @@ namespace CDNEU {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCantidadEmpleadosACargo;
-        
-        /// <summary>
-        /// Label29 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label29;
         
         /// <summary>
         /// RBComercializa control.
@@ -814,15 +688,6 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.TextBox txtComercializaOtro;
         
         /// <summary>
-        /// Label30 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label30;
-        
-        /// <summary>
         /// txtComercializaNombreEspacio control.
         /// </summary>
         /// <remarks>
@@ -830,15 +695,6 @@ namespace CDNEU {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtComercializaNombreEspacio;
-        
-        /// <summary>
-        /// Label31 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label31;
         
         /// <summary>
         /// txtComercializaLinkEspacio control.
@@ -850,15 +706,6 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.TextBox txtComercializaLinkEspacio;
         
         /// <summary>
-        /// Label32 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label32;
-        
-        /// <summary>
         /// txtComercializaUbicacionEspacio control.
         /// </summary>
         /// <remarks>
@@ -866,15 +713,6 @@ namespace CDNEU {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtComercializaUbicacionEspacio;
-        
-        /// <summary>
-        /// Label33 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label33;
         
         /// <summary>
         /// RBFinanciaActividadProfesional control.
@@ -893,15 +731,6 @@ namespace CDNEU {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFinanciaActividadProfesionalOtro;
-        
-        /// <summary>
-        /// Label34 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label34;
         
         /// <summary>
         /// RBVentasOtrosPaises control.

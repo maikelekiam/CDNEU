@@ -19,7 +19,7 @@ namespace CDNEU
             }
             else
             {
-                lbl18.Text = "Bienvenido " + Session["userlogin"].ToString();
+                lbl18.Text = "Hola Bienvenido " + Session["userlogin"].ToString();
 
                 if (Session["usergrupo"].ToString() == "1")
                 {

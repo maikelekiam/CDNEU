@@ -15,9 +15,10 @@ namespace CDNEU
     public partial class Login : System.Web.UI.Page
     {
         UsuarioNego usuarioNego = new UsuarioNego();
+        FotoUsuarioNego fotoUsuarioNego = new FotoUsuarioNego();
         RedesSocialesNego redesSocialesNego = new RedesSocialesNego();
         FormacionAcademicaNego formacionAcademicaNego = new FormacionAcademicaNego();
-        FotoUsuarioNego fotoUsuarioNego = new FotoUsuarioNego();
+        ActividadProfesionalNego actividadProfecionalNego = new ActividadProfesionalNego();
 
         public static int idUsuarioTemporal;
 
@@ -120,6 +121,19 @@ namespace CDNEU
             formacionAcademica.CarreraDuracion = null;
             formacionAcademica.CarreraInstitucion = null;
             formacionAcademicaNego.GuardarFormacionAcademica(formacionAcademica);
+
+            //Creo un objeto de tipo ActividadProfesional
+            ActividadProfesional actividadProfesional = new ActividadProfesional();
+            actividadProfesional.IdUsuario = idUsuarioTemporal;
+            actividadProfesional.DisciplinaProyectual = null;
+            actividadProfesional.DisciplinaProyectualOtra = null;
+            actividadProfesional.SubSector = null;
+            actividadProfesional.SubSectorOtro = null;
+            actividadProfesional.TipoRelacionLaboral = null;
+            actividadProfesional.TipoRelacionLaboralOtro = null;
+            actividadProfesional.NombreEmpresa = null;
+            actividadProfesional.LinkEmpresa = null;
+            actividadProfesional.DescripcionActividadProfesional = null;
 
         }
         private void GuardarFotoPerfil()

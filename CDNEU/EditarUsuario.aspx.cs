@@ -16,6 +16,7 @@ namespace CDNEU
         UsuarioNego usuarioNego = new UsuarioNego();
         RedesSocialesNego redesSocialesNego = new RedesSocialesNego();
         FormacionAcademicaNego formacionAcademicaNego = new FormacionAcademicaNego();
+        ActividadProfesionalNego actividadProfecionalNego = new ActividadProfesionalNego();
 
         static int globalIdUsuario;
         static string globalNombreUsuario;
@@ -126,15 +127,15 @@ namespace CDNEU
             else if (formacionAcademica.EstudiosOficiales == "Posgrado") { RBEstudiosOficiales.SelectedValue = "Posgrado"; }
             else if (formacionAcademica.EstudiosOficiales == "Otro") { RBEstudiosOficiales.SelectedValue = "Otro"; }
             if (formacionAcademica.EstudiosOficialesOtro == null) { txtEstudiosOficialesOtro.Text = ""; }
-            else { txtEstudiosOficialesOtro.Text = formacionAcademica.EstudiosOficialesOtro; txtEstudiosOficialesOtro.Visible = true; }
+            else { txtEstudiosOficialesOtro.Text = formacionAcademica.EstudiosOficialesOtro; }
             if (formacionAcademica.TituloObtenido == null) { txtTituloObtenido.Text = ""; }
             else { txtTituloObtenido.Text = formacionAcademica.TituloObtenido; }
             if (formacionAcademica.InstitucionEmisoraTitulo == null) { txtInstitucionEmisoraTitulo.Text = ""; }
             else { txtInstitucionEmisoraTitulo.Text = formacionAcademica.InstitucionEmisoraTitulo; }
             if (formacionAcademica.OtrosEstudios == null) { txtOtrosEstudios.Text = ""; }
             else { txtOtrosEstudios.Text = formacionAcademica.OtrosEstudios; }
-            if (formacionAcademica.EsEstudiante == true) { chkEstudianteVinculado.Checked = true; PanelEstudianteVinculado.Visible = true; }
-            else { chkEstudianteVinculado.Checked = false; PanelEstudianteVinculado.Visible = false; }
+            if (formacionAcademica.EsEstudiante == true) { chkEstudianteVinculado.Checked = true; }
+            else { chkEstudianteVinculado.Checked = false; }
 
             txtCarreraNombre.Text = formacionAcademica.CarreraNombre;
             txtCarreraAnioIngreso.Text = formacionAcademica.CarreraAnioIngreso;
@@ -143,6 +144,7 @@ namespace CDNEU
             txtCarreraInstitucion.Text = formacionAcademica.CarreraInstitucion;
 
             //PROXIMA: ACTIVIDAD PROFESIONAL
+            ActividadProfesional actividadProfesional = actividadProfecionalNego.ObtenerActividadProfesional(globalIdUsuario);
 
 
 
@@ -167,34 +169,36 @@ namespace CDNEU
             formacionAcademica.CarreraDuracion = txtCarreraDuracion.Text;
             formacionAcademica.CarreraInstitucion = txtCarreraInstitucion.Text;
 
-            if (RBEstudiosOficiales.SelectedValue != "Otro") { formacionAcademica.EstudiosOficialesOtro = null; }
-
-            if (chkEstudianteVinculado.Checked == false)
-            {
-                formacionAcademica.CarreraNombre = null;
-                formacionAcademica.CarreraAnioIngreso = null;
-                formacionAcademica.CarreraAnioCursada = null;
-                formacionAcademica.CarreraDuracion = null;
-                formacionAcademica.CarreraInstitucion = null;
-            }
-
             formacionAcademicaNego.ActualizarFormacionAcademica(formacionAcademica);
 
             Response.Redirect("EditarUsuario.aspx");
         }
 
-        protected void RBEstudiosOficiales_SelectedIndexChanged(object sender, EventArgs e)
+        protected void btnEnviarDatosActividadProfesional_Click(object sender, EventArgs e)
         {
-            if (RBEstudiosOficiales.SelectedValue == "Otro") { txtEstudiosOficialesOtro.Visible = true; }
-            else { txtEstudiosOficialesOtro.Visible = false; }
+            //ACTIVIDAD PROFESIONAL
+
+            ActividadProfesional actividadProfesional = new ActividadProfesional();
+
+            actividadProfesional.IdActividadProfesional = actividadProfecionalNego.ObtenerActividadProfesionalSegunIdUsuario(globalIdUsuario);
+            actividadProfesional.IdUsuario = globalIdUsuario;
+            actividadProfesional.DisciplinaProyectual = RBDisciplinaProyectual.SelectedValue.ToString();
+            actividadProfesional.DisciplinaProyectualOtra = txtDisciplinaProyectualOtra.Text;
+            actividadProfesional.SubSector = RBSubSector.SelectedValue.ToString();
+            actividadProfesional.SubSectorOtro = txtSubSectorOtro.Text;
+            actividadProfesional.TipoRelacionLaboral = RBTipoRelacionLaboral.SelectedValue.ToString();
+            actividadProfesional.TipoRelacionLaboralOtro = txtTipoRelacionLaboralOtro.Text;
+            actividadProfesional.NombreEmpresa = txtNombreEmpresa.Text;
+            actividadProfesional.LinkEmpresa = txtLinkEmpresa.Text;
+            actividadProfesional.DescripcionActividadProfesional = txtDescripcion.Text;
+
+            actividadProfecionalNego.ActualizarActividadProfesional(actividadProfesional);
+
+            Response.Redirect("EditarUsuario.aspx");
         }
 
-        protected void chkEstudianteVinculado_CheckedChanged(object sender, EventArgs e)
-        {
-            PanelEstudianteVinculado.Visible = chkEstudianteVinculado.Checked;
-            //if (chkEstudianteVinculado.Checked == true) { PanelEstudianteVinculado.Visible = true; }
-            //if (chkEstudianteVinculado.Checked == false) { PanelEstudianteVinculado.Visible = false; }
-        }
+
+
 
 
 

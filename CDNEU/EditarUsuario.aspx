@@ -10,9 +10,11 @@
             padding-right: 50px;
             background-size: contain;
         }
+
         input[type="radio"] + label {
             margin-left: 10px;
         }
+
         .parpadea {
             animation-name: parpadeo;
             animation-duration: 1s;
@@ -23,39 +25,49 @@
             -webkit-animation-timing-function: linear;
             -webkit-animation-iteration-count: infinite;
         }
+
         @-moz-keyframes parpadeo {
             0% {
                 opacity: 1.0;
             }
+
             50% {
                 opacity: 0.0;
             }
+
             100% {
                 opacity: 1.0;
             }
         }
+
         @-webkit-keyframes parpadeo {
             0% {
                 opacity: 1.0;
             }
+
             50% {
                 opacity: 0.0;
             }
+
             100% {
                 opacity: 1.0;
             }
         }
+
         @keyframes parpadeo {
             0% {
                 opacity: 1.0;
             }
+
             50% {
                 opacity: 0.0;
             }
+
             100% {
                 opacity: 1.0;
             }
         }
+
         .boton_azul {
             text-decoration: none;
             padding: 2px;
@@ -67,11 +79,13 @@
             border: 2px solid #6082ac;
             width: 180px;
         }
+
             .boton_azul:hover {
                 color: #6082ac;
                 background-color: #ffffff;
                 border-color: #6082ac;
             }
+
         .boton_rojo {
             text-decoration: none;
             padding: 2px;
@@ -83,36 +97,81 @@
             border: 2px solid #fb5d5d;
             width: 180px;
         }
+
             .boton_rojo:hover {
                 color: #fb5d5d;
                 background-color: #ffffff;
                 border-color: #fb5d5d;
             }
+
         .anchotabla {
             width: 200px;
         }
+
         .anchotablaFormacionAcademica {
             width: 300px;
         }
+
         .anchotablaActividadProfesional {
             width: 600px;
         }
+
         .anchotablaActividadIndependiente {
             width: 600px;
         }
+
         .anchotextbox {
             width: 300px;
         }
+
         .anchotextboxCarrera {
             width: 500px;
         }
+
         .altotabla {
             height: 15px;
+        }
+
+        .panel-body {
+            padding: 5px;
+        }
+
+        .panel {
+            padding: 5px;
+        }
+
+        .container-fluid {
+            padding-right: 0px;
+            padding-left: 0px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .container {
+            padding-right: 0px;
+            padding-left: 0px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .row1 {
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+
+        table {
+            border-spacing: 0;
+            border-collapse: separate;
+        }
+
+        label {
+            display: inline;
         }
     </style>
 
     <div class="container-fluid">
         <div class="panel-group" id="accordion">
+            <%--DATOS PERSONALES--%>
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
@@ -133,7 +192,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-user"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDatosPersonalesNombre" runat="server" CssClass="form-control" />
+                                            <asp:TextBox ID="txtDatosPersonalesNombre" runat="server" CssClass="form-control"  TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -150,7 +209,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-user"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDatosPersonalesApellido" runat="server" CssClass="form-control" />
+                                            <asp:TextBox ID="txtDatosPersonalesApellido" runat="server" CssClass="form-control"  TextMode="MultiLine" Rows="1"/>
                                         </div>
                                     </tr>
                                     <tr>
@@ -167,7 +226,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-envelope"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDatosPersonalesCorreoElectronico" runat="server" CssClass="form-control" />
+                                            <asp:TextBox ID="txtDatosPersonalesCorreoElectronico" runat="server" CssClass="form-control"  TextMode="MultiLine" Rows="1"/>
                                         </div>
                                     </tr>
                                     <tr>
@@ -184,7 +243,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-phone-alt"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDatosPersonalesTelefono" runat="server" CssClass="form-control" />
+                                            <asp:TextBox ID="txtDatosPersonalesTelefono" runat="server" CssClass="form-control"  TextMode="MultiLine" Rows="1"/>
                                         </div>
                                     </tr>
                                     <tr>
@@ -218,7 +277,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-home"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDatosPersonalesDomicilio" runat="server" CssClass="form-control" />
+                                            <asp:TextBox ID="txtDatosPersonalesDomicilio" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -235,7 +294,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-map-marker"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDatosPersonalesLocalidad" runat="server" CssClass="form-control" />
+                                            <asp:TextBox ID="txtDatosPersonalesLocalidad" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -249,7 +308,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-map-marker"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDatosPersonalesProvincia" runat="server" CssClass="form-control" />
+                                            <asp:TextBox ID="txtDatosPersonalesProvincia" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -270,7 +329,7 @@
 
                                 <table>
                                     <asp:Label ID="Label60" runat="server">Perfil de Instagram</asp:Label>
-                                    <asp:TextBox ID="txtInstagram" Height="35px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-instagram.jpg);" runat="server" CssClass="form-control estiloRedesSociales" />
+                                    <asp:TextBox ID="txtInstagram" Height="35px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-instagram.jpg);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" />
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
@@ -278,7 +337,7 @@
 
                                 <table>
                                     <asp:Label ID="Label61" runat="server">Perfil de Twitter</asp:Label>
-                                    <asp:TextBox ID="txtTwitter" Height="35px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-twitter.jpg);" runat="server" CssClass="form-control estiloRedesSociales" />
+                                    <asp:TextBox ID="txtTwitter" Height="35px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-twitter.jpg);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" />
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
@@ -286,7 +345,7 @@
 
                                 <table>
                                     <asp:Label ID="Label62" runat="server">Canal de YouTube</asp:Label>
-                                    <asp:TextBox ID="txtYouTube" Height="35px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-youtube.jpg);" runat="server" CssClass="form-control estiloRedesSociales" />
+                                    <asp:TextBox ID="txtYouTube" Height="35px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-youtube.jpg);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" />
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
@@ -294,7 +353,7 @@
 
                                 <table>
                                     <asp:Label ID="Label63" runat="server">Perfil Flickr</asp:Label>
-                                    <asp:TextBox ID="txtFlicker" Height="35px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-flickr.jpg);" runat="server" CssClass="form-control estiloRedesSociales" />
+                                    <asp:TextBox ID="txtFlicker" Height="35px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-flickr.jpg);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" />
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
@@ -305,20 +364,20 @@
 
                                 <table>
                                     <div class="form-group">
-                                        <asp:CheckBox ID="chkMercadoLibre" runat="server" Width="20px" />
+                                        <asp:CheckBox ID="chkMercadoLibre" runat="server" Width="20px" CssClass="col-md-offset-1 col-xs-offset-1 col-lg-offset-1 col-sm-offset-1" />
                                         <asp:Label ID="lblMercadoLibre" runat="server" Text="Mercado Libre"></asp:Label>
                                     </div>
                                 </table>
 
                                 <table>
                                     <div class="form-group">
-                                        <asp:CheckBox ID="chkTiendaNube" runat="server" Width="20px" />
+                                        <asp:CheckBox ID="chkTiendaNube" runat="server" Width="20px" CssClass="col-md-offset-1 col-xs-offset-1 col-lg-offset-1 col-sm-offset-1" />
                                         <asp:Label ID="lblTiendaNube" runat="server" Text="Tienda Nube"></asp:Label>
                                     </div>
                                 </table>
 
                                 <table>
-                                    <asp:TextBox ID="txtPlataformaComercializacionOtro" placeholder="Otro" runat="server" CssClass="form-control" />
+                                    <asp:TextBox ID="txtPlataformaComercializacionOtro" placeholder="Otro" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                 </table>
                             </div>
                             <%--del div group--%>
@@ -371,42 +430,31 @@
                                         </td>
                                     </tr>
                                 </table>
-                                <asp:UpdatePanel ID="UPEstudiosOficiales" runat="server">
-                                    <ContentTemplate>
-                                        <fieldset style="background-color: White;">
-                                            <table>
-                                                <tr>
-                                                    <td>
-                                                        <asp:RadioButtonList ID="RBEstudiosOficiales" runat="server"
-                                                            CssClass="form-control" BorderStyle="None"
-                                                            RepeatColumns="1"
-                                                            RepeatLayout="Table"
-                                                            CellPadding="10"
-                                                            AutoPostBack="True"
-                                                            OnSelectedIndexChanged="RBEstudiosOficiales_SelectedIndexChanged">
-                                                            <asp:ListItem>Secundario</asp:ListItem>
-                                                            <asp:ListItem>Terciario</asp:ListItem>
-                                                            <asp:ListItem>Universitario</asp:ListItem>
-                                                            <asp:ListItem>Posgrado</asp:ListItem>
-                                                            <asp:ListItem>Otro</asp:ListItem>
-                                                        </asp:RadioButtonList>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                            <table>
-                                                <tr>
-                                                    <asp:TextBox ID="txtEstudiosOficialesOtro" runat="server" CssClass="form-control" Visible="false" />
-                                                </tr>
-                                                <tr>
-                                                    <td style="height: 30px"></td>
-                                                </tr>
-                                            </table>
-                                        </fieldset>
-                                    </ContentTemplate>
-                                    <Triggers>
-                                        <asp:AsyncPostBackTrigger ControlID="RBEstudiosOficiales" EventName="SelectedIndexChanged" />
-                                    </Triggers>
-                                </asp:UpdatePanel>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBEstudiosOficiales" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10">
+                                                <asp:ListItem>Secundario</asp:ListItem>
+                                                <asp:ListItem>Terciario</asp:ListItem>
+                                                <asp:ListItem>Universitario</asp:ListItem>
+                                                <asp:ListItem>Posgrado</asp:ListItem>
+                                                <asp:ListItem>Otro</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtEstudiosOficialesOtro" runat="server" CssClass="form-control" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
                                 <h4>
                                     <asp:Label ID="Label1" runat="server" Text="Label">Título Obtenido</asp:Label>
                                 </h4>
@@ -464,7 +512,7 @@
                                         </td>
                                         <td>
                                             <div class="col-md-3">
-                                                <asp:CheckBox ID="chkEstudianteVinculado" runat="server" BorderStyle="None" OnCheckedChanged="chkEstudianteVinculado_CheckedChanged" AutoPostBack="true" />
+                                                <asp:CheckBox ID="chkEstudianteVinculado" runat="server" BorderStyle="None" />
                                             </div>
                                         </td>
                                     </tr>
@@ -473,58 +521,50 @@
                                     </tr>
                                 </table>
 
-                                <%--ACA VA EL UPDATEPANEL--%>
-                                <asp:UpdatePanel ID="UPEstudianteVinculado" runat="server" UpdateMode="Conditional">
-                                    <Triggers>
-                                        <asp:AsyncPostBackTrigger ControlID="chkEstudianteVinculado" />
-                                    </Triggers>
-                                    <ContentTemplate>
-                                        <asp:Panel ID="PanelEstudianteVinculado" runat="server" Visible="false">
-                                            <div class="row">
-                                                <table>
-                                                    <asp:Label ID="Label13" runat="server" Text="Label">Qué curso/carrera sigue</asp:Label>
-                                                    <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                            <span class="glyphicon glyphicon-asterisk"></span>
-                                                        </span>
-                                                        <asp:TextBox ID="txtCarreraNombre" runat="server" CssClass="form-control" />
-                                                    </div>
-                                                    <asp:Label ID="Label14" runat="server" Text="Label">Año de Ingreso</asp:Label>
-                                                    <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                            <span class="glyphicon glyphicon-asterisk"></span>
-                                                        </span>
-                                                        <asp:TextBox ID="txtCarreraAnioIngreso" runat="server" CssClass="form-control" />
-                                                    </div>
-                                                    <asp:Label ID="Label15" runat="server" Text="Label">Año de Cursada</asp:Label>
-                                                    <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                            <span class="glyphicon glyphicon-asterisk"></span>
-                                                        </span>
-                                                        <asp:TextBox ID="txtCarreraAnioCursada" runat="server" CssClass="form-control" />
-                                                    </div>
-                                                    <asp:Label ID="Label16" runat="server" Text="Label">Duración del curso/carrera</asp:Label>
-                                                    <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                            <span class="glyphicon glyphicon-asterisk"></span>
-                                                        </span>
-                                                        <asp:TextBox ID="txtCarreraDuracion" runat="server" CssClass="form-control" />
-                                                    </div>
-                                                    <asp:Label ID="Label17" runat="server" Text="Label">Institución</asp:Label>
-                                                    <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                            <span class="glyphicon glyphicon-asterisk"></span>
-                                                        </span>
-                                                        <asp:TextBox ID="txtCarreraInstitucion" runat="server" CssClass="form-control" />
-                                                    </div>
-                                                    <tr>
-                                                        <td style="height: 30px"></td>
-                                                    </tr>
-                                                </table>
+                                <asp:Panel ID="PanelEstudianteVinculado" runat="server">
+                                    <div class="row1">
+                                        <table>
+                                            <asp:Label ID="Label13" runat="server" Text="Label">Qué curso/carrera sigue</asp:Label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-asterisk"></span>
+                                                </span>
+                                                <asp:TextBox ID="txtCarreraNombre" runat="server" CssClass="form-control" />
                                             </div>
-                                        </asp:Panel>
-                                    </ContentTemplate>
-                                </asp:UpdatePanel>
+                                            <asp:Label ID="Label14" runat="server" Text="Label">Año de Ingreso</asp:Label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-asterisk"></span>
+                                                </span>
+                                                <asp:TextBox ID="txtCarreraAnioIngreso" runat="server" CssClass="form-control" />
+                                            </div>
+                                            <asp:Label ID="Label15" runat="server" Text="Label">Año de Cursada</asp:Label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-asterisk"></span>
+                                                </span>
+                                                <asp:TextBox ID="txtCarreraAnioCursada" runat="server" CssClass="form-control" />
+                                            </div>
+                                            <asp:Label ID="Label16" runat="server" Text="Label">Duración del curso/carrera</asp:Label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-asterisk"></span>
+                                                </span>
+                                                <asp:TextBox ID="txtCarreraDuracion" runat="server" CssClass="form-control" />
+                                            </div>
+                                            <asp:Label ID="Label17" runat="server" Text="Label">Institución</asp:Label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-asterisk"></span>
+                                                </span>
+                                                <asp:TextBox ID="txtCarreraInstitucion" runat="server" CssClass="form-control" />
+                                            </div>
+                                            <tr>
+                                                <td style="height: 30px"></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </asp:Panel>
                             </div>
                         </div>
                         <!--Boton de registro-->
@@ -548,202 +588,153 @@
                 </div>
                 <div id="collapse3" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label12" runat="server" Text="Label">Disciplina proyectual en que se enmarca su actividad profesional</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="RBDisciplinaProyectual" runat="server"
-                                        CssClass="form-control" BorderStyle="None"
-                                        RepeatColumns="1"
-                                        RepeatLayout="Table"
-                                        CellPadding="10">
-                                        <asp:ListItem Value="1">Diseño de Interiores</asp:ListItem>
-                                        <asp:ListItem Value="2">Diseño Industrial</asp:ListItem>
-                                        <asp:ListItem Value="3">Diseño del Paisaje</asp:ListItem>
-                                        <asp:ListItem Value="4">Diseño de Indumentaria</asp:ListItem>
-                                        <asp:ListItem Value="5">Diseño Gráfico</asp:ListItem>
-                                        <asp:ListItem Value="6">Diseño Multimedia</asp:ListItem>
-                                        <asp:ListItem Value="7">Arquitectura</asp:ListItem>
-                                        <asp:ListItem Value="8">Artesanías</asp:ListItem>
-                                        <asp:ListItem Value="9">Otra</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align: bottom">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtDisciplinaProyectualOtra" runat="server" CssClass="form-control" Width="800" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label18" runat="server" Text="Label">Sub Sector</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="RBSubSector" runat="server"
-                                        CssClass="form-control" BorderStyle="None"
-                                        RepeatColumns="1"
-                                        RepeatLayout="Table"
-                                        CellPadding="10">
-                                        <asp:ListItem Value="1">Mobiliario</asp:ListItem>
-                                        <asp:ListItem Value="2">Calzado</asp:ListItem>
-                                        <asp:ListItem Value="3">Accesorios</asp:ListItem>
-                                        <asp:ListItem Value="4">Diseño WEB</asp:ListItem>
-                                        <asp:ListItem Value="5">Diseño Editorial</asp:ListItem>
-                                        <asp:ListItem Value="6">Joyería</asp:ListItem>
-                                        <asp:ListItem Value="7">Tejidos</asp:ListItem>
-                                        <asp:ListItem Value="8">Otro</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align: bottom">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtSubSectorOtro" runat="server" CssClass="form-control" Width="800" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label19" runat="server" Text="Label">Tipo de Relación Laboral</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="RBTipoRelacionLaboral" runat="server"
-                                        CssClass="form-control" BorderStyle="None"
-                                        RepeatColumns="1"
-                                        RepeatLayout="Table"
-                                        CellPadding="10">
-                                        <asp:ListItem Value="1">Trabajador en relacion de dependencia</asp:ListItem>
-                                        <asp:ListItem Value="2">Trabajador Independiente proyecto propio</asp:ListItem>
-                                        <asp:ListItem Value="3">Por Proyecto</asp:ListItem>
-                                        <asp:ListItem Value="4">Free Lance</asp:ListItem>
-                                        <asp:ListItem Value="5">Abono mensual por horas dedicadas</asp:ListItem>
-                                        <asp:ListItem Value="6">Otro</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align: bottom">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtTipoRelacionLaboralOtro" runat="server" CssClass="form-control" Width="800" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label21" runat="server">Nombre de la empresa/estudio/emprendimiento/institucion donde lleva adelante su actividad profesional</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 10px"></td>
-                            </tr>
-                            <tr>
-                                <td style="width: 800px">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-asterisk"></span>
-                                        </span>
-                                        <asp:TextBox ID="txtNombreEmpresa" runat="server" CssClass="form-control" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label22" runat="server">Link de la empresa/estudio/emprendimiento/institucion donde lleva adelante su actividad profesional</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 10px"></td>
-                            </tr>
-                            <tr>
-                                <td style="width: 800px">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-asterisk"></span>
-                                        </span>
-                                        <asp:TextBox ID="txtLinkEmpresa" runat="server" CssClass="form-control" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label23" runat="server">Describa brevemente la actividad profesional que realiza</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 10px"></td>
-                            </tr>
-                            <tr>
-                                <td style="width: 800px">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-asterisk"></span>
-                                        </span>
-                                        <asp:TextBox ID="txtDescripcion" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h4>Disciplina proyectual en que se enmarca su actividad profesional</h4>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBDisciplinaProyectual" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10">
+                                                <asp:ListItem Value="1">Diseño de Interiores</asp:ListItem>
+                                                <asp:ListItem Value="2">Diseño Industrial</asp:ListItem>
+                                                <asp:ListItem Value="3">Diseño del Paisaje</asp:ListItem>
+                                                <asp:ListItem Value="4">Diseño de Indumentaria</asp:ListItem>
+                                                <asp:ListItem Value="5">Diseño Gráfico</asp:ListItem>
+                                                <asp:ListItem Value="6">Diseño Multimedia</asp:ListItem>
+                                                <asp:ListItem Value="7">Arquitectura</asp:ListItem>
+                                                <asp:ListItem Value="8">Artesanías</asp:ListItem>
+                                                <asp:ListItem Value="9">Otra</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtDisciplinaProyectualOtra" runat="server" CssClass="form-control" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <h4>Sub Sector
+                                </h4>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBSubSector" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10">
+                                                <asp:ListItem Value="1">Mobiliario</asp:ListItem>
+                                                <asp:ListItem Value="2">Calzado</asp:ListItem>
+                                                <asp:ListItem Value="3">Accesorios</asp:ListItem>
+                                                <asp:ListItem Value="4">Diseño WEB</asp:ListItem>
+                                                <asp:ListItem Value="5">Diseño Editorial</asp:ListItem>
+                                                <asp:ListItem Value="6">Joyería</asp:ListItem>
+                                                <asp:ListItem Value="7">Tejidos</asp:ListItem>
+                                                <asp:ListItem Value="8">Otro</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtSubSectorOtro" runat="server" CssClass="form-control" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <h4>Tipo de Relación Laboral</h4>
+                                <asp:RadioButtonList ID="RBTipoRelacionLaboral" runat="server"
+                                    CssClass="form-control" BorderStyle="None"
+                                    RepeatColumns="1"
+                                    RepeatLayout="Table"
+                                    CellPadding="10">
+                                    <asp:ListItem Value="1">Trabajador en relacion de dependencia</asp:ListItem>
+                                    <asp:ListItem Value="2">Trabajador Independiente proyecto propio</asp:ListItem>
+                                    <asp:ListItem Value="3">Por Proyecto</asp:ListItem>
+                                    <asp:ListItem Value="4">Free Lance</asp:ListItem>
+                                    <asp:ListItem Value="5">Abono mensual por horas dedicadas</asp:ListItem>
+                                    <asp:ListItem Value="6">Otro</asp:ListItem>
+                                </asp:RadioButtonList>
+                                <asp:TextBox ID="txtTipoRelacionLaboralOtro" runat="server" CssClass="form-control" />
+                                <table>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
 
+                                <h4>Nombre de la empresa /estudio /emprendimiento /institucion donde lleva adelante su actividad profesional</h4>
+                                <table>
+                                    <tr>
+                                        <td style="height: 10px"></td>
+                                    </tr>
+                                    <tr>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-asterisk"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtNombreEmpresa" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <h4>Link de la empresa /estudio /emprendimiento /institucion donde lleva adelante su actividad profesional
+                                </h4>
+                                <table>
+                                    <tr>
+                                        <td style="height: 10px"></td>
+                                    </tr>
+                                    <tr>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-asterisk"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtLinkEmpresa" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <h4>Describa brevemente la actividad profesional que realiza
+                                </h4>
+                                <table>
+                                    <tr>
+                                        <td style="height: 10px"></td>
+                                    </tr>
+                                    <tr>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-asterisk"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtDescripcion" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="2" />
+                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
                         <!--Boton de registro-->
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-1">
-                                <asp:Button ID="btnEnviarDatosActividadProfesional" runat="server" Text="Enviar Datos" CssClass="boton_azul" />
+                                <asp:Button ID="btnEnviarDatosActividadProfesional" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" OnClick="btnEnviarDatosActividadProfesional_Click" />
                             </div>
                         </div>
                     </div>
@@ -760,354 +751,286 @@
                 </div>
                 <div id="collapse4" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label24" runat="server">¿Es esta actividad su principal ingreso y sustento de vida?</asp:Label>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <table>
+                                    <h4>¿Es esta actividad su principal ingreso y sustento de vida?
                                     </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="RBSustentoDeVida" runat="server"
-                                        CssClass="form-control" BorderStyle="None"
-                                        RepeatColumns="1"
-                                        RepeatLayout="Table"
-                                        CellPadding="10">
-                                        <asp:ListItem>Si</asp:ListItem>
-                                        <asp:ListItem>No</asp:ListItem>
-                                        <asp:ListItem>Otra</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align: bottom">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtSustentoDeVidaOtro" runat="server" CssClass="form-control" Width="800" />
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBSustentoDeVida" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10">
+                                                <asp:ListItem>Si</asp:ListItem>
+                                                <asp:ListItem>No</asp:ListItem>
+                                                <asp:ListItem>Otra</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtSustentoDeVidaOtro" runat="server" CssClass="form-control" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <h4>Tiempo durante el cual su actividad se ha mantenido en funcionamiento
+                                    </h4>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBActividadFuncionamiento" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10">
+                                                <asp:ListItem>0 a 1 año</asp:ListItem>
+                                                <asp:ListItem>1 a 3 años</asp:ListItem>
+                                                <asp:ListItem>3 a 5 años</asp:ListItem>
+                                                <asp:ListItem>mas de 5 años</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <h4>¿Cuál es su situación tributaria?
+                                    </h4>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBSituacionTributaria" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10">
+                                                <asp:ListItem>Monotributo</asp:ListItem>
+                                                <asp:ListItem>Responsable Inscripto</asp:ListItem>
+                                                <asp:ListItem>Exento</asp:ListItem>
+                                                <asp:ListItem>No Inscripto</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <h4>¿Tiene registrado su marca /producto /nombre de empresa?
+                                    </h4>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBNombreRegistrado" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10">
+                                                <asp:ListItem>Si</asp:ListItem>
+                                                <asp:ListItem>No</asp:ListItem>
+                                                <asp:ListItem>Otro</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtNombreRegistradoOtro" runat="server" CssClass="form-control" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <h4>¿Tiene empleados a su cargo?
+                                    </h4>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBEmpleadosACargo" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10">
+                                                <asp:ListItem>Si</asp:ListItem>
+                                                <asp:ListItem>No</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtCantidadEmpleadosACargo" runat="server" CssClass="form-control" placeholder="Ingrese la cantidad de empleados a su cargo" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <h4>¿Cómo comercializa /ofrece sus productos /servicios?
+                                    </h4>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBComercializa" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10">
+                                                <asp:ListItem>Local / Estudio Propio</asp:ListItem>
+                                                <asp:ListItem>Oficina Privada / Showroom</asp:ListItem>
+                                                <asp:ListItem>Ferias Itinerantes</asp:ListItem>
+                                                <asp:ListItem>Locales / Oficinas de Terceros</asp:ListItem>
+                                                <asp:ListItem>Internet (WEB)</asp:ListItem>
+                                                <asp:ListItem>Internet (Redes Sociales)</asp:ListItem>
+                                                <asp:ListItem>Otro</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtComercializaOtro" runat="server" CssClass="form-control" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <h4>Nombre del espacio donde comercializa /ofrece sus productos /servicios
+                                    </h4>
+                                    <tr>
+                                        <td style="height: 10px"></td>
+                                    </tr>
+                                    <tr>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-asterisk"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtComercializaNombreEspacio" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <h4>Link del espacio donde comercializa /ofrece sus productos /servicios
+                                    </h4>
+                                    <tr>
+                                        <td style="height: 10px"></td>
+                                    </tr>
+                                    <tr>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-asterisk"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtComercializaLinkEspacio" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <h4>Ubicación del espacio donde comercializa /ofrece /otorga sus productos /servicios
+                                    </h4>
+                                    <tr>
+                                        <td style="height: 10px"></td>
+                                    </tr>
+                                    <tr>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-asterisk"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtComercializaUbicacionEspacio" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <table>
+
+                                    <h4>¿Cómo financia su actividad profesional?
+                                    </h4>
+
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBFinanciaActividadProfesional" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10">
+                                                <asp:ListItem>Fondos Propios</asp:ListItem>
+                                                <asp:ListItem>Prestamos de entidades privadas o públicas</asp:ListItem>
+                                                <asp:ListItem>Socios capitalistas</asp:ListItem>
+                                                <asp:ListItem>A través de las ganancias generadas</asp:ListItem>
+                                                <asp:ListItem>Otro</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtFinanciaActividadProfesionalOtro" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <h4>¿Realiza ventas /ofrece servicios a otras provincias /países?
+                                    </h4>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBVentasOtrosPaises" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10">
+                                                <asp:ListItem>Si</asp:ListItem>
+                                                <asp:ListItem>No</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtVentasOtrosPaisesCuales" runat="server" CssClass="form-control" placeholder="¿Cuáles?" TextMode="MultiLine" Rows="1" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <!--Boton de registro-->
+                                <div class="form-group">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <asp:Button ID="btnEnviarDatosActividadIndependiente" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" />
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label25" runat="server">Tiempo durante el cual su actividad se ha mantenido en funcionamiento</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="RBActividadFuncionamiento" runat="server"
-                                        CssClass="form-control" BorderStyle="None"
-                                        RepeatColumns="1"
-                                        RepeatLayout="Table"
-                                        CellPadding="10">
-                                        <asp:ListItem>0 a 1 año</asp:ListItem>
-                                        <asp:ListItem>1 a 3 años</asp:ListItem>
-                                        <asp:ListItem>3 a 5 años</asp:ListItem>
-                                        <asp:ListItem>mas de 5 años</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label26" runat="server">¿Cuál es su situación tributaria?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="RBSituacionTributaria" runat="server"
-                                        CssClass="form-control" BorderStyle="None"
-                                        RepeatColumns="1"
-                                        RepeatLayout="Table"
-                                        CellPadding="10">
-                                        <asp:ListItem>Monotributo</asp:ListItem>
-                                        <asp:ListItem>Responsable Inscripto</asp:ListItem>
-                                        <asp:ListItem>Exento</asp:ListItem>
-                                        <asp:ListItem>No Inscripto</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label27" runat="server">¿Tiene su marca/producto/nombre de empresa registrado?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="RBNombreRegistrado" runat="server"
-                                        CssClass="form-control" BorderStyle="None"
-                                        RepeatColumns="1"
-                                        RepeatLayout="Table"
-                                        CellPadding="10">
-                                        <asp:ListItem>Si</asp:ListItem>
-                                        <asp:ListItem>No</asp:ListItem>
-                                        <asp:ListItem>Otro</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align: bottom">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtNombreRegistradoOtro" runat="server" CssClass="form-control" Width="800" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label28" runat="server">¿Tiene empleados a su cargo?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="RBEmpleadosACargo" runat="server"
-                                        CssClass="form-control" BorderStyle="None"
-                                        RepeatColumns="1"
-                                        RepeatLayout="Table"
-                                        CellPadding="10">
-                                        <asp:ListItem>Si</asp:ListItem>
-                                        <asp:ListItem>No</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align: top">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtCantidadEmpleadosACargo" runat="server" CssClass="form-control" placeholder="Ingrese la cantidad de empleados a su cargo " Width="800" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label29" runat="server">¿Cómo comercializa/ofrece sus productos/servicios?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="RBComercializa" runat="server"
-                                        CssClass="form-control" BorderStyle="None"
-                                        RepeatColumns="1"
-                                        RepeatLayout="Table"
-                                        CellPadding="10">
-                                        <asp:ListItem>Local / Estudio Propio</asp:ListItem>
-                                        <asp:ListItem>Oficina Privada / Showroom</asp:ListItem>
-                                        <asp:ListItem>Ferias Itinerantes</asp:ListItem>
-                                        <asp:ListItem>Locales / Oficinas de Terceros</asp:ListItem>
-                                        <asp:ListItem>Internet (WEB)</asp:ListItem>
-                                        <asp:ListItem>Internet (Redes Sociales)</asp:ListItem>
-                                        <asp:ListItem>Otro</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align: bottom">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtComercializaOtro" runat="server" CssClass="form-control" Width="800" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label30" runat="server">Nombre del espacio donde comercializa/ofrece sus productos/servicios</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 10px"></td>
-                            </tr>
-                            <tr>
-                                <td style="width: 800px">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-asterisk"></span>
-                                        </span>
-                                        <asp:TextBox ID="txtComercializaNombreEspacio" runat="server" CssClass="form-control" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label31" runat="server">Link del espacio donde comercializa/ofrece sus productos/servicios</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 10px"></td>
-                            </tr>
-                            <tr>
-                                <td style="width: 800px">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-asterisk"></span>
-                                        </span>
-                                        <asp:TextBox ID="txtComercializaLinkEspacio" runat="server" CssClass="form-control" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label32" runat="server">Ubicación del espacio donde comercializa/ofrece/otorga sus productos/servicios</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 10px"></td>
-                            </tr>
-                            <tr>
-                                <td style="width: 800px">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-asterisk"></span>
-                                        </span>
-                                        <asp:TextBox ID="txtComercializaUbicacionEspacio" runat="server" CssClass="form-control" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label33" runat="server">¿Cómo financia su actividad profesional?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="RBFinanciaActividadProfesional" runat="server"
-                                        CssClass="form-control" BorderStyle="None"
-                                        RepeatColumns="1"
-                                        RepeatLayout="Table"
-                                        CellPadding="10">
-                                        <asp:ListItem>Fondos Propios</asp:ListItem>
-                                        <asp:ListItem>Prestamos de entidades privadas o públicas</asp:ListItem>
-                                        <asp:ListItem>Socios capitalistas</asp:ListItem>
-                                        <asp:ListItem>A través de las ganancias generadas</asp:ListItem>
-                                        <asp:ListItem>Otro</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td style="vertical-align: bottom">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtFinanciaActividadProfesionalOtro" runat="server" CssClass="form-control" Width="800" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label34" runat="server">¿Realiza ventas/ofrece servicios a otras provincias/países?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="RBVentasOtrosPaises" runat="server"
-                                        CssClass="form-control" BorderStyle="None"
-                                        RepeatColumns="1"
-                                        RepeatLayout="Table"
-                                        CellPadding="10">
-                                        <asp:ListItem>Si</asp:ListItem>
-                                        <asp:ListItem>No</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align: top" id="VentasOtrosPaisesCuales">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtVentasOtrosPaisesCuales" runat="server" CssClass="form-control" placeholder="¿Cuáles?" Width="800" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <!--Boton de registro-->
-                        <div class="form-group">
-                            <div class="col-md-10 col-md-offset-1">
-                                <asp:Button ID="btnEnviarDatosActividadIndependiente" runat="server" Text="Enviar Datos" CssClass="boton_azul" />
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
 
