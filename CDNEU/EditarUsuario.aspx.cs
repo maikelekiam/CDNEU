@@ -184,7 +184,7 @@ namespace CDNEU
             actividadProfesional.IdUsuario = globalIdUsuario;
             actividadProfesional.DisciplinaProyectual = RBDisciplinaProyectual.SelectedValue.ToString();
             actividadProfesional.DisciplinaProyectualOtra = txtDisciplinaProyectualOtra.Text;
-            actividadProfesional.SubSector = RBSubSector.SelectedValue.ToString();
+            //actividadProfesional.SubSector = RBSubSector.SelectedValue.ToString();
             actividadProfesional.SubSectorOtro = txtSubSectorOtro.Text;
             actividadProfesional.TipoRelacionLaboral = RBTipoRelacionLaboral.SelectedValue.ToString();
             actividadProfesional.TipoRelacionLaboralOtro = txtTipoRelacionLaboralOtro.Text;

@@ -3,6 +3,23 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <style>
+        .estilo-ul {
+            height: 10px;
+            font-weight: bolder;
+        }
+
+        .h4, h4 {
+            font-size: 18px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin: 0 0 5px;
+            line-height: 1.5;
+            /*font-weight: 400;*/
+            font-family: 'Oswald', sans-serif;
+        }
+
+
+
         .estiloRedesSociales {
             background-position: left;
             background-repeat: no-repeat;
@@ -137,7 +154,7 @@
         }
 
         .panel {
-            padding: 5px;
+            padding-left: 5px;
         }
 
         .container-fluid {
@@ -185,14 +202,14 @@
                             <div class="col-md-6">
                                 <table>
                                     <tr>
-                                        <asp:Label ID="lblDatosPersonalesNombre" runat="server" Text="Label">Nombre</asp:Label>
+                                        <asp:Label ID="lblDatosPersonalesNombre" runat="server" Text="Label">Tu Nombre</asp:Label>
                                     </tr>
                                     <tr>
                                         <div class="input-group">
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-user"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDatosPersonalesNombre" runat="server" CssClass="form-control"  TextMode="MultiLine" Rows="1" />
+                                            <asp:TextBox ID="txtDatosPersonalesNombre" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -202,14 +219,14 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:Label ID="Label4" runat="server" Text="Label">Apellido</asp:Label>
+                                        <asp:Label ID="Label4" runat="server" Text="Label">Tu Apellido</asp:Label>
                                     </tr>
                                     <tr>
                                         <div class="input-group">
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-user"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDatosPersonalesApellido" runat="server" CssClass="form-control"  TextMode="MultiLine" Rows="1"/>
+                                            <asp:TextBox ID="txtDatosPersonalesApellido" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -219,14 +236,14 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:Label ID="Label5" runat="server" Text="Label">Correo Electronico</asp:Label>
+                                        <asp:Label ID="Label5" runat="server" Text="Label">Tu Correo Electronico</asp:Label>
                                     </tr>
                                     <tr>
                                         <div class="input-group">
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-envelope"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDatosPersonalesCorreoElectronico" runat="server" CssClass="form-control"  TextMode="MultiLine" Rows="1"/>
+                                            <asp:TextBox ID="txtDatosPersonalesCorreoElectronico" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -236,14 +253,14 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:Label ID="Label6" runat="server" Text="Label">Telefono / Celular</asp:Label>
+                                        <asp:Label ID="Label6" runat="server" Text="Label">Tu Telefono / Celular</asp:Label>
                                     </tr>
                                     <tr>
                                         <div class="input-group">
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-phone-alt"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDatosPersonalesTelefono" runat="server" CssClass="form-control"  TextMode="MultiLine" Rows="1"/>
+                                            <asp:TextBox ID="txtDatosPersonalesTelefono" runat="server" CssClass="form-control" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -253,7 +270,7 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:Label ID="Label10" runat="server" Text="Label">Edad</asp:Label>
+                                        <asp:Label ID="Label10" runat="server" Text="Label">Tu Edad</asp:Label>
                                     </tr>
                                     <tr>
                                         <div class="input-group">
@@ -270,7 +287,7 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:Label ID="Label11" runat="server" Text="Label">Domicilio</asp:Label>
+                                        <asp:Label ID="Label11" runat="server" Text="Label">Tu Domicilio</asp:Label>
                                     </tr>
                                     <tr>
                                         <div class="input-group">
@@ -320,64 +337,95 @@
                                 <h4>REDES SOCIALES</h4>
 
                                 <table>
-                                    <asp:Label ID="Label59" runat="server">Perfil de Facebook</asp:Label>
-                                    <asp:TextBox ID="txtFacebook" Height="35px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-facebook.jpg);" runat="server" CssClass="form-control estiloRedesSociales" />
+                                    <asp:Label ID="Label59" runat="server">Tu Perfil de Facebook</asp:Label>
+                                    <asp:TextBox ID="txtFacebook" Height="45px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-facebook.jpg);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" />
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
                                 </table>
 
                                 <table>
-                                    <asp:Label ID="Label60" runat="server">Perfil de Instagram</asp:Label>
-                                    <asp:TextBox ID="txtInstagram" Height="35px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-instagram.jpg);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" />
+                                    <asp:Label ID="Label60" runat="server">Tu Perfil de Instagram</asp:Label>
+                                    <asp:TextBox ID="txtInstagram" Height="45px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-instagram.jpg);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" />
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
                                 </table>
 
                                 <table>
-                                    <asp:Label ID="Label61" runat="server">Perfil de Twitter</asp:Label>
-                                    <asp:TextBox ID="txtTwitter" Height="35px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-twitter.jpg);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" />
+                                    <asp:Label ID="Label61" runat="server">Tu Perfil de Twitter</asp:Label>
+                                    <asp:TextBox ID="txtTwitter" Height="45px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/ic01-twitter.png);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" />
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
                                 </table>
 
                                 <table>
-                                    <asp:Label ID="Label62" runat="server">Canal de YouTube</asp:Label>
-                                    <asp:TextBox ID="txtYouTube" Height="35px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-youtube.jpg);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" />
+                                    <asp:Label ID="Label62" runat="server">Tu Canal de YouTube</asp:Label>
+                                    <asp:TextBox ID="txtYouTube" Height="45px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-youtube.jpg);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" />
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
                                 </table>
 
                                 <table>
-                                    <asp:Label ID="Label63" runat="server">Perfil Flickr</asp:Label>
-                                    <asp:TextBox ID="txtFlicker" Height="35px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-flickr.jpg);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" />
+                                    <asp:Label ID="Label63" runat="server">Tu Perfil Flickr</asp:Label>
+                                    <asp:TextBox ID="txtFlicker" Height="45px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-flickr.jpg);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" />
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
                                 </table>
-
                                 <hr />
-                                <h4>Plataforma de Comercialización</h4>
 
+                                <h4>PLATAFORMA DE COMERCIALIZACION</h4>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkRedesSociales" runat="server" Width="20px" />
+                                    <asp:Label ID="lblRedesSociales" runat="server" Text="Redes Sociales"></asp:Label>
+                                </ul>
+                                <ul>
+                                    <asp:Label ID="Label25" runat="server" Text="( Facebook / Instagram / Twitter / YouTube / WhatsApp )"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkMercadoLibre" runat="server" Width="20px" />
+                                    <asp:Label ID="lblMercadoLibre" runat="server" Text="Mercado Libre"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkSitioWeb" runat="server" Width="20px" />
+                                    <asp:Label ID="lblSitioWeb" runat="server" Text="Sitio WEB"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkTiendaNube" runat="server" Width="20px" />
+                                    <asp:Label ID="lblTiendaNube" runat="server" Text="Tienda Nube"></asp:Label>
+                                </ul>
+
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkFerias" runat="server" Width="20px" />
+                                    <asp:Label ID="lblFerias" runat="server" Text="Ferias"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkLocalComercial" runat="server" Width="20px" />
+                                    <asp:Label ID="lblLocalComercial" runat="server" Text="Local Comercial"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkPersonal" runat="server" Width="20px" />
+                                    <asp:Label ID="lblPersonal" runat="server" Text="Personal"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkShowRoom" runat="server" Width="20px" />
+                                    <asp:Label ID="lblShowRoom" runat="server" Text="ShowRoom"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkNoComercializa" runat="server" Width="20px" />
+                                    <asp:Label ID="lblNoComercializa" runat="server" Text="No comercializa aún"></asp:Label>
+                                </ul>
                                 <table>
-                                    <div class="form-group">
-                                        <asp:CheckBox ID="chkMercadoLibre" runat="server" Width="20px" CssClass="col-md-offset-1 col-xs-offset-1 col-lg-offset-1 col-sm-offset-1" />
-                                        <asp:Label ID="lblMercadoLibre" runat="server" Text="Mercado Libre"></asp:Label>
-                                    </div>
+                                    <tr>
+                                        <td class="altotabla"></td>
+                                    </tr>
                                 </table>
 
                                 <table>
-                                    <div class="form-group">
-                                        <asp:CheckBox ID="chkTiendaNube" runat="server" Width="20px" CssClass="col-md-offset-1 col-xs-offset-1 col-lg-offset-1 col-sm-offset-1" />
-                                        <asp:Label ID="lblTiendaNube" runat="server" Text="Tienda Nube"></asp:Label>
-                                    </div>
-                                </table>
-
-                                <table>
-                                    <asp:TextBox ID="txtPlataformaComercializacionOtro" placeholder="Otro" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                    <asp:TextBox ID="txtPlataformaComercializacionOtro" placeholder="Otra Plataforma" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                 </table>
                             </div>
                             <%--del div group--%>
@@ -449,7 +497,7 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtEstudiosOficialesOtro" runat="server" CssClass="form-control" />
+                                        <asp:TextBox ID="txtEstudiosOficialesOtro" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
@@ -464,7 +512,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-asterisk"></span>
                                             </span>
-                                            <asp:TextBox ID="txtTituloObtenido" runat="server" CssClass="form-control" />
+                                            <asp:TextBox ID="txtTituloObtenido" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -480,7 +528,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-asterisk"></span>
                                             </span>
-                                            <asp:TextBox ID="txtInstitucionEmisoraTitulo" runat="server" CssClass="form-control" />
+                                            <asp:TextBox ID="txtInstitucionEmisoraTitulo" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -496,7 +544,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-asterisk"></span>
                                             </span>
-                                            <asp:TextBox ID="txtOtrosEstudios" runat="server" CssClass="form-control" placeholder="Nombre e Institucion" />
+                                            <asp:TextBox ID="txtOtrosEstudios" runat="server" CssClass="form-control" placeholder="Nombre e Institucion" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -529,7 +577,7 @@
                                                 <span class="input-group-addon">
                                                     <span class="glyphicon glyphicon-asterisk"></span>
                                                 </span>
-                                                <asp:TextBox ID="txtCarreraNombre" runat="server" CssClass="form-control" />
+                                                <asp:TextBox ID="txtCarreraNombre" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                             </div>
                                             <asp:Label ID="Label14" runat="server" Text="Label">Año de Ingreso</asp:Label>
                                             <div class="input-group">
@@ -557,7 +605,7 @@
                                                 <span class="input-group-addon">
                                                     <span class="glyphicon glyphicon-asterisk"></span>
                                                 </span>
-                                                <asp:TextBox ID="txtCarreraInstitucion" runat="server" CssClass="form-control" />
+                                                <asp:TextBox ID="txtCarreraInstitucion" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                             </div>
                                             <tr>
                                                 <td style="height: 30px"></td>
@@ -605,14 +653,14 @@
                                                 RepeatColumns="1"
                                                 RepeatLayout="Table"
                                                 CellPadding="10">
-                                                <asp:ListItem Value="1">Diseño de Interiores</asp:ListItem>
-                                                <asp:ListItem Value="2">Diseño Industrial</asp:ListItem>
-                                                <asp:ListItem Value="3">Diseño del Paisaje</asp:ListItem>
+                                                <asp:ListItem Value="1">Arquitectura</asp:ListItem>
+                                                <asp:ListItem Value="2">Artesanías</asp:ListItem>
+                                                <asp:ListItem Value="3">Diseño de Interiores</asp:ListItem>
                                                 <asp:ListItem Value="4">Diseño de Indumentaria</asp:ListItem>
-                                                <asp:ListItem Value="5">Diseño Gráfico</asp:ListItem>
-                                                <asp:ListItem Value="6">Diseño Multimedia</asp:ListItem>
-                                                <asp:ListItem Value="7">Arquitectura</asp:ListItem>
-                                                <asp:ListItem Value="8">Artesanías</asp:ListItem>
+                                                <asp:ListItem Value="5">Diseño del Paisaje</asp:ListItem>
+                                                <asp:ListItem Value="6">Diseño Industrial</asp:ListItem>
+                                                <asp:ListItem Value="7">Diseño Gráfico</asp:ListItem>
+                                                <asp:ListItem Value="8">Diseño Multimedia</asp:ListItem>
                                                 <asp:ListItem Value="9">Otra</asp:ListItem>
                                             </asp:RadioButtonList>
                                         </td>
@@ -626,9 +674,55 @@
                                         <td style="height: 30px"></td>
                                     </tr>
                                 </table>
-                                <h4>Sub Sector
-                                </h4>
+                                <h4>Sub Sector</h4>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAPAccesorios" runat="server" Width="20px" />
+                                    <asp:Label ID="lblAPAccesorios" runat="server" Text="Accesorios"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAPCalzado" runat="server" Width="20px" />
+                                    <asp:Label ID="lblAPCalzado" runat="server" Text="Calzado"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAPCeramica" runat="server" Width="20px" />
+                                    <asp:Label ID="lblAPCeramica" runat="server" Text="Ceramica"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAPDisenioEditorial" runat="server" Width="20px" />
+                                    <asp:Label ID="lblAPDisenioEditorial" runat="server" Text="Diseño Editorial"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAPDisenioWeb" runat="server" Width="20px" />
+                                    <asp:Label ID="lblAPDisenioWeb" runat="server" Text="Diseño WEB"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAPJoyeria" runat="server" Width="20px" />
+                                    <asp:Label ID="lblAPJoyeria" runat="server" Text="Joyeria"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAPMadera" runat="server" Width="20px" />
+                                    <asp:Label ID="lblAPMadera" runat="server" Text="Madera"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAPMobiliario" runat="server" Width="20px" />
+                                    <asp:Label ID="lblAPMobiliario" runat="server" Text="Mobiliario"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAPTejidos" runat="server" Width="20px" />
+                                    <asp:Label ID="lblAPTejidos" runat="server" Text="Tejidos"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkSubSectorOtro" runat="server" Width="20px" />
+                                    <asp:Label ID="lblSubSectorOtro" runat="server" Text="Otro"></asp:Label>
+                                </ul>
                                 <table>
+                                    <tr>
+                                        <td class="altotabla"></td>
+                                    </tr>
+                                </table>
+
+
+                                <%--<table>
                                     <tr>
                                         <td>
                                             <asp:RadioButtonList ID="RBSubSector" runat="server"
@@ -647,7 +741,7 @@
                                             </asp:RadioButtonList>
                                         </td>
                                     </tr>
-                                </table>
+                                </table>--%>
                                 <table>
                                     <tr>
                                         <asp:TextBox ID="txtSubSectorOtro" runat="server" CssClass="form-control" />
@@ -767,14 +861,13 @@
                                                 CellPadding="10">
                                                 <asp:ListItem>Si</asp:ListItem>
                                                 <asp:ListItem>No</asp:ListItem>
-                                                <asp:ListItem>Otra</asp:ListItem>
                                             </asp:RadioButtonList>
                                         </td>
                                     </tr>
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtSustentoDeVidaOtro" runat="server" CssClass="form-control" />
+                                        <asp:TextBox ID="txtSustentoDeVidaOtro" runat="server" CssClass="form-control" placeHolder="Otra Actividad" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
@@ -840,14 +933,13 @@
                                                 CellPadding="10">
                                                 <asp:ListItem>Si</asp:ListItem>
                                                 <asp:ListItem>No</asp:ListItem>
-                                                <asp:ListItem>Otro</asp:ListItem>
                                             </asp:RadioButtonList>
                                         </td>
                                     </tr>
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtNombreRegistradoOtro" runat="server" CssClass="form-control" />
+                                        <asp:TextBox ID="txtNombreRegistradoOtro" placeHolder="Otra Situación" runat="server" CssClass="form-control" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
@@ -879,11 +971,40 @@
                                         <td style="height: 30px"></td>
                                     </tr>
                                 </table>
+                                <h4>¿Cómo comercializa /ofrece sus productos /servicios?</h4>
+
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAIFerias" runat="server" Width="20px" />
+                                    <asp:Label ID="Label7" runat="server" Text="Ferias Itinerantes"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAIInternetWeb" runat="server" Width="20px" />
+                                    <asp:Label ID="Label8" runat="server" Text="Internet (WEB)"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAIInternetRedesSociales" runat="server" Width="20px" />
+                                    <asp:Label ID="Label9" runat="server" Text="Internet (Redes Sociales)"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAILocalPropio" runat="server" Width="20px" />
+                                    <asp:Label ID="Label12" runat="server" Text="Local / Estudio Propio"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAILocalesTerceros" runat="server" Width="20px" />
+                                    <asp:Label ID="Label18" runat="server" Text="Locales / Oficinas de Terceros"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAIShowRoom" runat="server" Width="20px" />
+                                    <asp:Label ID="Label19" runat="server" Text="Oficina Privada / ShowRoom"></asp:Label>
+                                </ul>
                                 <table>
-                                    <h4>¿Cómo comercializa /ofrece sus productos /servicios?
-                                    </h4>
+                                    <tr>
+                                        <td class="altotabla"></td>
+                                    </tr>
                                 </table>
-                                <table>
+
+
+                                <%--<table>
                                     <tr>
                                         <td>
                                             <asp:RadioButtonList ID="RBComercializa" runat="server"
@@ -901,10 +1022,10 @@
                                             </asp:RadioButtonList>
                                         </td>
                                     </tr>
-                                </table>
+                                </table>--%>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtComercializaOtro" runat="server" CssClass="form-control" />
+                                        <asp:TextBox ID="txtComercializaOtro" runat="server" placeHolder="Otra manera" CssClass="form-control" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
@@ -964,13 +1085,33 @@
                                         <td style="height: 30px"></td>
                                     </tr>
                                 </table>
+                                <h4>¿Cómo financia su actividad profesional?</h4>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAIFondosPropios" runat="server" Width="20px" />
+                                    <asp:Label ID="Label21" runat="server" Text="Fondos Propios"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAIPrestamosEntidadesPrivadas" runat="server" Width="20px" />
+                                    <asp:Label ID="Label22" runat="server" Text="Prestamos de entidades privadas"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAIPrestamosEntidadesPublicas" runat="server" Width="20px" />
+                                    <asp:Label ID="Label26" runat="server" Text="Prestamos de entidades públicas"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAISociosCapitalistas" runat="server" Width="20px" />
+                                    <asp:Label ID="Label23" runat="server" Text="Socios Capitalistas"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAIGananciasGeneradas" runat="server" Width="20px" />
+                                    <asp:Label ID="Label24" runat="server" Text="Ganancias Generadas"></asp:Label>
+                                </ul>
                                 <table>
-
-                                    <h4>¿Cómo financia su actividad profesional?
-                                    </h4>
-
+                                    <tr>
+                                        <td class="altotabla"></td>
+                                    </tr>
                                 </table>
-                                <table>
+                                <%--<table>
                                     <tr>
                                         <td>
                                             <asp:RadioButtonList ID="RBFinanciaActividadProfesional" runat="server"
@@ -986,10 +1127,10 @@
                                             </asp:RadioButtonList>
                                         </td>
                                     </tr>
-                                </table>
+                                </table>--%>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtFinanciaActividadProfesionalOtro" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                        <asp:TextBox ID="txtFinanciaActividadProfesionalOtro" runat="server" placeHolder="Otro Financiamiento" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
@@ -1015,7 +1156,7 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtVentasOtrosPaisesCuales" runat="server" CssClass="form-control" placeholder="¿Cuáles?" TextMode="MultiLine" Rows="1" />
+                                        <asp:TextBox ID="txtVentasOtrosPaisesCuales" runat="server" CssClass="form-control" placeholder="Indique cuáles" TextMode="MultiLine" Rows="2" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
@@ -1044,93 +1185,87 @@
                 </div>
                 <div id="collapse5" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <table>
-                            <tr>
-                                <td style="width: 300px">
-                                    <h4>
-                                        <asp:Label ID="Label35" runat="server">¿Qué cantidad de productos realiza al año?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtCantidadProductosAnio" placeholder="Ingrese aquí la cantidad" runat="server" CssClass="form-control" Width="300" />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>¿Qué cantidad de productos realiza al año?</h4>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtCantidadProductosAnio" placeholder="Ingrese aquí la cantidad" runat="server" CssClass="form-control" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <h4>¿Dónde realiza su producción?</h4>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkPRTalleresPropios" runat="server" Width="20px" />
+                                    <asp:Label ID="Label27" runat="server" Text="Talleres Propios"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkPRTalleresTercerizados" runat="server" Width="20px" />
+                                    <asp:Label ID="Label28" runat="server" Text="Talleres Tercerizados"></asp:Label>
+                                </ul>
+
+
+
+
+
+
+
+                                <table>
+                                    <tr>
+                                        <td class="altotabla"></td>
+                                    </tr>
+                                </table>
+                                <%--<table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBDondeRealizaProduccion" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10">
+                                                <asp:ListItem>Talleres Propios</asp:ListItem>
+                                                <asp:ListItem>Talleres tercerizados</asp:ListItem>
+                                                <asp:ListItem>Otro</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                </table>--%>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtDondeRealizaProduccionOtro" runat="server" CssClass="form-control" placeHolder="Otro" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 20px"></td>
+                                    </tr>
+                                </table>
+                                <h4>¿Qué porcentaje del proceso productivo realiza en la Provincia del Neuquén?</h4>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBPorcentajeProcesoProductivoNeuquen" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10">
+                                                <asp:ListItem>100%</asp:ListItem>
+                                                <asp:ListItem>entre el 50% y 99%</asp:ListItem>
+                                                <asp:ListItem>entre el 30% y 49%</asp:ListItem>
+                                                <asp:ListItem>menos del 30%</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 15px"></td>
+                                    </tr>
+                                </table>
+                                <!--Boton de registro-->
+                                <div class="form-group">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <asp:Button ID="btnEnviarDatosProductos" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" />
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label36" runat="server">¿Dónde realiza su producción?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="RBDondeRealizaProduccion" runat="server"
-                                        CssClass="form-control" BorderStyle="None"
-                                        RepeatColumns="1"
-                                        RepeatLayout="Table"
-                                        CellPadding="10">
-                                        <asp:ListItem>Talleres Propios</asp:ListItem>
-                                        <asp:ListItem>Talleres tercerizados</asp:ListItem>
-                                        <asp:ListItem>Otro</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td style="vertical-align: bottom">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtDondeRealizaProduccionOtro" runat="server" CssClass="form-control" Width="800" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label37" runat="server">¿Qué porcentaje del proceso productivo realiza en la Provincia del Neuquén?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="RBPorcentajeProcesoProductivoNeuquen" runat="server"
-                                        CssClass="form-control" BorderStyle="None"
-                                        RepeatColumns="1"
-                                        RepeatLayout="Table"
-                                        CellPadding="10">
-                                        <asp:ListItem>100%</asp:ListItem>
-                                        <asp:ListItem>entre el 50% y 99%</asp:ListItem>
-                                        <asp:ListItem>entre el 30% y 49%</asp:ListItem>
-                                        <asp:ListItem>menos del 30%</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <!--Boton de registro-->
-                        <div class="form-group">
-                            <div class="col-md-10 col-md-offset-1">
-                                <asp:Button ID="btnEnviarDatosProductos" runat="server" Text="Enviar Datos" CssClass="boton_azul" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1147,65 +1282,48 @@
                 </div>
                 <div id="collapse6" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label38" runat="server">¿Qué porcentaje adquiere en la Provincia del Neuquén?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="RBPorcentajeAdquiereNeuquen" runat="server"
-                                        CssClass="form-control" BorderStyle="None"
-                                        RepeatColumns="1"
-                                        RepeatLayout="Table"
-                                        CellPadding="10">
-                                        <asp:ListItem>100%</asp:ListItem>
-                                        <asp:ListItem>entre el 50% y 99%</asp:ListItem>
-                                        <asp:ListItem>entre el 30% y 49%</asp:ListItem>
-                                        <asp:ListItem>menos del 30%</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label39" runat="server">¿Tiene dificultades para adquirir las materias primas? Cuáles son? Cómo podría resolverlas?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 10px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td style="width: 800px">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-asterisk"></span>
-                                        </span>
-                                        <asp:TextBox ID="txtDificultades" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="5" />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>¿Qué porcentaje adquiere en la Provincia del Neuquén?</h4>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBPorcentajeAdquiereNeuquen" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10">
+                                                <asp:ListItem>100%</asp:ListItem>
+                                                <asp:ListItem>entre el 50% y 99%</asp:ListItem>
+                                                <asp:ListItem>entre el 30% y 49%</asp:ListItem>
+                                                <asp:ListItem>menos del 30%</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <h4>¿Tiene dificultades para adquirir las materias primas? Cuáles son? Cómo podría resolverlas?</h4>
+                                <table>
+                                    <tr>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-asterisk"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtDificultades" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="5" />
+                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <!--Boton de registro-->
+                                <div class="form-group">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <asp:Button ID="btnEnviarDatosMateriasPrimas" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" />
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <!--Boton de registro-->
-                        <div class="form-group">
-                            <div class="col-md-10 col-md-offset-1">
-                                <asp:Button ID="btnEnviarDatosMateriasPrimas" runat="server" Text="Enviar Datos" CssClass="boton_azul" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1222,98 +1340,125 @@
                 </div>
                 <div id="collapse7" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label40" runat="server">¿Dispone de equipos para el proceso?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButton ID="RB1" GroupName="Equipos"
-                                        Text="Si" runat="server" />
-                                </td>
-                                <td style="border: ridge; border-color: lightgray;" id="RecuadroOpcionSi">
-                                    <asp:RadioButton ID="RBOpcionSi1" GroupName="OpcionSi"
-                                        Text="Propios" Font-Italic="true" runat="server" />
-                                    <asp:RadioButton ID="RBOpcionSi2" GroupName="OpcionSi"
-                                        Text="Prestados" Font-Italic="true" runat="server" />
-                                    <asp:RadioButton ID="RBOpcionSi3" GroupName="OpcionSi"
-                                        Text="Alquilados" Font-Italic="true" runat="server" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:RadioButton ID="RB2" GroupName="Equipos"
-                                        Text="No" runat="server" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:RadioButton ID="RB3" GroupName="Equipos"
-                                        Text="Otro" runat="server" />
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td style="vertical-align: bottom">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtEquiposProcesoOtro" runat="server" CssClass="form-control" Width="800" />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>¿Dispone de equipos para el proceso?</h4>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButton ID="RB1" GroupName="Equipos"
+                                                Text="Si" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkMPPEquiposPropios" runat="server" Width="20px" />
+                                    <asp:Label ID="Label20" runat="server" Text="Equipos Propios"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkMPPEquiposPrestados" runat="server" Width="20px" />
+                                    <asp:Label ID="Label29" runat="server" Text="Equipos Prestados"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkMPPEquiposAlquilados" runat="server" Width="20px" />
+                                    <asp:Label ID="Label30" runat="server" Text="Equipos Alquilados"></asp:Label>
+                                </ul>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButton ID="RB2" GroupName="Equipos"
+                                                Text="No" runat="server" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButton ID="RB3" GroupName="Equipos"
+                                                Text="Otro" runat="server" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 15px"></td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtEquiposProcesoOtro" runat="server" CssClass="form-control" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 15px"></td>
+                                    </tr>
+                                </table>
+
+                                <%--<table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButton ID="RB1" GroupName="Equipos"
+                                                Text="Si" runat="server" />
+                                        </td>
+                                        <td style="border: ridge; border-color: lightgray;" id="RecuadroOpcionSi">
+                                            <asp:RadioButton ID="RBOpcionSi1" GroupName="OpcionSi"
+                                                Text="Propios" Font-Italic="true" runat="server" />
+                                            <asp:RadioButton ID="RBOpcionSi2" GroupName="OpcionSi"
+                                                Text="Prestados" Font-Italic="true" runat="server" />
+                                            <asp:RadioButton ID="RBOpcionSi3" GroupName="OpcionSi"
+                                                Text="Alquilados" Font-Italic="true" runat="server" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButton ID="RB2" GroupName="Equipos"
+                                                Text="No" runat="server" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButton ID="RB3" GroupName="Equipos"
+                                                Text="Otro" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtEquiposProcesoOtro" runat="server" CssClass="form-control" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 15px"></td>
+                                    </tr>
+                                </table>--%>
+                                <h4>¿Cuál es la principal falencia en el proceso de producción de objetos?</h4>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBPrincipalFalencia" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10">
+                                                <asp:ListItem>Máquinas</asp:ListItem>
+                                                <asp:ListItem>Recursos Informáticos</asp:ListItem>
+                                                <asp:ListItem>Herramientas</asp:ListItem>
+                                                <asp:ListItem>Poca Disponibilidad de Espacio</asp:ListItem>
+                                                <asp:ListItem>Poca Disponibilidad de Mano de Obra</asp:ListItem>
+                                                <asp:ListItem>Otro</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtPrincipalFalenciaOtro" runat="server" CssClass="form-control" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <!--Boton de registro-->
+                                <div class="form-group">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <asp:Button ID="btnEnviarDatosMaquinaria" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" />
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label20" runat="server">¿Cuál es la principal falencia en el proceso de producción de objetos?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="RBPrincipalFalencia" runat="server"
-                                        CssClass="form-control" BorderStyle="None"
-                                        RepeatColumns="1"
-                                        RepeatLayout="Table"
-                                        CellPadding="10">
-                                        <asp:ListItem>Máquinas</asp:ListItem>
-                                        <asp:ListItem>Recursos Informáticos</asp:ListItem>
-                                        <asp:ListItem>Herramientas</asp:ListItem>
-                                        <asp:ListItem>Poca Disponibilidad de Espacio</asp:ListItem>
-                                        <asp:ListItem>Poca Disponibilidad de Mano de Obra</asp:ListItem>
-                                        <asp:ListItem>Otro</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td style="vertical-align: bottom">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtPrincipalFalenciaOtro" runat="server" CssClass="form-control" Width="800" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <!--Boton de registro-->
-                        <div class="form-group">
-                            <div class="col-md-10 col-md-offset-1">
-                                <asp:Button ID="btnEnviarDatosMaquinaria" runat="server" Text="Enviar Datos" CssClass="boton_azul" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1330,125 +1475,86 @@
                 </div>
                 <div id="collapse8" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label42" runat="server">Nombre al menos 3 (tres) atributos/valores diferenciales de su trabajo</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 10px"></td>
-                            </tr>
-                            <tr>
-                                <td style="width: 800px">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-asterisk"></span>
-                                        </span>
-                                        <asp:TextBox ID="txtAtributos" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Nombre al menos 3 (tres) atributos /valores diferenciales de su trabajo</h4>
+                                <table>
+                                    <tr>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-asterisk"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtAtributos" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
+                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 15px"></td>
+                                    </tr>
+                                </table>
+                                <h4>Nombre al menos 3 (tres) rasgos identitarios del diseño neuquino</h4>
+                                <table>
+                                    <tr>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-asterisk"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtRasgos" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
+                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-md-12">
+                                <h4>De las siguientes opciones, indicar a su criterio qué aspecto es más relevante para abordar en relación al diseño en la Provincia del Neuquén</h4>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBAspectosRelevantes" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10">
+                                                <asp:ListItem>Difundir el diseño neuquino a nivel local a través de ferias, circuitos, páginas web, mapas, etc...</asp:ListItem>
+                                                <asp:ListItem>Difundir el diseño neuquino a nivel regional y nacional a través de la participación en ferias en otras provincias.</asp:ListItem>
+                                                <asp:ListItem>Capacitar para formar a los diseñadores en los distintos aspectos de su actividad (diseño, producción y gestión empresarial).</asp:ListItem>
+                                                <asp:ListItem>Apoyar a través de financiamiento, becas, fondo estímulo, acceso a préstamos, etc...</asp:ListItem>
+                                                <asp:ListItem>Otro</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtAspectosRelevantesOtro" runat="server" CssClass="form-control" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 10px"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>¿En qué temas cree importante capacitarse para mejorar su actividad como diseñador?</h4>
+                                <table>
+                                    <tr>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-asterisk"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtTemasCapacitarse" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
+                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <!--Boton de registro-->
+                                <div class="form-group">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <asp:Button ID="btnEnviarDatosIdentidadDisenio" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" />
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label43" runat="server">Nombre al menos 3 (tres) rasgos identitarios del diseño neuquino</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 10px"></td>
-                            </tr>
-                            <tr>
-                                <td style="width: 800px">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-asterisk"></span>
-                                        </span>
-                                        <asp:TextBox ID="txtRasgos" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label44" runat="server">De las siguientes opciones, indicar a su criterio qué aspecto es más relevante para abordar en relación al diseño en la Provincia del Neuquén</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="RBAspectosRelevantes" runat="server"
-                                        CssClass="form-control" BorderStyle="None"
-                                        RepeatColumns="1"
-                                        RepeatLayout="Table"
-                                        CellPadding="10">
-                                        <asp:ListItem>Difundir el diseño neuquino a nivel local a través de ferias, circuitos, páginas web, mapas, etc...</asp:ListItem>
-                                        <asp:ListItem>Difundir el diseño neuquino a nivel regional y nacional a través de la participación en ferias en otras provincias.</asp:ListItem>
-                                        <asp:ListItem>Capacitar para formar a los diseñadores en los distintos aspectos de su actividad (diseño, producción y gestión empresarial).</asp:ListItem>
-                                        <asp:ListItem>Apoyar a través de financiamiento, becas, fondo estímulo, acceso a préstamos, etc...</asp:ListItem>
-                                        <asp:ListItem>Otro</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td style="vertical-align: bottom">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtAspectosRelevantesOtro" runat="server" CssClass="form-control" Width="800" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label45" runat="server">¿En qué temas cree importante capacitarse para mejorar su actividad como diseñador?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 10px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td style="width: 800px">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-asterisk"></span>
-                                        </span>
-                                        <asp:TextBox ID="txtTemasCapacitarse" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <!--Boton de registro-->
-                        <div class="form-group">
-                            <div class="col-md-10 col-md-offset-1">
-                                <asp:Button ID="btnEnviarDatosIdentidadDisenio" runat="server" Text="Enviar Datos" CssClass="boton_azul" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1465,128 +1571,104 @@
                 </div>
                 <div id="collapse9" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label46" runat="server">¿De qué manera incorpora la innovación en el desarrollo de su labor?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="RBIncorporaInnovacion" runat="server"
-                                        CssClass="form-control" BorderStyle="None"
-                                        RepeatColumns="1"
-                                        RepeatLayout="Table"
-                                        CellPadding="10">
-                                        <asp:ListItem>En el Proceso de Diseño</asp:ListItem>
-                                        <asp:ListItem>En el Diseño de nuevos Servicios, Productos o Soluciones a un Problema</asp:ListItem>
-                                        <asp:ListItem>En el Rediseño Creativo de Productos</asp:ListItem>
-                                        <asp:ListItem>En la Comunicación Empresarial</asp:ListItem>
-                                        <asp:ListItem>Otra</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td style="vertical-align: bottom">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtIncorporaInnovacionOtro" runat="server" CssClass="form-control" Width="800" />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>¿De qué manera incorpora la innovación en el desarrollo de su labor?</h4>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBIncorporaInnovacion" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10">
+                                                <asp:ListItem>En el Proceso de Diseño</asp:ListItem>
+                                                <asp:ListItem>En el Diseño de nuevos Servicios, Productos o Soluciones a un Problema</asp:ListItem>
+                                                <asp:ListItem>En el Rediseño Creativo de Productos</asp:ListItem>
+                                                <asp:ListItem>En la Comunicación Empresarial</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtIncorporaInnovacionOtro" placeHolder="Otra manera" runat="server" CssClass="form-control" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 15px"></td>
+                                    </tr>
+                                </table>
+                                <h4>¿Cuáles son sus dificultades o barreras a la hora de innovar?</h4>
+                                <ul class="estilo-ul" style="padding-left: 0px;">
+                                    <asp:CheckBox ID="chkINNLegalesBurocraticas" runat="server" Width="20px" />
+                                    <asp:Label ID="Label31" runat="server" Text="Legales y burocráticas"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul" style="padding-left: 0px;">
+                                    <asp:CheckBox ID="chkINNFinancieras" runat="server" Width="20px" />
+                                    <asp:Label ID="Label32" runat="server" Text="Financieras /Económicas /Presupuestarias"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul" style="padding-left: 0px;">
+                                    <asp:CheckBox ID="chkINNProblemasTecnicos" runat="server" Width="20px" />
+                                    <asp:Label ID="Label33" runat="server" Text="Problemas Técnicos / Falta de Información"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul" style="padding-left: 0px; padding-bottom: 20px;">
+                                    <asp:CheckBox ID="chkINNRecursosHumanos" runat="server" Width="20px" />
+                                    <asp:Label ID="Label34" runat="server" Text="Recursos Humanos no adecuadamente Capacitados"></asp:Label>
+                                </ul>
+                                <table>
+                                    <tr>
+                                        <td class="altotabla"></td>
+                                    </tr>
+                                </table>
+                                <%--<table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBDificultadesInnovar" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10">
+                                                <asp:ListItem>Legales y burocráticas</asp:ListItem>
+                                                <asp:ListItem>Financieras / Económicas / Presupuestarias</asp:ListItem>
+                                                <asp:ListItem>Problemas Técnicos / Falta de Información</asp:ListItem>
+                                                <asp:ListItem>Recursos Humanos no adecuadamente Capacitados</asp:ListItem>
+                                                <asp:ListItem>Otra</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                </table>--%>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtDificultadesInnovarOtro" placeHolder="Otra dificultad" runat="server" CssClass="form-control" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 15px"></td>
+                                    </tr>
+                                </table>
+                                <h4>¿Cómo han sido tomadas las innovaciones propuestas en su medio de acción (socios, destinatarios, público general, etc.)?</h4>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtInnovacionesPropuestas" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 15px"></td>
+                                    </tr>
+                                </table>
+                                <h4>¿Qué puede contarnos en relación a esto? ¿Hay alguna experiencia?</h4>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtAlgunaExperiencia" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 15px"></td>
+                                    </tr>
+                                </table>
+                                <!--Boton de registro-->
+                                <div class="form-group">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <asp:Button ID="btnEnviarDatosInnovacion" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" />
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label47" runat="server">¿Cuáles son sus dificultades o barreras a la hora de innovar?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="RBDificultadesInnovar" runat="server"
-                                        CssClass="form-control" BorderStyle="None"
-                                        RepeatColumns="1"
-                                        RepeatLayout="Table"
-                                        CellPadding="10">
-                                        <asp:ListItem>Legales y burocráticas</asp:ListItem>
-                                        <asp:ListItem>Financieras / Económicas / Presupuestarias</asp:ListItem>
-                                        <asp:ListItem>Problemas Técnicos / Falta de Información</asp:ListItem>
-                                        <asp:ListItem>Recursos Humanos no adecuadamente Capacitados</asp:ListItem>
-                                        <asp:ListItem>Otra</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td style="vertical-align: bottom">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtDificultadesInnovarOtro" runat="server" CssClass="form-control" Width="800" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label48" runat="server">¿Cómo han sido tomadas las innovaciones propuestas en su medio de acción (socios, destinatarios, público general, etc.)?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td style="vertical-align: bottom">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtInnovacionesPropuestas" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" Width="800" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label49" runat="server">¿Qué puede contarnos en relación esto? ¿Hay alguna experiencia?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td style="vertical-align: bottom">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtAlgunaExperiencia" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" Width="800" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <!--Boton de registro-->
-                        <div class="form-group">
-                            <div class="col-md-10 col-md-offset-1">
-                                <asp:Button ID="btnEnviarDatosInnovacion" runat="server" Text="Enviar Datos" CssClass="boton_azul" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1603,239 +1685,205 @@
                 </div>
                 <div id="collapse10" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label50" runat="server">¿Ha recibido apoyo de alguna área del gobierno nacional, provincial o municipal?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButton ID="RadioButton1" GroupName="Apoyo"
-                                        Text="Si" runat="server" />
-                                </td>
-                                <td style="border: ridge; border-color: lightgray;" id="RecuadroApoyoOpcionSi">
-                                    <asp:RadioButton ID="RadioButton2" GroupName="ApoyoOpcionSi"
-                                        Text="Técnico" Font-Italic="true" runat="server" />
-                                    <asp:RadioButton ID="RadioButton3" GroupName="ApoyoOpcionSi"
-                                        Text="Financiero" Font-Italic="true" runat="server" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:RadioButton ID="RadioButton5" GroupName="Apoyo"
-                                        Text="No" runat="server" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:RadioButton ID="RadioButton6" GroupName="Apoyo"
-                                        Text="Otro" runat="server" />
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td style="vertical-align: bottom">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" Width="800" />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>¿Ha recibido apoyo de alguna área del gobierno nacional, provincial o municipal?</h4>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButton ID="RadioButton1" GroupName="Apoyo"
+                                                Text="Si" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkVINApoyoTecnico" runat="server" Width="20px" />
+                                    <asp:Label ID="Label35" runat="server" Text="Apoyo Técnico"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkVINApoyoFinanciero" runat="server" Width="20px" />
+                                    <asp:Label ID="Label36" runat="server" Text="Apoyo Financiero"></asp:Label>
+                                </ul>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButton ID="RadioButton5" GroupName="Apoyo"
+                                                Text="No" runat="server" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButton ID="RadioButton6" GroupName="Apoyo"
+                                                Text="Otro" runat="server" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 15px"></td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtApoyoOtro" runat="server" CssClass="form-control" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <h4>Organismo que brindó el apoyo</h4>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtOrganismoApoyoNombre" runat="server" CssClass="form-control" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <h4>Año en que brindó el apoyo</h4>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtOrganismoApoyoAnio" runat="server" CssClass="form-control" />
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <h4>¿Ha participado del Sello de Buen Diseño Argentino?</h4>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBSelloBuenDisenio" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10">
+                                                <asp:ListItem>Si</asp:ListItem>
+                                                <asp:ListItem>No</asp:ListItem>
+                                                <asp:ListItem>Otro</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="vertical-align: bottom">
+                                            <div class="input-group">
+                                                <asp:TextBox ID="txtSelloBuenDisenioOtro" runat="server" CssClass="form-control" Width="800" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h4>
+                                                <asp:Label ID="Label54" runat="server">¿Ha participado del Mercado de Industrias Creativas Argentinas (MICA)?</asp:Label>
+                                            </h4>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBMICA" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10">
+                                                <asp:ListItem>Si</asp:ListItem>
+                                                <asp:ListItem>No</asp:ListItem>
+                                                <asp:ListItem>Otro</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="vertical-align: bottom">
+                                            <div class="input-group">
+                                                <asp:TextBox ID="txtMICAOtro" runat="server" CssClass="form-control" Width="800" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h4>
+                                                <asp:Label ID="Label55" runat="server">¿Cuál considera que puede ser el mayor aporte que el CDNEU puede hacerle para fortalecer su actividad?</asp:Label>
+                                            </h4>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:RadioButtonList ID="RBAporteCDNEU" runat="server"
+                                                CssClass="form-control" BorderStyle="None"
+                                                RepeatColumns="1"
+                                                RepeatLayout="Table"
+                                                CellPadding="10">
+                                                <asp:ListItem>Capacitaciones</asp:ListItem>
+                                                <asp:ListItem>Vinculación con otros diseñadoras/es y creativas/os</asp:ListItem>
+                                                <asp:ListItem>Financiamiento</asp:ListItem>
+                                                <asp:ListItem>Infraestructura</asp:ListItem>
+                                                <asp:ListItem>Comercialización</asp:ListItem>
+                                                <asp:ListItem>Asistencia para participación en ferias</asp:ListItem>
+                                                <asp:ListItem>Visualización de sus productos/servicios</asp:ListItem>
+                                                <asp:ListItem>Otro</asp:ListItem>
+                                            </asp:RadioButtonList>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td style="vertical-align: bottom">
+                                            <div class="input-group">
+                                                <asp:TextBox ID="txtAporteCDNEUOtro" runat="server" CssClass="form-control" Width="800" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h4>
+                                                <asp:Label ID="Label56" runat="server">Comentarios Finales</asp:Label>
+                                            </h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 10px"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 800px">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-asterisk"></span>
+                                                </span>
+                                                <asp:TextBox ID="txtComentariosFinales" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="5" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <!--Boton de registro-->
+                                <div class="form-group">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <asp:Button ID="btnEnviarDatosVinculacion" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" />
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label51" runat="server">Organismo que brindó el apoyo</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td style="vertical-align: bottom">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtOrganismoApoyoNombre" runat="server" CssClass="form-control" Width="800" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label52" runat="server">Año en que brindó el apoyo</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td style="vertical-align: bottom">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtOrganismoApoyoAnio" runat="server" CssClass="form-control" Width="800" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label53" runat="server">¿Ha participado del Sello de Buen Diseño Argentino?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="RBSelloBuenDisenio" runat="server"
-                                        CssClass="form-control" BorderStyle="None"
-                                        RepeatColumns="1"
-                                        RepeatLayout="Table"
-                                        CellPadding="10">
-                                        <asp:ListItem>Si</asp:ListItem>
-                                        <asp:ListItem>No</asp:ListItem>
-                                        <asp:ListItem>Otro</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align: bottom">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtSelloBuenDisenioOtro" runat="server" CssClass="form-control" Width="800" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label54" runat="server">¿Ha participado del Mercado de Industrias Creativas Argentinas (MICA)?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="RBMICA" runat="server"
-                                        CssClass="form-control" BorderStyle="None"
-                                        RepeatColumns="1"
-                                        RepeatLayout="Table"
-                                        CellPadding="10">
-                                        <asp:ListItem>Si</asp:ListItem>
-                                        <asp:ListItem>No</asp:ListItem>
-                                        <asp:ListItem>Otro</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align: bottom">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtMICAOtro" runat="server" CssClass="form-control" Width="800" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label55" runat="server">¿Cuál considera que puede ser el mayor aporte que el CDNEU puede hacerle para fortalecer su actividad?</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="RBAporteCDNEU" runat="server"
-                                        CssClass="form-control" BorderStyle="None"
-                                        RepeatColumns="1"
-                                        RepeatLayout="Table"
-                                        CellPadding="10">
-                                        <asp:ListItem>Capacitaciones</asp:ListItem>
-                                        <asp:ListItem>Vinculación con otros diseñadoras/es y creativas/os</asp:ListItem>
-                                        <asp:ListItem>Financiamiento</asp:ListItem>
-                                        <asp:ListItem>Infraestructura</asp:ListItem>
-                                        <asp:ListItem>Comercialización</asp:ListItem>
-                                        <asp:ListItem>Asistencia para participación en ferias</asp:ListItem>
-                                        <asp:ListItem>Visualización de sus productos/servicios</asp:ListItem>
-                                        <asp:ListItem>Otro</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td style="vertical-align: bottom">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtAporteCDNEUOtro" runat="server" CssClass="form-control" Width="800" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td>
-                                    <h4>
-                                        <asp:Label ID="Label56" runat="server">Comentarios Finales</asp:Label>
-                                    </h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 10px"></td>
-                            </tr>
-                            <tr>
-                                <td style="width: 800px">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-asterisk"></span>
-                                        </span>
-                                        <asp:TextBox ID="txtComentariosFinales" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="5" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height: 30px"></td>
-                            </tr>
-                        </table>
-                        <!--Boton de registro-->
-                        <div class="form-group">
-                            <div class="col-md-10 col-md-offset-1">
-                                <asp:Button ID="btnEnviarDatosVinculacion" runat="server" Text="Enviar Datos" CssClass="boton_azul" />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 

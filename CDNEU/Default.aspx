@@ -5,10 +5,13 @@
     <div class="row">
         <div class="col-md-12">
             <h1>CDNEU</h1>
-            <%--<h3>Centro de Diseño, Creatividad e Innovación del Neuquén.</h3>
+            <h3>Centro de Diseño, Creatividad e Innovación del Neuquén.</h3>
             <p>
             <p>
-                <a class="btn btn-default" href="https://www.copade.gob.ar/Contenido.aspx?Id=NOV-9843">Evento Inspirarte &raquo;</a>
+                <a target="_blank" class="btn btn-default" href="https://www.copade.gob.ar/Contenido.aspx?Id=NOV-9877">Concurso Neuquén Crea &raquo;</a>
+            </p>
+            <%--<p>
+                <a target="_blank" class="btn btn-default" href="https://www.copade.gob.ar/Contenido.aspx?Id=NOV-9843">Ciclo de Formación Inspirarte &raquo;</a>
             </p>--%>
         </div>
     </div>

@@ -249,15 +249,16 @@
     <Content Include="imagenes\bg04.jpg" />
     <Content Include="imagenes\copade %28R%29.png" />
     <Content Include="imagenes\copade-barra.jpg" />
+    <Content Include="imagenes\copade-CDNEU.jpg" />
     <Content Include="imagenes\copade.ico" />
     <Content Include="imagenes\copade.png" />
     <Content Include="imagenes\copade03.jpg" />
     <Content Include="imagenes\copade04.jpg" />
     <Content Include="imagenes\FotoUsuariosx2.png" />
+    <Content Include="imagenes\ic01-twitter.png" />
     <Content Include="imagenes\icono-facebook.jpg" />
     <Content Include="imagenes\icono-flickr.jpg" />
     <Content Include="imagenes\icono-instagram.jpg" />
-    <Content Include="imagenes\icono-twitter.jpg" />
     <Content Include="imagenes\icono-youtube.jpg" />
     <Content Include="imagenes\img-01.png" />
     <Content Include="js\bootstrap-datepicker.js" />
