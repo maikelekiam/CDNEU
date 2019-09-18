@@ -1750,15 +1750,6 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.TextBox txtSelloBuenDisenioOtro;
         
         /// <summary>
-        /// Label54 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label54;
-        
-        /// <summary>
         /// RBMICA control.
         /// </summary>
         /// <remarks>
@@ -1777,15 +1768,6 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.TextBox txtMICAOtro;
         
         /// <summary>
-        /// Label55 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label55;
-        
-        /// <summary>
         /// RBAporteCDNEU control.
         /// </summary>
         /// <remarks>
@@ -1802,15 +1784,6 @@ namespace CDNEU {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAporteCDNEUOtro;
-        
-        /// <summary>
-        /// Label56 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label56;
         
         /// <summary>
         /// txtComentariosFinales control.

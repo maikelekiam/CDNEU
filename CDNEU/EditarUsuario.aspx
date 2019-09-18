@@ -1732,7 +1732,7 @@
                                 <h4>Organismo que brindó el apoyo</h4>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtOrganismoApoyoNombre" runat="server" CssClass="form-control" />
+                                        <asp:TextBox ID="txtOrganismoApoyoNombre" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
@@ -1750,124 +1750,80 @@
                                 <h4>¿Ha participado del Sello de Buen Diseño Argentino?</h4>
                                 <table>
                                     <tr>
-                                        <td>
-                                            <asp:RadioButtonList ID="RBSelloBuenDisenio" runat="server"
-                                                CssClass="form-control" BorderStyle="None"
-                                                RepeatColumns="1"
-                                                RepeatLayout="Table"
-                                                CellPadding="10">
-                                                <asp:ListItem>Si</asp:ListItem>
-                                                <asp:ListItem>No</asp:ListItem>
-                                                <asp:ListItem>Otro</asp:ListItem>
-                                            </asp:RadioButtonList>
-                                        </td>
+                                        <asp:RadioButtonList ID="RBSelloBuenDisenio" runat="server"
+                                            CssClass="form-control" BorderStyle="None"
+                                            RepeatColumns="1"
+                                            RepeatLayout="Table"
+                                            CellPadding="10">
+                                            <asp:ListItem>Si</asp:ListItem>
+                                            <asp:ListItem>No</asp:ListItem>
+                                        </asp:RadioButtonList>
                                     </tr>
+                                </table>
+                                <table>
+                                    <asp:TextBox ID="txtSelloBuenDisenioOtro" runat="server" CssClass="form-control" placeHolder="Otro" TextMode="MultiLine" Rows="1" />
                                     <tr>
-                                        <td style="vertical-align: bottom">
-                                            <div class="input-group">
-                                                <asp:TextBox ID="txtSelloBuenDisenioOtro" runat="server" CssClass="form-control" Width="800" />
-                                            </div>
-                                        </td>
+                                        <td style="height: 30px"></td>
+                                    </tr>
+                                </table>
+                                <h4>¿Ha participado del Mercado de Industrias Creativas Argentinas (MICA)?</h4>
+                                <table>
+                                    <tr>
+                                        <asp:RadioButtonList ID="RBMICA" runat="server"
+                                            CssClass="form-control" BorderStyle="None"
+                                            RepeatColumns="1"
+                                            RepeatLayout="Table"
+                                            CellPadding="10">
+                                            <asp:ListItem>Si</asp:ListItem>
+                                            <asp:ListItem>No</asp:ListItem>
+                                        </asp:RadioButtonList>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <asp:TextBox ID="txtMICAOtro" runat="server" CssClass="form-control" placeHolder="Otro" TextMode="MultiLine" Rows="1" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
                                     </tr>
                                 </table>
+                                <h4>¿Cuál considera que puede ser el mayor aporte que el CDNEU puede hacerle para fortalecer su actividad?</h4>
                                 <table>
                                     <tr>
-                                        <td>
-                                            <h4>
-                                                <asp:Label ID="Label54" runat="server">¿Ha participado del Mercado de Industrias Creativas Argentinas (MICA)?</asp:Label>
-                                            </h4>
-                                        </td>
+                                        <asp:RadioButtonList ID="RBAporteCDNEU" runat="server"
+                                            CssClass="form-control" BorderStyle="None"
+                                            RepeatColumns="1"
+                                            RepeatLayout="Table"
+                                            CellPadding="10">
+                                            <asp:ListItem>Capacitaciones</asp:ListItem>
+                                            <asp:ListItem>Vinculación con otros diseñadoras/es y creativas/os</asp:ListItem>
+                                            <asp:ListItem>Financiamiento</asp:ListItem>
+                                            <asp:ListItem>Infraestructura</asp:ListItem>
+                                            <asp:ListItem>Comercialización</asp:ListItem>
+                                            <asp:ListItem>Asistencia para participación en ferias</asp:ListItem>
+                                            <asp:ListItem>Visualización de sus productos/servicios</asp:ListItem>
+                                            <asp:ListItem>Otro</asp:ListItem>
+                                        </asp:RadioButtonList>
                                     </tr>
                                 </table>
                                 <table>
-                                    <tr>
-                                        <td>
-                                            <asp:RadioButtonList ID="RBMICA" runat="server"
-                                                CssClass="form-control" BorderStyle="None"
-                                                RepeatColumns="1"
-                                                RepeatLayout="Table"
-                                                CellPadding="10">
-                                                <asp:ListItem>Si</asp:ListItem>
-                                                <asp:ListItem>No</asp:ListItem>
-                                                <asp:ListItem>Otro</asp:ListItem>
-                                            </asp:RadioButtonList>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="vertical-align: bottom">
-                                            <div class="input-group">
-                                                <asp:TextBox ID="txtMICAOtro" runat="server" CssClass="form-control" Width="800" />
-                                            </div>
-                                        </td>
-                                    </tr>
+                                    <asp:TextBox ID="txtAporteCDNEUOtro" runat="server" CssClass="form-control" placeHolder="Otro" TextMode="MultiLine" Rows="1" />
                                     <tr>
                                         <td style="height: 30px"></td>
                                     </tr>
                                 </table>
+                                <h4>Comentarios Finales</h4>
                                 <table>
-                                    <tr>
-                                        <td>
-                                            <h4>
-                                                <asp:Label ID="Label55" runat="server">¿Cuál considera que puede ser el mayor aporte que el CDNEU puede hacerle para fortalecer su actividad?</asp:Label>
-                                            </h4>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <asp:RadioButtonList ID="RBAporteCDNEU" runat="server"
-                                                CssClass="form-control" BorderStyle="None"
-                                                RepeatColumns="1"
-                                                RepeatLayout="Table"
-                                                CellPadding="10">
-                                                <asp:ListItem>Capacitaciones</asp:ListItem>
-                                                <asp:ListItem>Vinculación con otros diseñadoras/es y creativas/os</asp:ListItem>
-                                                <asp:ListItem>Financiamiento</asp:ListItem>
-                                                <asp:ListItem>Infraestructura</asp:ListItem>
-                                                <asp:ListItem>Comercialización</asp:ListItem>
-                                                <asp:ListItem>Asistencia para participación en ferias</asp:ListItem>
-                                                <asp:ListItem>Visualización de sus productos/servicios</asp:ListItem>
-                                                <asp:ListItem>Otro</asp:ListItem>
-                                            </asp:RadioButtonList>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <table>
-                                    <tr>
-                                        <td style="vertical-align: bottom">
-                                            <div class="input-group">
-                                                <asp:TextBox ID="txtAporteCDNEUOtro" runat="server" CssClass="form-control" Width="800" />
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="height: 30px"></td>
-                                    </tr>
-                                </table>
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <h4>
-                                                <asp:Label ID="Label56" runat="server">Comentarios Finales</asp:Label>
-                                            </h4>
-                                        </td>
-                                    </tr>
                                     <tr>
                                         <td style="height: 10px"></td>
                                     </tr>
                                     <tr>
-                                        <td style="width: 800px">
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <span class="glyphicon glyphicon-asterisk"></span>
-                                                </span>
-                                                <asp:TextBox ID="txtComentariosFinales" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="5" />
-                                            </div>
-                                        </td>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-asterisk"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtComentariosFinales" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="5" />
+                                        </div>
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>

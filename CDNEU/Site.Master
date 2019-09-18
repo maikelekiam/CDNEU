@@ -118,18 +118,18 @@
                                     </ul>
                                 </li>
                                 <li runat="server" id="dropdownFotoPerfil">
-                                    <a><span>Cargar Fotos</span></a>
+                                    <a><span>Mis Fotos</span></a>
                                     <ul>
                                         <li>
                                             <a runat="server" href="~/FotoPerfil.aspx"><span class="glyphicon glyphicon-credit-card fa-fw"></span> Foto de Perfil</a>
                                         </li>
                                         <li>
-                                            <a runat="server" href="~/FotoProducto.aspx"><span class="glyphicon glyphicon-credit-card fa-fw"></span> Foto del Producto</a>
+                                            <a runat="server" href="~/FotoProducto.aspx"><span class="glyphicon glyphicon-credit-card fa-fw"></span> Fotos del Producto</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li runat="server" id="Li1">
-                                    <a href="CuentaUsuario.aspx"><span>Cuenta de Usuario</span></a>
+                                    <a href="CuentaUsuario.aspx"><span>Mi Cuenta</span></a>
                                     <ul>
                                         <li>
                                             <a runat="server" href="~/CuentaUsuario.aspx"><span class="glyphicon glyphicon-user fa-fw"></span>Cuenta de Usuario</a>

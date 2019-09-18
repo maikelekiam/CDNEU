@@ -2,14 +2,14 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<html lang="en">
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <title>LOGIN</title>
 
     <link rel="stylesheet" href="assets/css/assets.css" />
 
-    
+
 
     <style>
         body {
@@ -54,7 +54,7 @@
 <body>
     <br />
     <br />
-    <form id="form1" runat="server" class="form-horizontal">
+    <form id="form1" runat="server" class="form-horizontal autoHeight">
         <div id="exTab3" class="container">
             <div class="col-md-6 col-md-offset-3">
 
@@ -116,10 +116,7 @@
                             <div class="tab-pane" id="2b">
                                 <h3>Registro de Nuevo Usuario</h3>
                                 <hr />
-
-
-
-                                <asp:Image ID="setincode" Width="250" runat="server" Visible="false" />
+                                <%--<asp:Image ID="setincode" Width="250" runat="server" Visible="false" />--%>
                                 <table>
                                     <tr>
                                         <td class="anchotabla">
