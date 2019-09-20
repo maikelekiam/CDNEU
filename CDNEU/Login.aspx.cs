@@ -18,7 +18,7 @@ namespace CDNEU
         FotoUsuarioNego fotoUsuarioNego = new FotoUsuarioNego();
         RedesSocialesNego redesSocialesNego = new RedesSocialesNego();
         FormacionAcademicaNego formacionAcademicaNego = new FormacionAcademicaNego();
-        ActividadProfesionalNego actividadProfecionalNego = new ActividadProfesionalNego();
+        ActividadProfesionalNego actividadProfesionalNego = new ActividadProfesionalNego();
 
         public static int idUsuarioTemporal;
 
@@ -56,9 +56,14 @@ namespace CDNEU
         {
             //Aca hay que guardar los datos de Registro del Usuario NUEVO
 
-            if ((txtRegistroNombreUsuario.Text != "") && (txtRegistroContrasenia.Text != "") && (txtRegistroNombre.Text != "")
-                && (txtRegistroApellido.Text != "") && (txtRegistroCorreoElectronico.Text != "") 
-                && (txtRegistroEdad.Text != "") && (txtRegistroTelefono.Text != ""))
+            if ((txtRegistroNombreUsuario.Text != "")
+                && (txtRegistroContrasenia.Text != "")
+                && (txtRegistroNombre.Text != "")
+                && (txtRegistroApellido.Text != "")
+                && (txtRegistroCorreoElectronico.Text != "")
+                //&& (txtRegistroEdad.Text != "")
+                //&& (txtRegistroTelefono.Text != "")
+                )
             {
                 GuardarUsuario();
                 Response.Redirect("Login.aspx");
@@ -78,19 +83,19 @@ namespace CDNEU
 
             usuario.NombreUsuario = txtRegistroNombreUsuario.Text;
 
-            if (usuario.NombreUsuario == "marcamone")
-            {
-                usuario.Grupo = 1;
-            }
+            //ESTE IF DESPUES HABRIA QUE QUITARLO
+            if (usuario.NombreUsuario == "marcamone") { usuario.Grupo = 1; }
 
             usuario.Contrasenia = txtRegistroContrasenia.Text;
-
             usuario.Nombre = txtRegistroNombre.Text;
             usuario.Apellido = txtRegistroApellido.Text;
-            usuario.Telefono = txtRegistroTelefono.Text;
             usuario.CorreoElectronico = txtRegistroCorreoElectronico.Text;
-            usuario.Edad = Convert.ToInt32(txtRegistroEdad.Text);
 
+            usuario.Telefono = null;
+            usuario.Edad = null;
+
+            usuario.Localidad = null;
+            usuario.Provincia = "Neuquen";
 
             idUsuarioTemporal = usuarioNego.GuardarUsuario(usuario);
 
@@ -127,13 +132,16 @@ namespace CDNEU
             actividadProfesional.IdUsuario = idUsuarioTemporal;
             actividadProfesional.DisciplinaProyectual = null;
             actividadProfesional.DisciplinaProyectualOtra = null;
-            actividadProfesional.SubSector = null;
+
             actividadProfesional.SubSectorOtro = null;
             actividadProfesional.TipoRelacionLaboral = null;
             actividadProfesional.TipoRelacionLaboralOtro = null;
-            actividadProfesional.NombreEmpresa = null;
-            actividadProfesional.LinkEmpresa = null;
-            actividadProfesional.DescripcionActividadProfesional = null;
+            actividadProfesional.NombreEmpresaAP = null;
+            actividadProfesional.LinkEmpresaAP = null;
+            actividadProfesional.DescripcionAP = null;
+
+            actividadProfesionalNego.GuardarActividadProfesional(actividadProfesional);
+
 
         }
         private void GuardarFotoPerfil()

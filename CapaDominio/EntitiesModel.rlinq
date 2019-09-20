@@ -401,20 +401,11 @@
         <orm:field name="disciplinaProyectualOtra" property="DisciplinaProyectualOtra" behavior="readwrite" uniqueId="65a4991f-d923-4c8d-a641-ee5e305ab6a7" type="System.String">
           <orm:column name="disciplinaProyectualOtra" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="subSector" property="SubSector" behavior="readwrite" uniqueId="ae1dc099-c281-46ad-a48f-782b84485eb9" type="System.String">
-          <orm:column name="subSector" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
         <orm:field name="tipoRelacionLaboral" property="TipoRelacionLaboral" behavior="readwrite" uniqueId="889749a9-5384-44c4-afba-3f70b0bc4f92" type="System.String">
           <orm:column name="tipoRelacionLaboral" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
         <orm:field name="tipoRelacionLaboralOtro" property="TipoRelacionLaboralOtro" behavior="readwrite" uniqueId="e6f6e6ce-4ea2-4eac-8e0c-88795f579cb2" type="System.String">
           <orm:column name="tipoRelacionLaboralOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="nombreEmpresa" property="NombreEmpresa" behavior="readwrite" uniqueId="d2f63c88-ca9f-4173-8f2f-c648c992a377" type="System.String">
-          <orm:column name="nombreEmpresa" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="linkEmpresa" property="LinkEmpresa" behavior="readwrite" uniqueId="9b665e0f-1b37-475d-abd0-06b320d73908" type="System.String">
-          <orm:column name="linkEmpresa" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
         <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="c46f1058-af7e-42d0-baf0-a1a6271431d2" type="System.Int32">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
@@ -422,8 +413,41 @@
         <orm:field name="subSectorOtro" property="SubSectorOtro" behavior="readwrite" uniqueId="619e3fc5-35e6-4887-92fd-2e19ddfb7c36" type="System.String">
           <orm:column name="subSectorOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="descripcionActividadProfesional" property="DescripcionActividadProfesional" behavior="readwrite" uniqueId="446ce371-81f2-4473-91f5-d37ed34cda60" type="System.String">
-          <orm:column name="descripcionActividadProfesional" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:field name="tejidos" property="Tejidos" behavior="readwrite" uniqueId="539d29cb-d963-486c-9c0f-44015d509a45" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="tejidos" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="nombreEmpresaAP" property="NombreEmpresaAP" behavior="readwrite" uniqueId="538ba8c2-66b2-483a-a2d5-e2d0b556ca94" type="System.String">
+          <orm:column name="nombreEmpresaAP" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="mobiliario" property="Mobiliario" behavior="readwrite" uniqueId="29d77749-983e-4946-9ab6-f7461865ff36" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="mobiliario" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="madera" property="Madera" behavior="readwrite" uniqueId="515841be-c24b-483d-8541-8250462358e8" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="madera" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="linkEmpresaAP" property="LinkEmpresaAP" behavior="readwrite" uniqueId="5ada0ffa-f5f9-4a33-bf00-fcc1e77b0b6d" type="System.String">
+          <orm:column name="linkEmpresaAP" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="joyeria" property="Joyeria" behavior="readwrite" uniqueId="dbaf8c11-6487-4b5b-ab51-56bf796e2fdc" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="joyeria" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="disenioWeb" property="DisenioWeb" behavior="readwrite" uniqueId="5567fcba-02a7-4ae9-ab45-1ce7337e3e69" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="disenioWeb" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="disenioEditorial" property="DisenioEditorial" behavior="readwrite" uniqueId="e4bbc7f5-cbdf-4362-a134-f54d7e2bc7de" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="disenioEditorial" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="descripcionAP" property="DescripcionAP" behavior="readwrite" uniqueId="0ff86d19-fbef-402f-a6c6-7d8db4fa3c66" type="System.String">
+          <orm:column name="descripcionAP" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="ceramica" property="Ceramica" behavior="readwrite" uniqueId="735f929d-1d52-428b-873f-44819992bcdc" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="ceramica" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="calzado" property="Calzado" behavior="readwrite" uniqueId="c9a0eddd-b012-4ef3-bb81-26565c25ecf8" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="calzado" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="accesorios" property="Accesorios" behavior="readwrite" uniqueId="23cb681b-5921-47fb-963a-7fcff0829416" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="accesorios" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
         </orm:field>
         <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="132550c0-8241-4793-aa31-449216f39028" type="CapaDominio.Usuario">
           <orm:reference uniqueId="c6ce416e-849c-4b60-ac18-0ca4334cd7dd" association-name="ActividadProfesionalHasUsuario">
@@ -563,6 +587,27 @@
         <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="14e738ef-85e4-42f5-9a42-df11774ab904" type="System.Int32">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:field>
+        <orm:field name="sitioWeb" property="SitioWeb" behavior="readwrite" uniqueId="d1a1d079-6a5a-4451-95b6-e1c07d4b3d07" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="sitioWeb" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="showRoom" property="ShowRoom" behavior="readwrite" uniqueId="5000e911-6b80-4912-bb07-e98c191da8b3" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="showRoom" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="redesSociales" property="RedesSociales" behavior="readwrite" uniqueId="0e733cbf-5c5a-4498-af91-dbe0af9dbca6" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="redesSociales" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="personal" property="Personal" behavior="readwrite" uniqueId="9aefb5d9-fe37-4da5-974b-c87a214b2351" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="personal" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="noComercializa" property="NoComercializa" behavior="readwrite" uniqueId="dd176425-203b-4031-a82e-6ed265ccf91f" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="noComercializa" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="localComercial" property="LocalComercial" behavior="readwrite" uniqueId="e67f5350-ea7c-4a9d-b268-5ccc31f1adb3" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="localComercial" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="ferias" property="Ferias" behavior="readwrite" uniqueId="069ab0ae-296f-44bd-b253-7d62774c0806" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="ferias" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
         <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="7622792b-1f95-4e22-beed-0d60adfc858c" type="CapaDominio.Usuario">
           <orm:reference uniqueId="41af31f6-59a3-4093-9e8a-000dd3480946" association-name="RedesSocialeHasUsuario">
             <orm:sharedfield name="idUsuario" target-class="CapaDominio.Usuario" target-field="idUsuario" />
@@ -688,14 +733,22 @@
         <orm:column name="idActividadProfesional" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         <orm:column name="disciplinaProyectual" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="disciplinaProyectualOtra" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="subSector" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="tipoRelacionLaboral" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="tipoRelacionLaboralOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="nombreEmpresa" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="linkEmpresa" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         <orm:column name="subSectorOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="descripcionActividadProfesional" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="tejidos" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="nombreEmpresaAP" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="mobiliario" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="madera" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="linkEmpresaAP" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="joyeria" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="disenioWeb" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="disenioEditorial" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="descripcionAP" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="ceramica" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="calzado" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="accesorios" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
         <orm:constraint name="FK_ActividadProfesional_Usuario" delete-action="dbdefaultrule" destination-table="Usuario">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:constraint>
@@ -741,6 +794,13 @@
         <orm:column name="tiendaNube" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
         <orm:column name="plataformaOtra" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="sitioWeb" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="showRoom" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="redesSociales" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="personal" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="noComercializa" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="localComercial" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="ferias" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
         <orm:constraint name="FK_RedesSociales_Usuario" delete-action="dbdefaultrule" destination-table="Usuario">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:constraint>
@@ -1055,13 +1115,21 @@
       <Property Id="95fde095-80d2-4123-b203-7979b934c824" name="DisciplinaProyectual" label="DisciplinaProyectual : String" kind="Persistent" fieldName="disciplinaProyectual" />
       <Property Id="65a4991f-d923-4c8d-a641-ee5e305ab6a7" name="DisciplinaProyectualOtra" label="DisciplinaProyectualOtra : String" kind="Persistent" fieldName="disciplinaProyectualOtra" />
       <Property Id="c46f1058-af7e-42d0-baf0-a1a6271431d2" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
-      <Property Id="9b665e0f-1b37-475d-abd0-06b320d73908" name="LinkEmpresa" label="LinkEmpresa : String" kind="Persistent" fieldName="linkEmpresa" />
-      <Property Id="d2f63c88-ca9f-4173-8f2f-c648c992a377" name="NombreEmpresa" label="NombreEmpresa : String" kind="Persistent" fieldName="nombreEmpresa" />
-      <Property Id="ae1dc099-c281-46ad-a48f-782b84485eb9" name="SubSector" label="SubSector : String" kind="Persistent" fieldName="subSector" />
       <Property Id="889749a9-5384-44c4-afba-3f70b0bc4f92" name="TipoRelacionLaboral" label="TipoRelacionLaboral : String" kind="Persistent" fieldName="tipoRelacionLaboral" />
       <Property Id="e6f6e6ce-4ea2-4eac-8e0c-88795f579cb2" name="TipoRelacionLaboralOtro" label="TipoRelacionLaboralOtro : String" kind="Persistent" fieldName="tipoRelacionLaboralOtro" />
       <Property Id="619e3fc5-35e6-4887-92fd-2e19ddfb7c36" name="SubSectorOtro" label="SubSectorOtro : String" kind="Persistent" fieldName="subSectorOtro" />
-      <Property Id="446ce371-81f2-4473-91f5-d37ed34cda60" name="DescripcionActividadProfesional" label="DescripcionActividadProfesional : String" kind="Persistent" fieldName="descripcionActividadProfesional" />
+      <Property Id="539d29cb-d963-486c-9c0f-44015d509a45" name="Tejidos" type="Boolean" label="Tejidos : Boolean" nullable="true" kind="Persistent" fieldName="tejidos" />
+      <Property Id="538ba8c2-66b2-483a-a2d5-e2d0b556ca94" name="NombreEmpresaAP" label="NombreEmpresaAP : String" kind="Persistent" fieldName="nombreEmpresaAP" />
+      <Property Id="29d77749-983e-4946-9ab6-f7461865ff36" name="Mobiliario" type="Boolean" label="Mobiliario : Boolean" nullable="true" kind="Persistent" fieldName="mobiliario" />
+      <Property Id="515841be-c24b-483d-8541-8250462358e8" name="Madera" type="Boolean" label="Madera : Boolean" nullable="true" kind="Persistent" fieldName="madera" />
+      <Property Id="5ada0ffa-f5f9-4a33-bf00-fcc1e77b0b6d" name="LinkEmpresaAP" label="LinkEmpresaAP : String" kind="Persistent" fieldName="linkEmpresaAP" />
+      <Property Id="dbaf8c11-6487-4b5b-ab51-56bf796e2fdc" name="Joyeria" type="Boolean" label="Joyeria : Boolean" nullable="true" kind="Persistent" fieldName="joyeria" />
+      <Property Id="5567fcba-02a7-4ae9-ab45-1ce7337e3e69" name="DisenioWeb" type="Boolean" label="DisenioWeb : Boolean" nullable="true" kind="Persistent" fieldName="disenioWeb" />
+      <Property Id="e4bbc7f5-cbdf-4362-a134-f54d7e2bc7de" name="DisenioEditorial" type="Boolean" label="DisenioEditorial : Boolean" nullable="true" kind="Persistent" fieldName="disenioEditorial" />
+      <Property Id="0ff86d19-fbef-402f-a6c6-7d8db4fa3c66" name="DescripcionAP" label="DescripcionAP : String" kind="Persistent" fieldName="descripcionAP" />
+      <Property Id="735f929d-1d52-428b-873f-44819992bcdc" name="Ceramica" type="Boolean" label="Ceramica : Boolean" nullable="true" kind="Persistent" fieldName="ceramica" />
+      <Property Id="c9a0eddd-b012-4ef3-bb81-26565c25ecf8" name="Calzado" type="Boolean" label="Calzado : Boolean" nullable="true" kind="Persistent" fieldName="calzado" />
+      <Property Id="23cb681b-5921-47fb-963a-7fcff0829416" name="Accesorios" type="Boolean" label="Accesorios : Boolean" nullable="true" kind="Persistent" fieldName="accesorios" />
       <AssociationTargets>
         <Association Id="c6ce416e-849c-4b60-ac18-0ca4334cd7dd" SourceMultiplicity="One" name="ActividadProfesionalHasUsuario">
           <DomainClassMoniker name="/ModeloDeDominio/Usuario" />
@@ -1158,6 +1226,13 @@
       <Property Id="b4075f5a-a6d8-4695-9f60-d867ecc8d3a1" name="TiendaNube" type="Boolean" label="TiendaNube : Boolean" kind="Persistent" fieldName="tiendaNube" />
       <Property Id="b8c3b989-b485-45f1-8c2e-6d4a2adf6e89" name="Twitter" label="Twitter : String" kind="Persistent" fieldName="twitter" />
       <Property Id="80e1e073-1f84-4bae-859b-6f4e5c34d29e" name="Youtube" label="Youtube : String" kind="Persistent" fieldName="youtube" />
+      <Property Id="d1a1d079-6a5a-4451-95b6-e1c07d4b3d07" name="SitioWeb" type="Boolean" label="SitioWeb : Boolean" nullable="true" kind="Persistent" fieldName="sitioWeb" />
+      <Property Id="5000e911-6b80-4912-bb07-e98c191da8b3" name="ShowRoom" type="Boolean" label="ShowRoom : Boolean" nullable="true" kind="Persistent" fieldName="showRoom" />
+      <Property Id="0e733cbf-5c5a-4498-af91-dbe0af9dbca6" name="RedesSociales" type="Boolean" label="RedesSociales : Boolean" nullable="true" kind="Persistent" fieldName="redesSociales" />
+      <Property Id="9aefb5d9-fe37-4da5-974b-c87a214b2351" name="Personal" type="Boolean" label="Personal : Boolean" nullable="true" kind="Persistent" fieldName="personal" />
+      <Property Id="dd176425-203b-4031-a82e-6ed265ccf91f" name="NoComercializa" type="Boolean" label="NoComercializa : Boolean" nullable="true" kind="Persistent" fieldName="noComercializa" />
+      <Property Id="e67f5350-ea7c-4a9d-b268-5ccc31f1adb3" name="LocalComercial" type="Boolean" label="LocalComercial : Boolean" nullable="true" kind="Persistent" fieldName="localComercial" />
+      <Property Id="069ab0ae-296f-44bd-b253-7d62774c0806" name="Ferias" type="Boolean" label="Ferias : Boolean" nullable="true" kind="Persistent" fieldName="ferias" />
       <AssociationTargets>
         <Association Id="41af31f6-59a3-4093-9e8a-000dd3480946" SourceMultiplicity="One" name="RedesSocialeHasUsuario">
           <DomainClassMoniker name="/ModeloDeDominio/Usuario" />

@@ -154,6 +154,97 @@ namespace CapaDominio
 			}
 		}
 		
+		private bool? sitioWeb;
+		public virtual bool? SitioWeb
+		{
+			get
+			{
+				return this.sitioWeb;
+			}
+			set
+			{
+				this.sitioWeb = value;
+			}
+		}
+		
+		private bool? showRoom;
+		public virtual bool? ShowRoom
+		{
+			get
+			{
+				return this.showRoom;
+			}
+			set
+			{
+				this.showRoom = value;
+			}
+		}
+		
+		private bool? redesSociales;
+		public virtual bool? RedesSociales
+		{
+			get
+			{
+				return this.redesSociales;
+			}
+			set
+			{
+				this.redesSociales = value;
+			}
+		}
+		
+		private bool? personal;
+		public virtual bool? Personal
+		{
+			get
+			{
+				return this.personal;
+			}
+			set
+			{
+				this.personal = value;
+			}
+		}
+		
+		private bool? noComercializa;
+		public virtual bool? NoComercializa
+		{
+			get
+			{
+				return this.noComercializa;
+			}
+			set
+			{
+				this.noComercializa = value;
+			}
+		}
+		
+		private bool? localComercial;
+		public virtual bool? LocalComercial
+		{
+			get
+			{
+				return this.localComercial;
+			}
+			set
+			{
+				this.localComercial = value;
+			}
+		}
+		
+		private bool? ferias;
+		public virtual bool? Ferias
+		{
+			get
+			{
+				return this.ferias;
+			}
+			set
+			{
+				this.ferias = value;
+			}
+		}
+		
 		private Usuario usuario;
 		public virtual Usuario Usuario
 		{

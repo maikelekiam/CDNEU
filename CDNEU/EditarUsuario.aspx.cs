@@ -50,6 +50,10 @@ namespace CDNEU
                 ActualizarDatosPersonales();
                 Response.Redirect("EditarUsuario.aspx");
             }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "Correct", "alert('Complete todos los campos.')", true);
+            }
         }
         private void ActualizarDatosPersonales()
         {
@@ -80,8 +84,17 @@ namespace CDNEU
             redesSociale.Twitter = txtTwitter.Text;
             redesSociale.Youtube = txtYouTube.Text;
             redesSociale.Flicker = txtFlicker.Text;
+
+            redesSociale.RedesSociales = chkRedesSociales.Checked;
             redesSociale.MercadoLibre = chkMercadoLibre.Checked;
+            redesSociale.SitioWeb = chkSitioWeb.Checked;
             redesSociale.TiendaNube = chkTiendaNube.Checked;
+            redesSociale.Ferias = chkFerias.Checked;
+            redesSociale.LocalComercial = chkLocalComercial.Checked;
+            redesSociale.Personal = chkPersonal.Checked;
+            redesSociale.ShowRoom = chkShowRoom.Checked;
+            redesSociale.NoComercializa = chkNoComercializa.Checked;
+
             redesSociale.PlataformaOtra = txtPlataformaComercializacionOtro.Text;
             redesSocialesNego.ActualizarRedesSociales(redesSociale);
         }
@@ -92,7 +105,9 @@ namespace CDNEU
             txtDatosPersonalesNombre.Text = usuario.Nombre.ToString();
             txtDatosPersonalesApellido.Text = usuario.Apellido.ToString();
             txtDatosPersonalesCorreoElectronico.Text = usuario.CorreoElectronico.ToString();
-            txtDatosPersonalesTelefono.Text = usuario.Telefono.ToString();
+
+            if (usuario.Telefono == null) { txtDatosPersonalesTelefono.Text = null; }
+            else { txtDatosPersonalesTelefono.Text = usuario.Telefono.ToString(); }
             if (usuario.Domicilio == null) { txtDatosPersonalesDomicilio.Text = null; }
             else { txtDatosPersonalesDomicilio.Text = usuario.Domicilio.ToString(); }
             if (usuario.Localidad == null) { txtDatosPersonalesLocalidad.Text = null; }
@@ -113,10 +128,24 @@ namespace CDNEU
             else { txtYouTube.Text = redesSociale.Youtube; }
             if (redesSociale.Flicker == null) { txtFlicker.Text = null; }
             else { txtFlicker.Text = redesSociale.Flicker; }
+            if (redesSociale.RedesSociales == true) { chkRedesSociales.Checked = true; }
+            else { chkRedesSociales.Checked = false; }
             if (redesSociale.MercadoLibre == true) { chkMercadoLibre.Checked = true; }
             else { chkMercadoLibre.Checked = false; }
+            if (redesSociale.SitioWeb == true) { chkSitioWeb.Checked = true; }
+            else { chkSitioWeb.Checked = false; }
             if (redesSociale.TiendaNube == true) { chkTiendaNube.Checked = true; }
             else { chkTiendaNube.Checked = false; }
+            if (redesSociale.Ferias == true) { chkFerias.Checked = true; }
+            else { chkFerias.Checked = false; }
+            if (redesSociale.LocalComercial == true) { chkLocalComercial.Checked = true; }
+            else { chkLocalComercial.Checked = false; }
+            if (redesSociale.Personal == true) { chkPersonal.Checked = true; }
+            else { chkPersonal.Checked = false; }
+            if (redesSociale.ShowRoom == true) { chkShowRoom.Checked = true; }
+            else { chkShowRoom.Checked = false; }
+            if (redesSociale.NoComercializa == true) { chkNoComercializa.Checked = true; }
+            else { chkNoComercializa.Checked = false; }
             txtPlataformaComercializacionOtro.Text = redesSociale.PlataformaOtra;
 
             FormacionAcademica formacionAcademica = formacionAcademicaNego.ObtenerFormacionAcademica(globalIdUsuario);
@@ -136,7 +165,6 @@ namespace CDNEU
             else { txtOtrosEstudios.Text = formacionAcademica.OtrosEstudios; }
             if (formacionAcademica.EsEstudiante == true) { chkEstudianteVinculado.Checked = true; }
             else { chkEstudianteVinculado.Checked = false; }
-
             txtCarreraNombre.Text = formacionAcademica.CarreraNombre;
             txtCarreraAnioIngreso.Text = formacionAcademica.CarreraAnioIngreso;
             txtCarreraAnioCursada.Text = formacionAcademica.CarreraAnioCursada;
@@ -188,9 +216,9 @@ namespace CDNEU
             actividadProfesional.SubSectorOtro = txtSubSectorOtro.Text;
             actividadProfesional.TipoRelacionLaboral = RBTipoRelacionLaboral.SelectedValue.ToString();
             actividadProfesional.TipoRelacionLaboralOtro = txtTipoRelacionLaboralOtro.Text;
-            actividadProfesional.NombreEmpresa = txtNombreEmpresa.Text;
-            actividadProfesional.LinkEmpresa = txtLinkEmpresa.Text;
-            actividadProfesional.DescripcionActividadProfesional = txtDescripcion.Text;
+            actividadProfesional.NombreEmpresaAP = txtNombreEmpresa.Text;
+            actividadProfesional.LinkEmpresaAP = txtLinkEmpresa.Text;
+            actividadProfesional.DescripcionAP = txtDescripcion.Text;
 
             actividadProfecionalNego.ActualizarActividadProfesional(actividadProfesional);
 

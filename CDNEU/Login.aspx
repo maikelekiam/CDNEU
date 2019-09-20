@@ -6,12 +6,33 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>LOGIN</title>
+    <meta name="description" content="CDNEU | Multi-purpose HTML5 Template">
+    <meta name="author" content="IT-RAYS">
 
-    <link rel="stylesheet" href="assets/css/assets.css" />
+    <!-- Devices Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
 
+    <!-- Put favicon.ico and apple-touch-icon(s).png in the images folder -->
+    <link rel="shortcut icon" href="imagenes/copade.ico">
+
+
+    <link href="css/bootstrap-datepicker.css" rel="stylesheet" />
+    <link href="css/bootstrap-select.css" rel="stylesheet" />
+
+    <link href="css/estilo-textbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/assets.css">
 
 
     <style>
+        h3 {
+            font-family: 'Oswald','sans-serif';
+        }
+
+        .panel-body {
+            /*padding: 5px 0px;*/
+        }
+
         body {
             background: url('../imagenes/bg02.jpg') fixed;
             background-size: cover;
@@ -50,6 +71,11 @@
         }
     </style>
 
+    <!-- Template CSS files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/shortcodes.css">
+    <link id="theme_css" rel="stylesheet" href="assets/css/light.css">
+    <link id="skin_css" rel="stylesheet" href="assets/css/skins/default.css">
 </head>
 <body>
     <br />
@@ -64,9 +90,9 @@
 
                         <ul class="nav nav-pills">
                             <li class="active">
-                                <a href="#1b" data-toggle="tab">Ingreso</a>
+                                <a href="#1b" data-toggle="tab">Ingresá!</a>
                             </li>
-                            <li><a href="#2b" data-toggle="tab">Registro</a>
+                            <li><a href="#2b" data-toggle="tab">Registrate!</a>
                             </li>
                         </ul>
 
@@ -114,97 +140,65 @@
 
                             <%--Inicio del tab-pane del Registro--%>
                             <div class="tab-pane" id="2b">
-                                <h3>Registro de Nuevo Usuario</h3>
-                                <hr />
-                                <%--<asp:Image ID="setincode" Width="250" runat="server" Visible="false" />--%>
-                                <table>
-                                    <tr>
-                                        <td class="anchotabla">
-                                            <asp:Label ID="Label7" runat="server" Text="Label">Usuario</asp:Label>
-                                        </td>
-                                        <td class="anchotextbox">
-                                            <div class="input-group">
-                                                <span class="input-group-addon alert-info">
-                                                    <span class="glyphicon glyphicon-user"></span>
-                                                </span>
-                                                <asp:TextBox ID="txtRegistroNombreUsuario" runat="server" CssClass="form-control" placeholder="Ingrese un nombre de Usuario" />
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="anchotabla altotabla"></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="anchotabla">
-                                            <asp:Label ID="Label8" runat="server" Text="Label">Contraseña</asp:Label>
-                                        </td>
-                                        <td class="anchotextbox">
-                                            <div class="input-group">
-                                                <span class="input-group-addon alert-info">
-                                                    <span class="glyphicon glyphicon-lock"></span>
-                                                </span>
-                                                <asp:TextBox ID="txtRegistroContrasenia" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese una Contraseña" />
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="anchotabla altotabla">
-                                            <br />
-                                        </td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="anchotabla">
-                                            <asp:Label ID="Label9" runat="server" Text="Label">Nombre</asp:Label>
-                                        </td>
-                                        <td class="anchotextbox">
-                                            <div class="input-group">
-                                                <span class="input-group-addon alert-info">
-                                                    <span class="glyphicon glyphicon-edit"></span>
-                                                </span>
-                                                <asp:TextBox ID="txtRegistroNombre" runat="server" CssClass="form-control" placeholder="Ingrese su nombre" />
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="anchotabla altotabla"></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="anchotabla">
-                                            <asp:Label ID="Label3" runat="server" Text="Label">Apellido</asp:Label>
-                                        </td>
-                                        <td class="anchotextbox">
-                                            <div class="input-group">
-                                                <span class="input-group-addon alert-info">
-                                                    <span class="glyphicon glyphicon-edit"></span>
-                                                </span>
-                                                <asp:TextBox ID="txtRegistroApellido" runat="server" CssClass="form-control" placeholder="Ingrese su apellido" />
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="anchotabla altotabla"></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="anchotabla">
-                                            <asp:Label ID="Label4" runat="server" Text="Label">Correo Electronico</asp:Label>
-                                        </td>
-                                        <td class="anchotextbox">
-                                            <div class="input-group">
-                                                <span class="input-group-addon alert-info">
-                                                    <span class="glyphicon glyphicon-envelope"></span>
-                                                </span>
-                                                <asp:TextBox ID="txtRegistroCorreoElectronico" runat="server" CssClass="form-control" placeholder="Ingrese su Correo Electronico" />
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="anchotabla altotabla"></td>
-                                        <td></td>
-                                    </tr>
+                                <%--<h3>Nuevo Usuario</h3>
+                                <hr />--%>
+                                <div class="form-group">
+                                    <div class="col-md-6 col-md-offset-1">
+                                        <asp:Label ID="Label7" runat="server" Text="Label">Usuario</asp:Label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-user"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtRegistroNombreUsuario" runat="server" CssClass="form-control" placeholder="Ingrese un nombre de Usuario" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-6 col-md-offset-1">
+                                        <asp:Label ID="Label8" runat="server" Text="Label">Contraseña</asp:Label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-lock"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtRegistroContrasenia" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese una Contraseña" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-6 col-md-offset-1">
+                                        <asp:Label ID="Label9" runat="server" Text="Label">Nombre</asp:Label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-edit"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtRegistroNombre" runat="server" CssClass="form-control" placeholder="Ingrese su nombre" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-6 col-md-offset-1">
+                                        <asp:Label ID="Label3" runat="server" Text="Label">Apellido</asp:Label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-edit"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtRegistroApellido" runat="server" CssClass="form-control" placeholder="Ingrese su apellido" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-6 col-md-offset-1">
+                                        <asp:Label ID="Label4" runat="server" Text="Label">Correo Electronico</asp:Label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-envelope"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtRegistroCorreoElectronico" runat="server" CssClass="form-control" placeholder="Ingrese su Correo Electronico" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <%--<table>
                                     <tr>
                                         <td class="anchotabla">
                                             <asp:Label ID="Label5" runat="server" Text="Label">Telefono</asp:Label>
@@ -239,25 +233,7 @@
                                         <td class="anchotabla altotabla"></td>
                                         <td></td>
                                     </tr>
-                                    <%--<tr>
-                                        <td class="anchotabla">
-                                            <asp:Label ID="Label10" runat="server" Text="Label">Domicilio</asp:Label>
-                                        </td>
-                                        <td class="anchotextbox">
-                                            <div class="input-group">
-                                                <span class="input-group-addon alert-info">
-                                                    <span class="glyphicon glyphicon-home"></span>
-                                                </span>
-                                                <asp:TextBox ID="txtRegistroDomicilio" runat="server" CssClass="form-control" placeholder="Ingrese su Domicilio" />
-                                            </div>
-                                        </td>
-                                    </tr>--%>
-                                </table>
-
-
-
-
-
+                                </table>--%>
 
                                 <%--<!--USUARIO Y CONTRASEÑA-->
                                 <div class="form-group col-md-12">
@@ -342,9 +318,6 @@
                                         </div>
                                     </div>
                                 </div>--%>
-
-
-
 
                                 <br />
                                 <!--Boton de registro-->

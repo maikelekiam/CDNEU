@@ -711,40 +711,14 @@
                                     <asp:CheckBox ID="chkAPTejidos" runat="server" Width="20px" />
                                     <asp:Label ID="lblAPTejidos" runat="server" Text="Tejidos"></asp:Label>
                                 </ul>
-                                <ul class="estilo-ul">
-                                    <asp:CheckBox ID="chkSubSectorOtro" runat="server" Width="20px" />
-                                    <asp:Label ID="lblSubSectorOtro" runat="server" Text="Otro"></asp:Label>
-                                </ul>
                                 <table>
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
                                 </table>
-
-
-                                <%--<table>
-                                    <tr>
-                                        <td>
-                                            <asp:RadioButtonList ID="RBSubSector" runat="server"
-                                                CssClass="form-control" BorderStyle="None"
-                                                RepeatColumns="1"
-                                                RepeatLayout="Table"
-                                                CellPadding="10">
-                                                <asp:ListItem Value="1">Mobiliario</asp:ListItem>
-                                                <asp:ListItem Value="2">Calzado</asp:ListItem>
-                                                <asp:ListItem Value="3">Accesorios</asp:ListItem>
-                                                <asp:ListItem Value="4">Diseño WEB</asp:ListItem>
-                                                <asp:ListItem Value="5">Diseño Editorial</asp:ListItem>
-                                                <asp:ListItem Value="6">Joyería</asp:ListItem>
-                                                <asp:ListItem Value="7">Tejidos</asp:ListItem>
-                                                <asp:ListItem Value="8">Otro</asp:ListItem>
-                                            </asp:RadioButtonList>
-                                        </td>
-                                    </tr>
-                                </table>--%>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtSubSectorOtro" runat="server" CssClass="form-control" />
+                                        <asp:TextBox ID="txtSubSectorOtro" runat="server" CssClass="form-control" placeHolder="Otro Sub Sector" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>

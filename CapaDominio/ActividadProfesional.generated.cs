@@ -63,19 +63,6 @@ namespace CapaDominio
 			}
 		}
 		
-		private string subSector;
-		public virtual string SubSector
-		{
-			get
-			{
-				return this.subSector;
-			}
-			set
-			{
-				this.subSector = value;
-			}
-		}
-		
 		private string tipoRelacionLaboral;
 		public virtual string TipoRelacionLaboral
 		{
@@ -99,32 +86,6 @@ namespace CapaDominio
 			set
 			{
 				this.tipoRelacionLaboralOtro = value;
-			}
-		}
-		
-		private string nombreEmpresa;
-		public virtual string NombreEmpresa
-		{
-			get
-			{
-				return this.nombreEmpresa;
-			}
-			set
-			{
-				this.nombreEmpresa = value;
-			}
-		}
-		
-		private string linkEmpresa;
-		public virtual string LinkEmpresa
-		{
-			get
-			{
-				return this.linkEmpresa;
-			}
-			set
-			{
-				this.linkEmpresa = value;
 			}
 		}
 		
@@ -154,16 +115,159 @@ namespace CapaDominio
 			}
 		}
 		
-		private string descripcionActividadProfesional;
-		public virtual string DescripcionActividadProfesional
+		private bool? tejidos;
+		public virtual bool? Tejidos
 		{
 			get
 			{
-				return this.descripcionActividadProfesional;
+				return this.tejidos;
 			}
 			set
 			{
-				this.descripcionActividadProfesional = value;
+				this.tejidos = value;
+			}
+		}
+		
+		private string nombreEmpresaAP;
+		public virtual string NombreEmpresaAP
+		{
+			get
+			{
+				return this.nombreEmpresaAP;
+			}
+			set
+			{
+				this.nombreEmpresaAP = value;
+			}
+		}
+		
+		private bool? mobiliario;
+		public virtual bool? Mobiliario
+		{
+			get
+			{
+				return this.mobiliario;
+			}
+			set
+			{
+				this.mobiliario = value;
+			}
+		}
+		
+		private bool? madera;
+		public virtual bool? Madera
+		{
+			get
+			{
+				return this.madera;
+			}
+			set
+			{
+				this.madera = value;
+			}
+		}
+		
+		private string linkEmpresaAP;
+		public virtual string LinkEmpresaAP
+		{
+			get
+			{
+				return this.linkEmpresaAP;
+			}
+			set
+			{
+				this.linkEmpresaAP = value;
+			}
+		}
+		
+		private bool? joyeria;
+		public virtual bool? Joyeria
+		{
+			get
+			{
+				return this.joyeria;
+			}
+			set
+			{
+				this.joyeria = value;
+			}
+		}
+		
+		private bool? disenioWeb;
+		public virtual bool? DisenioWeb
+		{
+			get
+			{
+				return this.disenioWeb;
+			}
+			set
+			{
+				this.disenioWeb = value;
+			}
+		}
+		
+		private bool? disenioEditorial;
+		public virtual bool? DisenioEditorial
+		{
+			get
+			{
+				return this.disenioEditorial;
+			}
+			set
+			{
+				this.disenioEditorial = value;
+			}
+		}
+		
+		private string descripcionAP;
+		public virtual string DescripcionAP
+		{
+			get
+			{
+				return this.descripcionAP;
+			}
+			set
+			{
+				this.descripcionAP = value;
+			}
+		}
+		
+		private bool? ceramica;
+		public virtual bool? Ceramica
+		{
+			get
+			{
+				return this.ceramica;
+			}
+			set
+			{
+				this.ceramica = value;
+			}
+		}
+		
+		private bool? calzado;
+		public virtual bool? Calzado
+		{
+			get
+			{
+				return this.calzado;
+			}
+			set
+			{
+				this.calzado = value;
+			}
+		}
+		
+		private bool? accesorios;
+		public virtual bool? Accesorios
+		{
+			get
+			{
+				return this.accesorios;
+			}
+			set
+			{
+				this.accesorios = value;
 			}
 		}
 		

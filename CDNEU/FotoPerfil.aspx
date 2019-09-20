@@ -28,8 +28,6 @@
                         <asp:Button ID="btnMostrarFotoTemporal" runat="server" CssClass="boton_azul" Text="Mostrar" OnClick="btnMostrarFotoTemporal_Click" />
                     </td>
                 </tr>
-
-
                 <tr>
                     <td style="text-align: center" colspan="2">
                         <h3>
@@ -37,6 +35,11 @@
                     </td>
                 </tr>
             </table>
+            <table>
+                <asp:Button ID="btnRotarDerecha" runat="server" CssClass="boton_rojo" Text="Rotar Derecha" OnClick="btnRotarDerecha_Click" />
+                <asp:Button ID="btnRotarIzquierda" runat="server" CssClass="boton_rojo" Text="Rotar Izquierda" OnClick="btnRotarIzquierda_Click" />
+            </table>
+            
             <asp:Button ID="btnGuardarFoto" runat="server" CssClass="boton_verde" Text="Guardar Foto" OnClick="btnGuardarFoto_Click" />
 
         </div>

@@ -823,24 +823,6 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.Label lblAPTejidos;
         
         /// <summary>
-        /// chkSubSectorOtro control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkSubSectorOtro;
-        
-        /// <summary>
-        /// lblSubSectorOtro control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSubSectorOtro;
-        
-        /// <summary>
         /// txtSubSectorOtro control.
         /// </summary>
         /// <remarks>
