@@ -16,7 +16,7 @@ namespace CDNEU
         UsuarioNego usuarioNego = new UsuarioNego();
         RedesSocialesNego redesSocialesNego = new RedesSocialesNego();
         FormacionAcademicaNego formacionAcademicaNego = new FormacionAcademicaNego();
-        ActividadProfesionalNego actividadProfecionalNego = new ActividadProfesionalNego();
+        ActividadProfesionalNego actividadProfesionalNego = new ActividadProfesionalNego();
 
         static int globalIdUsuario;
         static string globalNombreUsuario;
@@ -84,7 +84,6 @@ namespace CDNEU
             redesSociale.Twitter = txtTwitter.Text;
             redesSociale.Youtube = txtYouTube.Text;
             redesSociale.Flicker = txtFlicker.Text;
-
             redesSociale.RedesSociales = chkRedesSociales.Checked;
             redesSociale.MercadoLibre = chkMercadoLibre.Checked;
             redesSociale.SitioWeb = chkSitioWeb.Checked;
@@ -94,7 +93,6 @@ namespace CDNEU
             redesSociale.Personal = chkPersonal.Checked;
             redesSociale.ShowRoom = chkShowRoom.Checked;
             redesSociale.NoComercializa = chkNoComercializa.Checked;
-
             redesSociale.PlataformaOtra = txtPlataformaComercializacionOtro.Text;
             redesSocialesNego.ActualizarRedesSociales(redesSociale);
         }
@@ -171,8 +169,52 @@ namespace CDNEU
             txtCarreraDuracion.Text = formacionAcademica.CarreraDuracion;
             txtCarreraInstitucion.Text = formacionAcademica.CarreraInstitucion;
 
-            //PROXIMA: ACTIVIDAD PROFESIONAL
-            ActividadProfesional actividadProfesional = actividadProfecionalNego.ObtenerActividadProfesional(globalIdUsuario);
+            //ACTIVIDAD PROFESIONAL
+            ActividadProfesional actividadProfesional = actividadProfesionalNego.ObtenerActividadProfesional(globalIdUsuario);
+            if (actividadProfesional.DisciplinaProyectual == null) { RBDisciplinaProyectual.SelectedValue = ""; }
+            else if (actividadProfesional.DisciplinaProyectual == "1") { RBDisciplinaProyectual.SelectedValue = "1"; }
+            else if (actividadProfesional.DisciplinaProyectual == "2") { RBDisciplinaProyectual.SelectedValue = "2"; }
+            else if (actividadProfesional.DisciplinaProyectual == "3") { RBDisciplinaProyectual.SelectedValue = "3"; }
+            else if (actividadProfesional.DisciplinaProyectual == "4") { RBDisciplinaProyectual.SelectedValue = "4"; }
+            else if (actividadProfesional.DisciplinaProyectual == "5") { RBDisciplinaProyectual.SelectedValue = "5"; }
+            else if (actividadProfesional.DisciplinaProyectual == "6") { RBDisciplinaProyectual.SelectedValue = "6"; }
+            else if (actividadProfesional.DisciplinaProyectual == "7") { RBDisciplinaProyectual.SelectedValue = "7"; }
+            else if (actividadProfesional.DisciplinaProyectual == "8") { RBDisciplinaProyectual.SelectedValue = "8"; }
+            else if (actividadProfesional.DisciplinaProyectual == "9") { RBDisciplinaProyectual.SelectedValue = "9"; }
+            txtDisciplinaProyectualOtra.Text = actividadProfesional.DisciplinaProyectualOtra;
+            if (actividadProfesional.Accesorios == true) { chkAPAccesorios.Checked = true; }
+            else { chkAPAccesorios.Checked = false; }
+            if (actividadProfesional.Calzado == true) { chkAPCalzado.Checked = true; }
+            else { chkAPCalzado.Checked = false; }
+            if (actividadProfesional.Ceramica == true) { chkAPCeramica.Checked = true; }
+            else { chkAPCeramica.Checked = false; }
+            if (actividadProfesional.DisenioEditorial == true) { chkAPDisenioEditorial.Checked = true; }
+            else { chkAPDisenioEditorial.Checked = false; }
+            if (actividadProfesional.DisenioWeb == true) { chkAPDisenioWeb.Checked = true; }
+            else { chkAPDisenioWeb.Checked = false; }
+            if (actividadProfesional.Joyeria == true) { chkAPJoyeria.Checked = true; }
+            else { chkAPJoyeria.Checked = false; }
+            if (actividadProfesional.Madera == true) { chkAPMadera.Checked = true; }
+            else { chkAPMadera.Checked = false; }
+            if (actividadProfesional.Mobiliario == true) { chkAPMobiliario.Checked = true; }
+            else { chkAPMobiliario.Checked = false; }
+            if (actividadProfesional.Tejidos == true) { chkAPTejidos.Checked = true; }
+            else { chkAPTejidos.Checked = false; }
+            txtSubSectorOtro.Text = actividadProfesional.SubSectorOtro;
+            if (actividadProfesional.TipoRelacionLaboral == null) { RBTipoRelacionLaboral.SelectedValue = ""; }
+            else if (actividadProfesional.TipoRelacionLaboral == "1") { RBTipoRelacionLaboral.SelectedValue = "1"; }
+            else if (actividadProfesional.TipoRelacionLaboral == "2") { RBTipoRelacionLaboral.SelectedValue = "2"; }
+            else if (actividadProfesional.TipoRelacionLaboral == "3") { RBTipoRelacionLaboral.SelectedValue = "3"; }
+            else if (actividadProfesional.TipoRelacionLaboral == "4") { RBTipoRelacionLaboral.SelectedValue = "4"; }
+            else if (actividadProfesional.TipoRelacionLaboral == "5") { RBTipoRelacionLaboral.SelectedValue = "5"; }
+            else if (actividadProfesional.TipoRelacionLaboral == "6") { RBTipoRelacionLaboral.SelectedValue = "6"; }
+            txtTipoRelacionLaboralOtro.Text = actividadProfesional.TipoRelacionLaboralOtro;
+            txtNombreEmpresa.Text = actividadProfesional.NombreEmpresaAP;
+            txtLinkEmpresa.Text = actividadProfesional.LinkEmpresaAP;
+            txtDescripcion.Text = actividadProfesional.DescripcionAP;
+
+            //PROXIMA: ACTIVIDAD INDEPENDIENTE
+
 
 
 
@@ -196,9 +238,7 @@ namespace CDNEU
             formacionAcademica.CarreraAnioCursada = txtCarreraAnioCursada.Text;
             formacionAcademica.CarreraDuracion = txtCarreraDuracion.Text;
             formacionAcademica.CarreraInstitucion = txtCarreraInstitucion.Text;
-
             formacionAcademicaNego.ActualizarFormacionAcademica(formacionAcademica);
-
             Response.Redirect("EditarUsuario.aspx");
         }
 
@@ -208,23 +248,28 @@ namespace CDNEU
 
             ActividadProfesional actividadProfesional = new ActividadProfesional();
 
-            actividadProfesional.IdActividadProfesional = actividadProfecionalNego.ObtenerActividadProfesionalSegunIdUsuario(globalIdUsuario);
+            actividadProfesional.IdActividadProfesional = actividadProfesionalNego.ObtenerActividadProfesionalSegunIdUsuario(globalIdUsuario);
             actividadProfesional.IdUsuario = globalIdUsuario;
             actividadProfesional.DisciplinaProyectual = RBDisciplinaProyectual.SelectedValue.ToString();
             actividadProfesional.DisciplinaProyectualOtra = txtDisciplinaProyectualOtra.Text;
-            //actividadProfesional.SubSector = RBSubSector.SelectedValue.ToString();
+            actividadProfesional.Accesorios = chkAPAccesorios.Checked;
+            actividadProfesional.Calzado = chkAPCalzado.Checked;
+            actividadProfesional.Ceramica = chkAPCeramica.Checked;
+            actividadProfesional.DisenioEditorial = chkAPDisenioEditorial.Checked;
+            actividadProfesional.DisenioWeb = chkAPDisenioWeb.Checked;
+            actividadProfesional.Joyeria = chkAPJoyeria.Checked;
+            actividadProfesional.Madera = chkAPMadera.Checked;
+            actividadProfesional.Mobiliario = chkAPMobiliario.Checked;
+            actividadProfesional.Tejidos = chkAPTejidos.Checked;
             actividadProfesional.SubSectorOtro = txtSubSectorOtro.Text;
             actividadProfesional.TipoRelacionLaboral = RBTipoRelacionLaboral.SelectedValue.ToString();
             actividadProfesional.TipoRelacionLaboralOtro = txtTipoRelacionLaboralOtro.Text;
             actividadProfesional.NombreEmpresaAP = txtNombreEmpresa.Text;
             actividadProfesional.LinkEmpresaAP = txtLinkEmpresa.Text;
             actividadProfesional.DescripcionAP = txtDescripcion.Text;
-
-            actividadProfecionalNego.ActualizarActividadProfesional(actividadProfesional);
-
+            actividadProfesionalNego.ActualizarActividadProfesional(actividadProfesional);
             Response.Redirect("EditarUsuario.aspx");
         }
-
 
 
 

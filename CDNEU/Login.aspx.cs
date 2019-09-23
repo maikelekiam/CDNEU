@@ -80,25 +80,21 @@ namespace CDNEU
 
             usuario.Grupo = 2;
             usuario.Activo = true;
-
             usuario.NombreUsuario = txtRegistroNombreUsuario.Text;
-
             //ESTE IF DESPUES HABRIA QUE QUITARLO
             if (usuario.NombreUsuario == "marcamone") { usuario.Grupo = 1; }
-
             usuario.Contrasenia = txtRegistroContrasenia.Text;
             usuario.Nombre = txtRegistroNombre.Text;
             usuario.Apellido = txtRegistroApellido.Text;
             usuario.CorreoElectronico = txtRegistroCorreoElectronico.Text;
-
             usuario.Telefono = null;
             usuario.Edad = null;
-
             usuario.Localidad = null;
             usuario.Provincia = "Neuquen";
 
             idUsuarioTemporal = usuarioNego.GuardarUsuario(usuario);
 
+            //Ademas, creo un objeto FotoPerfil
             GuardarFotoPerfil();
 
             //Creo un objeto de tipo RedesSociales
@@ -132,15 +128,27 @@ namespace CDNEU
             actividadProfesional.IdUsuario = idUsuarioTemporal;
             actividadProfesional.DisciplinaProyectual = null;
             actividadProfesional.DisciplinaProyectualOtra = null;
-
+            //actividadProfesional.Accesorios = null;
+            //actividadProfesional.Calzado = null;
+            //actividadProfesional.Ceramica = null;
+            //actividadProfesional.DisenioEditorial = null;
+            //actividadProfesional.DisenioWeb = null;
+            //actividadProfesional.Joyeria = null;
+            //actividadProfesional.Madera = null;
+            //actividadProfesional.Mobiliario = null;
+            //actividadProfesional.Tejidos = null;
             actividadProfesional.SubSectorOtro = null;
             actividadProfesional.TipoRelacionLaboral = null;
             actividadProfesional.TipoRelacionLaboralOtro = null;
             actividadProfesional.NombreEmpresaAP = null;
             actividadProfesional.LinkEmpresaAP = null;
             actividadProfesional.DescripcionAP = null;
-
             actividadProfesionalNego.GuardarActividadProfesional(actividadProfesional);
+
+            //Creo un objeto de tipo ActividadIndependiente
+
+
+
 
 
         }
