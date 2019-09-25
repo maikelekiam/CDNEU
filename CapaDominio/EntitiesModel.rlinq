@@ -99,8 +99,8 @@
         <orm:field name="telefono" property="Telefono" behavior="readwrite" uniqueId="29337358-8f17-48e9-92ce-cf038b355671" type="System.String">
           <orm:column name="telefono" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="edad" property="Edad" behavior="readwrite" uniqueId="71e189e1-1ba5-4373-8c06-1fbff510a664" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
-          <orm:column name="edad" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:field name="edad" property="Edad" behavior="readwrite" uniqueId="71e189e1-1ba5-4373-8c06-1fbff510a664" type="System.String">
+          <orm:column name="edad" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
         <orm:field name="domicilio" property="Domicilio" behavior="readwrite" uniqueId="75465b12-9602-43d8-a4ae-23b19da2e1e6" type="System.String">
           <orm:column name="domicilio" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
@@ -483,14 +483,11 @@
         <orm:field name="estaRegistrado" property="EstaRegistrado" behavior="readwrite" uniqueId="bee9e578-b85e-4489-92fb-51ee8e30dca7" type="System.String">
           <orm:column name="estaRegistrado" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="tieneEmpleadosACargo" property="TieneEmpleadosACargo" behavior="readwrite" uniqueId="295f9629-ce62-4234-b91e-26ba1aec8c4c" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
-          <orm:column name="tieneEmpleadosACargo" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:field name="tieneEmpleadosACargo" property="TieneEmpleadosACargo" behavior="readwrite" uniqueId="295f9629-ce62-4234-b91e-26ba1aec8c4c" type="System.String">
+          <orm:column name="tieneEmpleadosACargo" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="cantidadEmpleadosACargo" property="CantidadEmpleadosACargo" behavior="readwrite" uniqueId="80c63afa-78a3-41fc-8ebe-ce91d27d8731" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
-          <orm:column name="cantidadEmpleadosACargo" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
-        </orm:field>
-        <orm:field name="comoComercializa" property="ComoComercializa" behavior="readwrite" uniqueId="520607ca-746d-4a19-a267-eb121df97963" type="System.String">
-          <orm:column name="comoComercializa" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:field name="cantidadEmpleadosACargo" property="CantidadEmpleadosACargo" behavior="readwrite" uniqueId="80c63afa-78a3-41fc-8ebe-ce91d27d8731" type="System.String">
+          <orm:column name="cantidadEmpleadosACargo" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
         <orm:field name="nombreEspacio" property="NombreEspacio" behavior="readwrite" uniqueId="40462ad3-5600-41f3-ad09-326ddcf5947f" type="System.String">
           <orm:column name="nombreEspacio" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
@@ -501,17 +498,56 @@
         <orm:field name="ubicacionEspacio" property="UbicacionEspacio" behavior="readwrite" uniqueId="2f1ff70e-1dd9-40bf-a454-3942dfdb3472" type="System.String">
           <orm:column name="ubicacionEspacio" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
-        <orm:field name="comoFinanciaActividadProfesional" property="ComoFinanciaActividadProfesional" behavior="readwrite" uniqueId="45c88ea3-a536-45fc-9feb-d516a9c49e01" type="System.String">
-          <orm:column name="comoFinanciaActividadProfesional" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        </orm:field>
-        <orm:field name="realizaVentasServicios" property="RealizaVentasServicios" behavior="readwrite" uniqueId="1a3351f5-fcbc-4c7d-b638-6189a4958bdb" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
-          <orm:column name="realizaVentasServicios" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:field name="realizaVentasServicios" property="RealizaVentasServicios" behavior="readwrite" uniqueId="1a3351f5-fcbc-4c7d-b638-6189a4958bdb" type="System.String">
+          <orm:column name="realizaVentasServicios" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
         <orm:field name="cuales" property="Cuales" behavior="readwrite" uniqueId="999b83f2-89ac-48ae-adb5-8bf78a934cf6" type="System.String">
           <orm:column name="cuales" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
         <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="4ebfdea8-57a9-45bc-8f45-9eaccd17ed0a" type="System.Int32">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="estaRegistradoOtro" property="EstaRegistradoOtro" behavior="readwrite" uniqueId="3d4581fd-f5d9-4923-9ce6-f1d1a3eb3d2b" type="System.String">
+          <orm:column name="estaRegistradoOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="sociosCapitalistas" property="SociosCapitalistas" behavior="readwrite" uniqueId="34bd529d-f7a1-43b7-b97d-8982f8e429a0" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="sociosCapitalistas" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="prestamosEntidadesPublicas" property="PrestamosEntidadesPublicas" behavior="readwrite" uniqueId="bbc23e8a-0a26-4485-af2d-7a0e976453cb" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="prestamosEntidadesPublicas" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="prestamosEntidadesPrivadas" property="PrestamosEntidadesPrivadas" behavior="readwrite" uniqueId="6e5071d4-b218-4889-bcea-dca476c35c02" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="prestamosEntidadesPrivadas" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="oficinaPrivadaShowroom" property="OficinaPrivadaShowroom" behavior="readwrite" uniqueId="c009f7ec-f6f9-4861-aa98-a7d9c8bac1a2" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="oficinaPrivadaShowroom" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="localEstudioPropio" property="LocalEstudioPropio" behavior="readwrite" uniqueId="1bce7571-ca22-43d2-a67d-47c58e37ea4b" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="localEstudioPropio" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="localesOficinas" property="LocalesOficinas" behavior="readwrite" uniqueId="4a16cc7b-c8cb-428f-a015-9b0aa345acf5" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="localesOficinas" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="internetWeb" property="InternetWeb" behavior="readwrite" uniqueId="c4f3b58e-0c2f-49ec-87b1-310a6b839868" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="internetWeb" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="internetRedesSociales" property="InternetRedesSociales" behavior="readwrite" uniqueId="3b3e0a7d-788b-42f9-9cdc-929f823d6832" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="internetRedesSociales" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="gananciasGenerales" property="GananciasGenerales" behavior="readwrite" uniqueId="761827ae-167b-4d66-a94d-ca0863cd51a9" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="gananciasGenerales" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="fondosPropios" property="FondosPropios" behavior="readwrite" uniqueId="2ac36fe4-2e59-4c9e-a5ae-f07a1ec68617" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="fondosPropios" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="feriasItinerantes" property="FeriasItinerantes" behavior="readwrite" uniqueId="6274a2cb-1447-49a9-a4c0-3e27c74fb837" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="feriasItinerantes" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="comoFinanciaActividadProfesionalOtro" property="ComoFinanciaActividadProfesionalOtro" behavior="readwrite" uniqueId="3ea970d6-0f39-4b93-aa11-f0af165053ae" type="System.String">
+          <orm:column name="comoFinanciaActividadProfesionalOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="comoComercializaOtro" property="ComoComercializaOtro" behavior="readwrite" uniqueId="ae426f15-be25-4ff7-9c17-1ef165e94240" type="System.String">
+          <orm:column name="comoComercializaOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
         <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="2cbae501-0081-408c-99c3-51b4e0109e55" type="CapaDominio.Usuario">
           <orm:reference uniqueId="495d58b3-9a7d-4f74-b1c4-ddfe66a40ce2" association-name="ActividadIndependienteHasUsuario">
@@ -647,7 +683,7 @@
         <orm:column name="nombre" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="apellido" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="telefono" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="edad" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="edad" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="domicilio" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="provincia" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="localidad" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
@@ -760,16 +796,28 @@
         <orm:column name="tiempoActividadFuncionamiento" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="situacionTributaria" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="estaRegistrado" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="tieneEmpleadosACargo" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
-        <orm:column name="cantidadEmpleadosACargo" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
-        <orm:column name="comoComercializa" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="tieneEmpleadosACargo" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="cantidadEmpleadosACargo" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="nombreEspacio" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="linkEspacio" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="ubicacionEspacio" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="comoFinanciaActividadProfesional" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
-        <orm:column name="realizaVentasServicios" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="realizaVentasServicios" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="cuales" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="estaRegistradoOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="sociosCapitalistas" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="prestamosEntidadesPublicas" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="prestamosEntidadesPrivadas" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="oficinaPrivadaShowroom" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="localEstudioPropio" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="localesOficinas" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="internetWeb" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="internetRedesSociales" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="gananciasGenerales" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="fondosPropios" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="feriasItinerantes" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="comoFinanciaActividadProfesionalOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="comoComercializaOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:constraint name="FK_ActividadIndependiente_Usuario" delete-action="dbdefaultrule" destination-table="Usuario">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:constraint>
@@ -888,7 +936,7 @@
       <Property Id="e0c2d2dd-1327-47fb-94c7-21bf4d86760c" name="Contrasenia" label="Contrasenia : String" kind="Persistent" fieldName="contrasenia" />
       <Property Id="0be296dc-1005-452d-917d-663737ea1c42" name="CorreoElectronico" label="CorreoElectronico : String" kind="Persistent" fieldName="correoElectronico" />
       <Property Id="75465b12-9602-43d8-a4ae-23b19da2e1e6" name="Domicilio" label="Domicilio : String" kind="Persistent" fieldName="domicilio" />
-      <Property Id="71e189e1-1ba5-4373-8c06-1fbff510a664" name="Edad" type="Int32" label="Edad : Int32" nullable="true" kind="Persistent" fieldName="edad" />
+      <Property Id="71e189e1-1ba5-4373-8c06-1fbff510a664" name="Edad" label="Edad : String" nullable="true" kind="Persistent" fieldName="edad" />
       <Property Id="ae6a0f07-b63e-41fa-a5f5-32c355e489ef" name="Grupo" type="Int32" label="Grupo : Int32" kind="Persistent" fieldName="grupo" />
       <Property Id="dd320d4f-1f93-4f49-a8e1-c2238b16b28b" name="Nombre" label="Nombre : String" kind="Persistent" fieldName="nombre" />
       <Property Id="24adc16a-da84-47cc-ab36-b1ae8442df96" name="NombreUsuario" label="NombreUsuario : String" kind="Persistent" fieldName="nombreUsuario" />
@@ -1153,21 +1201,33 @@
     </DomainClass>
     <DomainClass Id="74ea2a9d-896c-443a-bf00-dabb21918a12" name="ActividadIndependiente" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdActividadIndependiente">
       <Property Id="d927c270-64da-463b-81e3-9b09b2ece8f3" name="IdActividadIndependiente" type="Int32" label="IdActividadIndependiente : Int32" kind="Persistent" identity="true" fieldName="idActividadIndependiente" />
-      <Property Id="80c63afa-78a3-41fc-8ebe-ce91d27d8731" name="CantidadEmpleadosACargo" type="Int32" label="CantidadEmpleadosACargo : Int32" nullable="true" kind="Persistent" fieldName="cantidadEmpleadosACargo" />
-      <Property Id="520607ca-746d-4a19-a267-eb121df97963" name="ComoComercializa" label="ComoComercializa : String" kind="Persistent" fieldName="comoComercializa" />
-      <Property Id="45c88ea3-a536-45fc-9feb-d516a9c49e01" name="ComoFinanciaActividadProfesional" label="ComoFinanciaActividadProfesional : String" kind="Persistent" fieldName="comoFinanciaActividadProfesional" />
+      <Property Id="80c63afa-78a3-41fc-8ebe-ce91d27d8731" name="CantidadEmpleadosACargo" label="CantidadEmpleadosACargo : String" nullable="true" kind="Persistent" fieldName="cantidadEmpleadosACargo" />
       <Property Id="999b83f2-89ac-48ae-adb5-8bf78a934cf6" name="Cuales" label="Cuales : String" kind="Persistent" fieldName="cuales" />
       <Property Id="bee9e578-b85e-4489-92fb-51ee8e30dca7" name="EstaRegistrado" label="EstaRegistrado : String" kind="Persistent" fieldName="estaRegistrado" />
       <Property Id="4ebfdea8-57a9-45bc-8f45-9eaccd17ed0a" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
       <Property Id="2fbe6d1b-060a-4aa9-a0a8-7dfd267e8814" name="LinkEspacio" label="LinkEspacio : String" kind="Persistent" fieldName="linkEspacio" />
       <Property Id="40462ad3-5600-41f3-ad09-326ddcf5947f" name="NombreEspacio" label="NombreEspacio : String" kind="Persistent" fieldName="nombreEspacio" />
-      <Property Id="1a3351f5-fcbc-4c7d-b638-6189a4958bdb" name="RealizaVentasServicios" type="Boolean" label="RealizaVentasServicios : Boolean" nullable="true" kind="Persistent" fieldName="realizaVentasServicios" />
+      <Property Id="1a3351f5-fcbc-4c7d-b638-6189a4958bdb" name="RealizaVentasServicios" label="RealizaVentasServicios : String" nullable="true" kind="Persistent" fieldName="realizaVentasServicios" />
       <Property Id="b984d84a-9bb7-418b-96a5-e2b40dd7a2c4" name="SituacionTributaria" label="SituacionTributaria : String" kind="Persistent" fieldName="situacionTributaria" />
       <Property Id="00ef336a-c058-45b0-a46a-1f0bc34b0060" name="SustentoDeVida" label="SustentoDeVida : String" kind="Persistent" fieldName="sustentoDeVida" />
       <Property Id="f98bbf7c-8c65-4192-89c0-dc688fb831be" name="SustentoDeVidaOtro" label="SustentoDeVidaOtro : String" kind="Persistent" fieldName="sustentoDeVidaOtro" />
       <Property Id="c81b9b4c-6d25-42d1-84b1-e43b6fee8e90" name="TiempoActividadFuncionamiento" label="TiempoActividadFuncionamiento : String" kind="Persistent" fieldName="tiempoActividadFuncionamiento" />
-      <Property Id="295f9629-ce62-4234-b91e-26ba1aec8c4c" name="TieneEmpleadosACargo" type="Boolean" label="TieneEmpleadosACargo : Boolean" nullable="true" kind="Persistent" fieldName="tieneEmpleadosACargo" />
+      <Property Id="295f9629-ce62-4234-b91e-26ba1aec8c4c" name="TieneEmpleadosACargo" label="TieneEmpleadosACargo : String" nullable="true" kind="Persistent" fieldName="tieneEmpleadosACargo" />
       <Property Id="2f1ff70e-1dd9-40bf-a454-3942dfdb3472" name="UbicacionEspacio" label="UbicacionEspacio : String" kind="Persistent" fieldName="ubicacionEspacio" />
+      <Property Id="3d4581fd-f5d9-4923-9ce6-f1d1a3eb3d2b" name="EstaRegistradoOtro" label="EstaRegistradoOtro : String" kind="Persistent" fieldName="estaRegistradoOtro" />
+      <Property Id="34bd529d-f7a1-43b7-b97d-8982f8e429a0" name="SociosCapitalistas" type="Boolean" label="SociosCapitalistas : Boolean" nullable="true" kind="Persistent" fieldName="sociosCapitalistas" />
+      <Property Id="bbc23e8a-0a26-4485-af2d-7a0e976453cb" name="PrestamosEntidadesPublicas" type="Boolean" label="PrestamosEntidadesPublicas : Boolean" nullable="true" kind="Persistent" fieldName="prestamosEntidadesPublicas" />
+      <Property Id="6e5071d4-b218-4889-bcea-dca476c35c02" name="PrestamosEntidadesPrivadas" type="Boolean" label="PrestamosEntidadesPrivadas : Boolean" nullable="true" kind="Persistent" fieldName="prestamosEntidadesPrivadas" />
+      <Property Id="c009f7ec-f6f9-4861-aa98-a7d9c8bac1a2" name="OficinaPrivadaShowroom" type="Boolean" label="OficinaPrivadaShowroom : Boolean" nullable="true" kind="Persistent" fieldName="oficinaPrivadaShowroom" />
+      <Property Id="1bce7571-ca22-43d2-a67d-47c58e37ea4b" name="LocalEstudioPropio" type="Boolean" label="LocalEstudioPropio : Boolean" nullable="true" kind="Persistent" fieldName="localEstudioPropio" />
+      <Property Id="4a16cc7b-c8cb-428f-a015-9b0aa345acf5" name="LocalesOficinas" type="Boolean" label="LocalesOficinas : Boolean" nullable="true" kind="Persistent" fieldName="localesOficinas" />
+      <Property Id="c4f3b58e-0c2f-49ec-87b1-310a6b839868" name="InternetWeb" type="Boolean" label="InternetWeb : Boolean" nullable="true" kind="Persistent" fieldName="internetWeb" />
+      <Property Id="3b3e0a7d-788b-42f9-9cdc-929f823d6832" name="InternetRedesSociales" type="Boolean" label="InternetRedesSociales : Boolean" nullable="true" kind="Persistent" fieldName="internetRedesSociales" />
+      <Property Id="761827ae-167b-4d66-a94d-ca0863cd51a9" name="GananciasGenerales" type="Boolean" label="GananciasGenerales : Boolean" nullable="true" kind="Persistent" fieldName="gananciasGenerales" />
+      <Property Id="2ac36fe4-2e59-4c9e-a5ae-f07a1ec68617" name="FondosPropios" type="Boolean" label="FondosPropios : Boolean" nullable="true" kind="Persistent" fieldName="fondosPropios" />
+      <Property Id="6274a2cb-1447-49a9-a4c0-3e27c74fb837" name="FeriasItinerantes" type="Boolean" label="FeriasItinerantes : Boolean" nullable="true" kind="Persistent" fieldName="feriasItinerantes" />
+      <Property Id="3ea970d6-0f39-4b93-aa11-f0af165053ae" name="ComoFinanciaActividadProfesionalOtro" label="ComoFinanciaActividadProfesionalOtro : String" kind="Persistent" fieldName="comoFinanciaActividadProfesionalOtro" />
+      <Property Id="ae426f15-be25-4ff7-9c17-1ef165e94240" name="ComoComercializaOtro" label="ComoComercializaOtro : String" kind="Persistent" fieldName="comoComercializaOtro" />
       <AssociationTargets>
         <Association Id="495d58b3-9a7d-4f74-b1c4-ddfe66a40ce2" SourceMultiplicity="One" name="ActividadIndependienteHasUsuario">
           <DomainClassMoniker name="/ModeloDeDominio/Usuario" />

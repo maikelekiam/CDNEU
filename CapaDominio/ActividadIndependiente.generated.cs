@@ -102,8 +102,8 @@ namespace CapaDominio
 			}
 		}
 		
-		private bool? tieneEmpleadosACargo;
-		public virtual bool? TieneEmpleadosACargo
+		private string tieneEmpleadosACargo;
+		public virtual string TieneEmpleadosACargo
 		{
 			get
 			{
@@ -115,8 +115,8 @@ namespace CapaDominio
 			}
 		}
 		
-		private int? cantidadEmpleadosACargo;
-		public virtual int? CantidadEmpleadosACargo
+		private string cantidadEmpleadosACargo;
+		public virtual string CantidadEmpleadosACargo
 		{
 			get
 			{
@@ -125,19 +125,6 @@ namespace CapaDominio
 			set
 			{
 				this.cantidadEmpleadosACargo = value;
-			}
-		}
-		
-		private string comoComercializa;
-		public virtual string ComoComercializa
-		{
-			get
-			{
-				return this.comoComercializa;
-			}
-			set
-			{
-				this.comoComercializa = value;
 			}
 		}
 		
@@ -180,21 +167,8 @@ namespace CapaDominio
 			}
 		}
 		
-		private string comoFinanciaActividadProfesional;
-		public virtual string ComoFinanciaActividadProfesional
-		{
-			get
-			{
-				return this.comoFinanciaActividadProfesional;
-			}
-			set
-			{
-				this.comoFinanciaActividadProfesional = value;
-			}
-		}
-		
-		private bool? realizaVentasServicios;
-		public virtual bool? RealizaVentasServicios
+		private string realizaVentasServicios;
+		public virtual string RealizaVentasServicios
 		{
 			get
 			{
@@ -229,6 +203,188 @@ namespace CapaDominio
 			set
 			{
 				this.idUsuario = value;
+			}
+		}
+		
+		private string estaRegistradoOtro;
+		public virtual string EstaRegistradoOtro
+		{
+			get
+			{
+				return this.estaRegistradoOtro;
+			}
+			set
+			{
+				this.estaRegistradoOtro = value;
+			}
+		}
+		
+		private bool? sociosCapitalistas;
+		public virtual bool? SociosCapitalistas
+		{
+			get
+			{
+				return this.sociosCapitalistas;
+			}
+			set
+			{
+				this.sociosCapitalistas = value;
+			}
+		}
+		
+		private bool? prestamosEntidadesPublicas;
+		public virtual bool? PrestamosEntidadesPublicas
+		{
+			get
+			{
+				return this.prestamosEntidadesPublicas;
+			}
+			set
+			{
+				this.prestamosEntidadesPublicas = value;
+			}
+		}
+		
+		private bool? prestamosEntidadesPrivadas;
+		public virtual bool? PrestamosEntidadesPrivadas
+		{
+			get
+			{
+				return this.prestamosEntidadesPrivadas;
+			}
+			set
+			{
+				this.prestamosEntidadesPrivadas = value;
+			}
+		}
+		
+		private bool? oficinaPrivadaShowroom;
+		public virtual bool? OficinaPrivadaShowroom
+		{
+			get
+			{
+				return this.oficinaPrivadaShowroom;
+			}
+			set
+			{
+				this.oficinaPrivadaShowroom = value;
+			}
+		}
+		
+		private bool? localEstudioPropio;
+		public virtual bool? LocalEstudioPropio
+		{
+			get
+			{
+				return this.localEstudioPropio;
+			}
+			set
+			{
+				this.localEstudioPropio = value;
+			}
+		}
+		
+		private bool? localesOficinas;
+		public virtual bool? LocalesOficinas
+		{
+			get
+			{
+				return this.localesOficinas;
+			}
+			set
+			{
+				this.localesOficinas = value;
+			}
+		}
+		
+		private bool? internetWeb;
+		public virtual bool? InternetWeb
+		{
+			get
+			{
+				return this.internetWeb;
+			}
+			set
+			{
+				this.internetWeb = value;
+			}
+		}
+		
+		private bool? internetRedesSociales;
+		public virtual bool? InternetRedesSociales
+		{
+			get
+			{
+				return this.internetRedesSociales;
+			}
+			set
+			{
+				this.internetRedesSociales = value;
+			}
+		}
+		
+		private bool? gananciasGenerales;
+		public virtual bool? GananciasGenerales
+		{
+			get
+			{
+				return this.gananciasGenerales;
+			}
+			set
+			{
+				this.gananciasGenerales = value;
+			}
+		}
+		
+		private bool? fondosPropios;
+		public virtual bool? FondosPropios
+		{
+			get
+			{
+				return this.fondosPropios;
+			}
+			set
+			{
+				this.fondosPropios = value;
+			}
+		}
+		
+		private bool? feriasItinerantes;
+		public virtual bool? FeriasItinerantes
+		{
+			get
+			{
+				return this.feriasItinerantes;
+			}
+			set
+			{
+				this.feriasItinerantes = value;
+			}
+		}
+		
+		private string comoFinanciaActividadProfesionalOtro;
+		public virtual string ComoFinanciaActividadProfesionalOtro
+		{
+			get
+			{
+				return this.comoFinanciaActividadProfesionalOtro;
+			}
+			set
+			{
+				this.comoFinanciaActividadProfesionalOtro = value;
+			}
+		}
+		
+		private string comoComercializaOtro;
+		public virtual string ComoComercializaOtro
+		{
+			get
+			{
+				return this.comoComercializaOtro;
+			}
+			set
+			{
+				this.comoComercializaOtro = value;
 			}
 		}
 		

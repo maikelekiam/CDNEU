@@ -19,14 +19,16 @@
         <div class="col-md-6">
             <table>
                 <tr>
-                    <h2>Subir Nueva Foto</h2>
+                    <h2>Nueva Foto</h2>
                     <asp:FileUpload ID="fuImagen" runat="server" CssClass="col-md-4 form-control" BorderStyle="Dashed"></asp:FileUpload>
                 </tr>
                 <tr>
                     <td style="border: none; border-width: thin" colspan="2">
                         <asp:Image ID="imgTemporal" runat="server" Style="max-width: 250px; border: solid; max-height: 250px;" />
-                        <asp:Button ID="btnMostrarFotoTemporal" runat="server" CssClass="boton_azul" Text="Mostrar" OnClick="btnMostrarFotoTemporal_Click" />
                     </td>
+                </tr>
+                <tr>
+                    <asp:Button ID="btnMostrarFotoTemporal" runat="server" CssClass="boton_azul" Text="Presione para Mostrar" OnClick="btnMostrarFotoTemporal_Click" />
                 </tr>
                 <tr>
                     <td style="text-align: center" colspan="2">
@@ -35,11 +37,24 @@
                     </td>
                 </tr>
             </table>
+
+
             <table>
-                <asp:Button ID="btnRotarDerecha" runat="server" CssClass="boton_rojo" Text="Rotar Derecha" OnClick="btnRotarDerecha_Click" />
-                <asp:Button ID="btnRotarIzquierda" runat="server" CssClass="boton_rojo" Text="Rotar Izquierda" OnClick="btnRotarIzquierda_Click" />
+                <tr>
+                    <td>-
+                    </td>
+                </tr>
             </table>
-            
+            <table>
+                <tr>
+
+                    <asp:Button ID="btnRotarDerecha" runat="server" CssClass="boton_azul" Text="Rotar Derecha" OnClick="btnRotarDerecha_Click" />
+                    <asp:Button ID="btnRotarIzquierda" runat="server" CssClass="boton_azul" Text="Rotar Izquierda" OnClick="btnRotarIzquierda_Click" />
+                    <asp:Button ID="btnRotar180" runat="server" CssClass="boton_azul" Text="Rotar 180°" OnClick="btnRotar180_Click" />
+
+                </tr>
+            </table>
+
             <asp:Button ID="btnGuardarFoto" runat="server" CssClass="boton_verde" Text="Guardar Foto" OnClick="btnGuardarFoto_Click" />
 
         </div>

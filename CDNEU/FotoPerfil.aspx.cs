@@ -21,7 +21,7 @@ namespace CDNEU
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblMensaje.Text = "";
             txtId.Text = Session["userid"].ToString();
             Ver();
         }
@@ -34,7 +34,6 @@ namespace CDNEU
 
         private void GuardarFoto()
         {
-            //bait = fuImagen.FileBytes;
             idUsuarioTemporal = Convert.ToInt32(Session["userid"].ToString());
 
             if (fuImagen.HasFile)
@@ -52,14 +51,6 @@ namespace CDNEU
                     fotoUsuarioNego.ActualizarFotoUsuario(fotoUsuarioNuevo);
 
                     lblMensaje.Text = "La foto se guardó correctamente.";
-
-                    //SqlConnection conectar = new ConectarSQLServer().conectarSQL();
-                    //String comandoInsertar = "UPDATE FotoUsuario SET fotoUsuarioCodigo=@fotoUsuarioCodigo, idUsuario=@idUsuario WHERE idUsuario=@idUsuario";
-                    //SqlCommand comando = new SqlCommand(comandoInsertar, conectar);
-                    //comando.Parameters.Add("@fotoUsuarioCodigo", SqlDbType.VarBinary).Value = fuImagen.FileBytes;
-                    //comando.Parameters.Add("@idUsuario", SqlDbType.Int).Value = Session["userid"].ToString();
-                    //comando.ExecuteNonQuery();
-                    //lblMensaje.Text = "La foto se guardó correctamente.";
                 }
                 catch (Exception ex)
                 {
@@ -81,14 +72,6 @@ namespace CDNEU
                     fotoUsuarioNego.ActualizarFotoUsuario(fotoUsuarioNuevo);
 
                     lblMensaje.Text = "La foto se guardó correctamente.";
-
-                    //SqlConnection conectar = new ConectarSQLServer().conectarSQL();
-                    //String comandoInsertar = "UPDATE FotoUsuario SET fotoUsuarioCodigo=@fotoUsuarioCodigo, idUsuario=@idUsuario WHERE idUsuario=@idUsuario";
-                    //SqlCommand comando = new SqlCommand(comandoInsertar, conectar);
-                    //comando.Parameters.Add("@fotoUsuarioCodigo", SqlDbType.VarBinary).Value = bait;
-                    //comando.Parameters.Add("@idUsuario", SqlDbType.Int).Value = Session["userid"].ToString();
-                    //comando.ExecuteNonQuery();
-                    //lblMensaje.Text = "La foto se guardó correctamente.";
                 }
                 catch (Exception ex)
                 {
@@ -106,6 +89,7 @@ namespace CDNEU
         {
             if (fuImagen.HasFile)
             {
+                lblMensaje.Text = "";
                 GuardarFotoTemporal();
                 MostrarFotoTemporal();
             }
@@ -129,17 +113,6 @@ namespace CDNEU
                 fotoUsuarioNego.ActualizarFotoUsuario(fotoUsuarioNuevo);
 
                 lblMensaje.Text = "La foto se cargó correctamente.";
-
-
-                //SqlConnection conectar = new ConectarSQLServer().conectarSQL();
-                //String comandoInsertar = "UPDATE FotoUsuario SET idUsuario=@idUsuario, fotoTemporal=@fotoTemporal WHERE idUsuario=@idUsuario";
-                //SqlCommand comando = new SqlCommand(comandoInsertar, conectar);
-                //comando.Parameters.Add("@fotoTemporal", SqlDbType.VarBinary).Value = fuImagen.FileBytes;
-                //bait = fuImagen.FileBytes;
-                //comando.Parameters.Add("@idUsuario", SqlDbType.Int).Value = Session["userid"].ToString();
-                //comando.ExecuteNonQuery();
-                //lblMensaje.Text = "La foto se cargó correctamente.";
-
             }
             catch (Exception ex)
             {
@@ -170,6 +143,7 @@ namespace CDNEU
 
                 GuardarFotoRotada();
                 MostrarFotoTemporal();
+                lblMensaje.Text = "Giro 90° hacia la derecha.";
             }
         }
 
@@ -201,19 +175,6 @@ namespace CDNEU
                 fotoUsuarioNuevo.FotoTemporal = bait;
 
                 fotoUsuarioNego.ActualizarFotoUsuario(fotoUsuarioNuevo);
-
-                lblMensaje.Text = "La foto rotó 90° hacia la derecha.";
-
-
-                //SqlConnection conectar = new ConectarSQLServer().conectarSQL();
-                //String comandoInsertar = "UPDATE FotoUsuario SET idUsuario=@idUsuario, fotoTemporal=@fotoTemporal WHERE idUsuario=@idUsuario";
-                //SqlCommand comando = new SqlCommand(comandoInsertar, conectar);
-                //comando.Parameters.Add("@fotoTemporal", SqlDbType.VarBinary).Value = fuImagen.FileBytes;
-                //bait = fuImagen.FileBytes;
-                //comando.Parameters.Add("@idUsuario", SqlDbType.Int).Value = Session["userid"].ToString();
-                //comando.ExecuteNonQuery();
-                //lblMensaje.Text = "La foto se cargó correctamente.";
-
             }
             catch (Exception ex)
             {
@@ -235,12 +196,26 @@ namespace CDNEU
 
                 GuardarFotoRotada();
                 MostrarFotoTemporal();
+                lblMensaje.Text = "Giro 90° hacia la izquierda.";
             }
         }
 
-        
-        
+        protected void btnRotar180_Click(object sender, EventArgs e)
+        {
+            if (bait != null)
+            {
+                byte[] b1 = bait;
 
-        
+                Image imagen01 = byteArrayToImage(b1);
+
+                imagen01.RotateFlip(RotateFlipType.Rotate180FlipNone);
+
+                bait = imageToByteArray(imagen01);
+
+                GuardarFotoRotada();
+                MostrarFotoTemporal();
+                lblMensaje.Text = "Giro 180°";
+            }
+        }
     }
 }

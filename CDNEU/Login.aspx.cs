@@ -19,6 +19,7 @@ namespace CDNEU
         RedesSocialesNego redesSocialesNego = new RedesSocialesNego();
         FormacionAcademicaNego formacionAcademicaNego = new FormacionAcademicaNego();
         ActividadProfesionalNego actividadProfesionalNego = new ActividadProfesionalNego();
+        ActividadIndependienteNego actividadIndependienteNego = new ActividadIndependienteNego();
 
         public static int idUsuarioTemporal;
 
@@ -57,12 +58,10 @@ namespace CDNEU
             //Aca hay que guardar los datos de Registro del Usuario NUEVO
 
             if ((txtRegistroNombreUsuario.Text != "")
-                && (txtRegistroContrasenia.Text != "")
+                && (txtRegistroContrasenia.Text != "") //Aca tendria que haber otro campo para verificar la contraseña...
                 && (txtRegistroNombre.Text != "")
                 && (txtRegistroApellido.Text != "")
                 && (txtRegistroCorreoElectronico.Text != "")
-                //&& (txtRegistroEdad.Text != "")
-                //&& (txtRegistroTelefono.Text != "")
                 )
             {
                 GuardarUsuario();
@@ -81,71 +80,113 @@ namespace CDNEU
             usuario.Grupo = 2;
             usuario.Activo = true;
             usuario.NombreUsuario = txtRegistroNombreUsuario.Text;
-            //ESTE IF DESPUES HABRIA QUE QUITARLO
+            //***ESTE IF DESPUES HABRIA QUE QUITARLO***//
             if (usuario.NombreUsuario == "marcamone") { usuario.Grupo = 1; }
+            //***FIN***//
             usuario.Contrasenia = txtRegistroContrasenia.Text;
             usuario.Nombre = txtRegistroNombre.Text;
             usuario.Apellido = txtRegistroApellido.Text;
             usuario.CorreoElectronico = txtRegistroCorreoElectronico.Text;
-            usuario.Telefono = null;
-            usuario.Edad = null;
-            usuario.Localidad = null;
+            usuario.Telefono = "";
+            usuario.Edad = "";
+            usuario.Domicilio = "";
+            usuario.Localidad = "";
             usuario.Provincia = "Neuquen";
-
             idUsuarioTemporal = usuarioNego.GuardarUsuario(usuario);
 
-            //Ademas, creo un objeto FotoPerfil
+            //Creo un objeto FotoPerfil
             GuardarFotoPerfil();
 
-            //Creo un objeto de tipo RedesSociales
+            //Creo un objeto RedesSociales
             RedesSociale redesSociale = new RedesSociale();
             redesSociale.IdUsuario = idUsuarioTemporal;
-            redesSociale.Facebook = null;
-            redesSociale.Instagram = null;
-            redesSociale.Twitter = null;
-            redesSociale.Youtube = null;
-            redesSociale.Flicker = null;
+            redesSociale.Facebook = "";
+            redesSociale.Instagram = "";
+            redesSociale.Twitter = "";
+            redesSociale.Youtube = "";
+            redesSociale.Flicker = "";
+            redesSociale.RedesSociales = false;
+            redesSociale.MercadoLibre = false;
+            redesSociale.SitioWeb = false;
+            redesSociale.TiendaNube = false;
+            redesSociale.Ferias = false;
+            redesSociale.LocalComercial = false;
+            redesSociale.Personal = false;
+            redesSociale.ShowRoom = false;
+            redesSociale.NoComercializa = false;
+            redesSociale.PlataformaOtra = "";
             redesSocialesNego.GuardarRedesSociales(redesSociale);
 
-            //Creo un objeto de tipo FormacionAcademica
+            //Creo un objeto FormacionAcademica
             FormacionAcademica formacionAcademica = new FormacionAcademica();
             formacionAcademica.IdUsuario = idUsuarioTemporal;
-            formacionAcademica.EstudiosOficiales = null;
-            formacionAcademica.EstudiosOficialesOtro = null;
-            formacionAcademica.TituloObtenido = null;
-            formacionAcademica.InstitucionEmisoraTitulo = null;
-            formacionAcademica.OtrosEstudios = null;
-            formacionAcademica.EsEstudiante = null;
-            formacionAcademica.CarreraNombre = null;
-            formacionAcademica.CarreraAnioIngreso = null;
-            formacionAcademica.CarreraAnioCursada = null;
-            formacionAcademica.CarreraDuracion = null;
-            formacionAcademica.CarreraInstitucion = null;
+            formacionAcademica.EstudiosOficiales = "";
+            formacionAcademica.EstudiosOficialesOtro = "";
+            formacionAcademica.TituloObtenido = "";
+            formacionAcademica.InstitucionEmisoraTitulo = "";
+            formacionAcademica.OtrosEstudios = "";
+            formacionAcademica.EsEstudiante = false;
+            formacionAcademica.CarreraNombre = "";
+            formacionAcademica.CarreraAnioIngreso = "";
+            formacionAcademica.CarreraAnioCursada = "";
+            formacionAcademica.CarreraDuracion = "";
+            formacionAcademica.CarreraInstitucion = "";
             formacionAcademicaNego.GuardarFormacionAcademica(formacionAcademica);
 
-            //Creo un objeto de tipo ActividadProfesional
+            //Creo un objeto ActividadProfesional
             ActividadProfesional actividadProfesional = new ActividadProfesional();
             actividadProfesional.IdUsuario = idUsuarioTemporal;
-            actividadProfesional.DisciplinaProyectual = null;
-            actividadProfesional.DisciplinaProyectualOtra = null;
-            //actividadProfesional.Accesorios = null;
-            //actividadProfesional.Calzado = null;
-            //actividadProfesional.Ceramica = null;
-            //actividadProfesional.DisenioEditorial = null;
-            //actividadProfesional.DisenioWeb = null;
-            //actividadProfesional.Joyeria = null;
-            //actividadProfesional.Madera = null;
-            //actividadProfesional.Mobiliario = null;
-            //actividadProfesional.Tejidos = null;
-            actividadProfesional.SubSectorOtro = null;
-            actividadProfesional.TipoRelacionLaboral = null;
-            actividadProfesional.TipoRelacionLaboralOtro = null;
-            actividadProfesional.NombreEmpresaAP = null;
-            actividadProfesional.LinkEmpresaAP = null;
-            actividadProfesional.DescripcionAP = null;
+            actividadProfesional.DisciplinaProyectual = "";
+            actividadProfesional.DisciplinaProyectualOtra = "";
+            actividadProfesional.Accesorios = false;
+            actividadProfesional.Calzado = false;
+            actividadProfesional.Ceramica = false;
+            actividadProfesional.DisenioEditorial = false;
+            actividadProfesional.DisenioWeb = false;
+            actividadProfesional.Joyeria = false;
+            actividadProfesional.Madera = false;
+            actividadProfesional.Mobiliario = false;
+            actividadProfesional.Tejidos = false;
+            actividadProfesional.SubSectorOtro = "";
+            actividadProfesional.TipoRelacionLaboral = "";
+            actividadProfesional.TipoRelacionLaboralOtro = "";
+            actividadProfesional.NombreEmpresaAP = "";
+            actividadProfesional.LinkEmpresaAP = "";
+            actividadProfesional.DescripcionAP = "";
             actividadProfesionalNego.GuardarActividadProfesional(actividadProfesional);
 
-            //Creo un objeto de tipo ActividadIndependiente
+            //Creo un objeto ActividadIndependiente
+            ActividadIndependiente actividadIndependiente = new ActividadIndependiente();
+            actividadIndependiente.IdUsuario = idUsuarioTemporal;
+            actividadIndependiente.SustentoDeVida = "";
+            actividadIndependiente.SustentoDeVidaOtro = "";
+            actividadIndependiente.TiempoActividadFuncionamiento = "";
+            actividadIndependiente.SituacionTributaria = "";
+            actividadIndependiente.EstaRegistrado = "";
+            actividadIndependiente.EstaRegistradoOtro = "";
+            actividadIndependiente.TieneEmpleadosACargo = "";
+            actividadIndependiente.CantidadEmpleadosACargo = "";
+            actividadIndependiente.FeriasItinerantes = false;
+            actividadIndependiente.InternetWeb = false;
+            actividadIndependiente.InternetRedesSociales = false;
+            actividadIndependiente.LocalEstudioPropio = false;
+            actividadIndependiente.LocalesOficinas = false;
+            actividadIndependiente.OficinaPrivadaShowroom = false;
+            actividadIndependiente.ComoComercializaOtro = "";
+            actividadIndependiente.NombreEspacio = "";
+            actividadIndependiente.LinkEspacio = "";
+            actividadIndependiente.UbicacionEspacio = "";
+            actividadIndependiente.FondosPropios = false;
+            actividadIndependiente.PrestamosEntidadesPrivadas = false;
+            actividadIndependiente.PrestamosEntidadesPublicas = false;
+            actividadIndependiente.SociosCapitalistas = false;
+            actividadIndependiente.GananciasGenerales = false;
+            actividadIndependiente.ComoFinanciaActividadProfesionalOtro = "";
+            actividadIndependiente.RealizaVentasServicios = "";
+            actividadIndependiente.Cuales = "";
+            actividadIndependienteNego.GuardarActividadIndependiente(actividadIndependiente);
+
+            //Creo un objeto de tipo Producto
 
 
 
@@ -154,23 +195,20 @@ namespace CDNEU
         }
         private void GuardarFotoPerfil()
         {
+            string ruta = Server.MapPath("~/imagenes/FotoUsuariosx2.png");
+
+            byte[] imagenEmpleado = File.ReadAllBytes(ruta);
+
             try
             {
                 FotoUsuario fotoUsuarioNuevo = new FotoUsuario();
-
-                FileUpload fu = new FileUpload();
-                fu.SaveAs("../imagenes/FotoUsuariosx2.png");
-
-                fotoUsuarioNuevo.FotoUsuarioCodigo = fu.FileBytes;
+                fotoUsuarioNuevo.FotoUsuarioCodigo = imagenEmpleado;
                 fotoUsuarioNuevo.IdUsuario = idUsuarioTemporal;
-                fotoUsuarioNuevo.FotoTemporal = fu.FileBytes;
-
+                fotoUsuarioNuevo.FotoTemporal = imagenEmpleado;
                 fotoUsuarioNego.GuardarFotoUsuario(fotoUsuarioNuevo);
-
             }
             catch (Exception ex)
             {
-
             }
         }
     }

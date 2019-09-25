@@ -17,6 +17,7 @@ namespace CDNEU
         RedesSocialesNego redesSocialesNego = new RedesSocialesNego();
         FormacionAcademicaNego formacionAcademicaNego = new FormacionAcademicaNego();
         ActividadProfesionalNego actividadProfesionalNego = new ActividadProfesionalNego();
+        ActividadIndependienteNego actividadIndependienteNego = new ActividadIndependienteNego();
 
         static int globalIdUsuario;
         static string globalNombreUsuario;
@@ -71,8 +72,7 @@ namespace CDNEU
             usuario.Domicilio = txtDatosPersonalesDomicilio.Text;
             usuario.Localidad = txtDatosPersonalesLocalidad.Text;
             usuario.Provincia = txtDatosPersonalesProvincia.Text;
-            if (txtDatosPersonalesEdad.Text == "") { usuario.Edad = null; }
-            else { usuario.Edad = Convert.ToInt32(txtDatosPersonalesEdad.Text); }
+            usuario.Edad = txtDatosPersonalesEdad.Text;
             usuarioNego.ActualizarUsuario(usuario);
 
             //REDES SOCIALES
@@ -100,120 +100,95 @@ namespace CDNEU
         private void ObtenerUsuario()
         {
             Usuario usuario = usuarioNego.ObtenerUsuario(globalIdUsuario);
-            txtDatosPersonalesNombre.Text = usuario.Nombre.ToString();
-            txtDatosPersonalesApellido.Text = usuario.Apellido.ToString();
-            txtDatosPersonalesCorreoElectronico.Text = usuario.CorreoElectronico.ToString();
-
-            if (usuario.Telefono == null) { txtDatosPersonalesTelefono.Text = null; }
-            else { txtDatosPersonalesTelefono.Text = usuario.Telefono.ToString(); }
-            if (usuario.Domicilio == null) { txtDatosPersonalesDomicilio.Text = null; }
-            else { txtDatosPersonalesDomicilio.Text = usuario.Domicilio.ToString(); }
-            if (usuario.Localidad == null) { txtDatosPersonalesLocalidad.Text = null; }
-            else { txtDatosPersonalesLocalidad.Text = usuario.Localidad; }
-            if (usuario.Provincia == null) { txtDatosPersonalesProvincia.Text = null; }
-            else { txtDatosPersonalesProvincia.Text = usuario.Provincia; }
-            if (usuario.Edad == null) { txtDatosPersonalesEdad.Text = null; }
-            else { txtDatosPersonalesEdad.Text = Convert.ToString(usuario.Edad); }
+            txtDatosPersonalesNombre.Text = usuario.Nombre;
+            txtDatosPersonalesApellido.Text = usuario.Apellido;
+            txtDatosPersonalesCorreoElectronico.Text = usuario.CorreoElectronico;
+            txtDatosPersonalesTelefono.Text = usuario.Telefono;
+            txtDatosPersonalesDomicilio.Text = usuario.Domicilio;
+            txtDatosPersonalesLocalidad.Text = usuario.Localidad;
+            txtDatosPersonalesProvincia.Text = usuario.Provincia;
+            txtDatosPersonalesEdad.Text = usuario.Edad;
 
             RedesSociale redesSociale = redesSocialesNego.ObtenerRedesSociale(globalIdUsuario);
-            if (redesSociale.Facebook == null) { txtFacebook.Text = null; }
-            else { txtFacebook.Text = redesSociale.Facebook; }
-            if (redesSociale.Instagram == null) { txtInstagram.Text = null; }
-            else { txtInstagram.Text = redesSociale.Instagram; }
-            if (redesSociale.Twitter == null) { txtTwitter.Text = null; }
-            else { txtTwitter.Text = redesSociale.Twitter; }
-            if (redesSociale.Youtube == null) { txtYouTube.Text = null; }
-            else { txtYouTube.Text = redesSociale.Youtube; }
-            if (redesSociale.Flicker == null) { txtFlicker.Text = null; }
-            else { txtFlicker.Text = redesSociale.Flicker; }
-            if (redesSociale.RedesSociales == true) { chkRedesSociales.Checked = true; }
-            else { chkRedesSociales.Checked = false; }
-            if (redesSociale.MercadoLibre == true) { chkMercadoLibre.Checked = true; }
-            else { chkMercadoLibre.Checked = false; }
-            if (redesSociale.SitioWeb == true) { chkSitioWeb.Checked = true; }
-            else { chkSitioWeb.Checked = false; }
-            if (redesSociale.TiendaNube == true) { chkTiendaNube.Checked = true; }
-            else { chkTiendaNube.Checked = false; }
-            if (redesSociale.Ferias == true) { chkFerias.Checked = true; }
-            else { chkFerias.Checked = false; }
-            if (redesSociale.LocalComercial == true) { chkLocalComercial.Checked = true; }
-            else { chkLocalComercial.Checked = false; }
-            if (redesSociale.Personal == true) { chkPersonal.Checked = true; }
-            else { chkPersonal.Checked = false; }
-            if (redesSociale.ShowRoom == true) { chkShowRoom.Checked = true; }
-            else { chkShowRoom.Checked = false; }
-            if (redesSociale.NoComercializa == true) { chkNoComercializa.Checked = true; }
-            else { chkNoComercializa.Checked = false; }
+            txtFacebook.Text = redesSociale.Facebook;
+            txtInstagram.Text = redesSociale.Instagram;
+            txtTwitter.Text = redesSociale.Twitter;
+            txtYouTube.Text = redesSociale.Youtube;
+            txtFlicker.Text = redesSociale.Flicker;
+            chkRedesSociales.Checked = redesSociale.RedesSociales.Value;
+            chkMercadoLibre.Checked = redesSociale.MercadoLibre.Value;
+            chkSitioWeb.Checked = redesSociale.SitioWeb.Value;
+            chkTiendaNube.Checked = redesSociale.TiendaNube.Value;
+            chkFerias.Checked = redesSociale.Ferias.Value;
+            chkLocalComercial.Checked = redesSociale.LocalComercial.Value;
+            chkPersonal.Checked = redesSociale.Personal.Value;
+            chkShowRoom.Checked = redesSociale.ShowRoom.Value;
+            chkNoComercializa.Checked = redesSociale.NoComercializa.Value;
             txtPlataformaComercializacionOtro.Text = redesSociale.PlataformaOtra;
 
             FormacionAcademica formacionAcademica = formacionAcademicaNego.ObtenerFormacionAcademica(globalIdUsuario);
-            if (formacionAcademica.EstudiosOficiales == null) { RBEstudiosOficiales.SelectedValue = ""; }
-            else if (formacionAcademica.EstudiosOficiales == "Secundario") { RBEstudiosOficiales.SelectedValue = "Secundario"; }
-            else if (formacionAcademica.EstudiosOficiales == "Terciario") { RBEstudiosOficiales.SelectedValue = "Terciario"; }
-            else if (formacionAcademica.EstudiosOficiales == "Universitario") { RBEstudiosOficiales.SelectedValue = "Universitario"; }
-            else if (formacionAcademica.EstudiosOficiales == "Posgrado") { RBEstudiosOficiales.SelectedValue = "Posgrado"; }
-            else if (formacionAcademica.EstudiosOficiales == "Otro") { RBEstudiosOficiales.SelectedValue = "Otro"; }
-            if (formacionAcademica.EstudiosOficialesOtro == null) { txtEstudiosOficialesOtro.Text = ""; }
-            else { txtEstudiosOficialesOtro.Text = formacionAcademica.EstudiosOficialesOtro; }
-            if (formacionAcademica.TituloObtenido == null) { txtTituloObtenido.Text = ""; }
-            else { txtTituloObtenido.Text = formacionAcademica.TituloObtenido; }
-            if (formacionAcademica.InstitucionEmisoraTitulo == null) { txtInstitucionEmisoraTitulo.Text = ""; }
-            else { txtInstitucionEmisoraTitulo.Text = formacionAcademica.InstitucionEmisoraTitulo; }
-            if (formacionAcademica.OtrosEstudios == null) { txtOtrosEstudios.Text = ""; }
-            else { txtOtrosEstudios.Text = formacionAcademica.OtrosEstudios; }
-            if (formacionAcademica.EsEstudiante == true) { chkEstudianteVinculado.Checked = true; }
-            else { chkEstudianteVinculado.Checked = false; }
+            RBEstudiosOficiales.SelectedValue = formacionAcademica.EstudiosOficiales;
+            txtEstudiosOficialesOtro.Text = formacionAcademica.EstudiosOficialesOtro;
+            txtTituloObtenido.Text = formacionAcademica.TituloObtenido;
+            txtInstitucionEmisoraTitulo.Text = formacionAcademica.InstitucionEmisoraTitulo;
+            txtOtrosEstudios.Text = formacionAcademica.OtrosEstudios;
+            chkEstudianteVinculado.Checked = formacionAcademica.EsEstudiante.Value;
             txtCarreraNombre.Text = formacionAcademica.CarreraNombre;
             txtCarreraAnioIngreso.Text = formacionAcademica.CarreraAnioIngreso;
             txtCarreraAnioCursada.Text = formacionAcademica.CarreraAnioCursada;
             txtCarreraDuracion.Text = formacionAcademica.CarreraDuracion;
             txtCarreraInstitucion.Text = formacionAcademica.CarreraInstitucion;
 
-            //ACTIVIDAD PROFESIONAL
             ActividadProfesional actividadProfesional = actividadProfesionalNego.ObtenerActividadProfesional(globalIdUsuario);
-            if (actividadProfesional.DisciplinaProyectual == null) { RBDisciplinaProyectual.SelectedValue = ""; }
-            else if (actividadProfesional.DisciplinaProyectual == "1") { RBDisciplinaProyectual.SelectedValue = "1"; }
-            else if (actividadProfesional.DisciplinaProyectual == "2") { RBDisciplinaProyectual.SelectedValue = "2"; }
-            else if (actividadProfesional.DisciplinaProyectual == "3") { RBDisciplinaProyectual.SelectedValue = "3"; }
-            else if (actividadProfesional.DisciplinaProyectual == "4") { RBDisciplinaProyectual.SelectedValue = "4"; }
-            else if (actividadProfesional.DisciplinaProyectual == "5") { RBDisciplinaProyectual.SelectedValue = "5"; }
-            else if (actividadProfesional.DisciplinaProyectual == "6") { RBDisciplinaProyectual.SelectedValue = "6"; }
-            else if (actividadProfesional.DisciplinaProyectual == "7") { RBDisciplinaProyectual.SelectedValue = "7"; }
-            else if (actividadProfesional.DisciplinaProyectual == "8") { RBDisciplinaProyectual.SelectedValue = "8"; }
-            else if (actividadProfesional.DisciplinaProyectual == "9") { RBDisciplinaProyectual.SelectedValue = "9"; }
+            RBDisciplinaProyectual.SelectedValue = actividadProfesional.DisciplinaProyectual;
             txtDisciplinaProyectualOtra.Text = actividadProfesional.DisciplinaProyectualOtra;
-            if (actividadProfesional.Accesorios == true) { chkAPAccesorios.Checked = true; }
-            else { chkAPAccesorios.Checked = false; }
-            if (actividadProfesional.Calzado == true) { chkAPCalzado.Checked = true; }
-            else { chkAPCalzado.Checked = false; }
-            if (actividadProfesional.Ceramica == true) { chkAPCeramica.Checked = true; }
-            else { chkAPCeramica.Checked = false; }
-            if (actividadProfesional.DisenioEditorial == true) { chkAPDisenioEditorial.Checked = true; }
-            else { chkAPDisenioEditorial.Checked = false; }
-            if (actividadProfesional.DisenioWeb == true) { chkAPDisenioWeb.Checked = true; }
-            else { chkAPDisenioWeb.Checked = false; }
-            if (actividadProfesional.Joyeria == true) { chkAPJoyeria.Checked = true; }
-            else { chkAPJoyeria.Checked = false; }
-            if (actividadProfesional.Madera == true) { chkAPMadera.Checked = true; }
-            else { chkAPMadera.Checked = false; }
-            if (actividadProfesional.Mobiliario == true) { chkAPMobiliario.Checked = true; }
-            else { chkAPMobiliario.Checked = false; }
-            if (actividadProfesional.Tejidos == true) { chkAPTejidos.Checked = true; }
-            else { chkAPTejidos.Checked = false; }
+            chkAPAccesorios.Checked = actividadProfesional.Accesorios.Value;
+            chkAPCalzado.Checked = actividadProfesional.Calzado.Value;
+            chkAPCeramica.Checked = actividadProfesional.Ceramica.Value;
+            chkAPDisenioEditorial.Checked = actividadProfesional.DisenioEditorial.Value;
+            chkAPDisenioWeb.Checked = actividadProfesional.DisenioWeb.Value;
+            chkAPJoyeria.Checked = actividadProfesional.Joyeria.Value;
+            chkAPMadera.Checked = actividadProfesional.Madera.Value;
+            chkAPMobiliario.Checked = actividadProfesional.Mobiliario.Value;
+            chkAPTejidos.Checked = actividadProfesional.Tejidos.Value;
             txtSubSectorOtro.Text = actividadProfesional.SubSectorOtro;
-            if (actividadProfesional.TipoRelacionLaboral == null) { RBTipoRelacionLaboral.SelectedValue = ""; }
-            else if (actividadProfesional.TipoRelacionLaboral == "1") { RBTipoRelacionLaboral.SelectedValue = "1"; }
-            else if (actividadProfesional.TipoRelacionLaboral == "2") { RBTipoRelacionLaboral.SelectedValue = "2"; }
-            else if (actividadProfesional.TipoRelacionLaboral == "3") { RBTipoRelacionLaboral.SelectedValue = "3"; }
-            else if (actividadProfesional.TipoRelacionLaboral == "4") { RBTipoRelacionLaboral.SelectedValue = "4"; }
-            else if (actividadProfesional.TipoRelacionLaboral == "5") { RBTipoRelacionLaboral.SelectedValue = "5"; }
-            else if (actividadProfesional.TipoRelacionLaboral == "6") { RBTipoRelacionLaboral.SelectedValue = "6"; }
+            RBTipoRelacionLaboral.SelectedValue = actividadProfesional.TipoRelacionLaboral;
             txtTipoRelacionLaboralOtro.Text = actividadProfesional.TipoRelacionLaboralOtro;
             txtNombreEmpresa.Text = actividadProfesional.NombreEmpresaAP;
             txtLinkEmpresa.Text = actividadProfesional.LinkEmpresaAP;
             txtDescripcion.Text = actividadProfesional.DescripcionAP;
+                        
+            ActividadIndependiente actividadIndependiente = actividadIndependienteNego.ObtenerActividadIndependiente(globalIdUsuario);
+            RBSustentoDeVida.SelectedValue = actividadIndependiente.SustentoDeVida;
+            txtSustentoDeVidaOtro.Text = actividadIndependiente.SustentoDeVidaOtro;
+            RBActividadFuncionamiento.SelectedValue = actividadIndependiente.TiempoActividadFuncionamiento;
+            RBSituacionTributaria.SelectedValue = actividadIndependiente.SituacionTributaria;
+            RBEstaRegistrado.SelectedValue = actividadIndependiente.EstaRegistrado;
+            txtEstaRegistradoOtro.Text = actividadIndependiente.EstaRegistradoOtro;
+            RBEmpleadosACargo.SelectedValue = actividadIndependiente.TieneEmpleadosACargo;
+            txtCantidadEmpleadosACargo.Text = actividadIndependiente.CantidadEmpleadosACargo;
+            chkAIFerias.Checked = actividadIndependiente.FeriasItinerantes.Value;
+            chkAIInternetWeb.Checked = actividadIndependiente.InternetWeb.Value;
+            chkAIInternetRedesSociales.Checked = actividadIndependiente.InternetRedesSociales.Value;
+            chkAILocalEstudioPropio.Checked = actividadIndependiente.LocalEstudioPropio.Value;
+            chkAILocalesOficinas.Checked = actividadIndependiente.LocalesOficinas.Value;
+            chkAIOficinaPrivadaShowroom.Checked = actividadIndependiente.OficinaPrivadaShowroom.Value;
+            txtComercializaOtro.Text = actividadIndependiente.ComoComercializaOtro;
+            txtComercializaNombreEspacio.Text = actividadIndependiente.NombreEspacio;
+            txtComercializaLinkEspacio.Text = actividadIndependiente.LinkEspacio;
+            txtComercializaUbicacionEspacio.Text = actividadIndependiente.UbicacionEspacio;
+            chkAIFondosPropios.Checked = actividadIndependiente.FondosPropios.Value;
+            chkAIPrestamosEntidadesPrivadas.Checked = actividadIndependiente.PrestamosEntidadesPrivadas.Value;
+            chkAIPrestamosEntidadesPublicas.Checked = actividadIndependiente.PrestamosEntidadesPublicas.Value;
+            chkAISociosCapitalistas.Checked = actividadIndependiente.SociosCapitalistas.Value;
+            chkAIGananciasGeneradas.Checked = actividadIndependiente.GananciasGenerales.Value;
+            txtFinanciaActividadProfesionalOtro.Text = actividadIndependiente.ComoFinanciaActividadProfesionalOtro;
+            RBVentasOtrosPaises.SelectedValue = actividadIndependiente.RealizaVentasServicios;
+            txtVentasOtrosPaisesCuales.Text = actividadIndependiente.Cuales;
 
-            //PROXIMA: ACTIVIDAD INDEPENDIENTE
+            //PROXIMA: PRODUCTO
+
+
 
 
 
@@ -238,6 +213,7 @@ namespace CDNEU
             formacionAcademica.CarreraAnioCursada = txtCarreraAnioCursada.Text;
             formacionAcademica.CarreraDuracion = txtCarreraDuracion.Text;
             formacionAcademica.CarreraInstitucion = txtCarreraInstitucion.Text;
+            //if (formacionAcademica.EstudiosOficiales != "5") { formacionAcademica.EstudiosOficialesOtro = null; }
             formacionAcademicaNego.ActualizarFormacionAcademica(formacionAcademica);
             Response.Redirect("EditarUsuario.aspx");
         }
@@ -267,7 +243,46 @@ namespace CDNEU
             actividadProfesional.NombreEmpresaAP = txtNombreEmpresa.Text;
             actividadProfesional.LinkEmpresaAP = txtLinkEmpresa.Text;
             actividadProfesional.DescripcionAP = txtDescripcion.Text;
+            //if (actividadProfesional.DisciplinaProyectual != "9") { actividadProfesional.DisciplinaProyectualOtra = null; }
             actividadProfesionalNego.ActualizarActividadProfesional(actividadProfesional);
+            Response.Redirect("EditarUsuario.aspx");
+        }
+
+        protected void btnEnviarDatosActividadIndependiente_Click(object sender, EventArgs e)
+        {
+            //ACTIVIDAD INDEPENDIENTE
+
+            ActividadIndependiente actividadIndependiente = new ActividadIndependiente();
+
+            actividadIndependiente.IdActividadIndependiente = actividadIndependienteNego.ObtenerActividadIndependienteSegunIdUsuario(globalIdUsuario);
+            actividadIndependiente.IdUsuario = globalIdUsuario;
+            actividadIndependiente.SustentoDeVida = RBSustentoDeVida.SelectedValue.ToString();
+            actividadIndependiente.SustentoDeVidaOtro = txtSustentoDeVidaOtro.Text;
+            actividadIndependiente.TiempoActividadFuncionamiento = RBActividadFuncionamiento.SelectedValue.ToString();
+            actividadIndependiente.SituacionTributaria = RBSituacionTributaria.SelectedValue.ToString();
+            actividadIndependiente.EstaRegistrado = RBEstaRegistrado.SelectedValue.ToString();
+            actividadIndependiente.EstaRegistradoOtro = txtEstaRegistradoOtro.Text;
+            actividadIndependiente.TieneEmpleadosACargo = RBEmpleadosACargo.SelectedValue.ToString();
+            actividadIndependiente.CantidadEmpleadosACargo = txtCantidadEmpleadosACargo.Text;
+            actividadIndependiente.FeriasItinerantes = chkAIFerias.Checked;
+            actividadIndependiente.InternetWeb = chkAIInternetWeb.Checked;
+            actividadIndependiente.InternetRedesSociales = chkAIInternetRedesSociales.Checked;
+            actividadIndependiente.LocalEstudioPropio = chkAILocalEstudioPropio.Checked;
+            actividadIndependiente.LocalesOficinas = chkAILocalesOficinas.Checked;
+            actividadIndependiente.OficinaPrivadaShowroom = chkAIOficinaPrivadaShowroom.Checked;
+            actividadIndependiente.ComoComercializaOtro = txtComercializaOtro.Text;
+            actividadIndependiente.NombreEspacio = txtComercializaNombreEspacio.Text;
+            actividadIndependiente.LinkEspacio = txtComercializaLinkEspacio.Text;
+            actividadIndependiente.UbicacionEspacio = txtComercializaUbicacionEspacio.Text;
+            actividadIndependiente.FondosPropios = chkAIFondosPropios.Checked;
+            actividadIndependiente.PrestamosEntidadesPrivadas = chkAIPrestamosEntidadesPrivadas.Checked;
+            actividadIndependiente.PrestamosEntidadesPublicas = chkAIPrestamosEntidadesPublicas.Checked;
+            actividadIndependiente.SociosCapitalistas = chkAISociosCapitalistas.Checked;
+            actividadIndependiente.GananciasGenerales = chkAIGananciasGeneradas.Checked;
+            actividadIndependiente.ComoFinanciaActividadProfesionalOtro = txtFinanciaActividadProfesionalOtro.Text;
+            actividadIndependiente.RealizaVentasServicios = RBVentasOtrosPaises.SelectedValue.ToString();
+            actividadIndependiente.Cuales = txtVentasOtrosPaisesCuales.Text;
+            actividadIndependienteNego.ActualizarActividadIndependiente(actividadIndependiente);
             Response.Redirect("EditarUsuario.aspx");
         }
 

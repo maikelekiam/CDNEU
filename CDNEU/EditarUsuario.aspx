@@ -486,11 +486,11 @@
                                                 RepeatColumns="1"
                                                 RepeatLayout="Table"
                                                 CellPadding="10">
-                                                <asp:ListItem>Secundario</asp:ListItem>
-                                                <asp:ListItem>Terciario</asp:ListItem>
-                                                <asp:ListItem>Universitario</asp:ListItem>
-                                                <asp:ListItem>Posgrado</asp:ListItem>
-                                                <asp:ListItem>Otro</asp:ListItem>
+                                                <asp:ListItem Value="1">Secundario</asp:ListItem>
+                                                <asp:ListItem Value="2">Terciario</asp:ListItem>
+                                                <asp:ListItem Value="3">Universitario</asp:ListItem>
+                                                <asp:ListItem Value="4">Posgrado</asp:ListItem>
+                                                <asp:ListItem Value="5">Otro</asp:ListItem>
                                             </asp:RadioButtonList>
                                         </td>
                                     </tr>
@@ -661,7 +661,7 @@
                                                 <asp:ListItem Value="6">Diseño Industrial</asp:ListItem>
                                                 <asp:ListItem Value="7">Diseño Gráfico</asp:ListItem>
                                                 <asp:ListItem Value="8">Diseño Multimedia</asp:ListItem>
-                                                <asp:ListItem Value="9">Otra</asp:ListItem>
+                                                <asp:ListItem Value="10">Otra</asp:ListItem>
                                             </asp:RadioButtonList>
                                         </td>
                                     </tr>
@@ -735,7 +735,7 @@
                                     <asp:ListItem Value="3">Por Proyecto</asp:ListItem>
                                     <asp:ListItem Value="4">Free Lance</asp:ListItem>
                                     <asp:ListItem Value="5">Abono mensual por horas dedicadas</asp:ListItem>
-                                    <asp:ListItem Value="6">Otro</asp:ListItem>
+                                    <asp:ListItem Value="10">Otro</asp:ListItem>
                                 </asp:RadioButtonList>
                                 <asp:TextBox ID="txtTipoRelacionLaboralOtro" runat="server" CssClass="form-control" />
                                 <table>
@@ -833,8 +833,8 @@
                                                 RepeatColumns="1"
                                                 RepeatLayout="Table"
                                                 CellPadding="10">
-                                                <asp:ListItem>Si</asp:ListItem>
-                                                <asp:ListItem>No</asp:ListItem>
+                                                <asp:ListItem Value="1">Si</asp:ListItem>
+                                                <asp:ListItem Value="2">No</asp:ListItem>
                                             </asp:RadioButtonList>
                                         </td>
                                     </tr>
@@ -847,10 +847,8 @@
                                         <td style="height: 30px"></td>
                                     </tr>
                                 </table>
-                                <table>
-                                    <h4>Tiempo durante el cual su actividad se ha mantenido en funcionamiento
-                                    </h4>
-                                </table>
+                                <h4>Tiempo durante el cual su actividad se ha mantenido en funcionamiento
+                                </h4>
                                 <table>
                                     <tr>
                                         <td>
@@ -859,10 +857,10 @@
                                                 RepeatColumns="1"
                                                 RepeatLayout="Table"
                                                 CellPadding="10">
-                                                <asp:ListItem>0 a 1 año</asp:ListItem>
-                                                <asp:ListItem>1 a 3 años</asp:ListItem>
-                                                <asp:ListItem>3 a 5 años</asp:ListItem>
-                                                <asp:ListItem>mas de 5 años</asp:ListItem>
+                                                <asp:ListItem Value="1">0 a 1 año</asp:ListItem>
+                                                <asp:ListItem Value="2">1 a 3 años</asp:ListItem>
+                                                <asp:ListItem Value="3">3 a 5 años</asp:ListItem>
+                                                <asp:ListItem Value="4">mas de 5 años</asp:ListItem>
                                             </asp:RadioButtonList>
                                         </td>
                                     </tr>
@@ -882,10 +880,10 @@
                                                 RepeatColumns="1"
                                                 RepeatLayout="Table"
                                                 CellPadding="10">
-                                                <asp:ListItem>Monotributo</asp:ListItem>
-                                                <asp:ListItem>Responsable Inscripto</asp:ListItem>
-                                                <asp:ListItem>Exento</asp:ListItem>
-                                                <asp:ListItem>No Inscripto</asp:ListItem>
+                                                <asp:ListItem Value="1">Monotributo</asp:ListItem>
+                                                <asp:ListItem Value="2">Responsable Inscripto</asp:ListItem>
+                                                <asp:ListItem Value="3">Exento</asp:ListItem>
+                                                <asp:ListItem Value="10">No Inscripto</asp:ListItem>
                                             </asp:RadioButtonList>
                                         </td>
                                     </tr>
@@ -900,20 +898,20 @@
                                 <table>
                                     <tr>
                                         <td>
-                                            <asp:RadioButtonList ID="RBNombreRegistrado" runat="server"
+                                            <asp:RadioButtonList ID="RBEstaRegistrado" runat="server"
                                                 CssClass="form-control" BorderStyle="None"
                                                 RepeatColumns="1"
                                                 RepeatLayout="Table"
                                                 CellPadding="10">
-                                                <asp:ListItem>Si</asp:ListItem>
-                                                <asp:ListItem>No</asp:ListItem>
+                                                <asp:ListItem Value="1">Si</asp:ListItem>
+                                                <asp:ListItem Value="2">No</asp:ListItem>
                                             </asp:RadioButtonList>
                                         </td>
                                     </tr>
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtNombreRegistradoOtro" placeHolder="Otra Situación" runat="server" CssClass="form-control" />
+                                        <asp:TextBox ID="txtEstaRegistradoOtro" placeHolder="Otra Situación" runat="server" CssClass="form-control" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
@@ -931,15 +929,15 @@
                                                 RepeatColumns="1"
                                                 RepeatLayout="Table"
                                                 CellPadding="10">
-                                                <asp:ListItem>Si</asp:ListItem>
-                                                <asp:ListItem>No</asp:ListItem>
+                                                <asp:ListItem Value="1">Si</asp:ListItem>
+                                                <asp:ListItem Value="2">No</asp:ListItem>
                                             </asp:RadioButtonList>
                                         </td>
                                     </tr>
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtCantidadEmpleadosACargo" runat="server" CssClass="form-control" placeholder="Ingrese la cantidad de empleados a su cargo" />
+                                        <asp:TextBox ID="txtCantidadEmpleadosACargo" runat="server" CssClass="form-control" placeholder="Ingrese cantidad de empleados" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
@@ -960,15 +958,15 @@
                                     <asp:Label ID="Label9" runat="server" Text="Internet (Redes Sociales)"></asp:Label>
                                 </ul>
                                 <ul class="estilo-ul">
-                                    <asp:CheckBox ID="chkAILocalPropio" runat="server" Width="20px" />
+                                    <asp:CheckBox ID="chkAILocalEstudioPropio" runat="server" Width="20px" />
                                     <asp:Label ID="Label12" runat="server" Text="Local / Estudio Propio"></asp:Label>
                                 </ul>
                                 <ul class="estilo-ul">
-                                    <asp:CheckBox ID="chkAILocalesTerceros" runat="server" Width="20px" />
+                                    <asp:CheckBox ID="chkAILocalesOficinas" runat="server" Width="20px" />
                                     <asp:Label ID="Label18" runat="server" Text="Locales / Oficinas de Terceros"></asp:Label>
                                 </ul>
                                 <ul class="estilo-ul">
-                                    <asp:CheckBox ID="chkAIShowRoom" runat="server" Width="20px" />
+                                    <asp:CheckBox ID="chkAIOficinaPrivadaShowroom" runat="server" Width="20px" />
                                     <asp:Label ID="Label19" runat="server" Text="Oficina Privada / ShowRoom"></asp:Label>
                                 </ul>
                                 <table>
@@ -1122,8 +1120,8 @@
                                                 RepeatColumns="1"
                                                 RepeatLayout="Table"
                                                 CellPadding="10">
-                                                <asp:ListItem>Si</asp:ListItem>
-                                                <asp:ListItem>No</asp:ListItem>
+                                                <asp:ListItem Value="1">Si</asp:ListItem>
+                                                <asp:ListItem Value="2">No</asp:ListItem>
                                             </asp:RadioButtonList>
                                         </td>
                                     </tr>
@@ -1139,7 +1137,7 @@
                                 <!--Boton de registro-->
                                 <div class="form-group">
                                     <div class="col-md-10 col-md-offset-1">
-                                        <asp:Button ID="btnEnviarDatosActividadIndependiente" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" />
+                                        <asp:Button ID="btnEnviarDatosActividadIndependiente" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" OnClick="btnEnviarDatosActividadIndependiente_Click" />
                                     </div>
                                 </div>
                             </div>

@@ -922,22 +922,22 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.RadioButtonList RBSituacionTributaria;
         
         /// <summary>
-        /// RBNombreRegistrado control.
+        /// RBEstaRegistrado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RBNombreRegistrado;
+        protected global::System.Web.UI.WebControls.RadioButtonList RBEstaRegistrado;
         
         /// <summary>
-        /// txtNombreRegistradoOtro control.
+        /// txtEstaRegistradoOtro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombreRegistradoOtro;
+        protected global::System.Web.UI.WebControls.TextBox txtEstaRegistradoOtro;
         
         /// <summary>
         /// RBEmpleadosACargo control.
@@ -1012,13 +1012,13 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.Label Label9;
         
         /// <summary>
-        /// chkAILocalPropio control.
+        /// chkAILocalEstudioPropio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkAILocalPropio;
+        protected global::System.Web.UI.WebControls.CheckBox chkAILocalEstudioPropio;
         
         /// <summary>
         /// Label12 control.
@@ -1030,13 +1030,13 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.Label Label12;
         
         /// <summary>
-        /// chkAILocalesTerceros control.
+        /// chkAILocalesOficinas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkAILocalesTerceros;
+        protected global::System.Web.UI.WebControls.CheckBox chkAILocalesOficinas;
         
         /// <summary>
         /// Label18 control.
@@ -1048,13 +1048,13 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.Label Label18;
         
         /// <summary>
-        /// chkAIShowRoom control.
+        /// chkAIOficinaPrivadaShowroom control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkAIShowRoom;
+        protected global::System.Web.UI.WebControls.CheckBox chkAIOficinaPrivadaShowroom;
         
         /// <summary>
         /// Label19 control.

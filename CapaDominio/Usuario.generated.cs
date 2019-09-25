@@ -141,8 +141,8 @@ namespace CapaDominio
 			}
 		}
 		
-		private int? edad;
-		public virtual int? Edad
+		private string edad;
+		public virtual string Edad
 		{
 			get
 			{
