@@ -1177,33 +1177,11 @@
                                     <asp:CheckBox ID="chkPRTalleresTercerizados" runat="server" Width="20px" />
                                     <asp:Label ID="Label28" runat="server" Text="Talleres Tercerizados"></asp:Label>
                                 </ul>
-
-
-
-
-
-
-
                                 <table>
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
                                 </table>
-                                <%--<table>
-                                    <tr>
-                                        <td>
-                                            <asp:RadioButtonList ID="RBDondeRealizaProduccion" runat="server"
-                                                CssClass="form-control" BorderStyle="None"
-                                                RepeatColumns="1"
-                                                RepeatLayout="Table"
-                                                CellPadding="10">
-                                                <asp:ListItem>Talleres Propios</asp:ListItem>
-                                                <asp:ListItem>Talleres tercerizados</asp:ListItem>
-                                                <asp:ListItem>Otro</asp:ListItem>
-                                            </asp:RadioButtonList>
-                                        </td>
-                                    </tr>
-                                </table>--%>
                                 <table>
                                     <tr>
                                         <asp:TextBox ID="txtDondeRealizaProduccionOtro" runat="server" CssClass="form-control" placeHolder="Otro" />
@@ -1221,10 +1199,10 @@
                                                 RepeatColumns="1"
                                                 RepeatLayout="Table"
                                                 CellPadding="10">
-                                                <asp:ListItem>100%</asp:ListItem>
-                                                <asp:ListItem>entre el 50% y 99%</asp:ListItem>
-                                                <asp:ListItem>entre el 30% y 49%</asp:ListItem>
-                                                <asp:ListItem>menos del 30%</asp:ListItem>
+                                                <asp:ListItem Value="1">100%</asp:ListItem>
+                                                <asp:ListItem Value="2">entre el 50% y 99%</asp:ListItem>
+                                                <asp:ListItem Value="3">entre el 30% y 49%</asp:ListItem>
+                                                <asp:ListItem Value="4">menos del 30%</asp:ListItem>
                                             </asp:RadioButtonList>
                                         </td>
                                     </tr>
@@ -1235,7 +1213,7 @@
                                 <!--Boton de registro-->
                                 <div class="form-group">
                                     <div class="col-md-10 col-md-offset-1">
-                                        <asp:Button ID="btnEnviarDatosProductos" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" />
+                                        <asp:Button ID="btnEnviarDatosProductos" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" OnClick="btnEnviarDatosProductos_Click" />
                                     </div>
                                 </div>
                             </div>
@@ -1265,10 +1243,10 @@
                                                 RepeatColumns="1"
                                                 RepeatLayout="Table"
                                                 CellPadding="10">
-                                                <asp:ListItem>100%</asp:ListItem>
-                                                <asp:ListItem>entre el 50% y 99%</asp:ListItem>
-                                                <asp:ListItem>entre el 30% y 49%</asp:ListItem>
-                                                <asp:ListItem>menos del 30%</asp:ListItem>
+                                                <asp:ListItem Value="1">100%</asp:ListItem>
+                                                <asp:ListItem Value="2">entre el 50% y 99%</asp:ListItem>
+                                                <asp:ListItem Value="3">entre el 30% y 49%</asp:ListItem>
+                                                <asp:ListItem Value="4">menos del 30%</asp:ListItem>
                                             </asp:RadioButtonList>
                                         </td>
                                     </tr>
@@ -1283,7 +1261,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-asterisk"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDificultades" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="5" />
+                                            <asp:TextBox ID="txtDificultades" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -1293,7 +1271,7 @@
                                 <!--Boton de registro-->
                                 <div class="form-group">
                                     <div class="col-md-10 col-md-offset-1">
-                                        <asp:Button ID="btnEnviarDatosMateriasPrimas" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" />
+                                        <asp:Button ID="btnEnviarDatosMateriaPrima" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" OnClick="btnEnviarDatosMateriaPrima_Click" />
                                     </div>
                                 </div>
                             </div>
@@ -1318,12 +1296,11 @@
                                 <table>
                                     <tr>
                                         <td>
-                                            <asp:RadioButton ID="RB1" GroupName="Equipos"
+                                            <asp:RadioButton ID="RBDisponeEquipoSi" GroupName="Equipos"
                                                 Text="Si" runat="server" />
                                         </td>
                                     </tr>
                                 </table>
-
                                 <ul class="estilo-ul">
                                     <asp:CheckBox ID="chkMPPEquiposPropios" runat="server" Width="20px" />
                                     <asp:Label ID="Label20" runat="server" Text="Equipos Propios"></asp:Label>
@@ -1339,14 +1316,8 @@
                                 <table>
                                     <tr>
                                         <td>
-                                            <asp:RadioButton ID="RB2" GroupName="Equipos"
+                                            <asp:RadioButton ID="RBDisponeEquipoNo" GroupName="Equipos"
                                                 Text="No" runat="server" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <asp:RadioButton ID="RB3" GroupName="Equipos"
-                                                Text="Otro" runat="server" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -1355,80 +1326,50 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtEquiposProcesoOtro" runat="server" CssClass="form-control" />
+                                        <asp:TextBox ID="txtDisponeEquipoOtro" runat="server" CssClass="form-control" placeHolder="Otros equipos" />
                                     </tr>
                                     <tr>
-                                        <td style="height: 15px"></td>
+                                        <td style="height: 20px"></td>
                                     </tr>
                                 </table>
-
-                                <%--<table>
-                                    <tr>
-                                        <td>
-                                            <asp:RadioButton ID="RB1" GroupName="Equipos"
-                                                Text="Si" runat="server" />
-                                        </td>
-                                        <td style="border: ridge; border-color: lightgray;" id="RecuadroOpcionSi">
-                                            <asp:RadioButton ID="RBOpcionSi1" GroupName="OpcionSi"
-                                                Text="Propios" Font-Italic="true" runat="server" />
-                                            <asp:RadioButton ID="RBOpcionSi2" GroupName="OpcionSi"
-                                                Text="Prestados" Font-Italic="true" runat="server" />
-                                            <asp:RadioButton ID="RBOpcionSi3" GroupName="OpcionSi"
-                                                Text="Alquilados" Font-Italic="true" runat="server" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <asp:RadioButton ID="RB2" GroupName="Equipos"
-                                                Text="No" runat="server" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <asp:RadioButton ID="RB3" GroupName="Equipos"
-                                                Text="Otro" runat="server" />
-                                        </td>
-                                    </tr>
-                                </table>
-                                <table>
-                                    <tr>
-                                        <asp:TextBox ID="txtEquiposProcesoOtro" runat="server" CssClass="form-control" />
-                                    </tr>
-                                    <tr>
-                                        <td style="height: 15px"></td>
-                                    </tr>
-                                </table>--%>
                                 <h4>¿Cuál es la principal falencia en el proceso de producción de objetos?</h4>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkMPPMaquinas" runat="server" Width="20px" />
+                                    <asp:Label ID="Label37" runat="server" Text="Máquinas"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkMPPRecursosInformaticos" runat="server" Width="20px" />
+                                    <asp:Label ID="Label38" runat="server" Text="Recursos Informáticos"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkMPPHerramientas" runat="server" Width="20px" />
+                                    <asp:Label ID="Label39" runat="server" Text="Herramientas"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkMPPEspacio" runat="server" Width="20px" />
+                                    <asp:Label ID="Label40" runat="server" Text="Poca disponibilidad de espacio"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkMPPManoDeObra" runat="server" Width="20px" />
+                                    <asp:Label ID="Label41" runat="server" Text="Poca disponibilidad de Mano de Obra"></asp:Label>
+                                </ul>
                                 <table>
                                     <tr>
-                                        <td>
-                                            <asp:RadioButtonList ID="RBPrincipalFalencia" runat="server"
-                                                CssClass="form-control" BorderStyle="None"
-                                                RepeatColumns="1"
-                                                RepeatLayout="Table"
-                                                CellPadding="10">
-                                                <asp:ListItem>Máquinas</asp:ListItem>
-                                                <asp:ListItem>Recursos Informáticos</asp:ListItem>
-                                                <asp:ListItem>Herramientas</asp:ListItem>
-                                                <asp:ListItem>Poca Disponibilidad de Espacio</asp:ListItem>
-                                                <asp:ListItem>Poca Disponibilidad de Mano de Obra</asp:ListItem>
-                                                <asp:ListItem>Otro</asp:ListItem>
-                                            </asp:RadioButtonList>
-                                        </td>
+                                        <td style="height: 20px"></td>
                                     </tr>
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtPrincipalFalenciaOtro" runat="server" CssClass="form-control" />
+                                        <asp:TextBox ID="txtFalenciaOtra" runat="server" CssClass="form-control" placeHolder="Otra falencia" />
                                     </tr>
                                     <tr>
-                                        <td style="height: 30px"></td>
+                                        <td style="height: 20px"></td>
                                     </tr>
                                 </table>
                                 <!--Boton de registro-->
                                 <div class="form-group">
                                     <div class="col-md-10 col-md-offset-1">
-                                        <asp:Button ID="btnEnviarDatosMaquinaria" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" />
+                                        <asp:Button ID="btnEnviarDatosMaquinaria" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" OnClick="btnEnviarDatosMaquinaria_Click" />
                                     </div>
                                 </div>
                             </div>

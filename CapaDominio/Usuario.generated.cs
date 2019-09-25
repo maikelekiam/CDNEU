@@ -292,6 +292,33 @@ namespace CapaDominio
 			}
 		}
 		
+		private IList<Producto> productos = new List<Producto>();
+		public virtual IList<Producto> Productos
+		{
+			get
+			{
+				return this.productos;
+			}
+		}
+		
+		private IList<MateriaPrima> materiaPrimas = new List<MateriaPrima>();
+		public virtual IList<MateriaPrima> MateriaPrimas
+		{
+			get
+			{
+				return this.materiaPrimas;
+			}
+		}
+		
+		private IList<Maquinarium> maquinaria = new List<Maquinarium>();
+		public virtual IList<Maquinarium> Maquinaria
+		{
+			get
+			{
+				return this.maquinaria;
+			}
+		}
+		
 	}
 }
 #pragma warning restore 1591

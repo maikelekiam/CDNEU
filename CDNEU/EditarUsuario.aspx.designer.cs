@@ -1318,22 +1318,22 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.TextBox txtDificultades;
         
         /// <summary>
-        /// btnEnviarDatosMateriasPrimas control.
+        /// btnEnviarDatosMateriaPrima control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEnviarDatosMateriasPrimas;
+        protected global::System.Web.UI.WebControls.Button btnEnviarDatosMateriaPrima;
         
         /// <summary>
-        /// RB1 control.
+        /// RBDisponeEquipoSi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RB1;
+        protected global::System.Web.UI.WebControls.RadioButton RBDisponeEquipoSi;
         
         /// <summary>
         /// chkMPPEquiposPropios control.
@@ -1390,49 +1390,121 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.Label Label30;
         
         /// <summary>
-        /// RB2 control.
+        /// RBDisponeEquipoNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RB2;
+        protected global::System.Web.UI.WebControls.RadioButton RBDisponeEquipoNo;
         
         /// <summary>
-        /// RB3 control.
+        /// txtDisponeEquipoOtro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RB3;
+        protected global::System.Web.UI.WebControls.TextBox txtDisponeEquipoOtro;
         
         /// <summary>
-        /// txtEquiposProcesoOtro control.
+        /// chkMPPMaquinas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEquiposProcesoOtro;
+        protected global::System.Web.UI.WebControls.CheckBox chkMPPMaquinas;
         
         /// <summary>
-        /// RBPrincipalFalencia control.
+        /// Label37 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RBPrincipalFalencia;
+        protected global::System.Web.UI.WebControls.Label Label37;
         
         /// <summary>
-        /// txtPrincipalFalenciaOtro control.
+        /// chkMPPRecursosInformaticos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrincipalFalenciaOtro;
+        protected global::System.Web.UI.WebControls.CheckBox chkMPPRecursosInformaticos;
+        
+        /// <summary>
+        /// Label38 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label38;
+        
+        /// <summary>
+        /// chkMPPHerramientas control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkMPPHerramientas;
+        
+        /// <summary>
+        /// Label39 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label39;
+        
+        /// <summary>
+        /// chkMPPEspacio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkMPPEspacio;
+        
+        /// <summary>
+        /// Label40 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label40;
+        
+        /// <summary>
+        /// chkMPPManoDeObra control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkMPPManoDeObra;
+        
+        /// <summary>
+        /// Label41 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label41;
+        
+        /// <summary>
+        /// txtFalenciaOtra control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFalenciaOtra;
         
         /// <summary>
         /// btnEnviarDatosMaquinaria control.

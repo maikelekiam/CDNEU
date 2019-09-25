@@ -20,6 +20,12 @@ namespace CDNEU
         FormacionAcademicaNego formacionAcademicaNego = new FormacionAcademicaNego();
         ActividadProfesionalNego actividadProfesionalNego = new ActividadProfesionalNego();
         ActividadIndependienteNego actividadIndependienteNego = new ActividadIndependienteNego();
+        ProductoNego productoNego = new ProductoNego();
+        MateriaPrimaNego materiaPrimaNego = new MateriaPrimaNego();
+        MaquinariaNego maquinariaNego = new MaquinariaNego();
+        IdentidadNego identidadNego = new IdentidadNego();
+        InnovacionNego innovacionNego = new InnovacionNego();
+        VinculacionNego vinculacionNego = new VinculacionNego();
 
         public static int idUsuarioTemporal;
 
@@ -187,6 +193,41 @@ namespace CDNEU
             actividadIndependienteNego.GuardarActividadIndependiente(actividadIndependiente);
 
             //Creo un objeto de tipo Producto
+            Producto producto = new Producto();
+            producto.IdUsuario = idUsuarioTemporal;
+            producto.CantidadProductosAnio = "";
+            producto.TalleresPropios = false;
+            producto.TalleresTercerizados = false;
+            producto.DondeRealizaProduccionOtro = "";
+            producto.PorcentajeProcesoProductivoNeuquen = "";
+            productoNego.GuardarProducto(producto);
+
+            //Creo un objeto de tipo MateriaPrima
+            MateriaPrima materiaPrima = new MateriaPrima();
+            materiaPrima.IdUsuario = idUsuarioTemporal;
+            materiaPrima.PorcentajeAdquiereNeuquen = "";
+            materiaPrima.Dificultades = "";
+            materiaPrimaNego.GuardarMateriaPrima(materiaPrima);
+
+            //Creo un objeto de tipo Maquinaria
+            Maquinarium maquinarium = new Maquinarium();
+            maquinarium.IdUsuario = idUsuarioTemporal;
+            maquinarium.DisponeEquipo = "";
+            maquinarium.EquiposPropios = false;
+            maquinarium.EquiposPrestados = false;
+            maquinarium.EquiposAlquilados = false;
+            maquinarium.DisponeEquipoOtro = "";
+            maquinarium.Maquinas = false;
+            maquinarium.RecursosInformaticos = false;
+            maquinarium.Herramientas = false;
+            maquinarium.Espacio = false;
+            maquinarium.ManoDeObra = false;
+            maquinarium.FalenciaOtra = "";
+            maquinariaNego.GuardarMaquinaria(maquinarium);
+
+
+
+
 
 
 

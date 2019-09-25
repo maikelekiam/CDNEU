@@ -45,9 +45,15 @@
     <Compile Include="ActividadProfesionalRepo.cs" />
     <Compile Include="FormacionAcademicaRepo.cs" />
     <Compile Include="FotoUsuarioRepo.cs" />
+    <Compile Include="IdentidadRepo.cs" />
+    <Compile Include="InnovacionRepo.cs" />
+    <Compile Include="MaquinariaRepo.cs" />
+    <Compile Include="MateriaPrimaRepo.cs" />
+    <Compile Include="ProductoRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RedesSocialesRepo.cs" />
     <Compile Include="UsuarioRepo.cs" />
+    <Compile Include="VinculacionRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaDominio\CapaDominio.csproj">

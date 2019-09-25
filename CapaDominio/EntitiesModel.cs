@@ -154,6 +154,30 @@ namespace CapaDominio
 			}
 		}
 		
+		public IQueryable<Producto> Productos 
+		{
+			get
+			{
+				return this.GetAll<Producto>();
+			}
+		}
+		
+		public IQueryable<MateriaPrima> MateriaPrimas 
+		{
+			get
+			{
+				return this.GetAll<MateriaPrima>();
+			}
+		}
+		
+		public IQueryable<Maquinarium> Maquinaria 
+		{
+			get
+			{
+				return this.GetAll<Maquinarium>();
+			}
+		}
+		
 		public static BackendConfiguration GetBackendConfiguration()
 		{
 			BackendConfiguration backend = new BackendConfiguration();
@@ -224,6 +248,18 @@ namespace CapaDominio
 			get;
 		}
 		IQueryable<RedesSociale> RedesSociales
+		{
+			get;
+		}
+		IQueryable<Producto> Productos
+		{
+			get;
+		}
+		IQueryable<MateriaPrima> MateriaPrimas
+		{
+			get;
+		}
+		IQueryable<Maquinarium> Maquinaria
 		{
 			get;
 		}

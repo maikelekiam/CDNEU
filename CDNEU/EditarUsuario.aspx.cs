@@ -18,6 +18,12 @@ namespace CDNEU
         FormacionAcademicaNego formacionAcademicaNego = new FormacionAcademicaNego();
         ActividadProfesionalNego actividadProfesionalNego = new ActividadProfesionalNego();
         ActividadIndependienteNego actividadIndependienteNego = new ActividadIndependienteNego();
+        ProductoNego productoNego = new ProductoNego();
+        MateriaPrimaNego materiaPrimaNego = new MateriaPrimaNego();
+        MaquinariaNego maquinariaNego = new MaquinariaNego();
+        IdentidadNego identidadNego = new IdentidadNego();
+        InnovacionNego innovacionNego = new InnovacionNego();
+        VinculacionNego vinculacionNego = new VinculacionNego();
 
         static int globalIdUsuario;
         static string globalNombreUsuario;
@@ -157,7 +163,7 @@ namespace CDNEU
             txtNombreEmpresa.Text = actividadProfesional.NombreEmpresaAP;
             txtLinkEmpresa.Text = actividadProfesional.LinkEmpresaAP;
             txtDescripcion.Text = actividadProfesional.DescripcionAP;
-                        
+
             ActividadIndependiente actividadIndependiente = actividadIndependienteNego.ObtenerActividadIndependiente(globalIdUsuario);
             RBSustentoDeVida.SelectedValue = actividadIndependiente.SustentoDeVida;
             txtSustentoDeVidaOtro.Text = actividadIndependiente.SustentoDeVidaOtro;
@@ -186,7 +192,44 @@ namespace CDNEU
             RBVentasOtrosPaises.SelectedValue = actividadIndependiente.RealizaVentasServicios;
             txtVentasOtrosPaisesCuales.Text = actividadIndependiente.Cuales;
 
-            //PROXIMA: PRODUCTO
+            Producto producto = productoNego.ObtenerProducto(globalIdUsuario);
+            txtCantidadProductosAnio.Text = producto.CantidadProductosAnio;
+            chkPRTalleresPropios.Checked = producto.TalleresPropios.Value;
+            chkPRTalleresTercerizados.Checked = producto.TalleresTercerizados.Value;
+            txtDondeRealizaProduccionOtro.Text = producto.DondeRealizaProduccionOtro;
+            RBPorcentajeProcesoProductivoNeuquen.SelectedValue = producto.PorcentajeProcesoProductivoNeuquen;
+
+            MateriaPrima materiaPrima = materiaPrimaNego.ObtenerMateriaPrima(globalIdUsuario);
+            RBPorcentajeAdquiereNeuquen.SelectedValue = materiaPrima.PorcentajeAdquiereNeuquen;
+            txtDificultades.Text = materiaPrima.Dificultades;
+
+            Maquinarium maquinarium = maquinariaNego.ObtenerMaquinaria(globalIdUsuario);
+            if (maquinarium.DisponeEquipo == "")
+            {
+                RBDisponeEquipoSi.Checked = false;
+                RBDisponeEquipoNo.Checked = false;
+            }
+            else if (maquinarium.DisponeEquipo == "Si")
+            {
+                RBDisponeEquipoSi.Checked = true;
+                RBDisponeEquipoNo.Checked = false;
+            }
+            else if (maquinarium.DisponeEquipo == "No")
+            {
+                RBDisponeEquipoSi.Checked = false;
+                RBDisponeEquipoNo.Checked = true;
+            }
+            chkMPPEquiposPropios.Checked = maquinarium.EquiposPropios.Value;
+            chkMPPEquiposPrestados.Checked = maquinarium.EquiposPrestados.Value;
+            chkMPPEquiposAlquilados.Checked = maquinarium.EquiposAlquilados.Value;
+            txtDisponeEquipoOtro.Text = maquinarium.DisponeEquipoOtro;
+            chkMPPMaquinas.Checked = maquinarium.Maquinas.Value;
+            chkMPPRecursosInformaticos.Checked = maquinarium.RecursosInformaticos.Value;
+            chkMPPHerramientas.Checked = maquinarium.Herramientas.Value;
+            chkMPPEspacio.Checked = maquinarium.Espacio.Value;
+            chkMPPManoDeObra.Checked = maquinarium.ManoDeObra.Value;
+            txtFalenciaOtra.Text = maquinarium.FalenciaOtra;
+
 
 
 
@@ -202,7 +245,7 @@ namespace CDNEU
             FormacionAcademica formacionAcademica = new FormacionAcademica();
             formacionAcademica.IdFormacionAcademica = formacionAcademicaNego.ObtenerFormacionAcademicaSegunIdUsuario(globalIdUsuario);
             formacionAcademica.IdUsuario = globalIdUsuario;
-            formacionAcademica.EstudiosOficiales = RBEstudiosOficiales.SelectedValue.ToString();
+            formacionAcademica.EstudiosOficiales = RBEstudiosOficiales.SelectedValue;
             formacionAcademica.EstudiosOficialesOtro = txtEstudiosOficialesOtro.Text;
             formacionAcademica.TituloObtenido = txtTituloObtenido.Text;
             formacionAcademica.InstitucionEmisoraTitulo = txtInstitucionEmisoraTitulo.Text;
@@ -226,7 +269,7 @@ namespace CDNEU
 
             actividadProfesional.IdActividadProfesional = actividadProfesionalNego.ObtenerActividadProfesionalSegunIdUsuario(globalIdUsuario);
             actividadProfesional.IdUsuario = globalIdUsuario;
-            actividadProfesional.DisciplinaProyectual = RBDisciplinaProyectual.SelectedValue.ToString();
+            actividadProfesional.DisciplinaProyectual = RBDisciplinaProyectual.SelectedValue;
             actividadProfesional.DisciplinaProyectualOtra = txtDisciplinaProyectualOtra.Text;
             actividadProfesional.Accesorios = chkAPAccesorios.Checked;
             actividadProfesional.Calzado = chkAPCalzado.Checked;
@@ -238,7 +281,7 @@ namespace CDNEU
             actividadProfesional.Mobiliario = chkAPMobiliario.Checked;
             actividadProfesional.Tejidos = chkAPTejidos.Checked;
             actividadProfesional.SubSectorOtro = txtSubSectorOtro.Text;
-            actividadProfesional.TipoRelacionLaboral = RBTipoRelacionLaboral.SelectedValue.ToString();
+            actividadProfesional.TipoRelacionLaboral = RBTipoRelacionLaboral.SelectedValue;
             actividadProfesional.TipoRelacionLaboralOtro = txtTipoRelacionLaboralOtro.Text;
             actividadProfesional.NombreEmpresaAP = txtNombreEmpresa.Text;
             actividadProfesional.LinkEmpresaAP = txtLinkEmpresa.Text;
@@ -256,13 +299,13 @@ namespace CDNEU
 
             actividadIndependiente.IdActividadIndependiente = actividadIndependienteNego.ObtenerActividadIndependienteSegunIdUsuario(globalIdUsuario);
             actividadIndependiente.IdUsuario = globalIdUsuario;
-            actividadIndependiente.SustentoDeVida = RBSustentoDeVida.SelectedValue.ToString();
+            actividadIndependiente.SustentoDeVida = RBSustentoDeVida.SelectedValue;
             actividadIndependiente.SustentoDeVidaOtro = txtSustentoDeVidaOtro.Text;
-            actividadIndependiente.TiempoActividadFuncionamiento = RBActividadFuncionamiento.SelectedValue.ToString();
-            actividadIndependiente.SituacionTributaria = RBSituacionTributaria.SelectedValue.ToString();
-            actividadIndependiente.EstaRegistrado = RBEstaRegistrado.SelectedValue.ToString();
+            actividadIndependiente.TiempoActividadFuncionamiento = RBActividadFuncionamiento.SelectedValue;
+            actividadIndependiente.SituacionTributaria = RBSituacionTributaria.SelectedValue;
+            actividadIndependiente.EstaRegistrado = RBEstaRegistrado.SelectedValue;
             actividadIndependiente.EstaRegistradoOtro = txtEstaRegistradoOtro.Text;
-            actividadIndependiente.TieneEmpleadosACargo = RBEmpleadosACargo.SelectedValue.ToString();
+            actividadIndependiente.TieneEmpleadosACargo = RBEmpleadosACargo.SelectedValue;
             actividadIndependiente.CantidadEmpleadosACargo = txtCantidadEmpleadosACargo.Text;
             actividadIndependiente.FeriasItinerantes = chkAIFerias.Checked;
             actividadIndependiente.InternetWeb = chkAIInternetWeb.Checked;
@@ -280,11 +323,81 @@ namespace CDNEU
             actividadIndependiente.SociosCapitalistas = chkAISociosCapitalistas.Checked;
             actividadIndependiente.GananciasGenerales = chkAIGananciasGeneradas.Checked;
             actividadIndependiente.ComoFinanciaActividadProfesionalOtro = txtFinanciaActividadProfesionalOtro.Text;
-            actividadIndependiente.RealizaVentasServicios = RBVentasOtrosPaises.SelectedValue.ToString();
+            actividadIndependiente.RealizaVentasServicios = RBVentasOtrosPaises.SelectedValue;
             actividadIndependiente.Cuales = txtVentasOtrosPaisesCuales.Text;
             actividadIndependienteNego.ActualizarActividadIndependiente(actividadIndependiente);
             Response.Redirect("EditarUsuario.aspx");
         }
+
+        protected void btnEnviarDatosProductos_Click(object sender, EventArgs e)
+        {
+            //PRODUCTO
+
+            Producto producto = new Producto();
+
+            producto.IdProducto = productoNego.ObtenerProductoSegunIdUsuario(globalIdUsuario);
+            producto.IdUsuario = globalIdUsuario;
+            producto.CantidadProductosAnio = txtCantidadProductosAnio.Text;
+            producto.TalleresPropios = chkPRTalleresPropios.Checked;
+            producto.TalleresTercerizados = chkPRTalleresTercerizados.Checked;
+            producto.DondeRealizaProduccionOtro = txtDondeRealizaProduccionOtro.Text;
+            producto.PorcentajeProcesoProductivoNeuquen = RBPorcentajeProcesoProductivoNeuquen.SelectedValue;
+            productoNego.ActualizarProducto(producto);
+            Response.Redirect("EditarUsuario.aspx");
+        }
+
+        protected void btnEnviarDatosMateriaPrima_Click(object sender, EventArgs e)
+        {
+            //MATERIA PRIMA
+
+            MateriaPrima materiaPrima = new MateriaPrima();
+
+            materiaPrima.IdMateriaPrima = materiaPrimaNego.ObtenerMateriaPrimaSegunIdUsuario(globalIdUsuario);
+            materiaPrima.IdUsuario = globalIdUsuario;
+            materiaPrima.PorcentajeAdquiereNeuquen = RBPorcentajeAdquiereNeuquen.SelectedValue;
+            materiaPrima.Dificultades = txtDificultades.Text;
+            materiaPrimaNego.ActualizarMateriaPrima(materiaPrima);
+            Response.Redirect("EditarUsuario.aspx");
+        }
+
+        protected void btnEnviarDatosMaquinaria_Click(object sender, EventArgs e)
+        {
+            //MAQUINARIA Y PROCESOS
+
+            Maquinarium maquinarium = new Maquinarium();
+
+            maquinarium.IdMaquinaria = maquinariaNego.ObtenerMaquinariaSegunIdUsuario(globalIdUsuario);
+            maquinarium.IdUsuario = globalIdUsuario;
+            if (RBDisponeEquipoSi.Checked == true)
+            {
+                maquinarium.DisponeEquipo = "Si";
+            }
+            else if (RBDisponeEquipoSi.Checked == false)
+            {
+
+                if (RBDisponeEquipoNo.Checked == true)
+                {
+                    maquinarium.DisponeEquipo = "No";
+                }
+                else
+                {
+                    maquinarium.DisponeEquipo = "";
+                }
+            }
+            maquinarium.DisponeEquipoOtro = txtDisponeEquipoOtro.Text;
+            maquinarium.EquiposPropios = chkMPPEquiposPropios.Checked;
+            maquinarium.EquiposPrestados = chkMPPEquiposPrestados.Checked;
+            maquinarium.EquiposAlquilados = chkMPPEquiposAlquilados.Checked;
+            maquinarium.Maquinas = chkMPPMaquinas.Checked;
+            maquinarium.RecursosInformaticos = chkMPPRecursosInformaticos.Checked;
+            maquinarium.Herramientas = chkMPPHerramientas.Checked;
+            maquinarium.Espacio = chkMPPEspacio.Checked;
+            maquinarium.ManoDeObra = chkMPPManoDeObra.Checked;
+            maquinarium.FalenciaOtra = txtFalenciaOtra.Text;
+            maquinariaNego.ActualizarMaquinaria(maquinarium);
+            Response.Redirect("EditarUsuario.aspx");
+        }
+
 
 
 
