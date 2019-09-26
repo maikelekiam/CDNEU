@@ -37,6 +37,19 @@ namespace CapaDominio
 			}
 		}
 		
+		private int idUsuario;
+		public virtual int IdUsuario
+		{
+			get
+			{
+				return this.idUsuario;
+			}
+			set
+			{
+				this.idUsuario = value;
+			}
+		}
+		
 		private string facebook;
 		public virtual string Facebook
 		{
@@ -102,6 +115,19 @@ namespace CapaDominio
 			}
 		}
 		
+		private bool? redesSociales;
+		public virtual bool? RedesSociales
+		{
+			get
+			{
+				return this.redesSociales;
+			}
+			set
+			{
+				this.redesSociales = value;
+			}
+		}
+		
 		private bool? mercadoLibre;
 		public virtual bool? MercadoLibre
 		{
@@ -112,45 +138,6 @@ namespace CapaDominio
 			set
 			{
 				this.mercadoLibre = value;
-			}
-		}
-		
-		private bool? tiendaNube;
-		public virtual bool? TiendaNube
-		{
-			get
-			{
-				return this.tiendaNube;
-			}
-			set
-			{
-				this.tiendaNube = value;
-			}
-		}
-		
-		private string plataformaOtra;
-		public virtual string PlataformaOtra
-		{
-			get
-			{
-				return this.plataformaOtra;
-			}
-			set
-			{
-				this.plataformaOtra = value;
-			}
-		}
-		
-		private int idUsuario;
-		public virtual int IdUsuario
-		{
-			get
-			{
-				return this.idUsuario;
-			}
-			set
-			{
-				this.idUsuario = value;
 			}
 		}
 		
@@ -167,55 +154,29 @@ namespace CapaDominio
 			}
 		}
 		
-		private bool? showRoom;
-		public virtual bool? ShowRoom
+		private bool? tiendaNube;
+		public virtual bool? TiendaNube
 		{
 			get
 			{
-				return this.showRoom;
+				return this.tiendaNube;
 			}
 			set
 			{
-				this.showRoom = value;
+				this.tiendaNube = value;
 			}
 		}
 		
-		private bool? redesSociales;
-		public virtual bool? RedesSociales
+		private bool? ferias;
+		public virtual bool? Ferias
 		{
 			get
 			{
-				return this.redesSociales;
+				return this.ferias;
 			}
 			set
 			{
-				this.redesSociales = value;
-			}
-		}
-		
-		private bool? personal;
-		public virtual bool? Personal
-		{
-			get
-			{
-				return this.personal;
-			}
-			set
-			{
-				this.personal = value;
-			}
-		}
-		
-		private bool? noComercializa;
-		public virtual bool? NoComercializa
-		{
-			get
-			{
-				return this.noComercializa;
-			}
-			set
-			{
-				this.noComercializa = value;
+				this.ferias = value;
 			}
 		}
 		
@@ -232,16 +193,55 @@ namespace CapaDominio
 			}
 		}
 		
-		private bool? ferias;
-		public virtual bool? Ferias
+		private bool? personal;
+		public virtual bool? Personal
 		{
 			get
 			{
-				return this.ferias;
+				return this.personal;
 			}
 			set
 			{
-				this.ferias = value;
+				this.personal = value;
+			}
+		}
+		
+		private bool? showRoom;
+		public virtual bool? ShowRoom
+		{
+			get
+			{
+				return this.showRoom;
+			}
+			set
+			{
+				this.showRoom = value;
+			}
+		}
+		
+		private bool? noComercializa;
+		public virtual bool? NoComercializa
+		{
+			get
+			{
+				return this.noComercializa;
+			}
+			set
+			{
+				this.noComercializa = value;
+			}
+		}
+		
+		private string plataformaOtra;
+		public virtual string PlataformaOtra
+		{
+			get
+			{
+				return this.plataformaOtra;
+			}
+			set
+			{
+				this.plataformaOtra = value;
 			}
 		}
 		

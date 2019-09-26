@@ -37,6 +37,19 @@ namespace CapaDominio
 			}
 		}
 		
+		private int idUsuario;
+		public virtual int IdUsuario
+		{
+			get
+			{
+				return this.idUsuario;
+			}
+			set
+			{
+				this.idUsuario = value;
+			}
+		}
+		
 		private string estudiosOficiales;
 		public virtual string EstudiosOficiales
 		{
@@ -177,19 +190,6 @@ namespace CapaDominio
 			set
 			{
 				this.carreraInstitucion = value;
-			}
-		}
-		
-		private int idUsuario;
-		public virtual int IdUsuario
-		{
-			get
-			{
-				return this.idUsuario;
-			}
-			set
-			{
-				this.idUsuario = value;
 			}
 		}
 		

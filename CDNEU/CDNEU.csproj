@@ -254,7 +254,12 @@
     <Content Include="imagenes\copade.png" />
     <Content Include="imagenes\copade03.jpg" />
     <Content Include="imagenes\copade04.jpg" />
+    <Content Include="imagenes\eliminar.png" />
     <Content Include="imagenes\FotoUsuariosx2.png" />
+    <Content Include="imagenes\girar180.png" />
+    <Content Include="imagenes\girarderecha20texto.png" />
+    <Content Include="imagenes\girarizquierda20texto.png" />
+    <Content Include="imagenes\guardar.png" />
     <Content Include="imagenes\ic01-twitter.png" />
     <Content Include="imagenes\icono-facebook.jpg" />
     <Content Include="imagenes\icono-flickr.jpg" />

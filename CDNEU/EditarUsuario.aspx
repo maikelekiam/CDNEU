@@ -441,7 +441,7 @@
                                         </tr>
                                         <tr>
                                             <td style="text-align: center" colspan="2">
-                                                <asp:Image ID="imgURL" runat="server" Style="width: 500px; border: solid;" />
+                                                <asp:Image ID="imgURL" runat="server" Style="width: 300px; border: solid;" />
                                             </td>
                                         </tr>
                                     </table>
@@ -1429,18 +1429,18 @@
                                                 RepeatColumns="1"
                                                 RepeatLayout="Table"
                                                 CellPadding="10">
-                                                <asp:ListItem>Difundir el diseño neuquino a nivel local a través de ferias, circuitos, páginas web, mapas, etc...</asp:ListItem>
-                                                <asp:ListItem>Difundir el diseño neuquino a nivel regional y nacional a través de la participación en ferias en otras provincias.</asp:ListItem>
-                                                <asp:ListItem>Capacitar para formar a los diseñadores en los distintos aspectos de su actividad (diseño, producción y gestión empresarial).</asp:ListItem>
-                                                <asp:ListItem>Apoyar a través de financiamiento, becas, fondo estímulo, acceso a préstamos, etc...</asp:ListItem>
-                                                <asp:ListItem>Otro</asp:ListItem>
+                                                <asp:ListItem Value="1">Difundir el diseño neuquino a nivel local a través de ferias, circuitos, páginas web, mapas, etc...</asp:ListItem>
+                                                <asp:ListItem Value="2">Difundir el diseño neuquino a nivel regional y nacional a través de la participación en ferias en otras provincias.</asp:ListItem>
+                                                <asp:ListItem Value="3">Capacitar para formar a los diseñadores en los distintos aspectos de su actividad (diseño, producción y gestión empresarial).</asp:ListItem>
+                                                <asp:ListItem Value="4">Apoyar a través de financiamiento, becas, fondo estímulo, acceso a préstamos, etc...</asp:ListItem>
+                                                <asp:ListItem Value="10">Otro</asp:ListItem>
                                             </asp:RadioButtonList>
                                         </td>
                                     </tr>
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtAspectosRelevantesOtro" runat="server" CssClass="form-control" />
+                                        <asp:TextBox ID="txtAspectosRelevantesOtro" runat="server" CssClass="form-control" placeHolder="Otro Aspecto" TextMode="MultiLine" Rows="2" />
                                     </tr>
                                     <tr>
                                         <td style="height: 10px"></td>
@@ -1455,7 +1455,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-asterisk"></span>
                                             </span>
-                                            <asp:TextBox ID="txtTemasCapacitarse" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
+                                            <asp:TextBox ID="txtTemasParaCapacitarse" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -1465,7 +1465,7 @@
                                 <!--Boton de registro-->
                                 <div class="form-group">
                                     <div class="col-md-10 col-md-offset-1">
-                                        <asp:Button ID="btnEnviarDatosIdentidadDisenio" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" />
+                                        <asp:Button ID="btnEnviarDatosIdentidadDisenio" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" OnClick="btnEnviarDatosIdentidadDisenio_Click" />
                                     </div>
                                 </div>
                             </div>
@@ -1495,10 +1495,11 @@
                                                 RepeatColumns="1"
                                                 RepeatLayout="Table"
                                                 CellPadding="10">
-                                                <asp:ListItem>En el Proceso de Diseño</asp:ListItem>
-                                                <asp:ListItem>En el Diseño de nuevos Servicios, Productos o Soluciones a un Problema</asp:ListItem>
-                                                <asp:ListItem>En el Rediseño Creativo de Productos</asp:ListItem>
-                                                <asp:ListItem>En la Comunicación Empresarial</asp:ListItem>
+                                                <asp:ListItem Value="1">En el Proceso de Diseño</asp:ListItem>
+                                                <asp:ListItem Value="2">En el Diseño de nuevos Servicios, Productos o Soluciones a un Problema</asp:ListItem>
+                                                <asp:ListItem Value="3">En el Rediseño Creativo de Productos</asp:ListItem>
+                                                <asp:ListItem Value="4">En la Comunicación Empresarial</asp:ListItem>
+                                                <asp:ListItem Value="10">Otra</asp:ListItem>
                                             </asp:RadioButtonList>
                                         </td>
                                     </tr>
@@ -1530,29 +1531,12 @@
                                 </ul>
                                 <table>
                                     <tr>
-                                        <td class="altotabla"></td>
+                                        <td style="height: 15px"></td>
                                     </tr>
                                 </table>
-                                <%--<table>
-                                    <tr>
-                                        <td>
-                                            <asp:RadioButtonList ID="RBDificultadesInnovar" runat="server"
-                                                CssClass="form-control" BorderStyle="None"
-                                                RepeatColumns="1"
-                                                RepeatLayout="Table"
-                                                CellPadding="10">
-                                                <asp:ListItem>Legales y burocráticas</asp:ListItem>
-                                                <asp:ListItem>Financieras / Económicas / Presupuestarias</asp:ListItem>
-                                                <asp:ListItem>Problemas Técnicos / Falta de Información</asp:ListItem>
-                                                <asp:ListItem>Recursos Humanos no adecuadamente Capacitados</asp:ListItem>
-                                                <asp:ListItem>Otra</asp:ListItem>
-                                            </asp:RadioButtonList>
-                                        </td>
-                                    </tr>
-                                </table>--%>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtDificultadesInnovarOtro" placeHolder="Otra dificultad" runat="server" CssClass="form-control" />
+                                        <asp:TextBox ID="txtDificultadesInnovarOtro" placeHolder="Otra dificultad" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1"/>
                                     </tr>
                                     <tr>
                                         <td style="height: 15px"></td>
@@ -1579,7 +1563,7 @@
                                 <!--Boton de registro-->
                                 <div class="form-group">
                                     <div class="col-md-10 col-md-offset-1">
-                                        <asp:Button ID="btnEnviarDatosInnovacion" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" />
+                                        <asp:Button ID="btnEnviarDatosInnovacion" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" OnClick="btnEnviarDatosInnovacion_Click"/>
                                     </div>
                                 </div>
                             </div>
@@ -1604,7 +1588,7 @@
                                 <table>
                                     <tr>
                                         <td>
-                                            <asp:RadioButton ID="RadioButton1" GroupName="Apoyo"
+                                            <asp:RadioButton ID="RBApoyoSi" GroupName="Apoyo"
                                                 Text="Si" runat="server" />
                                         </td>
                                     </tr>
@@ -1620,14 +1604,8 @@
                                 <table>
                                     <tr>
                                         <td>
-                                            <asp:RadioButton ID="RadioButton5" GroupName="Apoyo"
+                                            <asp:RadioButton ID="RBApoyoNo" GroupName="Apoyo"
                                                 Text="No" runat="server" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <asp:RadioButton ID="RadioButton6" GroupName="Apoyo"
-                                                Text="Otro" runat="server" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -1636,7 +1614,7 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtApoyoOtro" runat="server" CssClass="form-control" />
+                                        <asp:TextBox ID="txtApoyoOtro" runat="server" CssClass="form-control" placeHolder="Otro tipo de apoyo" TextMode="MultiLine" Rows="1"  />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
@@ -1645,7 +1623,7 @@
                                 <h4>Organismo que brindó el apoyo</h4>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtOrganismoApoyoNombre" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                        <asp:TextBox ID="txtOrganismoApoyoNombre" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1"  />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
@@ -1668,8 +1646,8 @@
                                             RepeatColumns="1"
                                             RepeatLayout="Table"
                                             CellPadding="10">
-                                            <asp:ListItem>Si</asp:ListItem>
-                                            <asp:ListItem>No</asp:ListItem>
+                                            <asp:ListItem Value="1">Si</asp:ListItem>
+                                            <asp:ListItem Value="2">No</asp:ListItem>
                                         </asp:RadioButtonList>
                                     </tr>
                                 </table>
@@ -1687,8 +1665,8 @@
                                             RepeatColumns="1"
                                             RepeatLayout="Table"
                                             CellPadding="10">
-                                            <asp:ListItem>Si</asp:ListItem>
-                                            <asp:ListItem>No</asp:ListItem>
+                                            <asp:ListItem Value="1">Si</asp:ListItem>
+                                            <asp:ListItem Value="2">No</asp:ListItem>
                                         </asp:RadioButtonList>
                                     </tr>
                                 </table>
@@ -1708,19 +1686,19 @@
                                             RepeatColumns="1"
                                             RepeatLayout="Table"
                                             CellPadding="10">
-                                            <asp:ListItem>Capacitaciones</asp:ListItem>
-                                            <asp:ListItem>Vinculación con otros diseñadoras/es y creativas/os</asp:ListItem>
-                                            <asp:ListItem>Financiamiento</asp:ListItem>
-                                            <asp:ListItem>Infraestructura</asp:ListItem>
-                                            <asp:ListItem>Comercialización</asp:ListItem>
-                                            <asp:ListItem>Asistencia para participación en ferias</asp:ListItem>
-                                            <asp:ListItem>Visualización de sus productos/servicios</asp:ListItem>
-                                            <asp:ListItem>Otro</asp:ListItem>
+                                            <asp:ListItem Value="1">Capacitaciones</asp:ListItem>
+                                            <asp:ListItem Value="2">Vinculación con otros diseñadoras/es y creativas/os</asp:ListItem>
+                                            <asp:ListItem Value="3">Financiamiento</asp:ListItem>
+                                            <asp:ListItem Value="4">Infraestructura</asp:ListItem>
+                                            <asp:ListItem Value="5">Comercialización</asp:ListItem>
+                                            <asp:ListItem Value="6">Asistencia para participación en ferias</asp:ListItem>
+                                            <asp:ListItem Value="7">Visualización de sus productos/servicios</asp:ListItem>
+                                            <asp:ListItem Value="10">Otro</asp:ListItem>
                                         </asp:RadioButtonList>
                                     </tr>
                                 </table>
                                 <table>
-                                    <asp:TextBox ID="txtAporteCDNEUOtro" runat="server" CssClass="form-control" placeHolder="Otro" TextMode="MultiLine" Rows="1" />
+                                    <asp:TextBox ID="txtAporteCDNEUOtro" runat="server" CssClass="form-control" placeHolder="Otro tipo de aporte" TextMode="MultiLine" Rows="1" />
                                     <tr>
                                         <td style="height: 30px"></td>
                                     </tr>
@@ -1735,7 +1713,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-asterisk"></span>
                                             </span>
-                                            <asp:TextBox ID="txtComentariosFinales" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="5" />
+                                            <asp:TextBox ID="txtComentariosFinales" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -1745,7 +1723,7 @@
                                 <!--Boton de registro-->
                                 <div class="form-group">
                                     <div class="col-md-10 col-md-offset-1">
-                                        <asp:Button ID="btnEnviarDatosVinculacion" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" />
+                                        <asp:Button ID="btnEnviarDatosVinculacion" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" OnClick="btnEnviarDatosVinculacion_Click" />
                                     </div>
                                 </div>
                             </div>
@@ -1788,7 +1766,4 @@
             window.scrollTo(0, 500);
         }
     </script>
-
-
-
 </asp:Content>

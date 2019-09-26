@@ -21,14 +21,20 @@ namespace CDNEU
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack) return;
+
+            bait = null;
             lblMensaje.Text = "";
             txtId.Text = Session["userid"].ToString();
             Ver();
+            ResetearFotoTemporal();
         }
 
         protected void btnGuardarFoto_Click(object sender, EventArgs e)
         {
             GuardarFoto();
+            bait = null;
+            ResetearFotoTemporal();
             Ver();
         }
 
@@ -215,6 +221,62 @@ namespace CDNEU
                 GuardarFotoRotada();
                 MostrarFotoTemporal();
                 lblMensaje.Text = "Giro 180°";
+            }
+        }
+
+        protected void btnEliminarFoto_Click(object sender, EventArgs e)
+        {
+            string ruta = Server.MapPath("~/imagenes/FotoUsuariosx2.png");
+
+            byte[] imagenEmpleado = File.ReadAllBytes(ruta);
+
+            try
+            {
+                idUsuarioTemporal = Convert.ToInt32(Session["userid"].ToString());
+
+                FotoUsuario fotoUsuario2 = fotoUsuarioNego.ObtenerFotoUsuario(idUsuarioTemporal);
+                FotoUsuario fotoUsuarioNuevo = new FotoUsuario();
+
+                fotoUsuarioNuevo.IdFotoUsuario = fotoUsuario2.IdFotoUsuario;
+                fotoUsuarioNuevo.FotoUsuarioCodigo = imagenEmpleado;
+                fotoUsuarioNuevo.IdUsuario = fotoUsuario2.IdUsuario;
+                fotoUsuarioNuevo.FotoTemporal = imagenEmpleado;
+
+                //bait = fuImagen.FileBytes;
+
+                fotoUsuarioNego.ActualizarFotoUsuario(fotoUsuarioNuevo);
+
+                lblMensaje.Text = "Foto Eliminada";
+            }
+            catch (Exception ex)
+            {
+                lblMensaje.Text = ex.Message;
+            }
+
+        }
+        public void ResetearFotoTemporal()
+        {
+            string ruta = Server.MapPath("~/imagenes/FotoUsuariosx2.png");
+
+            byte[] imagenEmpleado = File.ReadAllBytes(ruta);
+
+            try
+            {
+                idUsuarioTemporal = Convert.ToInt32(Session["userid"].ToString());
+
+                FotoUsuario fotoUsuario2 = fotoUsuarioNego.ObtenerFotoUsuario(idUsuarioTemporal);
+                FotoUsuario fotoUsuarioNuevo = new FotoUsuario();
+
+                fotoUsuarioNuevo.IdFotoUsuario = fotoUsuario2.IdFotoUsuario;
+                fotoUsuarioNuevo.FotoUsuarioCodigo = fotoUsuario2.FotoUsuarioCodigo;
+                fotoUsuarioNuevo.IdUsuario = fotoUsuario2.IdUsuario;
+                fotoUsuarioNuevo.FotoTemporal = imagenEmpleado;
+
+                fotoUsuarioNego.ActualizarFotoUsuario(fotoUsuarioNuevo);
+            }
+            catch (Exception ex)
+            {
+                lblMensaje.Text = ex.Message;
             }
         }
     }

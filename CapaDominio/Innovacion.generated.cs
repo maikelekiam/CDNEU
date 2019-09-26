@@ -37,6 +37,19 @@ namespace CapaDominio
 			}
 		}
 		
+		private int idUsuario;
+		public virtual int IdUsuario
+		{
+			get
+			{
+				return this.idUsuario;
+			}
+			set
+			{
+				this.idUsuario = value;
+			}
+		}
+		
 		private string incorporaInnovacion;
 		public virtual string IncorporaInnovacion
 		{
@@ -50,16 +63,81 @@ namespace CapaDominio
 			}
 		}
 		
-		private string dificultades;
-		public virtual string Dificultades
+		private string incorporaInnovacionOtra;
+		public virtual string IncorporaInnovacionOtra
 		{
 			get
 			{
-				return this.dificultades;
+				return this.incorporaInnovacionOtra;
 			}
 			set
 			{
-				this.dificultades = value;
+				this.incorporaInnovacionOtra = value;
+			}
+		}
+		
+		private bool? legales;
+		public virtual bool? Legales
+		{
+			get
+			{
+				return this.legales;
+			}
+			set
+			{
+				this.legales = value;
+			}
+		}
+		
+		private bool? financieras;
+		public virtual bool? Financieras
+		{
+			get
+			{
+				return this.financieras;
+			}
+			set
+			{
+				this.financieras = value;
+			}
+		}
+		
+		private bool? problemasTecnicos;
+		public virtual bool? ProblemasTecnicos
+		{
+			get
+			{
+				return this.problemasTecnicos;
+			}
+			set
+			{
+				this.problemasTecnicos = value;
+			}
+		}
+		
+		private bool? recursosHumanos;
+		public virtual bool? RecursosHumanos
+		{
+			get
+			{
+				return this.recursosHumanos;
+			}
+			set
+			{
+				this.recursosHumanos = value;
+			}
+		}
+		
+		private string dificultadesOtra;
+		public virtual string DificultadesOtra
+		{
+			get
+			{
+				return this.dificultadesOtra;
+			}
+			set
+			{
+				this.dificultadesOtra = value;
 			}
 		}
 		
@@ -86,45 +164,6 @@ namespace CapaDominio
 			set
 			{
 				this.contarExperiencia = value;
-			}
-		}
-		
-		private int idUsuario;
-		public virtual int IdUsuario
-		{
-			get
-			{
-				return this.idUsuario;
-			}
-			set
-			{
-				this.idUsuario = value;
-			}
-		}
-		
-		private string incorporaInnovacionOtra;
-		public virtual string IncorporaInnovacionOtra
-		{
-			get
-			{
-				return this.incorporaInnovacionOtra;
-			}
-			set
-			{
-				this.incorporaInnovacionOtra = value;
-			}
-		}
-		
-		private string dificultadesOtra;
-		public virtual string DificultadesOtra
-		{
-			get
-			{
-				return this.dificultadesOtra;
-			}
-			set
-			{
-				this.dificultadesOtra = value;
 			}
 		}
 		

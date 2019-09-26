@@ -1552,13 +1552,13 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.TextBox txtAspectosRelevantesOtro;
         
         /// <summary>
-        /// txtTemasCapacitarse control.
+        /// txtTemasParaCapacitarse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTemasCapacitarse;
+        protected global::System.Web.UI.WebControls.TextBox txtTemasParaCapacitarse;
         
         /// <summary>
         /// btnEnviarDatosIdentidadDisenio control.
@@ -1696,13 +1696,13 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.Button btnEnviarDatosInnovacion;
         
         /// <summary>
-        /// RadioButton1 control.
+        /// RBApoyoSi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton1;
+        protected global::System.Web.UI.WebControls.RadioButton RBApoyoSi;
         
         /// <summary>
         /// chkVINApoyoTecnico control.
@@ -1741,22 +1741,13 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.Label Label36;
         
         /// <summary>
-        /// RadioButton5 control.
+        /// RBApoyoNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton5;
-        
-        /// <summary>
-        /// RadioButton6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton6;
+        protected global::System.Web.UI.WebControls.RadioButton RBApoyoNo;
         
         /// <summary>
         /// txtApoyoOtro control.

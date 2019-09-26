@@ -100,7 +100,7 @@
 
                             <%--Inicio del tab-pane del Login--%>
                             <div class="tab-pane active" id="1b">
-                                <h3>Ingreso al Sistema CDNEU</h3>
+                                <h3>Ingreso al Sistema</h3>
                                 <hr />
                                 <div class="form-group">
                                     <div class="col-md-6 col-md-offset-1">

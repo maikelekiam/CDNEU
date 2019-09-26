@@ -225,14 +225,47 @@ namespace CDNEU
             maquinarium.FalenciaOtra = "";
             maquinariaNego.GuardarMaquinaria(maquinarium);
 
+            //Creo un objeto Identidad
+            Identidad identidad = new Identidad();
+            identidad.IdUsuario = idUsuarioTemporal;
+            identidad.Atributos = "";
+            identidad.Rasgos = "";
+            identidad.AspectoRelevante = "";
+            identidad.AspectoRelevanteOtro = "";
+            identidad.TemasParaCapacitarse = "";
+            identidadNego.GuardarIdentidad(identidad);
 
+            //Creo un objeto Innovacion
+            Innovacion innovacion = new Innovacion();
+            innovacion.IdUsuario = idUsuarioTemporal;
+            innovacion.IncorporaInnovacion = "";
+            innovacion.IncorporaInnovacionOtra = "";
+            innovacion.Legales = false;
+            innovacion.Financieras = false;
+            innovacion.ProblemasTecnicos = false;
+            innovacion.RecursosHumanos = false;
+            innovacion.DificultadesOtra = "";
+            innovacion.ComoTomaronInnovacion = "";
+            innovacion.ContarExperiencia = "";
+            innovacionNego.GuardarInnovacion(innovacion);
 
-
-
-
-
-
-
+            //Creo un objeto Vinculacion
+            Vinculacion vinculacion = new Vinculacion();
+            vinculacion.IdUsuario = idUsuarioTemporal;
+            vinculacion.RecibioApoyo = "";
+            vinculacion.ApoyoTecnico = false;
+            vinculacion.ApoyoFinanciero = false;
+            vinculacion.OtroApoyo = "";
+            vinculacion.OrganismoApoyoNombre = "";
+            vinculacion.OrganismoApoyoAnio = "";
+            vinculacion.SelloBuenDisenioArgentino = "";
+            vinculacion.SelloBuenDisenioArgentinoOtro = "";
+            vinculacion.Mica = "";
+            vinculacion.MicaOtro = "";
+            vinculacion.AporteCdneu = "";
+            vinculacion.AporteCdneuOtro = "";
+            vinculacion.ComentariosFinales = "";
+            vinculacionNego.GuardarVinculacion(vinculacion);
         }
         private void GuardarFotoPerfil()
         {

@@ -37,123 +37,6 @@ namespace CapaDominio
 			}
 		}
 		
-		private bool? recibioApoyo;
-		public virtual bool? RecibioApoyo
-		{
-			get
-			{
-				return this.recibioApoyo;
-			}
-			set
-			{
-				this.recibioApoyo = value;
-			}
-		}
-		
-		private string otroApoyo;
-		public virtual string OtroApoyo
-		{
-			get
-			{
-				return this.otroApoyo;
-			}
-			set
-			{
-				this.otroApoyo = value;
-			}
-		}
-		
-		private string organismoApoyo;
-		public virtual string OrganismoApoyo
-		{
-			get
-			{
-				return this.organismoApoyo;
-			}
-			set
-			{
-				this.organismoApoyo = value;
-			}
-		}
-		
-		private int? organismoApoyoAnio;
-		public virtual int? OrganismoApoyoAnio
-		{
-			get
-			{
-				return this.organismoApoyoAnio;
-			}
-			set
-			{
-				this.organismoApoyoAnio = value;
-			}
-		}
-		
-		private bool? selloBuenDisenioArgentino;
-		public virtual bool? SelloBuenDisenioArgentino
-		{
-			get
-			{
-				return this.selloBuenDisenioArgentino;
-			}
-			set
-			{
-				this.selloBuenDisenioArgentino = value;
-			}
-		}
-		
-		private bool? mercadoIndustriasCreativasArgentinas;
-		public virtual bool? MercadoIndustriasCreativasArgentinas
-		{
-			get
-			{
-				return this.mercadoIndustriasCreativasArgentinas;
-			}
-			set
-			{
-				this.mercadoIndustriasCreativasArgentinas = value;
-			}
-		}
-		
-		private string aporteCdneu;
-		public virtual string AporteCdneu
-		{
-			get
-			{
-				return this.aporteCdneu;
-			}
-			set
-			{
-				this.aporteCdneu = value;
-			}
-		}
-		
-		private string otroAporteCdneu;
-		public virtual string OtroAporteCdneu
-		{
-			get
-			{
-				return this.otroAporteCdneu;
-			}
-			set
-			{
-				this.otroAporteCdneu = value;
-			}
-		}
-		
-		private string comentariosFinales;
-		public virtual string ComentariosFinales
-		{
-			get
-			{
-				return this.comentariosFinales;
-			}
-			set
-			{
-				this.comentariosFinales = value;
-			}
-		}
-		
 		private int idUsuario;
 		public virtual int IdUsuario
 		{
@@ -167,29 +50,16 @@ namespace CapaDominio
 			}
 		}
 		
-		private string selloBuenDisenioArgentinoOtro;
-		public virtual string SelloBuenDisenioArgentinoOtro
+		private string recibioApoyo;
+		public virtual string RecibioApoyo
 		{
 			get
 			{
-				return this.selloBuenDisenioArgentinoOtro;
+				return this.recibioApoyo;
 			}
 			set
 			{
-				this.selloBuenDisenioArgentinoOtro = value;
-			}
-		}
-		
-		private string mercadoIndustriasCreativasArgentinasOtro;
-		public virtual string MercadoIndustriasCreativasArgentinasOtro
-		{
-			get
-			{
-				return this.mercadoIndustriasCreativasArgentinasOtro;
-			}
-			set
-			{
-				this.mercadoIndustriasCreativasArgentinasOtro = value;
+				this.recibioApoyo = value;
 			}
 		}
 		
@@ -216,6 +86,136 @@ namespace CapaDominio
 			set
 			{
 				this.apoyoFinanciero = value;
+			}
+		}
+		
+		private string otroApoyo;
+		public virtual string OtroApoyo
+		{
+			get
+			{
+				return this.otroApoyo;
+			}
+			set
+			{
+				this.otroApoyo = value;
+			}
+		}
+		
+		private string organismoApoyoNombre;
+		public virtual string OrganismoApoyoNombre
+		{
+			get
+			{
+				return this.organismoApoyoNombre;
+			}
+			set
+			{
+				this.organismoApoyoNombre = value;
+			}
+		}
+		
+		private string organismoApoyoAnio;
+		public virtual string OrganismoApoyoAnio
+		{
+			get
+			{
+				return this.organismoApoyoAnio;
+			}
+			set
+			{
+				this.organismoApoyoAnio = value;
+			}
+		}
+		
+		private string selloBuenDisenioArgentino;
+		public virtual string SelloBuenDisenioArgentino
+		{
+			get
+			{
+				return this.selloBuenDisenioArgentino;
+			}
+			set
+			{
+				this.selloBuenDisenioArgentino = value;
+			}
+		}
+		
+		private string selloBuenDisenioArgentinoOtro;
+		public virtual string SelloBuenDisenioArgentinoOtro
+		{
+			get
+			{
+				return this.selloBuenDisenioArgentinoOtro;
+			}
+			set
+			{
+				this.selloBuenDisenioArgentinoOtro = value;
+			}
+		}
+		
+		private string mica;
+		public virtual string Mica
+		{
+			get
+			{
+				return this.mica;
+			}
+			set
+			{
+				this.mica = value;
+			}
+		}
+		
+		private string micaOtro;
+		public virtual string MicaOtro
+		{
+			get
+			{
+				return this.micaOtro;
+			}
+			set
+			{
+				this.micaOtro = value;
+			}
+		}
+		
+		private string aporteCdneu;
+		public virtual string AporteCdneu
+		{
+			get
+			{
+				return this.aporteCdneu;
+			}
+			set
+			{
+				this.aporteCdneu = value;
+			}
+		}
+		
+		private string aporteCdneuOtro;
+		public virtual string AporteCdneuOtro
+		{
+			get
+			{
+				return this.aporteCdneuOtro;
+			}
+			set
+			{
+				this.aporteCdneuOtro = value;
+			}
+		}
+		
+		private string comentariosFinales;
+		public virtual string ComentariosFinales
+		{
+			get
+			{
+				return this.comentariosFinales;
+			}
+			set
+			{
+				this.comentariosFinales = value;
 			}
 		}
 		

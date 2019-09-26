@@ -66,86 +66,6 @@ namespace CapaDominio
 			}
 		}
 		
-		public IQueryable<ProduccionDeBiene> ProduccionDeBienes 
-		{
-			get
-			{
-				return this.GetAll<ProduccionDeBiene>();
-			}
-		}
-		
-		public IQueryable<MateriasPrima> MateriasPrimas 
-		{
-			get
-			{
-				return this.GetAll<MateriasPrima>();
-			}
-		}
-		
-		public IQueryable<MaquinariasYProceso> MaquinariasYProcesos 
-		{
-			get
-			{
-				return this.GetAll<MaquinariasYProceso>();
-			}
-		}
-		
-		public IQueryable<Innovacion> Innovacions 
-		{
-			get
-			{
-				return this.GetAll<Innovacion>();
-			}
-		}
-		
-		public IQueryable<Imagen> Imagens 
-		{
-			get
-			{
-				return this.GetAll<Imagen>();
-			}
-		}
-		
-		public IQueryable<IdentidadDisenio> IdentidadDisenios 
-		{
-			get
-			{
-				return this.GetAll<IdentidadDisenio>();
-			}
-		}
-		
-		public IQueryable<FormacionAcademica> FormacionAcademicas 
-		{
-			get
-			{
-				return this.GetAll<FormacionAcademica>();
-			}
-		}
-		
-		public IQueryable<ActividadProfesional> ActividadProfesionals 
-		{
-			get
-			{
-				return this.GetAll<ActividadProfesional>();
-			}
-		}
-		
-		public IQueryable<ActividadIndependiente> ActividadIndependientes 
-		{
-			get
-			{
-				return this.GetAll<ActividadIndependiente>();
-			}
-		}
-		
-		public IQueryable<FotoUsuario> FotoUsuarios 
-		{
-			get
-			{
-				return this.GetAll<FotoUsuario>();
-			}
-		}
-		
 		public IQueryable<RedesSociale> RedesSociales 
 		{
 			get
@@ -178,6 +98,54 @@ namespace CapaDominio
 			}
 		}
 		
+		public IQueryable<Innovacion> Innovacions 
+		{
+			get
+			{
+				return this.GetAll<Innovacion>();
+			}
+		}
+		
+		public IQueryable<Identidad> Identidads 
+		{
+			get
+			{
+				return this.GetAll<Identidad>();
+			}
+		}
+		
+		public IQueryable<FotoUsuario> FotoUsuarios 
+		{
+			get
+			{
+				return this.GetAll<FotoUsuario>();
+			}
+		}
+		
+		public IQueryable<FormacionAcademica> FormacionAcademicas 
+		{
+			get
+			{
+				return this.GetAll<FormacionAcademica>();
+			}
+		}
+		
+		public IQueryable<ActividadProfesional> ActividadProfesionals 
+		{
+			get
+			{
+				return this.GetAll<ActividadProfesional>();
+			}
+		}
+		
+		public IQueryable<ActividadIndependiente> ActividadIndependientes 
+		{
+			get
+			{
+				return this.GetAll<ActividadIndependiente>();
+			}
+		}
+		
 		public static BackendConfiguration GetBackendConfiguration()
 		{
 			BackendConfiguration backend = new BackendConfiguration();
@@ -207,46 +175,6 @@ namespace CapaDominio
 		{
 			get;
 		}
-		IQueryable<ProduccionDeBiene> ProduccionDeBienes
-		{
-			get;
-		}
-		IQueryable<MateriasPrima> MateriasPrimas
-		{
-			get;
-		}
-		IQueryable<MaquinariasYProceso> MaquinariasYProcesos
-		{
-			get;
-		}
-		IQueryable<Innovacion> Innovacions
-		{
-			get;
-		}
-		IQueryable<Imagen> Imagens
-		{
-			get;
-		}
-		IQueryable<IdentidadDisenio> IdentidadDisenios
-		{
-			get;
-		}
-		IQueryable<FormacionAcademica> FormacionAcademicas
-		{
-			get;
-		}
-		IQueryable<ActividadProfesional> ActividadProfesionals
-		{
-			get;
-		}
-		IQueryable<ActividadIndependiente> ActividadIndependientes
-		{
-			get;
-		}
-		IQueryable<FotoUsuario> FotoUsuarios
-		{
-			get;
-		}
 		IQueryable<RedesSociale> RedesSociales
 		{
 			get;
@@ -260,6 +188,30 @@ namespace CapaDominio
 			get;
 		}
 		IQueryable<Maquinarium> Maquinaria
+		{
+			get;
+		}
+		IQueryable<Innovacion> Innovacions
+		{
+			get;
+		}
+		IQueryable<Identidad> Identidads
+		{
+			get;
+		}
+		IQueryable<FotoUsuario> FotoUsuarios
+		{
+			get;
+		}
+		IQueryable<FormacionAcademica> FormacionAcademicas
+		{
+			get;
+		}
+		IQueryable<ActividadProfesional> ActividadProfesionals
+		{
+			get;
+		}
+		IQueryable<ActividadIndependiente> ActividadIndependientes
 		{
 			get;
 		}

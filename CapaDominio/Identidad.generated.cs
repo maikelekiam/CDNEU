@@ -22,44 +22,18 @@ using CapaDominio;
 
 namespace CapaDominio	
 {
-	public partial class MateriasPrima
+	public partial class Identidad
 	{
-		private int idMateriasPrimas;
-		public virtual int IdMateriasPrimas
+		private int idIdentidad;
+		public virtual int IdIdentidad
 		{
 			get
 			{
-				return this.idMateriasPrimas;
+				return this.idIdentidad;
 			}
 			set
 			{
-				this.idMateriasPrimas = value;
-			}
-		}
-		
-		private string porcentajeNeuquen;
-		public virtual string PorcentajeNeuquen
-		{
-			get
-			{
-				return this.porcentajeNeuquen;
-			}
-			set
-			{
-				this.porcentajeNeuquen = value;
-			}
-		}
-		
-		private string dificultades;
-		public virtual string Dificultades
-		{
-			get
-			{
-				return this.dificultades;
-			}
-			set
-			{
-				this.dificultades = value;
+				this.idIdentidad = value;
 			}
 		}
 		
@@ -73,6 +47,71 @@ namespace CapaDominio
 			set
 			{
 				this.idUsuario = value;
+			}
+		}
+		
+		private string atributos;
+		public virtual string Atributos
+		{
+			get
+			{
+				return this.atributos;
+			}
+			set
+			{
+				this.atributos = value;
+			}
+		}
+		
+		private string rasgos;
+		public virtual string Rasgos
+		{
+			get
+			{
+				return this.rasgos;
+			}
+			set
+			{
+				this.rasgos = value;
+			}
+		}
+		
+		private string aspectoRelevante;
+		public virtual string AspectoRelevante
+		{
+			get
+			{
+				return this.aspectoRelevante;
+			}
+			set
+			{
+				this.aspectoRelevante = value;
+			}
+		}
+		
+		private string aspectoRelevanteOtro;
+		public virtual string AspectoRelevanteOtro
+		{
+			get
+			{
+				return this.aspectoRelevanteOtro;
+			}
+			set
+			{
+				this.aspectoRelevanteOtro = value;
+			}
+		}
+		
+		private string temasParaCapacitarse;
+		public virtual string TemasParaCapacitarse
+		{
+			get
+			{
+				return this.temasParaCapacitarse;
+			}
+			set
+			{
+				this.temasParaCapacitarse = value;
 			}
 		}
 		

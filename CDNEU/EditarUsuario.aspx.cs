@@ -230,13 +230,52 @@ namespace CDNEU
             chkMPPManoDeObra.Checked = maquinarium.ManoDeObra.Value;
             txtFalenciaOtra.Text = maquinarium.FalenciaOtra;
 
+            Identidad identidad = identidadNego.ObtenerIdentidad(globalIdUsuario);
+            txtAtributos.Text = identidad.Atributos;
+            txtRasgos.Text = identidad.Rasgos;
+            RBAspectosRelevantes.SelectedValue = identidad.AspectoRelevante;
+            txtAspectosRelevantesOtro.Text = identidad.AspectoRelevanteOtro;
+            txtTemasParaCapacitarse.Text = identidad.TemasParaCapacitarse;
 
+            Innovacion innovacion = innovacionNego.ObtenerInnovacion(globalIdUsuario);
+            RBIncorporaInnovacion.SelectedValue = innovacion.IncorporaInnovacion;
+            txtIncorporaInnovacionOtro.Text = innovacion.IncorporaInnovacionOtra;
+            chkINNLegalesBurocraticas.Checked = innovacion.Legales.Value;
+            chkINNFinancieras.Checked = innovacion.Financieras.Value;
+            chkINNProblemasTecnicos.Checked = innovacion.ProblemasTecnicos.Value;
+            chkINNRecursosHumanos.Checked = innovacion.RecursosHumanos.Value;
+            txtDificultadesInnovarOtro.Text = innovacion.DificultadesOtra;
+            txtInnovacionesPropuestas.Text = innovacion.ComoTomaronInnovacion;
+            txtAlgunaExperiencia.Text = innovacion.ContarExperiencia;
 
-
-
-
-
-
+            Vinculacion vinculacion = vinculacionNego.ObtenerVinculacion(globalIdUsuario);
+            if (vinculacion.RecibioApoyo == "")
+            {
+                RBApoyoSi.Checked = false;
+                RBApoyoNo.Checked = false;
+            }
+            else if (vinculacion.RecibioApoyo == "Si")
+            {
+                RBApoyoSi.Checked = true;
+                RBApoyoNo.Checked = false;
+            }
+            else if (vinculacion.RecibioApoyo == "No")
+            {
+                RBApoyoSi.Checked = false;
+                RBApoyoNo.Checked = true;
+            }
+            chkVINApoyoTecnico.Checked = vinculacion.ApoyoTecnico.Value;
+            chkVINApoyoFinanciero.Checked = vinculacion.ApoyoFinanciero.Value;
+            txtApoyoOtro.Text = vinculacion.OtroApoyo;
+            txtOrganismoApoyoNombre.Text = vinculacion.OrganismoApoyoNombre;
+            txtOrganismoApoyoAnio.Text = vinculacion.OrganismoApoyoAnio;
+            RBSelloBuenDisenio.SelectedValue = vinculacion.SelloBuenDisenioArgentino;
+            txtSelloBuenDisenioOtro.Text = vinculacion.SelloBuenDisenioArgentinoOtro;
+            RBMICA.SelectedValue = vinculacion.Mica;
+            txtMICAOtro.Text = vinculacion.MicaOtro;
+            RBAporteCDNEU.SelectedValue = vinculacion.AporteCdneu;
+            txtAporteCDNEUOtro.Text = vinculacion.AporteCdneuOtro;
+            txtComentariosFinales.Text = vinculacion.ComentariosFinales;
         }
 
         protected void btnEnviarDatosFormacionAcademica_Click(object sender, EventArgs e)
@@ -368,21 +407,11 @@ namespace CDNEU
 
             maquinarium.IdMaquinaria = maquinariaNego.ObtenerMaquinariaSegunIdUsuario(globalIdUsuario);
             maquinarium.IdUsuario = globalIdUsuario;
-            if (RBDisponeEquipoSi.Checked == true)
-            {
-                maquinarium.DisponeEquipo = "Si";
-            }
+            if (RBDisponeEquipoSi.Checked == true) { maquinarium.DisponeEquipo = "Si"; }
             else if (RBDisponeEquipoSi.Checked == false)
             {
-
-                if (RBDisponeEquipoNo.Checked == true)
-                {
-                    maquinarium.DisponeEquipo = "No";
-                }
-                else
-                {
-                    maquinarium.DisponeEquipo = "";
-                }
+                if (RBDisponeEquipoNo.Checked == true) { maquinarium.DisponeEquipo = "No"; }
+                else { maquinarium.DisponeEquipo = ""; }
             }
             maquinarium.DisponeEquipoOtro = txtDisponeEquipoOtro.Text;
             maquinarium.EquiposPropios = chkMPPEquiposPropios.Checked;
@@ -398,10 +427,73 @@ namespace CDNEU
             Response.Redirect("EditarUsuario.aspx");
         }
 
+        protected void btnEnviarDatosIdentidadDisenio_Click(object sender, EventArgs e)
+        {
+            //IDENTIDAD
 
+            Identidad identidad = new Identidad();
 
+            identidad.IdIdentidad = identidadNego.ObtenerIdentidadSegunIdUsuario(globalIdUsuario);
+            identidad.IdUsuario = globalIdUsuario;
+            identidad.Atributos = txtAtributos.Text;
+            identidad.Rasgos = txtRasgos.Text;
+            identidad.AspectoRelevante = RBAspectosRelevantes.SelectedValue;
+            identidad.AspectoRelevanteOtro = txtAspectosRelevantesOtro.Text;
+            identidad.TemasParaCapacitarse = txtTemasParaCapacitarse.Text;
+            identidadNego.ActualizarIdentidad(identidad);
+            Response.Redirect("EditarUsuario.aspx");
+        }
 
+        protected void btnEnviarDatosInnovacion_Click(object sender, EventArgs e)
+        {
+            //INNOVACION
 
+            Innovacion innovacion = new Innovacion();
 
+            innovacion.IdInnovacion = innovacionNego.ObtenerInnovacionSegunIdUsuario(globalIdUsuario);
+            innovacion.IdUsuario = globalIdUsuario;
+            innovacion.IncorporaInnovacion = RBIncorporaInnovacion.SelectedValue;
+            innovacion.IncorporaInnovacionOtra = txtIncorporaInnovacionOtro.Text;
+            innovacion.Legales = chkINNLegalesBurocraticas.Checked;
+            innovacion.Financieras = chkINNFinancieras.Checked;
+            innovacion.ProblemasTecnicos = chkINNProblemasTecnicos.Checked;
+            innovacion.RecursosHumanos = chkINNRecursosHumanos.Checked;
+            innovacion.DificultadesOtra = txtDificultadesInnovarOtro.Text;
+            innovacion.ComoTomaronInnovacion = txtInnovacionesPropuestas.Text;
+            innovacion.ContarExperiencia = txtAlgunaExperiencia.Text;
+            innovacionNego.ActualizarInnovacion(innovacion);
+            Response.Redirect("EditarUsuario.aspx");
+
+        }
+
+        protected void btnEnviarDatosVinculacion_Click(object sender, EventArgs e)
+        {
+            //VINCULACION
+
+            Vinculacion vinculacion = new Vinculacion();
+
+            vinculacion.IdVinculacion = vinculacionNego.ObtenerVinculacionSegunIdUsuario(globalIdUsuario);
+            vinculacion.IdUsuario = globalIdUsuario;
+            if (RBApoyoSi.Checked == true) { vinculacion.RecibioApoyo = "Si"; }
+            else if (RBApoyoSi.Checked == false)
+            {
+                if (RBApoyoNo.Checked == true) { vinculacion.RecibioApoyo = "No"; }
+                else { vinculacion.RecibioApoyo = ""; }
+            }
+            vinculacion.ApoyoTecnico = chkVINApoyoTecnico.Checked;
+            vinculacion.ApoyoFinanciero = chkVINApoyoFinanciero.Checked;
+            vinculacion.OtroApoyo = txtApoyoOtro.Text;
+            vinculacion.OrganismoApoyoNombre = txtOrganismoApoyoNombre.Text;
+            vinculacion.OrganismoApoyoAnio = txtOrganismoApoyoAnio.Text;
+            vinculacion.SelloBuenDisenioArgentino = RBSelloBuenDisenio.SelectedValue;
+            vinculacion.SelloBuenDisenioArgentinoOtro = txtSelloBuenDisenioOtro.Text;
+            vinculacion.Mica = RBMICA.SelectedValue;
+            vinculacion.MicaOtro = txtMICAOtro.Text;
+            vinculacion.AporteCdneu = RBAporteCDNEU.SelectedValue;
+            vinculacion.AporteCdneuOtro = txtAporteCDNEUOtro.Text;
+            vinculacion.ComentariosFinales = txtComentariosFinales.Text;
+            vinculacionNego.ActualizarVinculacion(vinculacion);
+            Response.Redirect("EditarUsuario.aspx");
+        }
     }
 }

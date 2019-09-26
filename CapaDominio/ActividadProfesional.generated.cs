@@ -37,6 +37,19 @@ namespace CapaDominio
 			}
 		}
 		
+		private int idUsuario;
+		public virtual int IdUsuario
+		{
+			get
+			{
+				return this.idUsuario;
+			}
+			set
+			{
+				this.idUsuario = value;
+			}
+		}
+		
 		private string disciplinaProyectual;
 		public virtual string DisciplinaProyectual
 		{
@@ -60,6 +73,136 @@ namespace CapaDominio
 			set
 			{
 				this.disciplinaProyectualOtra = value;
+			}
+		}
+		
+		private bool? accesorios;
+		public virtual bool? Accesorios
+		{
+			get
+			{
+				return this.accesorios;
+			}
+			set
+			{
+				this.accesorios = value;
+			}
+		}
+		
+		private bool? calzado;
+		public virtual bool? Calzado
+		{
+			get
+			{
+				return this.calzado;
+			}
+			set
+			{
+				this.calzado = value;
+			}
+		}
+		
+		private bool? ceramica;
+		public virtual bool? Ceramica
+		{
+			get
+			{
+				return this.ceramica;
+			}
+			set
+			{
+				this.ceramica = value;
+			}
+		}
+		
+		private bool? disenioEditorial;
+		public virtual bool? DisenioEditorial
+		{
+			get
+			{
+				return this.disenioEditorial;
+			}
+			set
+			{
+				this.disenioEditorial = value;
+			}
+		}
+		
+		private bool? disenioWeb;
+		public virtual bool? DisenioWeb
+		{
+			get
+			{
+				return this.disenioWeb;
+			}
+			set
+			{
+				this.disenioWeb = value;
+			}
+		}
+		
+		private bool? joyeria;
+		public virtual bool? Joyeria
+		{
+			get
+			{
+				return this.joyeria;
+			}
+			set
+			{
+				this.joyeria = value;
+			}
+		}
+		
+		private bool? madera;
+		public virtual bool? Madera
+		{
+			get
+			{
+				return this.madera;
+			}
+			set
+			{
+				this.madera = value;
+			}
+		}
+		
+		private bool? mobiliario;
+		public virtual bool? Mobiliario
+		{
+			get
+			{
+				return this.mobiliario;
+			}
+			set
+			{
+				this.mobiliario = value;
+			}
+		}
+		
+		private bool? tejidos;
+		public virtual bool? Tejidos
+		{
+			get
+			{
+				return this.tejidos;
+			}
+			set
+			{
+				this.tejidos = value;
+			}
+		}
+		
+		private string subSectorOtro;
+		public virtual string SubSectorOtro
+		{
+			get
+			{
+				return this.subSectorOtro;
+			}
+			set
+			{
+				this.subSectorOtro = value;
 			}
 		}
 		
@@ -89,45 +232,6 @@ namespace CapaDominio
 			}
 		}
 		
-		private int idUsuario;
-		public virtual int IdUsuario
-		{
-			get
-			{
-				return this.idUsuario;
-			}
-			set
-			{
-				this.idUsuario = value;
-			}
-		}
-		
-		private string subSectorOtro;
-		public virtual string SubSectorOtro
-		{
-			get
-			{
-				return this.subSectorOtro;
-			}
-			set
-			{
-				this.subSectorOtro = value;
-			}
-		}
-		
-		private bool? tejidos;
-		public virtual bool? Tejidos
-		{
-			get
-			{
-				return this.tejidos;
-			}
-			set
-			{
-				this.tejidos = value;
-			}
-		}
-		
 		private string nombreEmpresaAP;
 		public virtual string NombreEmpresaAP
 		{
@@ -138,32 +242,6 @@ namespace CapaDominio
 			set
 			{
 				this.nombreEmpresaAP = value;
-			}
-		}
-		
-		private bool? mobiliario;
-		public virtual bool? Mobiliario
-		{
-			get
-			{
-				return this.mobiliario;
-			}
-			set
-			{
-				this.mobiliario = value;
-			}
-		}
-		
-		private bool? madera;
-		public virtual bool? Madera
-		{
-			get
-			{
-				return this.madera;
-			}
-			set
-			{
-				this.madera = value;
 			}
 		}
 		
@@ -180,45 +258,6 @@ namespace CapaDominio
 			}
 		}
 		
-		private bool? joyeria;
-		public virtual bool? Joyeria
-		{
-			get
-			{
-				return this.joyeria;
-			}
-			set
-			{
-				this.joyeria = value;
-			}
-		}
-		
-		private bool? disenioWeb;
-		public virtual bool? DisenioWeb
-		{
-			get
-			{
-				return this.disenioWeb;
-			}
-			set
-			{
-				this.disenioWeb = value;
-			}
-		}
-		
-		private bool? disenioEditorial;
-		public virtual bool? DisenioEditorial
-		{
-			get
-			{
-				return this.disenioEditorial;
-			}
-			set
-			{
-				this.disenioEditorial = value;
-			}
-		}
-		
 		private string descripcionAP;
 		public virtual string DescripcionAP
 		{
@@ -229,45 +268,6 @@ namespace CapaDominio
 			set
 			{
 				this.descripcionAP = value;
-			}
-		}
-		
-		private bool? ceramica;
-		public virtual bool? Ceramica
-		{
-			get
-			{
-				return this.ceramica;
-			}
-			set
-			{
-				this.ceramica = value;
-			}
-		}
-		
-		private bool? calzado;
-		public virtual bool? Calzado
-		{
-			get
-			{
-				return this.calzado;
-			}
-			set
-			{
-				this.calzado = value;
-			}
-		}
-		
-		private bool? accesorios;
-		public virtual bool? Accesorios
-		{
-			get
-			{
-				return this.accesorios;
-			}
-			set
-			{
-				this.accesorios = value;
 			}
 		}
 		
