@@ -44,13 +44,13 @@
                     Text="<img src='imagenes/girar180.png' />"></asp:LinkButton>
                 <asp:LinkButton BorderStyle="Solid" BorderWidth="1" ID="LinkButton2" runat="server" OnClick="btnRotarDerecha_Click"
                     Text="<img src='imagenes/girarderecha20texto.png' />"></asp:LinkButton>
-                
-            </div>
-            <div class="form-group">
+
+                <%--</div>
+            <div class="form-group">--%>
+                <asp:LinkButton BorderStyle="none" BorderWidth="1" ID="LinkButton5" runat="server" OnClick="btnEliminarFoto_Click"
+                    Font-Bold="true" Text="<img src='imagenes/eliminar.png' />"></asp:LinkButton>
                 <asp:LinkButton BorderStyle="none" BorderWidth="1" ID="LinkButton4" runat="server" OnClick="btnGuardarFoto_Click"
                     Font-Bold="true" Text="<img src='imagenes/guardar.png' /> Guardar"></asp:LinkButton>
-                <asp:LinkButton BorderStyle="none" BorderWidth="1" ID="LinkButton5" runat="server" OnClick="btnEliminarFoto_Click"
-                    Font-Bold="true" Text="<img src='imagenes/eliminar.png' /> Eliminar"></asp:LinkButton>
             </div>
 
 

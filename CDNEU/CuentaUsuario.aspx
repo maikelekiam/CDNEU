@@ -1,13 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CuentaUsuario.aspx.cs" Inherits="CDNEU.CuentaUsuario" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+
     <style>
         input[type="radio"] + label {
             margin-left: 10px;
         }
 
         .col-md-6 {
-            padding-left: 2px;
+            padding-left: 12px;
         }
 
         .container-fluid {
@@ -63,6 +64,7 @@
             height: 15px;
         }
     </style>
+
     <div class="container-fluid">
         <asp:Panel ID="Panel1" CssClass="panel panel-default" runat="server">
             <div class="panel-heading">
@@ -97,7 +99,7 @@
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-lock"></span>
                                     </span>
-                                    <asp:TextBox ID="txtRegistroContrasenia" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese una Contraseña" />
+                                    <asp:TextBox ID="txtRegistroContrasenia" runat="server" CssClass="form-control" />
                                 </div>
                             </tr>
                             <tr>
@@ -114,7 +116,7 @@
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-lock"></span>
                                     </span>
-                                    <asp:TextBox ID="txtRegistroNuevaContrasenia" runat="server" CssClass="form-control" TextMode="Password" placeholder="Nueva Contraseña" />
+                                    <asp:TextBox ID="txtRegistroNuevaContrasenia" runat="server" CssClass="form-control" />
                                 </div>
                             </tr>
                             <tr>
@@ -131,7 +133,7 @@
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-lock"></span>
                                     </span>
-                                    <asp:TextBox ID="txtRegistroReingresarNuevaContrasenia" runat="server" CssClass="form-control" TextMode="Password" placeholder="Nueva Contraseña" />
+                                    <asp:TextBox ID="txtRegistroReingresarNuevaContrasenia" runat="server" CssClass="form-control" />
                                 </div>
                             </tr>
                             <tr>
@@ -140,16 +142,18 @@
                             </tr>
                         </table>
 
-
-                        <hr />
+                        <h3>
+                            <asp:Label ID="lblMensaje" runat="server" Style="color: red" />
+                        </h3>
                         <!--Boton de registro-->
                         <div class="form-group">
-                            <div class="col-md-10 col-md-offset-1">
-                                <asp:Button ID="btnGuardar" runat="server" Text="Guardar Datos" CssClass="boton_azul" />
+                            <div class="col-md-6">
+                                <asp:Button ID="btnActualizarUsuario" Width="230px" runat="server" OnClientClick="return confirm('¿Esta seguro en actualizar el nombre de usuario?')" Text="Actualizar Nombre de Usuario" CssClass="boton_azul" OnClick="btnActualizarUsuario_Click" />
+                            </div>
+                            <div class="col-md-6">
+                                <asp:Button ID="btnActualizarContrasenia" runat="server" OnClientClick="return confirm('¿Esta seguro en actualizar la contraseña?')" Text="Actualizar Contraseña" CssClass="boton_azul" OnClick="btnActualizarContrasenia_Click" />
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>

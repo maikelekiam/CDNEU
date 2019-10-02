@@ -255,15 +255,20 @@
     <Content Include="imagenes\copade03.jpg" />
     <Content Include="imagenes\copade04.jpg" />
     <Content Include="imagenes\eliminar.png" />
+    <Content Include="imagenes\foto01.jpg" />
+    <Content Include="imagenes\foto02.jpg" />
+    <Content Include="imagenes\foto03.jpg" />
+    <Content Include="imagenes\foto04.jpg" />
+    <Content Include="imagenes\foto05.jpg" />
     <Content Include="imagenes\FotoUsuariosx2.png" />
     <Content Include="imagenes\girar180.png" />
     <Content Include="imagenes\girarderecha20texto.png" />
     <Content Include="imagenes\girarizquierda20texto.png" />
     <Content Include="imagenes\guardar.png" />
-    <Content Include="imagenes\ic01-twitter.png" />
     <Content Include="imagenes\icono-facebook.jpg" />
     <Content Include="imagenes\icono-flickr.jpg" />
     <Content Include="imagenes\icono-instagram.jpg" />
+    <Content Include="imagenes\icono-twitter.jpg" />
     <Content Include="imagenes\icono-youtube.jpg" />
     <Content Include="imagenes\img-01.png" />
     <Content Include="js\bootstrap-datepicker.js" />
@@ -461,7 +466,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1095</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:1095/</IISUrl>
+          <IISUrl>http://localhost:1097/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

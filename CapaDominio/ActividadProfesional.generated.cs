@@ -271,6 +271,110 @@ namespace CapaDominio
 			}
 		}
 		
+		private bool? plasticas;
+		public virtual bool? Plasticas
+		{
+			get
+			{
+				return this.plasticas;
+			}
+			set
+			{
+				this.plasticas = value;
+			}
+		}
+		
+		private bool? musicales;
+		public virtual bool? Musicales
+		{
+			get
+			{
+				return this.musicales;
+			}
+			set
+			{
+				this.musicales = value;
+			}
+		}
+		
+		private bool? literarias;
+		public virtual bool? Literarias
+		{
+			get
+			{
+				return this.literarias;
+			}
+			set
+			{
+				this.literarias = value;
+			}
+		}
+		
+		private bool? graficas;
+		public virtual bool? Graficas
+		{
+			get
+			{
+				return this.graficas;
+			}
+			set
+			{
+				this.graficas = value;
+			}
+		}
+		
+		private bool? escenicas;
+		public virtual bool? Escenicas
+		{
+			get
+			{
+				return this.escenicas;
+			}
+			set
+			{
+				this.escenicas = value;
+			}
+		}
+		
+		private bool? digitales;
+		public virtual bool? Digitales
+		{
+			get
+			{
+				return this.digitales;
+			}
+			set
+			{
+				this.digitales = value;
+			}
+		}
+		
+		private bool? cinematograficas;
+		public virtual bool? Cinematograficas
+		{
+			get
+			{
+				return this.cinematograficas;
+			}
+			set
+			{
+				this.cinematograficas = value;
+			}
+		}
+		
+		private bool? audiovisuales;
+		public virtual bool? Audiovisuales
+		{
+			get
+			{
+				return this.audiovisuales;
+			}
+			set
+			{
+				this.audiovisuales = value;
+			}
+		}
+		
 		private Usuario usuario;
 		public virtual Usuario Usuario
 		{

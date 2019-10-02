@@ -236,6 +236,51 @@
                                 </table>
                                 <table>
                                     <tr>
+                                        <asp:Label ID="Label42" runat="server" Text="Label">Tu DNI</asp:Label>
+                                    </tr>
+                                    <tr>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-edit"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtDatosPersonalesDni" runat="server" CssClass="form-control" />
+                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <td class="altotabla"></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+                                <table>
+                                    <tr>
+                                        <asp:Label ID="Label43" runat="server" Text="Label">Tu Fecha de Nacimiento</asp:Label>
+                                    </tr>
+                                    <tr>
+                                        <div class="input-group date"
+                                            data-provide="datepicker"
+                                            data-date-autoclose="true"
+                                            data-date-today-btn="true"
+                                            data-date-clear-btn="true"
+                                            data-date-today-highlight="true">
+                                            <asp:TextBox CssClass="form-control" runat="server" ID="txtDatosPersonalesFechaDeNacimiento"></asp:TextBox>
+                                            <div class="input-group-addon">
+                                                <span class="glyphicon glyphicon-th"></span>
+                                            </div>
+                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <td class="altotabla"></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+
+
+
+
+                                <table>
+                                    <tr>
                                         <asp:Label ID="Label5" runat="server" Text="Label">Tu Correo Electronico</asp:Label>
                                     </tr>
                                     <tr>
@@ -261,23 +306,6 @@
                                                 <span class="glyphicon glyphicon-phone-alt"></span>
                                             </span>
                                             <asp:TextBox ID="txtDatosPersonalesTelefono" runat="server" CssClass="form-control" />
-                                        </div>
-                                    </tr>
-                                    <tr>
-                                        <td class="altotabla"></td>
-                                        <td></td>
-                                    </tr>
-                                </table>
-                                <table>
-                                    <tr>
-                                        <asp:Label ID="Label10" runat="server" Text="Label">Tu Edad</asp:Label>
-                                    </tr>
-                                    <tr>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-calendar"></span>
-                                            </span>
-                                            <asp:TextBox ID="txtDatosPersonalesEdad" onkeypress="return validarSoloNumeros(event);" MaxLength="2" runat="server" CssClass="form-control" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -354,7 +382,7 @@
 
                                 <table>
                                     <asp:Label ID="Label61" runat="server">Tu Perfil de Twitter</asp:Label>
-                                    <asp:TextBox ID="txtTwitter" Height="45px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/ic01-twitter.png);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" />
+                                    <asp:TextBox ID="txtTwitter" Height="45px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-twitter.jpg);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" />
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
@@ -486,11 +514,12 @@
                                                 RepeatColumns="1"
                                                 RepeatLayout="Table"
                                                 CellPadding="10">
-                                                <asp:ListItem Value="1">Secundario</asp:ListItem>
-                                                <asp:ListItem Value="2">Terciario</asp:ListItem>
-                                                <asp:ListItem Value="3">Universitario</asp:ListItem>
-                                                <asp:ListItem Value="4">Posgrado</asp:ListItem>
-                                                <asp:ListItem Value="5">Otro</asp:ListItem>
+                                                <asp:ListItem Value="1">Primario</asp:ListItem>
+                                                <asp:ListItem Value="2">Secundario</asp:ListItem>
+                                                <asp:ListItem Value="3">Terciario</asp:ListItem>
+                                                <asp:ListItem Value="4">Universitario</asp:ListItem>
+                                                <asp:ListItem Value="5">Posgrado</asp:ListItem>
+                                                <asp:ListItem Value="10">Otro</asp:ListItem>
                                             </asp:RadioButtonList>
                                         </td>
                                     </tr>
@@ -654,14 +683,18 @@
                                                 RepeatLayout="Table"
                                                 CellPadding="10">
                                                 <asp:ListItem Value="1">Arquitectura</asp:ListItem>
-                                                <asp:ListItem Value="2">Artesanías</asp:ListItem>
-                                                <asp:ListItem Value="3">Diseño de Interiores</asp:ListItem>
-                                                <asp:ListItem Value="4">Diseño de Indumentaria</asp:ListItem>
-                                                <asp:ListItem Value="5">Diseño del Paisaje</asp:ListItem>
-                                                <asp:ListItem Value="6">Diseño Industrial</asp:ListItem>
-                                                <asp:ListItem Value="7">Diseño Gráfico</asp:ListItem>
-                                                <asp:ListItem Value="8">Diseño Multimedia</asp:ListItem>
-                                                <asp:ListItem Value="10">Otra</asp:ListItem>
+                                                <asp:ListItem Value="2">Artes</asp:ListItem>
+                                                <asp:ListItem Value="3">Artesanías</asp:ListItem>
+                                                <asp:ListItem Value="4">Diseño de Interiores</asp:ListItem>
+                                                <asp:ListItem Value="5">Diseño de Indumentaria</asp:ListItem>
+                                                <asp:ListItem Value="6">Diseño del Paisaje</asp:ListItem>
+                                                <asp:ListItem Value="7">Diseño Industrial</asp:ListItem>
+                                                <asp:ListItem Value="8">Diseño Gráfico</asp:ListItem>
+                                                <asp:ListItem Value="9">Diseño Multimedia</asp:ListItem>
+                                                <asp:ListItem Value="10">Fotografía</asp:ListItem>
+                                                <asp:ListItem Value="11">Food Design</asp:ListItem>
+                                                <asp:ListItem Value="12">Publicidad</asp:ListItem>
+                                                <asp:ListItem Value="20">Otra</asp:ListItem>
                                             </asp:RadioButtonList>
                                         </td>
                                     </tr>
@@ -675,6 +708,39 @@
                                     </tr>
                                 </table>
                                 <h4>Sub Sector</h4>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAPArtesCinematograficas" runat="server" Width="20px" />
+                                    <asp:Label ID="Label10" runat="server" Text="Artes Cinematograficas"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAPArtesAudiovisuales" runat="server" Width="20px" />
+                                    <asp:Label ID="Label44" runat="server" Text="Artes Audiovisuales"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAPArtesEscenicas" runat="server" Width="20px" />
+                                    <asp:Label ID="Label45" runat="server" Text="Artes Escénicas"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAPArtesMusicales" runat="server" Width="20px" />
+                                    <asp:Label ID="Label46" runat="server" Text="Artes Musicales y Sonoras"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAPArtesLiterarias" runat="server" Width="20px" />
+                                    <asp:Label ID="Label47" runat="server" Text="Artes Literarias y Narrativas"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAPArtesPlasticas" runat="server" Width="20px" />
+                                    <asp:Label ID="Label48" runat="server" Text="Artes Plasticas y Visuales"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAPArtesGraficas" runat="server" Width="20px" />
+                                    <asp:Label ID="Label49" runat="server" Text="Artes Gráficas e Ilustracion"></asp:Label>
+                                </ul>
+                                <ul class="estilo-ul">
+                                    <asp:CheckBox ID="chkAPArtesDigitales" runat="server" Width="20px" />
+                                    <asp:Label ID="Label50" runat="server" Text="Artes Digitales"></asp:Label>
+                                </ul>
+
                                 <ul class="estilo-ul">
                                     <asp:CheckBox ID="chkAPAccesorios" runat="server" Width="20px" />
                                     <asp:Label ID="lblAPAccesorios" runat="server" Text="Accesorios"></asp:Label>
@@ -1536,7 +1602,7 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtDificultadesInnovarOtro" placeHolder="Otra dificultad" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1"/>
+                                        <asp:TextBox ID="txtDificultadesInnovarOtro" placeHolder="Otra dificultad" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                     </tr>
                                     <tr>
                                         <td style="height: 15px"></td>
@@ -1563,7 +1629,7 @@
                                 <!--Boton de registro-->
                                 <div class="form-group">
                                     <div class="col-md-10 col-md-offset-1">
-                                        <asp:Button ID="btnEnviarDatosInnovacion" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" OnClick="btnEnviarDatosInnovacion_Click"/>
+                                        <asp:Button ID="btnEnviarDatosInnovacion" runat="server" Text="Enviar Datos" CssClass="boton_azul parpadea" OnClick="btnEnviarDatosInnovacion_Click" />
                                     </div>
                                 </div>
                             </div>
@@ -1614,7 +1680,7 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtApoyoOtro" runat="server" CssClass="form-control" placeHolder="Otro tipo de apoyo" TextMode="MultiLine" Rows="1"  />
+                                        <asp:TextBox ID="txtApoyoOtro" runat="server" CssClass="form-control" placeHolder="Otro tipo de apoyo" TextMode="MultiLine" Rows="1" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
@@ -1623,7 +1689,7 @@
                                 <h4>Organismo que brindó el apoyo</h4>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtOrganismoApoyoNombre" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1"  />
+                                        <asp:TextBox ID="txtOrganismoApoyoNombre" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>

@@ -59,5 +59,16 @@ namespace CapaRepositorio
 
             }
         }
+        public void ActualizarUsuarioSoloNombreUsuario(string cosa)
+        {
+            using (ModeloDeDominio modeloDeDominio = new ModeloDeDominio())
+            {
+                Usuario usuario = modeloDeDominio.Usuarios.FirstOrDefault();
+
+                usuario.NombreUsuario = cosa;
+
+                modeloDeDominio.SaveChanges();
+            }
+        }
     }
 }

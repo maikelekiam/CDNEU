@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using CapaDominio;
 using CapaNegocio;
+using System.Globalization;
 
 namespace CDNEU
 {
@@ -51,6 +52,7 @@ namespace CDNEU
             // Aca hay que restringir los datos si o si necesarios para GUARDAR
             if ((txtDatosPersonalesNombre.Text != "")
                 && (txtDatosPersonalesApellido.Text != "")
+                && (txtDatosPersonalesDni.Text != "")
                 && (txtDatosPersonalesCorreoElectronico.Text != "")
                 )
             {
@@ -73,12 +75,18 @@ namespace CDNEU
             usuario.Activo = globalActivo;
             usuario.Nombre = txtDatosPersonalesNombre.Text;
             usuario.Apellido = txtDatosPersonalesApellido.Text;
+            usuario.Dni = txtDatosPersonalesDni.Text;
+
+
+            if (txtDatosPersonalesFechaDeNacimiento.Text == "") { usuario.FechaNacimiento = null; }
+            else { usuario.FechaNacimiento = DateTime.ParseExact(txtDatosPersonalesFechaDeNacimiento.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture); }
+
+
             usuario.CorreoElectronico = txtDatosPersonalesCorreoElectronico.Text;
             usuario.Telefono = txtDatosPersonalesTelefono.Text;
             usuario.Domicilio = txtDatosPersonalesDomicilio.Text;
             usuario.Localidad = txtDatosPersonalesLocalidad.Text;
             usuario.Provincia = txtDatosPersonalesProvincia.Text;
-            usuario.Edad = txtDatosPersonalesEdad.Text;
             usuarioNego.ActualizarUsuario(usuario);
 
             //REDES SOCIALES
@@ -108,12 +116,16 @@ namespace CDNEU
             Usuario usuario = usuarioNego.ObtenerUsuario(globalIdUsuario);
             txtDatosPersonalesNombre.Text = usuario.Nombre;
             txtDatosPersonalesApellido.Text = usuario.Apellido;
+            txtDatosPersonalesDni.Text = usuario.Dni;
+
+            if (usuario.FechaNacimiento == null) { txtDatosPersonalesFechaDeNacimiento.Text = ""; }
+            else { txtDatosPersonalesFechaDeNacimiento.Text = Convert.ToDateTime(usuario.FechaNacimiento).ToShortDateString(); }
+
             txtDatosPersonalesCorreoElectronico.Text = usuario.CorreoElectronico;
             txtDatosPersonalesTelefono.Text = usuario.Telefono;
             txtDatosPersonalesDomicilio.Text = usuario.Domicilio;
             txtDatosPersonalesLocalidad.Text = usuario.Localidad;
             txtDatosPersonalesProvincia.Text = usuario.Provincia;
-            txtDatosPersonalesEdad.Text = usuario.Edad;
 
             RedesSociale redesSociale = redesSocialesNego.ObtenerRedesSociale(globalIdUsuario);
             txtFacebook.Text = redesSociale.Facebook;
@@ -148,6 +160,14 @@ namespace CDNEU
             ActividadProfesional actividadProfesional = actividadProfesionalNego.ObtenerActividadProfesional(globalIdUsuario);
             RBDisciplinaProyectual.SelectedValue = actividadProfesional.DisciplinaProyectual;
             txtDisciplinaProyectualOtra.Text = actividadProfesional.DisciplinaProyectualOtra;
+            chkAPArtesCinematograficas.Checked = actividadProfesional.Cinematograficas.Value;
+            chkAPArtesAudiovisuales.Checked = actividadProfesional.Audiovisuales.Value;
+            chkAPArtesEscenicas.Checked = actividadProfesional.Escenicas.Value;
+            chkAPArtesMusicales.Checked = actividadProfesional.Musicales.Value;
+            chkAPArtesLiterarias.Checked = actividadProfesional.Literarias.Value;
+            chkAPArtesPlasticas.Checked = actividadProfesional.Plasticas.Value;
+            chkAPArtesGraficas.Checked = actividadProfesional.Graficas.Value;
+            chkAPArtesDigitales.Checked = actividadProfesional.Digitales.Value;
             chkAPAccesorios.Checked = actividadProfesional.Accesorios.Value;
             chkAPCalzado.Checked = actividadProfesional.Calzado.Value;
             chkAPCeramica.Checked = actividadProfesional.Ceramica.Value;
@@ -310,6 +330,16 @@ namespace CDNEU
             actividadProfesional.IdUsuario = globalIdUsuario;
             actividadProfesional.DisciplinaProyectual = RBDisciplinaProyectual.SelectedValue;
             actividadProfesional.DisciplinaProyectualOtra = txtDisciplinaProyectualOtra.Text;
+
+            actividadProfesional.Cinematograficas = chkAPArtesCinematograficas.Checked;
+            actividadProfesional.Audiovisuales = chkAPArtesAudiovisuales.Checked;
+            actividadProfesional.Escenicas = chkAPArtesEscenicas.Checked;
+            actividadProfesional.Musicales = chkAPArtesMusicales.Checked;
+            actividadProfesional.Literarias = chkAPArtesLiterarias.Checked;
+            actividadProfesional.Plasticas = chkAPArtesPlasticas.Checked;
+            actividadProfesional.Graficas = chkAPArtesGraficas.Checked;
+            actividadProfesional.Digitales = chkAPArtesDigitales.Checked;
+
             actividadProfesional.Accesorios = chkAPAccesorios.Checked;
             actividadProfesional.Calzado = chkAPCalzado.Checked;
             actividadProfesional.Ceramica = chkAPCeramica.Checked;

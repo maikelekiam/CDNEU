@@ -67,6 +67,7 @@ namespace CDNEU
                 && (txtRegistroContrasenia.Text != "") //Aca tendria que haber otro campo para verificar la contraseña...
                 && (txtRegistroNombre.Text != "")
                 && (txtRegistroApellido.Text != "")
+                && (txtRegistroDni.Text != "")
                 && (txtRegistroCorreoElectronico.Text != "")
                 )
             {
@@ -92,12 +93,15 @@ namespace CDNEU
             usuario.Contrasenia = txtRegistroContrasenia.Text;
             usuario.Nombre = txtRegistroNombre.Text;
             usuario.Apellido = txtRegistroApellido.Text;
+            usuario.Dni = txtRegistroDni.Text;
             usuario.CorreoElectronico = txtRegistroCorreoElectronico.Text;
             usuario.Telefono = "";
-            usuario.Edad = "";
             usuario.Domicilio = "";
             usuario.Localidad = "";
             usuario.Provincia = "Neuquen";
+
+            usuario.FechaNacimiento = null;
+
             idUsuarioTemporal = usuarioNego.GuardarUsuario(usuario);
 
             //Creo un objeto FotoPerfil
@@ -144,6 +148,14 @@ namespace CDNEU
             actividadProfesional.IdUsuario = idUsuarioTemporal;
             actividadProfesional.DisciplinaProyectual = "";
             actividadProfesional.DisciplinaProyectualOtra = "";
+            actividadProfesional.Cinematograficas = false;
+            actividadProfesional.Audiovisuales = false;
+            actividadProfesional.Escenicas = false;
+            actividadProfesional.Musicales = false;
+            actividadProfesional.Literarias = false;
+            actividadProfesional.Plasticas = false;
+            actividadProfesional.Graficas = false;
+            actividadProfesional.Digitales = false;
             actividadProfesional.Accesorios = false;
             actividadProfesional.Calzado = false;
             actividadProfesional.Ceramica = false;

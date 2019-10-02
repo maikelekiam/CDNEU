@@ -36,5 +36,9 @@ namespace CapaNegocio
         {
             return usuarioRepo.ControlarDuplicadoUsuario(nombre);
         }
+        public void ActualizarUsuarioSoloNombreUsuario(string cosa)
+        {
+            usuarioRepo.ActualizarUsuarioSoloNombreUsuario(cosa);
+        }
     }
 }

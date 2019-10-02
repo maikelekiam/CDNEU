@@ -141,19 +141,6 @@ namespace CapaDominio
 			}
 		}
 		
-		private string edad;
-		public virtual string Edad
-		{
-			get
-			{
-				return this.edad;
-			}
-			set
-			{
-				this.edad = value;
-			}
-		}
-		
 		private string domicilio;
 		public virtual string Domicilio
 		{
@@ -190,6 +177,32 @@ namespace CapaDominio
 			set
 			{
 				this.provincia = value;
+			}
+		}
+		
+		private DateTime? fechaNacimiento;
+		public virtual DateTime? FechaNacimiento
+		{
+			get
+			{
+				return this.fechaNacimiento;
+			}
+			set
+			{
+				this.fechaNacimiento = value;
+			}
+		}
+		
+		private string dni;
+		public virtual string Dni
+		{
+			get
+			{
+				return this.dni;
+			}
+			set
+			{
+				this.dni = value;
 			}
 		}
 		

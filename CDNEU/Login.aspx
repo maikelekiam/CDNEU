@@ -188,6 +188,17 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-6 col-md-offset-1">
+                                        <asp:Label ID="Label5" runat="server" Text="Label">DNI</asp:Label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-edit"></span>
+                                            </span>
+                                            <asp:TextBox ID="txtRegistroDni" runat="server" CssClass="form-control" placeholder="Ingrese su DNI" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-6 col-md-offset-1">
                                         <asp:Label ID="Label4" runat="server" Text="Label">Correo Electronico</asp:Label>
                                         <div class="input-group">
                                             <span class="input-group-addon alert-info">
@@ -197,128 +208,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <%--<table>
-                                    <tr>
-                                        <td class="anchotabla">
-                                            <asp:Label ID="Label5" runat="server" Text="Label">Telefono</asp:Label>
-                                        </td>
-                                        <td class="anchotextbox">
-                                            <div class="input-group">
-                                                <span class="input-group-addon alert-info">
-                                                    <span class="glyphicon glyphicon-phone-alt"></span>
-                                                </span>
-                                                <asp:TextBox ID="txtRegistroTelefono" runat="server" CssClass="form-control" placeholder="Ingrese su Telefono" />
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="anchotabla altotabla"></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="anchotabla">
-                                            <asp:Label ID="Label6" runat="server" Text="Label">Edad</asp:Label>
-                                        </td>
-                                        <td class="anchotextbox">
-                                            <div class="input-group">
-                                                <span class="input-group-addon alert-info">
-                                                    <span class="glyphicon glyphicon-calendar"></span>
-                                                </span>
-                                                <asp:TextBox ID="txtRegistroEdad" onkeypress="return validarSoloNumeros(event);" MaxLength="2" runat="server" CssClass="form-control" placeholder="Ingrese su Edad" />
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="anchotabla altotabla"></td>
-                                        <td></td>
-                                    </tr>
-                                </table>--%>
-
-                                <%--<!--USUARIO Y CONTRASEÑA-->
-                                <div class="form-group col-md-12">
-                                    <div class="col-md-6">
-                                        <asp:Label ID="Label3" runat="server" Text="Label">Usuario</asp:Label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group">
-                                            <span class="input-group-addon alert-info">
-                                                <span class="glyphicon glyphicon-user"></span>
-                                            </span>
-                                            <asp:TextBox ID="txtRegistroUsuario" runat="server" CssClass="form-control" placeholder="Ingrese nombre de Usuario" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <div class="col-md-6">
-                                        <asp:Label ID="Label4" runat="server" Text="Label">Contraseña</asp:Label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group">
-                                            <span class="input-group-addon alert-info">
-                                                <span class="glyphicon glyphicon-lock"></span>
-                                            </span>
-                                            <asp:TextBox ID="txtRegistroContrasenia" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese una Contraseña" />
-                                        </div>
-                                    </div>
-                                </div>--%>
-
-                                <%--<!--NOMBRE Y APELLIDO-->
-                                <div class="form-group col-md-12">
-                                    <div class="col-md-6">
-                                        <asp:Label ID="Label9" runat="server" Text="Label">Nombre</asp:Label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group">
-                                            <span class="input-group-addon alert-info">
-                                                <span class="glyphicon glyphicon-edit"></span>
-                                            </span>
-                                            <asp:TextBox ID="txtRegistroNombre" runat="server" CssClass="form-control" placeholder="Ingrese su nombre" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <div class="col-md-6">
-                                        <asp:Label ID="Label10" runat="server" Text="Label">Apellido</asp:Label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group">
-                                            <span class="input-group-addon alert-info">
-                                                <span class="glyphicon glyphicon-edit"></span>
-                                            </span>
-                                            <asp:TextBox ID="txtRegistroApellido" runat="server" CssClass="form-control" placeholder="Ingrese su apellido" />
-                                        </div>
-                                    </div>
-                                </div>--%>
-
-                                <%--<!--MAIL Y TELEFONO-->
-                                <div class="form-group col-md-12">
-                                    <div class="col-md-6">
-                                        <asp:Label ID="Label5" runat="server" Text="Label">Correo Electronico</asp:Label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group">
-                                            <span class="input-group-addon alert-info">
-                                                <span class="glyphicon glyphicon-envelope"></span>
-                                            </span>
-                                            <asp:TextBox ID="txtRegistroMail" runat="server" CssClass="form-control" placeholder="Ingrese su correo electronico" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <div class="col-md-6">
-                                        <asp:Label ID="Label6" runat="server" Text="Label">Telefono</asp:Label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group">
-                                            <span class="input-group-addon alert-info">
-                                                <span class="glyphicon glyphicon-phone-alt"></span>
-                                            </span>
-                                            <asp:TextBox ID="txtRegistroTelefono" runat="server" CssClass="form-control" placeholder="Ingrese su telefono" />
-                                        </div>
-                                    </div>
-                                </div>--%>
-
                                 <br />
                                 <!--Boton de registro-->
                                 <div class="form-group">
