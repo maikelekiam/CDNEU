@@ -2,32 +2,10 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
+        
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<%--    <div class="container" style="padding-top: 10px">
+    <%--    <div class="container" style="padding-top: 10px">
         <div class="form-horizontal">
             <div class="form-group">
                 <asp:Label ID="Label1" runat="server" Text="Upload Image 1 " CssClass="col-md-2 control-label"></asp:Label>
@@ -78,5 +56,4 @@
         </div>
 
     </div>--%>
-
 </asp:Content>

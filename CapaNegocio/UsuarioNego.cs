@@ -40,5 +40,9 @@ namespace CapaNegocio
         {
             usuarioRepo.ActualizarUsuarioSoloNombreUsuario(cosa);
         }
+        public Usuario ObtenerUsuarioSegunCorreoElectronico(String correoElectronico)
+        {
+            return usuarioRepo.ObtenerUsuarioSegunCorreoElectronico(correoElectronico);
+        }
     }
 }

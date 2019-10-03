@@ -174,7 +174,7 @@ namespace CDNEU
 
                     usuarioNego.ActualizarUsuario(usuarioNuevo);
 
-                    lblMensaje.Text = "La COntraseña se Actualizó Correctamente";
+                    lblMensaje.Text = "La Contraseña se Actualizó Correctamente";
                 }
                 else
                 {

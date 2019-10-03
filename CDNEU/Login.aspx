@@ -58,6 +58,17 @@
                 border-color: #6082ac;
             }
 
+
+        .boton_modal {
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 15px;
+            color: blue;
+            background-color: #ffffff;
+            border-radius: 6px;
+            border: 2px solid #ffffff;
+        }
+
         .anchotabla {
             width: 200px;
         }
@@ -133,6 +144,9 @@
                                     <div class="col-md-4 col-md-offset-1">
                                         <asp:Button ID="btnLogin" runat="server"
                                             Text="Ingresar" OnClick="btnLogin_Click" CssClass="boton_azul" />
+                                    </div>
+                                    <div class="col-md-6 col-md-offset-1">
+                                        <button type="button" id="btnOlvidoContrasenia" class="boton_modal" data-toggle="modal" data-target="#modalOlvidoContrasenia">¿Olvidaste tu contraseña?</button>
                                     </div>
                                 </div>
                             </div>
@@ -225,7 +239,55 @@
                 <%--Fin de Panel Externo--%>
             </div>
         </div>
+
+
+        <!-- MODAL OLVIDO CONTRASEÑA  -->
+        <div class="form-group">
+            <div class="modal fade" id="modalOlvidoContrasenia" tabindex="-1" role="dialog" aria-labelledby="modalLabelOlvidoContrasenia" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="modalLabelOlvidoContrasenia">Ingrese su dirección de Correo Electrónico</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <div class="col-md-12 col-xs-12">
+                                    <asp:TextBox ID="txtOlvidoContraseniaCorreoElectronicoModal" runat="server" CssClass="form-control"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <%--<asp:Button runat="server" ID="btnModalOlvidoContraseniaSalir" Text="Salir" class="boton_rojo" data-dismiss="modal" />--%>
+                                <asp:Button runat="server" ID="btnModalOlvidoContraseniaEnviar" Text="Enviar" CssClass="boton_verde" OnClick="btnModalOlvidoContraseniaEnviar_Click" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
     </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script src="js/jquery-1.12.3.js"></script>
     <script src="js/bootstrap.js"></script>

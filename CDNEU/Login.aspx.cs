@@ -297,5 +297,59 @@ namespace CDNEU
             {
             }
         }
+
+        protected void btnModalOlvidoContraseniaEnviar_Click(object sender, EventArgs e)
+        {
+            if (txtOlvidoContraseniaCorreoElectronicoModal.Text != "")
+            {
+                //1ro hay que chequear que el e-mail ingresado exista en la base de datos
+                Usuario usuarioActual = usuarioNego.ObtenerUsuarioSegunCorreoElectronico(txtOlvidoContraseniaCorreoElectronicoModal.Text);
+
+                if (usuarioActual != null)
+                //Significa que existe un usuario con ese email
+                {
+                    EnviarCorreo(usuarioActual.NombreUsuario,
+                        usuarioActual.Contrasenia,
+                        usuarioActual.CorreoElectronico,
+                        usuarioActual.Nombre,
+                    usuarioActual.Apellido);
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "Correct", "alert('Datos enviados a la casilla de correo.')", true);
+                }
+                else
+                {
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "Correct", "alert('La dirección de email no existe en la Base de Datos.')", true);
+                }
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "Correct", "alert('Ingrese una direccion de email valida.')", true);
+            }
+
+        }
+        public void EnviarCorreo(String nombreUsuario, String contrasenia, String email, String nombre, String apellido)
+        {
+            string msn = "<HTML><p1><h3>Estimada/o " + nombre + " " + apellido + ".</h3></p1>";
+
+            msn += "Este es un mail automatico de envio de datos de su cuenta.";
+            msn += "<br /><br />";
+            msn += "A continuacion detallamos los mismos: ";
+            msn += "<br /><br />";
+
+            //msn += "<br />";
+            msn += "<p1><h3>Nombre de Usuario: " + nombreUsuario + "</h3></p1>";
+
+            //msn += "<br />";
+            msn += "<p1><h3>Contraseña: " + contrasenia + "</h3></p1>";
+
+            msn += "<br />";
+            msn += "Saludamos a Ud. muy Atte.";
+
+            msn += "<br /><br />";
+            msn += "Administrador</HTML>";
+
+            new Email().enviarCorreo("victor.alejandro.arribas@gmail.com", "clavelchino", email, msn);
+            //new Email().enviarCorreo("infocdneu@gmail.com", "CdN13J2019", email, msn);
+
+        }
     }
 }

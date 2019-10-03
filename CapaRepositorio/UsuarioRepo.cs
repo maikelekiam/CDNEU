@@ -70,5 +70,13 @@ namespace CapaRepositorio
                 modeloDeDominio.SaveChanges();
             }
         }
+        public Usuario ObtenerUsuarioSegunCorreoElectronico(String correoElectronico)
+        {
+            using (ModeloDeDominio modeloDeDominio = new ModeloDeDominio())
+            {
+                return modeloDeDominio.Usuarios.Where(c => c.CorreoElectronico == correoElectronico).FirstOrDefault();
+
+            }
+        }
     }
 }

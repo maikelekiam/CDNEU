@@ -92,20 +92,20 @@
                         </table>
                         <table>
                             <tr>
-                                <asp:Label ID="Label4" runat="server" Text="Label">Contraseña Actual</asp:Label>
+                                <asp:Label ID="Label4" runat="server" Text="Label" Visible="false">Contraseña Actual</asp:Label>
                             </tr>
                             <tr>
                                 <div class="input-group">
-                                    <span class="input-group-addon">
+                                    <%--<span class="input-group-addon">
                                         <span class="glyphicon glyphicon-lock"></span>
-                                    </span>
-                                    <asp:TextBox ID="txtRegistroContrasenia" runat="server" CssClass="form-control" />
+                                    </span>--%>
+                                    <asp:TextBox ID="txtRegistroContrasenia" runat="server" Visible="false" CssClass="form-control" />
                                 </div>
                             </tr>
-                            <tr>
+                            <%--<tr>
                                 <td class="altotabla"></td>
                                 <td></td>
-                            </tr>
+                            </tr>--%>
                         </table>
                         <table>
                             <tr>
@@ -148,10 +148,10 @@
                         <!--Boton de registro-->
                         <div class="form-group">
                             <div class="col-md-6">
-                                <asp:Button ID="btnActualizarUsuario" Width="230px" runat="server" OnClientClick="return confirm('¿Esta seguro en actualizar el nombre de usuario?')" Text="Actualizar Nombre de Usuario" CssClass="boton_azul" OnClick="btnActualizarUsuario_Click" />
+                                <asp:Button ID="btnActualizarUsuario" Width="230px" runat="server" OnClientClick="return confirm('¿Esta seguro de actualizar el nombre de usuario?')" Text="Actualizar Nombre de Usuario" CssClass="boton_azul" OnClick="btnActualizarUsuario_Click" />
                             </div>
                             <div class="col-md-6">
-                                <asp:Button ID="btnActualizarContrasenia" runat="server" OnClientClick="return confirm('¿Esta seguro en actualizar la contraseña?')" Text="Actualizar Contraseña" CssClass="boton_azul" OnClick="btnActualizarContrasenia_Click" />
+                                <asp:Button ID="btnActualizarContrasenia" runat="server" OnClientClick="return confirm('¿Esta seguro de actualizar la contraseña?')" Text="Actualizar Contraseña" CssClass="boton_azul" OnClick="btnActualizarContrasenia_Click" />
                             </div>
                         </div>
                     </div>

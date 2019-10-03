@@ -366,6 +366,7 @@
     <Compile Include="EditarUsuario.aspx.designer.cs">
       <DependentUpon>EditarUsuario.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Email.cs" />
     <Compile Include="FotoPerfil.aspx.cs">
       <DependentUpon>FotoPerfil.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
