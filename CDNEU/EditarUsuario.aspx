@@ -32,6 +32,10 @@
             margin-left: 10px;
         }
 
+        input[type="checkbox"] + label {
+            margin-left: 10px;
+        }
+
         .parpadea {
             animation-name: parpadeo;
             animation-duration: 1s;
@@ -406,7 +410,26 @@
                                 <hr />
 
                                 <h4>PLATAFORMA DE COMERCIALIZACION</h4>
-                                <ul class="estilo-ul">
+                                <table>
+                                    <tr>
+                                        <asp:CheckBoxList ID="chbListPlataforma" runat="server"
+                                            CssClass="form-control" BorderStyle="None"
+                                            RepeatColumns="1"
+                                            RepeatLayout="Table"
+                                            CellPadding="10">
+                                            <asp:ListItem Value="1">Redes Sociales ( Facebook / Instagram / Twitter / YouTube / WhatsApp )</asp:ListItem>
+                                            <asp:ListItem Value="2">Mercado Libre</asp:ListItem>
+                                            <asp:ListItem Value="3">Sitio WEB</asp:ListItem>
+                                            <asp:ListItem Value="4">Tienda Nube</asp:ListItem>
+                                            <asp:ListItem Value="5">Ferias</asp:ListItem>
+                                            <asp:ListItem Value="6">Local Comercial</asp:ListItem>
+                                            <asp:ListItem Value="7">Personal</asp:ListItem>
+                                            <asp:ListItem Value="8">Showroom</asp:ListItem>
+                                            <asp:ListItem Value="9">No comercializa aún</asp:ListItem>
+                                        </asp:CheckBoxList>
+                                    </tr>
+                                </table>
+                                <%--<ul class="estilo-ul">
                                     <asp:CheckBox ID="chkRedesSociales" runat="server" Width="20px" />
                                     <asp:Label ID="lblRedesSociales" runat="server" Text="Redes Sociales"></asp:Label>
                                 </ul>
@@ -445,13 +468,12 @@
                                 <ul class="estilo-ul">
                                     <asp:CheckBox ID="chkNoComercializa" runat="server" Width="20px" />
                                     <asp:Label ID="lblNoComercializa" runat="server" Text="No comercializa aún"></asp:Label>
-                                </ul>
-                                <table>
+                                </ul>--%>
+                                <%--<table>
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
-                                </table>
-
+                                </table>--%>
                                 <table>
                                     <asp:TextBox ID="txtPlataformaComercializacionOtro" placeholder="Otra Plataforma" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                 </table>
@@ -708,7 +730,34 @@
                                     </tr>
                                 </table>
                                 <h4>Sub Sector</h4>
-                                <ul class="estilo-ul">
+                                <table>
+                                    <tr>
+                                        <asp:CheckBoxList ID="chbListSubSector" runat="server"
+                                            CssClass="form-control" BorderStyle="None"
+                                            RepeatColumns="1"
+                                            RepeatLayout="Table"
+                                            CellPadding="10">
+                                            <asp:ListItem Value="1">Artes Cinematográficas</asp:ListItem>
+                                            <asp:ListItem Value="2">Artes Audiovisuales</asp:ListItem>
+                                            <asp:ListItem Value="3">Artes Escénicas</asp:ListItem>
+                                            <asp:ListItem Value="4">Artes Musicales y Sonoras</asp:ListItem>
+                                            <asp:ListItem Value="5">Artes Literarias, Narrativas y Producción Editorial</asp:ListItem>
+                                            <asp:ListItem Value="6">Artes Plásticas y Visuales</asp:ListItem>
+                                            <asp:ListItem Value="7">Artes Gráficas e Ilustración</asp:ListItem>
+                                            <asp:ListItem Value="8">Artes Digitales</asp:ListItem>
+                                            <asp:ListItem Value="9">Accesorios</asp:ListItem>
+                                            <asp:ListItem Value="10">Calzado</asp:ListItem>
+                                            <asp:ListItem Value="11">Cerámica</asp:ListItem>
+                                            <asp:ListItem Value="12">Diseño Editorial</asp:ListItem>
+                                            <asp:ListItem Value="13">Diseño WEB</asp:ListItem>
+                                            <asp:ListItem Value="14">Joyería</asp:ListItem>
+                                            <asp:ListItem Value="15">Madera</asp:ListItem>
+                                            <asp:ListItem Value="16">Mobiliario</asp:ListItem>
+                                            <asp:ListItem Value="17">Tejidos</asp:ListItem>
+                                        </asp:CheckBoxList>
+                                    </tr>
+                                </table>
+                                <%--                                <ul class="estilo-ul">
                                     <asp:CheckBox ID="chkAPArtesCinematograficas" runat="server" Width="20px" />
                                     <asp:Label ID="Label10" runat="server" Text="Artes Cinematograficas"></asp:Label>
                                 </ul>
@@ -781,7 +830,7 @@
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
-                                </table>
+                                </table>--%>
                                 <table>
                                     <tr>
                                         <asp:TextBox ID="txtSubSectorOtro" runat="server" CssClass="form-control" placeHolder="Otro Sub Sector" />
@@ -1010,8 +1059,24 @@
                                     </tr>
                                 </table>
                                 <h4>¿Cómo comercializa /ofrece sus productos /servicios?</h4>
-
-                                <ul class="estilo-ul">
+                                <table>
+                                    <tr>
+                                        <asp:CheckBoxList ID="chbListComoComercializa" runat="server"
+                                            CssClass="form-control" BorderStyle="None"
+                                            RepeatColumns="1"
+                                            RepeatLayout="Table"
+                                            CellPadding="10">
+                                            <asp:ListItem Value="1">Ferias Itinerantes</asp:ListItem>
+                                            <asp:ListItem Value="2">Internet (WEB)</asp:ListItem>
+                                            <asp:ListItem Value="3">Internet (Redes Sociales)</asp:ListItem>
+                                            <asp:ListItem Value="4">Local / Estudio Propio</asp:ListItem>
+                                            <asp:ListItem Value="5">Locales / Oficinas de Terceros</asp:ListItem>
+                                            <asp:ListItem Value="6">Oficina Privada / ShowRoom</asp:ListItem>
+                                            <asp:ListItem Value="7">No comercializa aún</asp:ListItem>
+                                        </asp:CheckBoxList>
+                                    </tr>
+                                </table>
+                                <%--                                <ul class="estilo-ul">
                                     <asp:CheckBox ID="chkAIFerias" runat="server" Width="20px" />
                                     <asp:Label ID="Label7" runat="server" Text="Ferias Itinerantes"></asp:Label>
                                 </ul>
@@ -1039,7 +1104,7 @@
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
-                                </table>
+                                </table>--%>
 
 
                                 <%--<table>
@@ -1124,7 +1189,23 @@
                                     </tr>
                                 </table>
                                 <h4>¿Cómo financia su actividad profesional?</h4>
-                                <ul class="estilo-ul">
+                                <table>
+                                    <tr>
+                                        <asp:CheckBoxList ID="chbListComoFinancia" runat="server"
+                                            CssClass="form-control" BorderStyle="None"
+                                            RepeatColumns="1"
+                                            RepeatLayout="Table"
+                                            CellPadding="10">
+                                            <asp:ListItem Value="1">Fondos Propios</asp:ListItem>
+                                            <asp:ListItem Value="2">Préstamos Entidades Privadas</asp:ListItem>
+                                            <asp:ListItem Value="3">Préstamos Entidades Públicas</asp:ListItem>
+                                            <asp:ListItem Value="4">Socios Capitalistas</asp:ListItem>
+                                            <asp:ListItem Value="5">Ganancias Generadas</asp:ListItem>
+                                            <asp:ListItem Value="6">Sin Financiamiento</asp:ListItem>
+                                        </asp:CheckBoxList>
+                                    </tr>
+                                </table>
+                                <%--                                <ul class="estilo-ul">
                                     <asp:CheckBox ID="chkAIFondosPropios" runat="server" Width="20px" />
                                     <asp:Label ID="Label21" runat="server" Text="Fondos Propios"></asp:Label>
                                 </ul>
@@ -1148,7 +1229,7 @@
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
-                                </table>
+                                </table>--%>
                                 <%--<table>
                                     <tr>
                                         <td>
@@ -1399,7 +1480,22 @@
                                     </tr>
                                 </table>
                                 <h4>¿Cuál es la principal falencia en el proceso de producción de objetos?</h4>
-                                <ul class="estilo-ul">
+                                <table>
+                                    <tr>
+                                        <asp:CheckBoxList ID="chbListPrincipalFalencia" runat="server"
+                                            CssClass="form-control" BorderStyle="None"
+                                            RepeatColumns="1"
+                                            RepeatLayout="Table"
+                                            CellPadding="10">
+                                            <asp:ListItem Value="1">Máquinas</asp:ListItem>
+                                            <asp:ListItem Value="2">Recursos Informáticos</asp:ListItem>
+                                            <asp:ListItem Value="3">Herramoentas</asp:ListItem>
+                                            <asp:ListItem Value="4">Poca disponibilidad de espacio</asp:ListItem>
+                                            <asp:ListItem Value="5">Poca disponibilidad de mano de obra</asp:ListItem>
+                                        </asp:CheckBoxList>
+                                    </tr>
+                                </table>
+                                <%--                                <ul class="estilo-ul">
                                     <asp:CheckBox ID="chkMPPMaquinas" runat="server" Width="20px" />
                                     <asp:Label ID="Label37" runat="server" Text="Máquinas"></asp:Label>
                                 </ul>
@@ -1423,7 +1519,7 @@
                                     <tr>
                                         <td style="height: 20px"></td>
                                     </tr>
-                                </table>
+                                </table>--%>
                                 <table>
                                     <tr>
                                         <asp:TextBox ID="txtFalenciaOtra" runat="server" CssClass="form-control" placeHolder="Otra falencia" />
@@ -1579,22 +1675,28 @@
                                     </tr>
                                 </table>
                                 <h4>¿Cuáles son sus dificultades o barreras a la hora de innovar?</h4>
-                                <ul class="estilo-ul" style="padding-left: 0px;">
-                                    <asp:CheckBox ID="chkINNLegalesBurocraticas" runat="server" Width="20px" />
-                                    <asp:Label ID="Label31" runat="server" Text="Legales y burocráticas"></asp:Label>
-                                </ul>
-                                <ul class="estilo-ul" style="padding-left: 0px;">
-                                    <asp:CheckBox ID="chkINNFinancieras" runat="server" Width="20px" />
-                                    <asp:Label ID="Label32" runat="server" Text="Financieras /Económicas /Presupuestarias"></asp:Label>
-                                </ul>
-                                <ul class="estilo-ul" style="padding-left: 0px;">
-                                    <asp:CheckBox ID="chkINNProblemasTecnicos" runat="server" Width="20px" />
-                                    <asp:Label ID="Label33" runat="server" Text="Problemas Técnicos / Falta de Información"></asp:Label>
-                                </ul>
-                                <ul class="estilo-ul" style="padding-left: 0px; padding-bottom: 20px;">
-                                    <asp:CheckBox ID="chkINNRecursosHumanos" runat="server" Width="20px" />
-                                    <asp:Label ID="Label34" runat="server" Text="Recursos Humanos no adecuadamente Capacitados"></asp:Label>
-                                </ul>
+                                <table>
+                                    <tr>
+                                        <asp:CheckBoxList ID="chbListInn" runat="server"
+                                            CssClass="form-control" BorderStyle="None"
+                                            RepeatColumns="1"
+                                            RepeatLayout="Table"
+                                            CellPadding="10">
+                                            <asp:ListItem Value="1">Legales y burocráticas</asp:ListItem>
+                                            <asp:ListItem Value="2">Financieras /Económicas /Presupuestarias</asp:ListItem>
+                                            <asp:ListItem Value="3">Problemas Técnicos / Falta de Información</asp:ListItem>
+                                            <asp:ListItem Value="4">Recursos Humanos no adecuadamente Capacitados</asp:ListItem>
+                                        </asp:CheckBoxList>
+                                    </tr>
+                                </table>
+                                <%--                                <asp:CheckBox ID="chkINNLegalesBurocraticas" runat="server" Width="20px" Visible="false" />
+                                <asp:Label ID="lblprueba" runat="server" Text="Legales y burocráticas" Visible="false"></asp:Label>
+                                <asp:CheckBox ID="chkINNFinancieras" runat="server" Width="20px" Visible="false" />
+                                <asp:Label ID="Label32" runat="server" Text="Financieras /Económicas /Presupuestarias" Visible="false"></asp:Label>
+                                <asp:CheckBox ID="chkINNProblemasTecnicos" runat="server" Width="20px" Visible="false" />
+                                <asp:Label ID="Label33" runat="server" Text="Problemas Técnicos / Falta de Información" Visible="false"></asp:Label>
+                                <asp:CheckBox ID="chkINNRecursosHumanos" runat="server" Width="20px" Visible="false" />
+                                <asp:Label ID="Label34" runat="server" Text="Recursos Humanos no adecuadamente Capacitados" Visible="false"></asp:Label>--%>
                                 <table>
                                     <tr>
                                         <td style="height: 15px"></td>
@@ -1633,6 +1735,7 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>

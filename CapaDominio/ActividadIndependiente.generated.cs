@@ -388,6 +388,32 @@ namespace CapaDominio
 			}
 		}
 		
+		private bool? sinFinanciamiento;
+		public virtual bool? SinFinanciamiento
+		{
+			get
+			{
+				return this.sinFinanciamiento;
+			}
+			set
+			{
+				this.sinFinanciamiento = value;
+			}
+		}
+		
+		private bool? noComercializaAun;
+		public virtual bool? NoComercializaAun
+		{
+			get
+			{
+				return this.noComercializaAun;
+			}
+			set
+			{
+				this.noComercializaAun = value;
+			}
+		}
+		
 		private Usuario usuario;
 		public virtual Usuario Usuario
 		{

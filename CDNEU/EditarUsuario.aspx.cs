@@ -98,15 +98,26 @@ namespace CDNEU
             redesSociale.Twitter = txtTwitter.Text;
             redesSociale.Youtube = txtYouTube.Text;
             redesSociale.Flicker = txtFlicker.Text;
-            redesSociale.RedesSociales = chkRedesSociales.Checked;
-            redesSociale.MercadoLibre = chkMercadoLibre.Checked;
-            redesSociale.SitioWeb = chkSitioWeb.Checked;
-            redesSociale.TiendaNube = chkTiendaNube.Checked;
-            redesSociale.Ferias = chkFerias.Checked;
-            redesSociale.LocalComercial = chkLocalComercial.Checked;
-            redesSociale.Personal = chkPersonal.Checked;
-            redesSociale.ShowRoom = chkShowRoom.Checked;
-            redesSociale.NoComercializa = chkNoComercializa.Checked;
+            //inicio
+            redesSociale.RedesSociales = chbListPlataforma.Items[0].Selected;
+            redesSociale.MercadoLibre = chbListPlataforma.Items[1].Selected;
+            redesSociale.SitioWeb = chbListPlataforma.Items[2].Selected;
+            redesSociale.TiendaNube = chbListPlataforma.Items[3].Selected;
+            redesSociale.Ferias = chbListPlataforma.Items[4].Selected;
+            redesSociale.LocalComercial = chbListPlataforma.Items[5].Selected;
+            redesSociale.Personal = chbListPlataforma.Items[6].Selected;
+            redesSociale.ShowRoom = chbListPlataforma.Items[7].Selected;
+            redesSociale.NoComercializa = chbListPlataforma.Items[8].Selected;
+            //redesSociale.RedesSociales = chkRedesSociales.Checked;
+            //redesSociale.MercadoLibre = chkMercadoLibre.Checked;
+            //redesSociale.SitioWeb = chkSitioWeb.Checked;
+            //redesSociale.TiendaNube = chkTiendaNube.Checked;
+            //redesSociale.Ferias = chkFerias.Checked;
+            //redesSociale.LocalComercial = chkLocalComercial.Checked;
+            //redesSociale.Personal = chkPersonal.Checked;
+            //redesSociale.ShowRoom = chkShowRoom.Checked;
+            //redesSociale.NoComercializa = chkNoComercializa.Checked;
+            //fin
             redesSociale.PlataformaOtra = txtPlataformaComercializacionOtro.Text;
             redesSocialesNego.ActualizarRedesSociales(redesSociale);
         }
@@ -133,15 +144,26 @@ namespace CDNEU
             txtTwitter.Text = redesSociale.Twitter;
             txtYouTube.Text = redesSociale.Youtube;
             txtFlicker.Text = redesSociale.Flicker;
-            chkRedesSociales.Checked = redesSociale.RedesSociales.Value;
-            chkMercadoLibre.Checked = redesSociale.MercadoLibre.Value;
-            chkSitioWeb.Checked = redesSociale.SitioWeb.Value;
-            chkTiendaNube.Checked = redesSociale.TiendaNube.Value;
-            chkFerias.Checked = redesSociale.Ferias.Value;
-            chkLocalComercial.Checked = redesSociale.LocalComercial.Value;
-            chkPersonal.Checked = redesSociale.Personal.Value;
-            chkShowRoom.Checked = redesSociale.ShowRoom.Value;
-            chkNoComercializa.Checked = redesSociale.NoComercializa.Value;
+            //ini
+            chbListPlataforma.Items[0].Selected = redesSociale.RedesSociales.Value;
+            chbListPlataforma.Items[1].Selected = redesSociale.MercadoLibre.Value;
+            chbListPlataforma.Items[2].Selected = redesSociale.SitioWeb.Value;
+            chbListPlataforma.Items[3].Selected = redesSociale.TiendaNube.Value;
+            chbListPlataforma.Items[4].Selected = redesSociale.Ferias.Value;
+            chbListPlataforma.Items[5].Selected = redesSociale.LocalComercial.Value;
+            chbListPlataforma.Items[6].Selected = redesSociale.Personal.Value;
+            chbListPlataforma.Items[7].Selected = redesSociale.ShowRoom.Value;
+            chbListPlataforma.Items[8].Selected = redesSociale.NoComercializa.Value;
+            //chkRedesSociales.Checked = redesSociale.RedesSociales.Value;
+            //chkMercadoLibre.Checked = redesSociale.MercadoLibre.Value;
+            //chkSitioWeb.Checked = redesSociale.SitioWeb.Value;
+            //chkTiendaNube.Checked = redesSociale.TiendaNube.Value;
+            //chkFerias.Checked = redesSociale.Ferias.Value;
+            //chkLocalComercial.Checked = redesSociale.LocalComercial.Value;
+            //chkPersonal.Checked = redesSociale.Personal.Value;
+            //chkShowRoom.Checked = redesSociale.ShowRoom.Value;
+            //chkNoComercializa.Checked = redesSociale.NoComercializa.Value;
+            //fin
             txtPlataformaComercializacionOtro.Text = redesSociale.PlataformaOtra;
 
             FormacionAcademica formacionAcademica = formacionAcademicaNego.ObtenerFormacionAcademica(globalIdUsuario);
@@ -160,23 +182,42 @@ namespace CDNEU
             ActividadProfesional actividadProfesional = actividadProfesionalNego.ObtenerActividadProfesional(globalIdUsuario);
             RBDisciplinaProyectual.SelectedValue = actividadProfesional.DisciplinaProyectual;
             txtDisciplinaProyectualOtra.Text = actividadProfesional.DisciplinaProyectualOtra;
-            chkAPArtesCinematograficas.Checked = actividadProfesional.Cinematograficas.Value;
-            chkAPArtesAudiovisuales.Checked = actividadProfesional.Audiovisuales.Value;
-            chkAPArtesEscenicas.Checked = actividadProfesional.Escenicas.Value;
-            chkAPArtesMusicales.Checked = actividadProfesional.Musicales.Value;
-            chkAPArtesLiterarias.Checked = actividadProfesional.Literarias.Value;
-            chkAPArtesPlasticas.Checked = actividadProfesional.Plasticas.Value;
-            chkAPArtesGraficas.Checked = actividadProfesional.Graficas.Value;
-            chkAPArtesDigitales.Checked = actividadProfesional.Digitales.Value;
-            chkAPAccesorios.Checked = actividadProfesional.Accesorios.Value;
-            chkAPCalzado.Checked = actividadProfesional.Calzado.Value;
-            chkAPCeramica.Checked = actividadProfesional.Ceramica.Value;
-            chkAPDisenioEditorial.Checked = actividadProfesional.DisenioEditorial.Value;
-            chkAPDisenioWeb.Checked = actividadProfesional.DisenioWeb.Value;
-            chkAPJoyeria.Checked = actividadProfesional.Joyeria.Value;
-            chkAPMadera.Checked = actividadProfesional.Madera.Value;
-            chkAPMobiliario.Checked = actividadProfesional.Mobiliario.Value;
-            chkAPTejidos.Checked = actividadProfesional.Tejidos.Value;
+            //ini
+            chbListSubSector.Items[0].Selected = actividadProfesional.Cinematograficas.Value;
+            chbListSubSector.Items[1].Selected = actividadProfesional.Audiovisuales.Value;
+            chbListSubSector.Items[2].Selected = actividadProfesional.Escenicas.Value;
+            chbListSubSector.Items[3].Selected = actividadProfesional.Musicales.Value;
+            chbListSubSector.Items[4].Selected = actividadProfesional.Literarias.Value;
+            chbListSubSector.Items[5].Selected = actividadProfesional.Plasticas.Value;
+            chbListSubSector.Items[6].Selected = actividadProfesional.Graficas.Value;
+            chbListSubSector.Items[7].Selected = actividadProfesional.Digitales.Value;
+            chbListSubSector.Items[8].Selected = actividadProfesional.Accesorios.Value;
+            chbListSubSector.Items[9].Selected = actividadProfesional.Calzado.Value;
+            chbListSubSector.Items[10].Selected = actividadProfesional.Ceramica.Value;
+            chbListSubSector.Items[11].Selected = actividadProfesional.DisenioEditorial.Value;
+            chbListSubSector.Items[12].Selected = actividadProfesional.DisenioWeb.Value;
+            chbListSubSector.Items[13].Selected = actividadProfesional.Joyeria.Value;
+            chbListSubSector.Items[14].Selected = actividadProfesional.Madera.Value;
+            chbListSubSector.Items[15].Selected = actividadProfesional.Mobiliario.Value;
+            chbListSubSector.Items[16].Selected = actividadProfesional.Tejidos.Value;
+            //chkAPArtesCinematograficas.Checked = actividadProfesional.Cinematograficas.Value;
+            //chkAPArtesAudiovisuales.Checked = actividadProfesional.Audiovisuales.Value;
+            //chkAPArtesEscenicas.Checked = actividadProfesional.Escenicas.Value;
+            //chkAPArtesMusicales.Checked = actividadProfesional.Musicales.Value;
+            //chkAPArtesLiterarias.Checked = actividadProfesional.Literarias.Value;
+            //chkAPArtesPlasticas.Checked = actividadProfesional.Plasticas.Value;
+            //chkAPArtesGraficas.Checked = actividadProfesional.Graficas.Value;
+            //chkAPArtesDigitales.Checked = actividadProfesional.Digitales.Value;
+            //chkAPAccesorios.Checked = actividadProfesional.Accesorios.Value;
+            //chkAPCalzado.Checked = actividadProfesional.Calzado.Value;
+            //chkAPCeramica.Checked = actividadProfesional.Ceramica.Value;
+            //chkAPDisenioEditorial.Checked = actividadProfesional.DisenioEditorial.Value;
+            //chkAPDisenioWeb.Checked = actividadProfesional.DisenioWeb.Value;
+            //chkAPJoyeria.Checked = actividadProfesional.Joyeria.Value;
+            //chkAPMadera.Checked = actividadProfesional.Madera.Value;
+            //chkAPMobiliario.Checked = actividadProfesional.Mobiliario.Value;
+            //chkAPTejidos.Checked = actividadProfesional.Tejidos.Value;
+            //fin
             txtSubSectorOtro.Text = actividadProfesional.SubSectorOtro;
             RBTipoRelacionLaboral.SelectedValue = actividadProfesional.TipoRelacionLaboral;
             txtTipoRelacionLaboralOtro.Text = actividadProfesional.TipoRelacionLaboralOtro;
@@ -193,21 +234,31 @@ namespace CDNEU
             txtEstaRegistradoOtro.Text = actividadIndependiente.EstaRegistradoOtro;
             RBEmpleadosACargo.SelectedValue = actividadIndependiente.TieneEmpleadosACargo;
             txtCantidadEmpleadosACargo.Text = actividadIndependiente.CantidadEmpleadosACargo;
-            chkAIFerias.Checked = actividadIndependiente.FeriasItinerantes.Value;
-            chkAIInternetWeb.Checked = actividadIndependiente.InternetWeb.Value;
-            chkAIInternetRedesSociales.Checked = actividadIndependiente.InternetRedesSociales.Value;
-            chkAILocalEstudioPropio.Checked = actividadIndependiente.LocalEstudioPropio.Value;
-            chkAILocalesOficinas.Checked = actividadIndependiente.LocalesOficinas.Value;
-            chkAIOficinaPrivadaShowroom.Checked = actividadIndependiente.OficinaPrivadaShowroom.Value;
+            //ini
+            chbListComoComercializa.Items[0].Selected = actividadIndependiente.FeriasItinerantes.Value;
+            chbListComoComercializa.Items[1].Selected = actividadIndependiente.InternetWeb.Value;
+            chbListComoComercializa.Items[2].Selected = actividadIndependiente.InternetRedesSociales.Value;
+            chbListComoComercializa.Items[3].Selected = actividadIndependiente.LocalEstudioPropio.Value;
+            chbListComoComercializa.Items[4].Selected = actividadIndependiente.LocalesOficinas.Value;
+            chbListComoComercializa.Items[5].Selected = actividadIndependiente.OficinaPrivadaShowroom.Value;
+            chbListComoComercializa.Items[6].Selected = actividadIndependiente.NoComercializaAun.Value;
+            //chkAIFerias.Checked = actividadIndependiente.FeriasItinerantes.Value;
+            //chkAIInternetWeb.Checked = actividadIndependiente.InternetWeb.Value;
+            //chkAIInternetRedesSociales.Checked = actividadIndependiente.InternetRedesSociales.Value;
+            //chkAILocalEstudioPropio.Checked = actividadIndependiente.LocalEstudioPropio.Value;
+            //chkAILocalesOficinas.Checked = actividadIndependiente.LocalesOficinas.Value;
+            //chkAIOficinaPrivadaShowroom.Checked = actividadIndependiente.OficinaPrivadaShowroom.Value;
+            //fin
             txtComercializaOtro.Text = actividadIndependiente.ComoComercializaOtro;
             txtComercializaNombreEspacio.Text = actividadIndependiente.NombreEspacio;
             txtComercializaLinkEspacio.Text = actividadIndependiente.LinkEspacio;
             txtComercializaUbicacionEspacio.Text = actividadIndependiente.UbicacionEspacio;
-            chkAIFondosPropios.Checked = actividadIndependiente.FondosPropios.Value;
-            chkAIPrestamosEntidadesPrivadas.Checked = actividadIndependiente.PrestamosEntidadesPrivadas.Value;
-            chkAIPrestamosEntidadesPublicas.Checked = actividadIndependiente.PrestamosEntidadesPublicas.Value;
-            chkAISociosCapitalistas.Checked = actividadIndependiente.SociosCapitalistas.Value;
-            chkAIGananciasGeneradas.Checked = actividadIndependiente.GananciasGenerales.Value;
+            chbListComoFinancia.Items[0].Selected = actividadIndependiente.FondosPropios.Value;
+            chbListComoFinancia.Items[1].Selected = actividadIndependiente.PrestamosEntidadesPrivadas.Value;
+            chbListComoFinancia.Items[2].Selected = actividadIndependiente.PrestamosEntidadesPublicas.Value;
+            chbListComoFinancia.Items[3].Selected = actividadIndependiente.SociosCapitalistas.Value;
+            chbListComoFinancia.Items[4].Selected = actividadIndependiente.GananciasGenerales.Value;
+            chbListComoFinancia.Items[5].Selected = actividadIndependiente.SinFinanciamiento.Value;
             txtFinanciaActividadProfesionalOtro.Text = actividadIndependiente.ComoFinanciaActividadProfesionalOtro;
             RBVentasOtrosPaises.SelectedValue = actividadIndependiente.RealizaVentasServicios;
             txtVentasOtrosPaisesCuales.Text = actividadIndependiente.Cuales;
@@ -243,11 +294,13 @@ namespace CDNEU
             chkMPPEquiposPrestados.Checked = maquinarium.EquiposPrestados.Value;
             chkMPPEquiposAlquilados.Checked = maquinarium.EquiposAlquilados.Value;
             txtDisponeEquipoOtro.Text = maquinarium.DisponeEquipoOtro;
-            chkMPPMaquinas.Checked = maquinarium.Maquinas.Value;
-            chkMPPRecursosInformaticos.Checked = maquinarium.RecursosInformaticos.Value;
-            chkMPPHerramientas.Checked = maquinarium.Herramientas.Value;
-            chkMPPEspacio.Checked = maquinarium.Espacio.Value;
-            chkMPPManoDeObra.Checked = maquinarium.ManoDeObra.Value;
+            //ini
+            chbListPrincipalFalencia.Items[0].Selected = maquinarium.Maquinas.Value;
+            chbListPrincipalFalencia.Items[1].Selected = maquinarium.RecursosInformaticos.Value;
+            chbListPrincipalFalencia.Items[2].Selected = maquinarium.Herramientas.Value;
+            chbListPrincipalFalencia.Items[3].Selected = maquinarium.Espacio.Value;
+            chbListPrincipalFalencia.Items[4].Selected = maquinarium.ManoDeObra.Value;
+            //fin
             txtFalenciaOtra.Text = maquinarium.FalenciaOtra;
 
             Identidad identidad = identidadNego.ObtenerIdentidad(globalIdUsuario);
@@ -260,10 +313,18 @@ namespace CDNEU
             Innovacion innovacion = innovacionNego.ObtenerInnovacion(globalIdUsuario);
             RBIncorporaInnovacion.SelectedValue = innovacion.IncorporaInnovacion;
             txtIncorporaInnovacionOtro.Text = innovacion.IncorporaInnovacionOtra;
-            chkINNLegalesBurocraticas.Checked = innovacion.Legales.Value;
-            chkINNFinancieras.Checked = innovacion.Financieras.Value;
-            chkINNProblemasTecnicos.Checked = innovacion.ProblemasTecnicos.Value;
-            chkINNRecursosHumanos.Checked = innovacion.RecursosHumanos.Value;
+            //chkINNLegalesBurocraticas.Checked = innovacion.Legales.Value;
+            //chkINNFinancieras.Checked = innovacion.Financieras.Value;
+            //chkINNProblemasTecnicos.Checked = innovacion.ProblemasTecnicos.Value;
+            //chkINNRecursosHumanos.Checked = innovacion.RecursosHumanos.Value;
+
+            //PRUEBA: aca pongo el checkBoxList nuevo
+            chbListInn.Items[0].Selected = innovacion.Legales.Value;
+            chbListInn.Items[1].Selected = innovacion.Financieras.Value;
+            chbListInn.Items[2].Selected = innovacion.ProblemasTecnicos.Value;
+            chbListInn.Items[3].Selected = innovacion.RecursosHumanos.Value;
+            //fin
+
             txtDificultadesInnovarOtro.Text = innovacion.DificultadesOtra;
             txtInnovacionesPropuestas.Text = innovacion.ComoTomaronInnovacion;
             txtAlgunaExperiencia.Text = innovacion.ContarExperiencia;
@@ -330,25 +391,42 @@ namespace CDNEU
             actividadProfesional.IdUsuario = globalIdUsuario;
             actividadProfesional.DisciplinaProyectual = RBDisciplinaProyectual.SelectedValue;
             actividadProfesional.DisciplinaProyectualOtra = txtDisciplinaProyectualOtra.Text;
-
-            actividadProfesional.Cinematograficas = chkAPArtesCinematograficas.Checked;
-            actividadProfesional.Audiovisuales = chkAPArtesAudiovisuales.Checked;
-            actividadProfesional.Escenicas = chkAPArtesEscenicas.Checked;
-            actividadProfesional.Musicales = chkAPArtesMusicales.Checked;
-            actividadProfesional.Literarias = chkAPArtesLiterarias.Checked;
-            actividadProfesional.Plasticas = chkAPArtesPlasticas.Checked;
-            actividadProfesional.Graficas = chkAPArtesGraficas.Checked;
-            actividadProfesional.Digitales = chkAPArtesDigitales.Checked;
-
-            actividadProfesional.Accesorios = chkAPAccesorios.Checked;
-            actividadProfesional.Calzado = chkAPCalzado.Checked;
-            actividadProfesional.Ceramica = chkAPCeramica.Checked;
-            actividadProfesional.DisenioEditorial = chkAPDisenioEditorial.Checked;
-            actividadProfesional.DisenioWeb = chkAPDisenioWeb.Checked;
-            actividadProfesional.Joyeria = chkAPJoyeria.Checked;
-            actividadProfesional.Madera = chkAPMadera.Checked;
-            actividadProfesional.Mobiliario = chkAPMobiliario.Checked;
-            actividadProfesional.Tejidos = chkAPTejidos.Checked;
+            //ini
+            actividadProfesional.Cinematograficas = chbListSubSector.Items[0].Selected;
+            actividadProfesional.Audiovisuales = chbListSubSector.Items[0].Selected;
+            actividadProfesional.Escenicas = chbListSubSector.Items[0].Selected;
+            actividadProfesional.Musicales = chbListSubSector.Items[0].Selected;
+            actividadProfesional.Literarias = chbListSubSector.Items[0].Selected;
+            actividadProfesional.Plasticas = chbListSubSector.Items[0].Selected;
+            actividadProfesional.Graficas = chbListSubSector.Items[0].Selected;
+            actividadProfesional.Digitales = chbListSubSector.Items[0].Selected;
+            actividadProfesional.Accesorios = chbListSubSector.Items[0].Selected;
+            actividadProfesional.Calzado = chbListSubSector.Items[0].Selected;
+            actividadProfesional.Ceramica = chbListSubSector.Items[0].Selected;
+            actividadProfesional.DisenioEditorial = chbListSubSector.Items[0].Selected;
+            actividadProfesional.DisenioWeb = chbListSubSector.Items[0].Selected;
+            actividadProfesional.Joyeria = chbListSubSector.Items[0].Selected;
+            actividadProfesional.Madera = chbListSubSector.Items[0].Selected;
+            actividadProfesional.Mobiliario = chbListSubSector.Items[0].Selected;
+            actividadProfesional.Tejidos = chbListSubSector.Items[0].Selected;
+            //actividadProfesional.Cinematograficas = chkAPArtesCinematograficas.Checked;
+            //actividadProfesional.Audiovisuales = chkAPArtesAudiovisuales.Checked;
+            //actividadProfesional.Escenicas = chkAPArtesEscenicas.Checked;
+            //actividadProfesional.Musicales = chkAPArtesMusicales.Checked;
+            //actividadProfesional.Literarias = chkAPArtesLiterarias.Checked;
+            //actividadProfesional.Plasticas = chkAPArtesPlasticas.Checked;
+            //actividadProfesional.Graficas = chkAPArtesGraficas.Checked;
+            //actividadProfesional.Digitales = chkAPArtesDigitales.Checked;
+            //actividadProfesional.Accesorios = chkAPAccesorios.Checked;
+            //actividadProfesional.Calzado = chkAPCalzado.Checked;
+            //actividadProfesional.Ceramica = chkAPCeramica.Checked;
+            //actividadProfesional.DisenioEditorial = chkAPDisenioEditorial.Checked;
+            //actividadProfesional.DisenioWeb = chkAPDisenioWeb.Checked;
+            //actividadProfesional.Joyeria = chkAPJoyeria.Checked;
+            //actividadProfesional.Madera = chkAPMadera.Checked;
+            //actividadProfesional.Mobiliario = chkAPMobiliario.Checked;
+            //actividadProfesional.Tejidos = chkAPTejidos.Checked;
+            //fin
             actividadProfesional.SubSectorOtro = txtSubSectorOtro.Text;
             actividadProfesional.TipoRelacionLaboral = RBTipoRelacionLaboral.SelectedValue;
             actividadProfesional.TipoRelacionLaboralOtro = txtTipoRelacionLaboralOtro.Text;
@@ -376,21 +454,31 @@ namespace CDNEU
             actividadIndependiente.EstaRegistradoOtro = txtEstaRegistradoOtro.Text;
             actividadIndependiente.TieneEmpleadosACargo = RBEmpleadosACargo.SelectedValue;
             actividadIndependiente.CantidadEmpleadosACargo = txtCantidadEmpleadosACargo.Text;
-            actividadIndependiente.FeriasItinerantes = chkAIFerias.Checked;
-            actividadIndependiente.InternetWeb = chkAIInternetWeb.Checked;
-            actividadIndependiente.InternetRedesSociales = chkAIInternetRedesSociales.Checked;
-            actividadIndependiente.LocalEstudioPropio = chkAILocalEstudioPropio.Checked;
-            actividadIndependiente.LocalesOficinas = chkAILocalesOficinas.Checked;
-            actividadIndependiente.OficinaPrivadaShowroom = chkAIOficinaPrivadaShowroom.Checked;
+            //ini
+            actividadIndependiente.FeriasItinerantes = chbListComoComercializa.Items[0].Selected;
+            actividadIndependiente.InternetWeb = chbListComoComercializa.Items[1].Selected;
+            actividadIndependiente.InternetRedesSociales = chbListComoComercializa.Items[2].Selected;
+            actividadIndependiente.LocalEstudioPropio = chbListComoComercializa.Items[3].Selected;
+            actividadIndependiente.LocalesOficinas = chbListComoComercializa.Items[4].Selected;
+            actividadIndependiente.OficinaPrivadaShowroom = chbListComoComercializa.Items[5].Selected;
+            actividadIndependiente.NoComercializaAun = chbListComoComercializa.Items[6].Selected;
+            //actividadIndependiente.FeriasItinerantes = chkAIFerias.Checked;
+            //actividadIndependiente.InternetWeb = chkAIInternetWeb.Checked;
+            //actividadIndependiente.InternetRedesSociales = chkAIInternetRedesSociales.Checked;
+            //actividadIndependiente.LocalEstudioPropio = chkAILocalEstudioPropio.Checked;
+            //actividadIndependiente.LocalesOficinas = chkAILocalesOficinas.Checked;
+            //actividadIndependiente.OficinaPrivadaShowroom = chkAIOficinaPrivadaShowroom.Checked;
+            //fin
             actividadIndependiente.ComoComercializaOtro = txtComercializaOtro.Text;
             actividadIndependiente.NombreEspacio = txtComercializaNombreEspacio.Text;
             actividadIndependiente.LinkEspacio = txtComercializaLinkEspacio.Text;
             actividadIndependiente.UbicacionEspacio = txtComercializaUbicacionEspacio.Text;
-            actividadIndependiente.FondosPropios = chkAIFondosPropios.Checked;
-            actividadIndependiente.PrestamosEntidadesPrivadas = chkAIPrestamosEntidadesPrivadas.Checked;
-            actividadIndependiente.PrestamosEntidadesPublicas = chkAIPrestamosEntidadesPublicas.Checked;
-            actividadIndependiente.SociosCapitalistas = chkAISociosCapitalistas.Checked;
-            actividadIndependiente.GananciasGenerales = chkAIGananciasGeneradas.Checked;
+            actividadIndependiente.FondosPropios = chbListComoFinancia.Items[0].Selected;
+            actividadIndependiente.PrestamosEntidadesPrivadas = chbListComoFinancia.Items[1].Selected;
+            actividadIndependiente.PrestamosEntidadesPublicas = chbListComoFinancia.Items[2].Selected;
+            actividadIndependiente.SociosCapitalistas = chbListComoFinancia.Items[3].Selected;
+            actividadIndependiente.GananciasGenerales = chbListComoFinancia.Items[4].Selected;
+            actividadIndependiente.SinFinanciamiento = chbListComoFinancia.Items[5].Selected;
             actividadIndependiente.ComoFinanciaActividadProfesionalOtro = txtFinanciaActividadProfesionalOtro.Text;
             actividadIndependiente.RealizaVentasServicios = RBVentasOtrosPaises.SelectedValue;
             actividadIndependiente.Cuales = txtVentasOtrosPaisesCuales.Text;
@@ -447,11 +535,13 @@ namespace CDNEU
             maquinarium.EquiposPropios = chkMPPEquiposPropios.Checked;
             maquinarium.EquiposPrestados = chkMPPEquiposPrestados.Checked;
             maquinarium.EquiposAlquilados = chkMPPEquiposAlquilados.Checked;
-            maquinarium.Maquinas = chkMPPMaquinas.Checked;
-            maquinarium.RecursosInformaticos = chkMPPRecursosInformaticos.Checked;
-            maquinarium.Herramientas = chkMPPHerramientas.Checked;
-            maquinarium.Espacio = chkMPPEspacio.Checked;
-            maquinarium.ManoDeObra = chkMPPManoDeObra.Checked;
+            //ini
+            maquinarium.Maquinas = chbListPrincipalFalencia.Items[0].Selected;
+            maquinarium.RecursosInformaticos = chbListPrincipalFalencia.Items[1].Selected;
+            maquinarium.Herramientas = chbListPrincipalFalencia.Items[2].Selected;
+            maquinarium.Espacio = chbListPrincipalFalencia.Items[3].Selected;
+            maquinarium.ManoDeObra = chbListPrincipalFalencia.Items[4].Selected;
+            //fin
             maquinarium.FalenciaOtra = txtFalenciaOtra.Text;
             maquinariaNego.ActualizarMaquinaria(maquinarium);
             Response.Redirect("EditarUsuario.aspx");
@@ -484,10 +574,16 @@ namespace CDNEU
             innovacion.IdUsuario = globalIdUsuario;
             innovacion.IncorporaInnovacion = RBIncorporaInnovacion.SelectedValue;
             innovacion.IncorporaInnovacionOtra = txtIncorporaInnovacionOtro.Text;
-            innovacion.Legales = chkINNLegalesBurocraticas.Checked;
-            innovacion.Financieras = chkINNFinancieras.Checked;
-            innovacion.ProblemasTecnicos = chkINNProblemasTecnicos.Checked;
-            innovacion.RecursosHumanos = chkINNRecursosHumanos.Checked;
+            //PRUEBA
+            //innovacion.Legales = chkINNLegalesBurocraticas.Checked;
+            //innovacion.Financieras = chkINNFinancieras.Checked;
+            //innovacion.ProblemasTecnicos = chkINNProblemasTecnicos.Checked;
+            //innovacion.RecursosHumanos = chkINNRecursosHumanos.Checked;
+            innovacion.Legales = chbListInn.Items[0].Selected;
+            innovacion.Financieras = chbListInn.Items[1].Selected;
+            innovacion.ProblemasTecnicos = chbListInn.Items[2].Selected;
+            innovacion.RecursosHumanos = chbListInn.Items[3].Selected;
+            //fin
             innovacion.DificultadesOtra = txtDificultadesInnovarOtro.Text;
             innovacion.ComoTomaronInnovacion = txtInnovacionesPropuestas.Text;
             innovacion.ContarExperiencia = txtAlgunaExperiencia.Text;

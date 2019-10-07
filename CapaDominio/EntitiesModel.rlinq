@@ -694,6 +694,12 @@
         <orm:field name="cuales" property="Cuales" behavior="readwrite" uniqueId="452ad501-c19b-4446-8539-f2f5a98f3578" type="System.String">
           <orm:column name="cuales" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
+        <orm:field name="sinFinanciamiento" property="SinFinanciamiento" behavior="readwrite" uniqueId="72a671ce-afce-4b2f-9bd9-030aceeed11a" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="sinFinanciamiento" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="noComercializaAun" property="NoComercializaAun" behavior="readwrite" uniqueId="1f7bebca-4e7c-4d07-b565-06c8744f75c7" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="noComercializaAun" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
         <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="445646a8-dff9-43c5-91f8-eaa10594c9ff" type="CapaDominio.Usuario">
           <orm:reference uniqueId="ae6459dc-4acf-4c5c-b813-1cca3f190712" association-name="ActividadIndependienteHasUsuario">
             <orm:sharedfield name="idUsuario" target-class="CapaDominio.Usuario" target-field="idUsuario" />
@@ -916,6 +922,8 @@
         <orm:column name="comoFinanciaActividadProfesionalOtro" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="realizaVentasServicios" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="cuales" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="sinFinanciamiento" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="noComercializaAun" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
         <orm:constraint name="FK_ActividadIndependiente_Usuario" delete-action="dbdefaultrule" destination-table="Usuario">
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:constraint>
@@ -1377,6 +1385,8 @@
       <Property Id="91bcaae9-3050-44d9-b9e1-3da3d4574476" name="TiempoActividadFuncionamiento" label="TiempoActividadFuncionamiento : String" kind="Persistent" fieldName="tiempoActividadFuncionamiento" />
       <Property Id="d7ba968c-728b-4c37-9651-192e503e0f21" name="TieneEmpleadosACargo" label="TieneEmpleadosACargo : String" kind="Persistent" fieldName="tieneEmpleadosACargo" />
       <Property Id="896ffddf-3f61-470d-9cca-2d8756095980" name="UbicacionEspacio" label="UbicacionEspacio : String" kind="Persistent" fieldName="ubicacionEspacio" />
+      <Property Id="72a671ce-afce-4b2f-9bd9-030aceeed11a" name="SinFinanciamiento" type="Boolean" label="SinFinanciamiento : Boolean" nullable="true" kind="Persistent" fieldName="sinFinanciamiento" />
+      <Property Id="1f7bebca-4e7c-4d07-b565-06c8744f75c7" name="NoComercializaAun" type="Boolean" label="NoComercializaAun : Boolean" nullable="true" kind="Persistent" fieldName="noComercializaAun" />
       <AssociationTargets>
         <Association Id="ae6459dc-4acf-4c5c-b813-1cca3f190712" SourceMultiplicity="One" name="ActividadIndependienteHasUsuario">
           <DomainClassMoniker name="/ModeloDeDominio/Usuario" />

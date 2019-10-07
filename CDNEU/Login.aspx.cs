@@ -190,6 +190,7 @@ namespace CDNEU
             actividadIndependiente.LocalEstudioPropio = false;
             actividadIndependiente.LocalesOficinas = false;
             actividadIndependiente.OficinaPrivadaShowroom = false;
+            actividadIndependiente.NoComercializaAun = false;
             actividadIndependiente.ComoComercializaOtro = "";
             actividadIndependiente.NombreEspacio = "";
             actividadIndependiente.LinkEspacio = "";
@@ -199,6 +200,7 @@ namespace CDNEU
             actividadIndependiente.PrestamosEntidadesPublicas = false;
             actividadIndependiente.SociosCapitalistas = false;
             actividadIndependiente.GananciasGenerales = false;
+            actividadIndependiente.SinFinanciamiento = false;
             actividadIndependiente.ComoFinanciaActividadProfesionalOtro = "";
             actividadIndependiente.RealizaVentasServicios = "";
             actividadIndependiente.Cuales = "";
