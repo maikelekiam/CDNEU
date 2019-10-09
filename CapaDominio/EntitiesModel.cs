@@ -146,6 +146,22 @@ namespace CapaDominio
 			}
 		}
 		
+		public IQueryable<FotoProducto> FotoProductos 
+		{
+			get
+			{
+				return this.GetAll<FotoProducto>();
+			}
+		}
+		
+		public IQueryable<Employee> Employees 
+		{
+			get
+			{
+				return this.GetAll<Employee>();
+			}
+		}
+		
 		public static BackendConfiguration GetBackendConfiguration()
 		{
 			BackendConfiguration backend = new BackendConfiguration();
@@ -212,6 +228,14 @@ namespace CapaDominio
 			get;
 		}
 		IQueryable<ActividadIndependiente> ActividadIndependientes
+		{
+			get;
+		}
+		IQueryable<FotoProducto> FotoProductos
+		{
+			get;
+		}
+		IQueryable<Employee> Employees
 		{
 			get;
 		}

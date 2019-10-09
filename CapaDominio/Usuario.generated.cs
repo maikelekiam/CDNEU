@@ -305,6 +305,15 @@ namespace CapaDominio
 			}
 		}
 		
+		private IList<FotoProducto> fotoProductos = new List<FotoProducto>();
+		public virtual IList<FotoProducto> FotoProductos
+		{
+			get
+			{
+				return this.fotoProductos;
+			}
+		}
+		
 	}
 }
 #pragma warning restore 1591

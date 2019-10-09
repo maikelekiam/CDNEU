@@ -16,9 +16,11 @@ namespace CDNEU
 {
     public partial class FotoProducto : System.Web.UI.Page
     {
+        static int globalIdUsuario;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            globalIdUsuario = Convert.ToInt32(Session["userid"].ToString());
         }
     }
 }

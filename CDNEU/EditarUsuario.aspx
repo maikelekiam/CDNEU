@@ -491,7 +491,7 @@
                                         </tr>
                                         <tr>
                                             <td style="text-align: center" colspan="2">
-                                                <asp:Image ID="imgURL" runat="server" Style="width: 300px; border: solid;" />
+                                                <asp:Image ID="imgURL" runat="server" Style="width: 100%; height: auto; max-width: 400px; max-height: initial; border: solid;" />
                                             </td>
                                         </tr>
                                     </table>

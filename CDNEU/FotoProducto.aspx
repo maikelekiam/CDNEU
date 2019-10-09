@@ -2,58 +2,51 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-        
+    <style>
+
+    </style>
 
 
-    <%--    <div class="container" style="padding-top: 10px">
-        <div class="form-horizontal">
-            <div class="form-group">
-                <asp:Label ID="Label1" runat="server" Text="Upload Image 1 " CssClass="col-md-2 control-label"></asp:Label>
-                <div class="col-md-3">
-                    <asp:FileUpload ID="img01" runat="server" CssClass="form-control" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
-                        runat="server" ErrorMessage="This field is required" ControlToValidate="img01" CssClass="text-danger"></asp:RequiredFieldValidator>
-                </div>
-            </div>
-            <div class="form-group">
-                <asp:Label ID="Label2" runat="server" Text="Upload Image 2 " CssClass="col-md-2 control-label"></asp:Label>
-                <div class="col-md-3">
-                    <asp:FileUpload ID="img02" runat="server" CssClass="form-control" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
-                        runat="server" ErrorMessage="This field is required" ControlToValidate="img02" CssClass="text-danger"></asp:RequiredFieldValidator>
-                </div>
-            </div>
-            <div class="form-group">
-                <asp:Label ID="Label3" runat="server" Text="Upload Image 3 " CssClass="col-md-2 control-label"></asp:Label>
-                <div class="col-md-3">
-                    <asp:FileUpload ID="img03" runat="server" CssClass="form-control" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3"
-                        runat="server" ErrorMessage="This field is required" ControlToValidate="img03" CssClass="text-danger"></asp:RequiredFieldValidator>
-                </div>
-            </div>
-            <div class="form-group">
-                <asp:Label ID="Label4" runat="server" Text="Upload Image 4 " CssClass="col-md-2 control-label"></asp:Label>
-                <div class="col-md-3">
-                    <asp:FileUpload ID="img04" runat="server" CssClass="form-control" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4"
-                        runat="server" ErrorMessage="This field is required" ControlToValidate="img04" CssClass="text-danger"></asp:RequiredFieldValidator>
-                </div>
-            </div>
-            <div class="form-group">
-                <asp:Label ID="Label5" runat="server" Text="Upload Image 5 " CssClass="col-md-2 control-label"></asp:Label>
-                <div class="col-md-3">
-                    <asp:FileUpload ID="img05" runat="server" CssClass="form-control" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5"
-                        runat="server" ErrorMessage="This field is required" ControlToValidate="img05" CssClass="text-danger"></asp:RequiredFieldValidator>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-3 col-md-offset-2">
-                    <asp:Button ID="btnUpload" runat="server" Text="Uplaod Images" CssClass="btn btn-primary btn-group-lg" OnClick="btnUpload_Click" />
-                    <asp:Label ID="lblMessage" runat="server" CssClass="text-success"></asp:Label>
+
+
+
+    <br />
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-xs-12">
+                <div class="table-responsive">
+                    <asp:GridView ID="gvFotoProducto" runat="server" AutoGenerateColumns="False" DataKeyNames="idFotoProducto" DataSourceID="SqlDataSource1"
+                        CssClass="table table-bordered table-condensed">
+                        <Columns>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:Label ID="lblTitle" Font-Bold="true" runat="server" Text='<%# "Nombre: "+ Eval("nombreFotoProducto")%>' ></asp:Label>
+                                    <br />
+                                    <asp:Label ID="lblName" runat="server" Text='<%# "Descripcion: "+Eval("descripcionFotoProducto")%>'></asp:Label>
+                                </ItemTemplate>
+
+
+                            </asp:TemplateField>
+
+
+
+                            <asp:BoundField DataField="idFotoProducto" HeaderText="idFotoProducto" SortExpression="idFotoProducto" InsertVisible="False" ReadOnly="True" Visible="false" />
+                            <asp:BoundField DataField="idUsuario" HeaderText="idUsuario" SortExpression="idUsuario" Visible="false"/>
+                            <asp:BoundField DataField="nombreFotoProducto" HeaderStyle-CssClass="hidden-on" ItemStyle-CssClass="hidden-on" Visible="false"/>
+                            <asp:BoundField DataField="descripcionFotoProducto" HeaderText="descripcionFotoProducto" SortExpression="descripcionFotoProducto" Visible="false"/>
+                            <asp:BoundField DataField="rutaFotoProducto" HeaderText="rutaFotoProducto" SortExpression="rutaFotoProducto" Visible="false" />
+                            <asp:ImageField DataImageUrlField="rutaFotoProducto" DataImageUrlFormatString="~/imagenes/{0}" HeaderText="IMAGEN" ItemStyle-CssClass="style: col-sm-6 col-xs-6;">
+                            </asp:ImageField>
+                        </Columns>
+                    </asp:GridView>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Conn %>" SelectCommand="listadofotoproducto" SelectCommandType="StoredProcedure">
+                        <SelectParameters>
+                            <asp:SessionParameter DefaultValue="" Name="idUsuario" SessionField="userid" Type="Int32" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
                 </div>
             </div>
         </div>
-
-    </div>--%>
+    </div>
 </asp:Content>

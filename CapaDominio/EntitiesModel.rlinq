@@ -147,6 +147,9 @@
         <orm:field name="actividadIndependientes" property="ActividadIndependientes" behavior="readwrite" uniqueId="3c67b66a-5e4f-4b5b-8cf9-7cf53890326d" type="CapaDominio.ActividadIndependiente">
           <orm:collection element-class="CapaDominio.ActividadIndependiente" inverse-field="usuario" order-by="" uniqueId="ae6459dc-4acf-4c5c-b813-1cca3f190712" />
         </orm:field>
+        <orm:field name="fotoProductos" property="FotoProductos" behavior="readwrite" uniqueId="00d602a7-5941-4052-8ccf-b3222ee3f976" type="CapaDominio.FotoProducto">
+          <orm:collection element-class="CapaDominio.FotoProducto" inverse-field="usuario" order-by="" uniqueId="7f4fb468-6b81-4eb4-8c18-499e9c05fade" />
+        </orm:field>
       </orm:class>
       <orm:class name="RedesSociale" uniqueId="577317c0-71d4-4673-aa95-7036254872fd">
         <orm:table name="RedesSociales" />
@@ -707,6 +710,65 @@
           </orm:reference>
         </orm:field>
       </orm:class>
+      <orm:class name="FotoProducto" uniqueId="e588a7ff-11b3-42b5-bede-d228997ded10">
+        <orm:table name="FotoProducto" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="IdFotoProducto" />
+          </orm:key-generator>
+          <orm:single-field field-name="idFotoProducto" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="idFotoProducto" property="IdFotoProducto" behavior="readwrite" uniqueId="81fdb8f5-922f-4b24-abc2-cdf24aa1a8cd" type="System.Int32">
+          <orm:column name="idFotoProducto" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="idUsuario" property="IdUsuario" behavior="readwrite" uniqueId="60facacd-ca64-4c3f-942d-cd528238607e" type="System.Int32">
+          <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="nombreFotoProducto" property="NombreFotoProducto" behavior="readwrite" uniqueId="67b572fe-d098-44f1-ac5f-b4e842cc2e36" type="System.String">
+          <orm:column name="nombreFotoProducto" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="descripcionFotoProducto" property="DescripcionFotoProducto" behavior="readwrite" uniqueId="8780ae5c-f97a-4cd4-bdef-0f8008beb1e1" type="System.String">
+          <orm:column name="descripcionFotoProducto" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="extensionFotoProducto" property="ExtensionFotoProducto" behavior="readwrite" uniqueId="5d3c24c3-b2d0-4b75-abfb-fbb5f1dfb574" type="System.String">
+          <orm:column name="extensionFotoProducto" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="tipoContenidoFotoProducto" property="TipoContenidoFotoProducto" behavior="readwrite" uniqueId="04b54c49-2142-448c-986c-802e0cd54154" type="System.String">
+          <orm:column name="tipoContenidoFotoProducto" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="tamanioFotoProducto" property="TamanioFotoProducto" behavior="readwrite" uniqueId="60fbeb13-768c-4d5d-8d23-54d39b19f488" type="System.Nullable`1[[System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="tamanioFotoProducto" sql-type="bigint" nullable="true" length="0" scale="0" ado-type="Int64" />
+        </orm:field>
+        <orm:field name="rutaFotoProducto" property="RutaFotoProducto" behavior="readwrite" uniqueId="130708c1-f2f0-4c04-aec4-3e8f2d41415b" type="System.String">
+          <orm:column name="rutaFotoProducto" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        </orm:field>
+        <orm:field name="usuario" property="Usuario" behavior="readwrite" uniqueId="082f3227-00a1-43c3-8a3e-6ff1b3f93a6b" type="CapaDominio.Usuario">
+          <orm:reference uniqueId="7f4fb468-6b81-4eb4-8c18-499e9c05fade" association-name="FotoProductoHasUsuario">
+            <orm:sharedfield name="idUsuario" target-class="CapaDominio.Usuario" target-field="idUsuario" />
+            <orm:constraint name="FK_FotoProducto_Usuario" delete-action="dbdefaultrule" destination-table="Usuario" />
+          </orm:reference>
+        </orm:field>
+      </orm:class>
+      <orm:class name="Employee" uniqueId="69ba6c63-3fb1-4da7-b403-36b29e80c5b9">
+        <orm:table name="Employees" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="IdEmployee" />
+          </orm:key-generator>
+          <orm:single-field field-name="idEmployee" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="idEmployee" property="IdEmployee" behavior="readwrite" uniqueId="1a54201e-e04b-449d-a2bf-7ea97ee7288e" type="System.Int32">
+          <orm:column name="idEmployee" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="lastname" property="Lastname" behavior="readwrite" uniqueId="9ab28dde-7721-47df-b299-1afef9d419eb" type="System.String">
+          <orm:column name="lastname" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="title" property="Title" behavior="readwrite" uniqueId="db4e0726-cbb2-473d-a356-2ed02dba3a93" type="System.String">
+          <orm:column name="title" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+      </orm:class>
     </orm:namespace>
     <orm:schema schema="">
       <orm:table name="Vinculacion">
@@ -928,7 +990,29 @@
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:constraint>
       </orm:table>
+      <orm:table name="FotoProducto">
+        <orm:column name="idFotoProducto" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="nombreFotoProducto" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="descripcionFotoProducto" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="extensionFotoProducto" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="tipoContenidoFotoProducto" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="tamanioFotoProducto" sql-type="bigint" nullable="true" length="0" scale="0" ado-type="Int64" />
+        <orm:column name="rutaFotoProducto" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:constraint name="FK_FotoProducto_Usuario" delete-action="dbdefaultrule" destination-table="Usuario">
+          <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:constraint>
+      </orm:table>
+      <orm:table name="Employees">
+        <orm:column name="idEmployee" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="lastname" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="title" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+      </orm:table>
       <orm:procedure name="fn_diagramobjects" is-function="true" return-type="int">
+        <orm:result-sets />
+      </orm:procedure>
+      <orm:procedure name="listadofotoproducto">
+        <orm:procedure-parameter name="idUsuario" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" mode="in" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
         <orm:result-sets />
       </orm:procedure>
     </orm:schema>
@@ -1052,6 +1136,9 @@
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="c74a73b0-d95d-49c0-9c74-8e711f9b1cce">
           <NavigationalProperty Id="3c67b66a-5e4f-4b5b-8cf9-7cf53890326d" name="ActividadIndependientes" type="IList&lt;ActividadIndependiente&gt;" label="ActividadIndependientes : IList&lt;ActividadIndependiente&gt;" nullable="true" kind="Persistent" fieldName="actividadIndependientes" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="6c51e7b3-f679-477c-95cf-dea552c7a688">
+          <NavigationalProperty Id="00d602a7-5941-4052-8ccf-b3222ee3f976" name="FotoProductos" type="IList&lt;FotoProducto&gt;" label="FotoProductos : IList&lt;FotoProducto&gt;" nullable="true" kind="Persistent" fieldName="fotoProductos" isDependent="false" isManaged="false" />
         </classHasNavigationalProperties>
       </navigationalProperties>
     </DomainClass>
@@ -1408,6 +1495,41 @@
         </classHasNavigationalProperties>
       </navigationalProperties>
     </DomainClass>
+    <DomainClass Id="e588a7ff-11b3-42b5-bede-d228997ded10" name="FotoProducto" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdFotoProducto">
+      <Property Id="81fdb8f5-922f-4b24-abc2-cdf24aa1a8cd" name="IdFotoProducto" type="Int32" label="IdFotoProducto : Int32" kind="Persistent" identity="true" fieldName="idFotoProducto" />
+      <Property Id="8780ae5c-f97a-4cd4-bdef-0f8008beb1e1" name="DescripcionFotoProducto" label="DescripcionFotoProducto : String" kind="Persistent" fieldName="descripcionFotoProducto" />
+      <Property Id="5d3c24c3-b2d0-4b75-abfb-fbb5f1dfb574" name="ExtensionFotoProducto" label="ExtensionFotoProducto : String" kind="Persistent" fieldName="extensionFotoProducto" />
+      <Property Id="60facacd-ca64-4c3f-942d-cd528238607e" name="IdUsuario" type="Int32" label="IdUsuario : Int32" kind="Persistent" fieldName="idUsuario" />
+      <Property Id="67b572fe-d098-44f1-ac5f-b4e842cc2e36" name="NombreFotoProducto" label="NombreFotoProducto : String" kind="Persistent" fieldName="nombreFotoProducto" />
+      <Property Id="60fbeb13-768c-4d5d-8d23-54d39b19f488" name="TamanioFotoProducto" type="Int64" label="TamanioFotoProducto : Int64" nullable="true" kind="Persistent" fieldName="tamanioFotoProducto" />
+      <Property Id="04b54c49-2142-448c-986c-802e0cd54154" name="TipoContenidoFotoProducto" label="TipoContenidoFotoProducto : String" kind="Persistent" fieldName="tipoContenidoFotoProducto" />
+      <Property Id="130708c1-f2f0-4c04-aec4-3e8f2d41415b" name="RutaFotoProducto" label="RutaFotoProducto : String" kind="Persistent" fieldName="rutaFotoProducto" />
+      <AssociationTargets>
+        <Association Id="7f4fb468-6b81-4eb4-8c18-499e9c05fade" SourceMultiplicity="One" name="FotoProductoHasUsuario">
+          <DomainClassMoniker name="/ModeloDeDominio/Usuario" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="a20faf40-105c-4e29-84e2-015a9360d76f">
+              <NavigationalPropertyMoniker name="/ModeloDeDominio/Usuario/FotoProductos" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="d26b3635-4e34-40a4-8294-cd7bae1761e9">
+              <NavigationalPropertyMoniker name="/ModeloDeDominio/FotoProducto/Usuario" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+      </AssociationTargets>
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="6263653d-0293-401d-88a3-18d5188a9dc4">
+          <NavigationalProperty Id="082f3227-00a1-43c3-8a3e-6ff1b3f93a6b" name="Usuario" type="Usuario" label="Usuario : Usuario" nullable="true" kind="Persistent" fieldName="usuario" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="69ba6c63-3fb1-4da7-b403-36b29e80c5b9" name="Employee" namespace="CapaDominio" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="IdEmployee">
+      <Property Id="1a54201e-e04b-449d-a2bf-7ea97ee7288e" name="IdEmployee" type="Int32" label="IdEmployee : Int32" kind="Persistent" identity="true" fieldName="idEmployee" />
+      <Property Id="9ab28dde-7721-47df-b299-1afef9d419eb" name="Lastname" label="Lastname : String" kind="Persistent" fieldName="lastname" />
+      <Property Id="db4e0726-cbb2-473d-a356-2ed02dba3a93" name="Title" label="Title : String" kind="Persistent" fieldName="title" />
+    </DomainClass>
   </Types>
   <domainContext>
     <domainModelHasDomainContext Id="bf50758d-6fe7-4e0d-b439-dff8d8a8adb5">
@@ -1424,6 +1546,8 @@
         <entitySetProperty name="FormacionAcademicas" namespace="CapaDominio" type="FormacionAcademica" label="FormacionAcademicas : IQueryable&lt;CapaDominio.FormacionAcademica&gt;" />
         <entitySetProperty name="ActividadProfesionals" namespace="CapaDominio" type="ActividadProfesional" label="ActividadProfesionals : IQueryable&lt;CapaDominio.ActividadProfesional&gt;" />
         <entitySetProperty name="ActividadIndependientes" namespace="CapaDominio" type="ActividadIndependiente" label="ActividadIndependientes : IQueryable&lt;CapaDominio.ActividadIndependiente&gt;" />
+        <entitySetProperty name="FotoProductos" namespace="CapaDominio" type="FotoProducto" label="FotoProductos : IQueryable&lt;CapaDominio.FotoProducto&gt;" />
+        <entitySetProperty name="Employees" namespace="CapaDominio" type="Employee" label="Employees : IQueryable&lt;CapaDominio.Employee&gt;" />
       </domainContainer>
     </domainModelHasDomainContext>
   </domainContext>

@@ -22,9 +22,9 @@ namespace CDNEU
                 m.Body = mensaje;
                 m.IsBodyHtml = true;
                 //smtp.Host = "smtp.neuquen.gov.ar";
-                //smtp.Port = 25;
+                smtp.Port = 25;
                 smtp.Host = "smtp.gmail.com";
-                smtp.Port = 587;
+                //smtp.Port = 587;
                 smtp.Credentials = new NetworkCredential(from, password);
                 smtp.EnableSsl = true;
                 smtp.Send(m);
