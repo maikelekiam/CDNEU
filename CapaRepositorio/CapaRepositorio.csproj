@@ -44,6 +44,7 @@
     <Compile Include="ActividadIndependienteRepo.cs" />
     <Compile Include="ActividadProfesionalRepo.cs" />
     <Compile Include="FormacionAcademicaRepo.cs" />
+    <Compile Include="FotoProductoRepo.cs" />
     <Compile Include="FotoUsuarioRepo.cs" />
     <Compile Include="IdentidadRepo.cs" />
     <Compile Include="InnovacionRepo.cs" />
