@@ -28,5 +28,9 @@ namespace CapaNegocio
         {
             return fotoProductoRepo.ObtenerIdFotoProducto(idProducto);
         }
+        public IEnumerable<FotoProducto> MostrarFotoProductos(int idUsuario)
+        {
+            return fotoProductoRepo.MostrarFotoProductos(idUsuario);
+        } 
     }
 }

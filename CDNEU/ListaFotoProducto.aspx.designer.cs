@@ -10,34 +10,52 @@
 namespace CDNEU {
     
     
-    public partial class FotoPerfil {
+    public partial class ListaFotoProducto {
         
         /// <summary>
-        /// imgURL control.
+        /// lblNuevaFotoProductoNombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgURL;
+        protected global::System.Web.UI.WebControls.Label lblNuevaFotoProductoNombre;
         
         /// <summary>
-        /// txtId control.
+        /// txtNuevaFotoProductoNombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtId;
+        protected global::System.Web.UI.WebControls.TextBox txtNuevaFotoProductoNombre;
         
         /// <summary>
-        /// fuImagen control.
+        /// lblNuevaFotoProductoDescripcion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fuImagen;
+        protected global::System.Web.UI.WebControls.Label lblNuevaFotoProductoDescripcion;
+        
+        /// <summary>
+        /// txtNuevaFotoProductoDescripcion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNuevaFotoProductoDescripcion;
+        
+        /// <summary>
+        /// fuploadNuevaFotoProducto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fuploadNuevaFotoProducto;
         
         /// <summary>
         /// imgTemporal control.
@@ -58,6 +76,15 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.Button btnMostrarFotoTemporal;
         
         /// <summary>
+        /// btnGuardarNuevaFotoProducto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGuardarNuevaFotoProducto;
+        
+        /// <summary>
         /// lblMensaje control.
         /// </summary>
         /// <remarks>
@@ -67,57 +94,21 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.Label lblMensaje;
         
         /// <summary>
-        /// panelEditarFotoPerfil control.
+        /// dgFotoProducto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelEditarFotoPerfil;
+        protected global::System.Web.UI.WebControls.GridView dgFotoProducto;
         
         /// <summary>
-        /// LinkButton1 control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
-        
-        /// <summary>
-        /// LinkButton3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton3;
-        
-        /// <summary>
-        /// LinkButton2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
-        
-        /// <summary>
-        /// LinkButton5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton5;
-        
-        /// <summary>
-        /// LinkButton4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton4;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

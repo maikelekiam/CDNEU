@@ -45,5 +45,14 @@ namespace CapaRepositorio
             }
         }
 
+        public IEnumerable<FotoProducto> MostrarFotoProductos(int idUsuario)
+        {
+            using (ModeloDeDominio modeloDeDominio = new ModeloDeDominio())
+            {
+                IEnumerable<FotoProducto> result = modeloDeDominio.FotoProductos.Where(c => c.IdUsuario == idUsuario).ToList();
+                return result;
+            }
+        }
+
     }
 }

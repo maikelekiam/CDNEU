@@ -297,6 +297,7 @@ namespace CDNEU
             }
             catch (Exception ex)
             {
+                ex.ToString();
             }
         }
 

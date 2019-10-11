@@ -1,6 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FotoPerfil.aspx.cs" Inherits="CDNEU.FotoPerfil" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+
+
+    <style>
+        .form-horizontal .form-group {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    </style>
+
+
+
+
     <div class="row">
         <div class="col-md-6">
             <table>
@@ -28,7 +40,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <asp:Button ID="btnMostrarFotoTemporal" runat="server" CssClass="boton_azul" Text="Presione para Mostrar" OnClick="btnMostrarFotoTemporal_Click" />
+                    <asp:Button ID="btnMostrarFotoTemporal" runat="server" CssClass="boton_azul2" Text="Previsualizar" OnClick="btnMostrarFotoTemporal_Click" />
                 </tr>
                 <tr>
                     <td style="text-align: center" colspan="2">
@@ -37,29 +49,28 @@
                     </td>
                 </tr>
             </table>
-            <div class="form-group">
-                <asp:LinkButton BorderStyle="Solid" BorderWidth="1" ID="LinkButton1" runat="server" OnClick="btnRotarIzquierda_Click"
-                    Text="<img src='imagenes/girarizquierda20texto.png' />"></asp:LinkButton>
-                <asp:LinkButton BorderStyle="Solid" BorderWidth="1" ID="LinkButton3" runat="server" OnClick="btnRotar180_Click"
-                    Text="<img src='imagenes/girar180.png' />"></asp:LinkButton>
-                <asp:LinkButton BorderStyle="Solid" BorderWidth="1" ID="LinkButton2" runat="server" OnClick="btnRotarDerecha_Click"
-                    Text="<img src='imagenes/girarderecha20texto.png' />"></asp:LinkButton>
+            <asp:Panel ID="panelEditarFotoPerfil" runat="server">
+                <div class="form-group">
+                    <asp:LinkButton BorderStyle="Solid" BorderWidth="1" ID="LinkButton1" runat="server" OnClick="btnRotarIzquierda_Click"
+                        Text="<img src='imagenes/girarizquierda20texto.png' />"></asp:LinkButton>
+                    <asp:LinkButton BorderStyle="Solid" BorderWidth="1" ID="LinkButton3" runat="server" OnClick="btnRotar180_Click"
+                        Text="<img src='imagenes/girar180.png' />"></asp:LinkButton>
+                    <asp:LinkButton BorderStyle="Solid" BorderWidth="1" ID="LinkButton2" runat="server" OnClick="btnRotarDerecha_Click"
+                        Text="<img src='imagenes/girarderecha20texto.png' />"></asp:LinkButton>
 
-                <%--</div>
+                    <%--</div>
             <div class="form-group">--%>
-                <asp:LinkButton BorderStyle="none" BorderWidth="1" ID="LinkButton5" runat="server" OnClick="btnEliminarFoto_Click"
-                    Font-Bold="true" Text="<img src='imagenes/eliminar.png' />"></asp:LinkButton>
-                <asp:LinkButton BorderStyle="none" BorderWidth="1" ID="LinkButton4" runat="server" OnClick="btnGuardarFoto_Click"
-                    Font-Bold="true" Text="<img src='imagenes/guardar.png' /> Guardar"></asp:LinkButton>
-            </div>
-
-
+                    <asp:LinkButton BorderStyle="none" BorderWidth="1" ID="LinkButton5" runat="server" OnClientClick="return confirm('¿Esta seguro de eliminar la foto?')" OnClick="btnEliminarFoto_Click"
+                        Font-Bold="true" Text="<img src='imagenes/eliminar.png' />"></asp:LinkButton>
+                    <asp:LinkButton BorderStyle="none" BorderWidth="1" ID="LinkButton4" runat="server" OnClientClick="return confirm('¿Esta seguro de guardar la foto?')" OnClick="btnGuardarFoto_Click"
+                        Font-Bold="true" Text="<img src='imagenes/guardar.png' /> Guardar"></asp:LinkButton>
+                </div>
+            </asp:Panel>
             <%--<div class="form-group">
                 <asp:Button ID="btnRotarDerecha" runat="server" CssClass="boton_azul" Text="Rotar Derecha" OnClick="btnRotarDerecha_Click" />
                 <asp:Button ID="btnRotarIzquierda" runat="server" CssClass="boton_azul" Text="Rotar Izquierda" OnClick="btnRotarIzquierda_Click" />
                 <asp:Button ID="btnRotar180" runat="server" CssClass="boton_azul" Text="Rotar 180°" OnClick="btnRotar180_Click" />
             </div>
-
             <div class="form-group">
                 <asp:Button ID="btnGuardarFoto" runat="server" CssClass="boton_verde" Text="Guardar Foto" OnClick="btnGuardarFoto_Click" />
                 <asp:Button ID="btnEliminarFoto" runat="server" CssClass="boton_rojo" Text="Eliminar Foto" OnClick="btnEliminarFoto_Click" />

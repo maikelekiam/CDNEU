@@ -23,6 +23,9 @@ namespace CDNEU
         {
             if (IsPostBack) return;
 
+            panelEditarFotoPerfil.Visible = false;
+            imgTemporal.Visible = false;
+
             bait = null;
             lblMensaje.Text = "";
             txtId.Text = Session["userid"].ToString();
@@ -57,6 +60,8 @@ namespace CDNEU
                     fotoUsuarioNego.ActualizarFotoUsuario(fotoUsuarioNuevo);
 
                     lblMensaje.Text = "La foto se guardó correctamente.";
+                    panelEditarFotoPerfil.Visible = false;
+                    imgTemporal.Visible = false;
                 }
                 catch (Exception ex)
                 {
@@ -78,6 +83,8 @@ namespace CDNEU
                     fotoUsuarioNego.ActualizarFotoUsuario(fotoUsuarioNuevo);
 
                     lblMensaje.Text = "La foto se guardó correctamente.";
+                    panelEditarFotoPerfil.Visible = false;
+                    imgTemporal.Visible = false;
                 }
                 catch (Exception ex)
                 {
@@ -88,13 +95,17 @@ namespace CDNEU
 
         protected void btnVer_Click(object sender, EventArgs e)
         {
+            lblMensaje.Text = "";
             Ver();
         }
 
         protected void btnMostrarFotoTemporal_Click(object sender, EventArgs e)
         {
+            lblMensaje.Text = "";
             if (fuImagen.HasFile)
             {
+                panelEditarFotoPerfil.Visible = true;
+                imgTemporal.Visible = true;
                 lblMensaje.Text = "";
                 GuardarFotoTemporal();
                 MostrarFotoTemporal();
@@ -102,6 +113,7 @@ namespace CDNEU
         }
         public void GuardarFotoTemporal()
         {
+            lblMensaje.Text = "";
             try
             {
                 idUsuarioTemporal = Convert.ToInt32(Session["userid"].ToString());
@@ -119,6 +131,8 @@ namespace CDNEU
                 fotoUsuarioNego.ActualizarFotoUsuario(fotoUsuarioNuevo);
 
                 lblMensaje.Text = "La foto se cargó correctamente.";
+                panelEditarFotoPerfil.Visible = true;
+                imgTemporal.Visible = true;
             }
             catch (Exception ex)
             {
@@ -247,6 +261,8 @@ namespace CDNEU
                 fotoUsuarioNego.ActualizarFotoUsuario(fotoUsuarioNuevo);
 
                 lblMensaje.Text = "Foto Eliminada";
+                panelEditarFotoPerfil.Visible = false;
+                imgTemporal.Visible = false;
             }
             catch (Exception ex)
             {
@@ -273,6 +289,9 @@ namespace CDNEU
                 fotoUsuarioNuevo.FotoTemporal = imagenEmpleado;
 
                 fotoUsuarioNego.ActualizarFotoUsuario(fotoUsuarioNuevo);
+
+                panelEditarFotoPerfil.Visible = false;
+                imgTemporal.Visible = false;
             }
             catch (Exception ex)
             {

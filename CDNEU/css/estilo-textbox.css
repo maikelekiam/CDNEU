@@ -68,6 +68,29 @@
         border-color: #fb5d5d;
     }
 
+.boton_azul2 {
+    text-decoration: none;
+    padding: 2px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #6082ac;
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: 2px solid #ffffff;
+    width: 180px;
+    /*text-align: left;*/
+    border-color: #6082ac;
+}
+
+    .boton_azul2:hover {
+        color: #ffffff;
+        background-color: #6082ac;
+        border-color: #ffffff;
+    }
+
+
+
+
 .boton_azul {
     text-decoration: none;
     padding: 2px;
@@ -77,7 +100,7 @@
     background-color: #6082ac;
     border-radius: 6px;
     border: 2px solid #6082ac;
-    width: 180px; 
+    width: 180px;
     /*text-align: left;*/
 }
 
