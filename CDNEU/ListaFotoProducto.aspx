@@ -39,7 +39,10 @@
                 <br />
                 <div class="table-responsive col-md-12">
                     <asp:GridView ID="dgFotoProducto" runat="server" AutoGenerateColumns="False" DataKeyNames="idFotoProducto"
-                        CssClass="table table-bordered table-condensed">
+                        CssClass="table table-bordered table-condensed"
+                        
+                        
+                        >
                         <Columns>
                             <asp:TemplateField ItemStyle-CssClass="visible-sm visible-xs" HeaderStyle-CssClass="visible-sm visible-xs" HeaderText="Producto">
                                 <ItemTemplate>
@@ -61,7 +64,7 @@
 
                                 <ItemStyle CssClass="visible-lg visible-md" />
                             </asp:BoundField>
-                            <asp:ImageField DataImageUrlField="rutaFotoProducto" DataImageUrlFormatString="~/imagenes_productos/{0}" HeaderText="IMAGEN" ItemStyle-CssClass="style: col-sm-4 col-xs-4 col-lg-4 col-md-4">
+                            <asp:ImageField DataImageUrlField="rutaFotoProducto" DataImageUrlFormatString="~/imagenes_productos/{0}" HeaderText="IMAGEN" ItemStyle-CssClass="style: col-sm-4 col-xs-4 col-lg-4 col-md-4" >
                             </asp:ImageField>
                         </Columns>
                     </asp:GridView>
