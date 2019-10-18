@@ -13,6 +13,33 @@ namespace CDNEU {
     public partial class ListaFotoProducto {
         
         /// <summary>
+        /// panelFU control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelFU;
+        
+        /// <summary>
+        /// fuploadNuevaFotoProducto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fuploadNuevaFotoProducto;
+        
+        /// <summary>
+        /// panelNombreDescripcion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelNombreDescripcion;
+        
+        /// <summary>
         /// lblNuevaFotoProductoNombre control.
         /// </summary>
         /// <remarks>
@@ -49,15 +76,6 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.TextBox txtNuevaFotoProductoDescripcion;
         
         /// <summary>
-        /// fuploadNuevaFotoProducto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fuploadNuevaFotoProducto;
-        
-        /// <summary>
         /// imgTemporal control.
         /// </summary>
         /// <remarks>
@@ -65,6 +83,42 @@ namespace CDNEU {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image imgTemporal;
+        
+        /// <summary>
+        /// panelEditarFoto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelEditarFoto;
+        
+        /// <summary>
+        /// btnRotarIzquierda control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnRotarIzquierda;
+        
+        /// <summary>
+        /// btnRotar180 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnRotar180;
+        
+        /// <summary>
+        /// btnRotarDerecha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnRotarDerecha;
         
         /// <summary>
         /// btnMostrarFotoTemporal control.

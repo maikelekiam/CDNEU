@@ -239,7 +239,10 @@
     <Content Include="css\estilo-textbox.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\owl.theme.default.css" />
     <Content Include="CuentaUsuario.aspx" />
+    <Content Include="EditarFotoProducto.aspx" />
     <Content Include="EditarUsuario.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="FotoPerfil.aspx" />
@@ -275,6 +278,7 @@
     <Content Include="js\bootstrap-select.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\jquery-1.12.3.js" />
+    <Content Include="js\owl.carousel.js" />
     <Content Include="ListaFotoProducto.aspx" />
     <Content Include="ListarUsuarios.aspx" />
     <Content Include="Login.aspx" />
@@ -357,6 +361,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditarFotoProducto.aspx.cs">
+      <DependentUpon>EditarFotoProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarFotoProducto.aspx.designer.cs">
+      <DependentUpon>EditarFotoProducto.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditarUsuario.aspx.cs">
       <DependentUpon>EditarUsuario.aspx</DependentUpon>

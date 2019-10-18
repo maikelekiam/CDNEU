@@ -31,6 +31,14 @@ namespace CapaNegocio
         public IEnumerable<FotoProducto> MostrarFotoProductos(int idUsuario)
         {
             return fotoProductoRepo.MostrarFotoProductos(idUsuario);
-        } 
+        }
+        public FotoProducto MostrarFotoProducto(int idFotoProducto)
+        {
+            return fotoProductoRepo.MostrarFotoProducto(idFotoProducto);
+        }
+        public void EliminarFotoProducto(FotoProducto fotoProducto)
+        {
+            fotoProductoRepo.EliminarFotoProducto(fotoProducto);
+        }
     }
 }

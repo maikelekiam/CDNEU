@@ -20,6 +20,13 @@
     <link href="css/bootstrap-datepicker.css" rel="stylesheet" />
     <link href="css/bootstrap-select.css" rel="stylesheet" />
 
+
+    <link href="css/owl.carousel.css" rel="stylesheet" />
+    <link href="css/owl.theme.default.css" rel="stylesheet" />
+
+
+
+
     <link href="css/estilo-textbox.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/assets.css">
 
@@ -173,16 +180,74 @@
         <a id="to-top" href="#"><span class="fa fa fa-angle-up"></span></a>
 
         <script src="js/jquery-1.12.3.js"></script>
+
+        <script src="js/owl.carousel.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                var owl = $("#owl-example");
+                owl.owlCarousel({
+                    responsiveClass: true,
+                    responsive: {
+                        0: {
+                            items: 1,
+                            nav: true,
+                            loop: false
+                        },
+                        600: {
+                            items: 2,
+                            nav: true,
+                            loop: false
+                        },
+                        900: {
+                            items: 3,
+                            nav: true,
+                            loop: false,
+                            autoPlay: 2000 //Set AutoPlay to 3 seconds
+                        },
+                        1000: {
+                            items: 4,
+                            nav: true,
+                            loop: false,
+                            autoPlay: 2000 //Set AutoPlay to 3 seconds
+                        }
+                    },
+
+                    
+
+                    stopOnHover: true,
+                    navigation: true,
+                    slideSpeed: 300,
+                    paginationSpeed: 400,
+                    goToFirstSpeed: 2000,
+                    singleItem: true,
+                    autoHeight: true,
+                    transitionStyle: "fade",
+                    loop: true
+                });
+                // Custom Navigation Events
+                $(".next").click(function () {
+                    owl.trigger('owl.next');
+                })
+                $(".prev").click(function () {
+                    owl.trigger('owl.prev');
+                })
+                $(".play").click(function () {
+                    owl.trigger('owl.play', 1000); //owl.play event accept autoPlay speed as second parameter
+                })
+                $(".stop").click(function () {
+                    owl.trigger('owl.stop');
+                })
+
+            });
+        </script>
+
         <script src="js/bootstrap-datepicker.js"></script>
         <script src="js/bootstrap-select.js"></script>
 
-
         <script type="text/javascript" src="assets/js/assets.js"></script>
-
-        <!-- general script file -->
         <script type="text/javascript" src="assets/js/script.js"></script>
-
-
+        
         <%--PARA VALIDAR SOLO NUMEROS--%>
         <script>
             function validarSoloNumeros(e) {

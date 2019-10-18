@@ -132,6 +132,9 @@
                                                 <span class="glyphicon glyphicon-lock"></span>
                                             </span>
                                             <asp:TextBox ID="txtLoginContrasenia" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese una Contraseña" />
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-eye-open" id="show" action="hide"></span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -267,30 +270,30 @@
                 </div>
             </div>
         </div>
-
-
-
     </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <script src="js/jquery-1.12.3.js"></script>
     <script src="js/bootstrap.js"></script>
+
+    <%--PARA HACER VISIBLE LA CONTRASEÑA--%>
+    <script>
+        $(document).ready(function () {
+            $('#show').on('click', (function (e) {
+                e.preventDefault();
+
+                var current = $(this).attr('action');
+
+                if (current == 'hide') {
+                    $('#txtLoginContrasenia').removeAttr('type');
+                    $(this).removeClass('glyphicon-eye-open').addClass('glyphicon-eye-close').attr('action', 'show');
+                }
+                if (current == 'show') {
+                    $('#txtLoginContrasenia').attr('type', 'password');
+                    $(this).removeClass('glyphicon-eye-close').addClass('glyphicon-eye-open').attr('action', 'hide');
+                }
+            }))
+        })
+    </script>
     <%--PARA VALIDAR SOLO NUMEROS--%>
     <script>
         function validarSoloNumeros(e) {

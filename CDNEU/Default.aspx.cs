@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Web.UI;
+using CapaDominio;
+using CapaNegocio;
 
 namespace CDNEU
 {
@@ -7,7 +9,12 @@ namespace CDNEU
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            CargarDatos();
+        }
+        private void CargarDatos()
+        {
+            //repeter.DataSourceID = "SqlDataSource1";
+            //repeter.DataBind();
         }
     }
 }

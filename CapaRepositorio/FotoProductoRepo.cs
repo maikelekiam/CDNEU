@@ -53,6 +53,23 @@ namespace CapaRepositorio
                 return result;
             }
         }
+        public FotoProducto MostrarFotoProducto(int idFotoProducto)
+        {
+            using (ModeloDeDominio modeloDeDominio = new ModeloDeDominio())
+            {
+                FotoProducto fotoProducto = modeloDeDominio.FotoProductos.Where(c => c.IdFotoProducto == idFotoProducto).FirstOrDefault();
 
+                return fotoProducto;
+            }
+        }
+        public void EliminarFotoProducto(FotoProducto fotoProducto)
+        {
+            using (ModeloDeDominio modeloDeDominio = new ModeloDeDominio())
+            {
+                FotoProducto fp = modeloDeDominio.FotoProductos.FirstOrDefault(c=>c.IdFotoProducto==fotoProducto.IdFotoProducto);
+                modeloDeDominio.Delete(fp);
+                modeloDeDominio.SaveChanges();
+            }
+        }
     }
 }

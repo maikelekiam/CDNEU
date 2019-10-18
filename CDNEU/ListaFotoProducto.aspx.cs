@@ -10,7 +10,6 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Configuration;
 
 namespace CDNEU
 {
@@ -18,21 +17,41 @@ namespace CDNEU
     {
         FotoProductoNego fotoProductoNego = new FotoProductoNego();
 
+        public static Byte[] bait;
+
         int idUsuarioTemporal;
         int globalIdUsuario;
-        string[] validFileTypes = { ".bmp", ".gif", ".png", ".jpg", ".jpeg" };
 
-        string archivoExtension;
+        string[] validFileTypes = { ".bmp", ".gif", ".png", ".jpg", ".jpeg" };
+        public static string archivoExtension;
+        public static string archivoTipoContenido;
+        public static int archivoTamanio;
         string archivoNombre;
         int idFotoProductoTemporal;
+        public static int idFotoProductoParaEditar;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack) return;
+            if (IsPostBack)
+            {
+                //txtNuevaFotoProductoDescripcion.Text = "";
+                //txtNuevaFotoProductoNombre.Text = "";
+                return;
+            }
+
+            txtNuevaFotoProductoNombre.Attributes.Add("maxlength", "50");
+            txtNuevaFotoProductoDescripcion.Attributes.Add("maxlength", "80");
+
+            panelFU.Visible = true;
+            panelEditarFoto.Visible = false;
+            panelNombreDescripcion.Visible = false;
+            imgTemporal.Visible = false;
+            btnGuardarNuevaFotoProducto.Visible = false;
 
             lblMensaje.Text = "";
             txtNuevaFotoProductoDescripcion.Text = "";
             txtNuevaFotoProductoNombre.Text = "";
+
             CargarGrilla();
 
             globalIdUsuario = Convert.ToInt32(Session["userid"].ToString());
@@ -41,16 +60,8 @@ namespace CDNEU
 
         private void CargarGrilla()
         {
-            //dgFotoProducto.DataSource = fotoProductoNego.MostrarFotoProductos(idUsuarioTemporal);
             dgFotoProducto.DataSourceID = "SqlDataSource1";
             dgFotoProducto.DataBind();
-            //DataKeyNames="idFotoProducto" DataSourceID="SqlDataSource1"
-        }
-
-        protected void btnGuardarNuevaFotoProducto_Click(object sender, EventArgs e)
-        {
-            lblMensaje.Text = "";
-            GuardarNuevaFotoProducto();
         }
 
         protected void btnMostrarFotoTemporal_Click(object sender, EventArgs e)
@@ -61,18 +72,9 @@ namespace CDNEU
 
         private void MostrarFotoTemporal()
         {
-            //FALTA DESARROLLAR hay que fijarse del fotoperfil
-
-
-
-        }
-        private void GuardarNuevaFotoProducto()
-        {
-            //idUsuarioTemporal = Convert.ToInt32(Session["userid"].ToString());
-            //string folderPath = Server.MapPath("~/imagenes/");
-
             if (fuploadNuevaFotoProducto.HasFile)
             {
+                //imgTemporal.Visible = true;
                 archivoExtension = System.IO.Path.GetExtension(fuploadNuevaFotoProducto.PostedFile.FileName).ToLower();
                 bool isValidFile = false;
 
@@ -96,17 +98,108 @@ namespace CDNEU
                 {
                     lblMensaje.Visible = true;
                     lblMensaje.ForeColor = System.Drawing.Color.Green;
-                    lblMensaje.Text = "Archivo cargado exitosamente.";
+                    lblMensaje.Text = "Imagen cargada con éxito.";
+
+                    // metodo que guarda la imagen en una carpeta y luego en la base de datos
+                    //GuardarArchivoEnBaseDeDatos(fuploadNuevaFotoProducto.PostedFile); ************************SIRVE!!!!
+
+
+
+                    //GuardarArchivoEnCarpeta(fuploadNuevaFotoProducto.PostedFile);
+
+                    panelFU.Visible = false;
+                    panelNombreDescripcion.Visible = true;
+                    panelEditarFoto.Visible = true;
+                    imgTemporal.Visible = true;
+                    btnGuardarNuevaFotoProducto.Visible = true;
+                    btnMostrarFotoTemporal.Visible = false;
+
+                    bait = fuploadNuevaFotoProducto.FileBytes;
+
+                    archivoTamanio = fuploadNuevaFotoProducto.PostedFile.ContentLength;
+                    archivoTipoContenido = fuploadNuevaFotoProducto.PostedFile.ContentType.ToLower();
+
+                    //archivoExtension = System.IO.Path.GetExtension(fuploadNuevaFotoProducto.PostedFile.FileName).ToLower();
+                    string path = "~/imagenes_productos/" + Session["userid"].ToString() + "temporal" + archivoExtension;
+
+                    fuploadNuevaFotoProducto.SaveAs(MapPath(path));
+                    imgTemporal.ImageUrl = path;
                 }
-                // metodo que guarda la imagen en una carpeta y luego en la base de datos
-                GuardarArchivoEnBaseDeDatos(fuploadNuevaFotoProducto.PostedFile);
-                //GuardarArchivoEnCarpeta(fuploadNuevaFotoProducto.PostedFile);
             }
             else
             {
                 lblMensaje.Visible = true;
                 lblMensaje.ForeColor = System.Drawing.Color.Red;
                 lblMensaje.Text = "No se ha cargado ningun archivo !!!";
+            }
+        }
+
+        protected void btnGuardarNuevaFotoProducto_Click(object sender, EventArgs e)
+        {
+            lblMensaje.Text = "";
+            GuardarNuevaFotoProducto();
+
+            //imgTemporal.Visible = false;
+        }
+
+        private void GuardarNuevaFotoProducto()
+        {
+            if (bait != null)
+            {
+                byte[] b1 = bait;
+
+                System.Drawing.Image imagen = byteArrayToImage(b1);
+
+                idUsuarioTemporal = Convert.ToInt32(Session["userid"].ToString());
+
+
+
+                FotoProducto fotoProducto = new FotoProducto();
+
+                fotoProducto.IdUsuario = idUsuarioTemporal;
+                fotoProducto.NombreFotoProducto = txtNuevaFotoProductoNombre.Text;
+                fotoProducto.DescripcionFotoProducto = txtNuevaFotoProductoDescripcion.Text;
+                fotoProducto.ExtensionFotoProducto = archivoExtension;
+                fotoProducto.TipoContenidoFotoProducto = archivoTipoContenido;
+                fotoProducto.TamanioFotoProducto = archivoTamanio;
+                fotoProducto.RutaFotoProducto = "US";
+                idFotoProductoTemporal = fotoProductoNego.GuardarFotoProducto(fotoProducto);
+
+                fotoProducto = new FotoProducto();
+                fotoProducto.IdFotoProducto = idFotoProductoTemporal;
+                fotoProducto.IdUsuario = idUsuarioTemporal;
+                fotoProducto.NombreFotoProducto = txtNuevaFotoProductoNombre.Text;
+                fotoProducto.DescripcionFotoProducto = txtNuevaFotoProductoDescripcion.Text;
+                fotoProducto.ExtensionFotoProducto = archivoExtension;
+                fotoProducto.TipoContenidoFotoProducto = archivoTipoContenido;
+                fotoProducto.TamanioFotoProducto = archivoTamanio;
+                fotoProducto.RutaFotoProducto = "US" + Convert.ToString(idUsuarioTemporal) + "IM" + Convert.ToString(idFotoProductoTemporal) + archivoExtension;
+
+                fotoProductoNego.ActualizarFotoProducto(fotoProducto);
+
+
+                string ruta = Server.MapPath("~/imagenes_productos/");
+
+                //hay que calcular el nombre del archivo y su extension
+                archivoNombre = "US" + Convert.ToString(idUsuarioTemporal) + "IM" + Convert.ToString(idFotoProductoTemporal) + archivoExtension;
+
+                string fullPath = Path.Combine(Server.MapPath("~/imagenes_productos/"), archivoNombre);
+                imagen.Save(fullPath);
+
+
+                CargarGrilla();
+
+                panelFU.Visible = true;
+                panelNombreDescripcion.Visible = false;
+                panelEditarFoto.Visible = false;
+                imgTemporal.Visible = false;
+                btnGuardarNuevaFotoProducto.Visible = false;
+                btnMostrarFotoTemporal.Visible = true;
+
+            }
+            else
+            {
+                lblMensaje.Text = "Archivo NULO";
             }
         }
 
@@ -196,63 +289,161 @@ namespace CDNEU
             //}
         }
 
+        //private void GuardarArchivoEnCarpeta(HttpPostedFile file)
+        //{
+        //    string ruta = Server.MapPath("~/imagenes_productos/");
+
+        //    //hay que calcular el nombre del archivo y su extension
+        //    string nombreArchivoNuevo = "US0001IM000001";
+
+        //    string fullPath = Path.Combine(Server.MapPath("~/imagenes_productos/"), nombreArchivoNuevo);
+        //    file.SaveAs(fullPath);
+
+
+
+        //    lblMensaje.Visible = true;
+        //    lblMensaje.ForeColor = System.Drawing.Color.BlueViolet;
+        //    lblMensaje.Text = "PRUEBA OK : " + fullPath.ToString().ToLower();
+
+        //    //string fullPath = Path.Combine(Server.MapPath("~/imagenes/"), file.FileName);
+
+
+        //    //Obtengo el nombre del archivo enviado
 
 
 
 
+        //    //Verificar que el archivo no exista
+        //    //if (File.Exists(fullPath))
+        //    //{
+        //    //    lblMensaje.ForeColor = System.Drawing.Color.Red;
+        //    //    lblMensaje.Text = "ya existe el archivo " + file.FileName;
+        //    //    // en caso quisiera eliminar utilizaria esta linea de codigo
+        //    //    // if (File.Exists(archivo)) File.Delete(archivo);
+        //    //}
+        //    //else
+        //    //{
+        //    //    file.SaveAs(fullPath);
+        //    //    lblMensaje.ForeColor = System.Drawing.Color.Blue;
+        //    //    lblMensaje.Text = "se guardo el archivo " + file.FileName;
+        //    //}
 
+        //}
 
-
-
-
-
-
-
-
-        private void GuardarArchivoEnCarpeta(HttpPostedFile file)
+        protected void ImageButton1_Command(object sender, CommandEventArgs e)
         {
-            string ruta = Server.MapPath("~/imagenes_productos/");
-
-            //hay que calcular el nombre del archivo y su extension
-            string nombreArchivoNuevo = "US0001IM000001";
-
-            string fullPath = Path.Combine(Server.MapPath("~/imagenes_productos/"), nombreArchivoNuevo);
-            file.SaveAs(fullPath);
-
-
-
-            lblMensaje.Visible = true;
-            lblMensaje.ForeColor = System.Drawing.Color.BlueViolet;
-            lblMensaje.Text = "PRUEBA OK : " + fullPath.ToString().ToLower();
-
-            //string fullPath = Path.Combine(Server.MapPath("~/imagenes/"), file.FileName);
-
-
-            //Obtengo el nombre del archivo enviado
-
-
-
-
-            //Verificar que el archivo no exista
-            //if (File.Exists(fullPath))
-            //{
-            //    lblMensaje.ForeColor = System.Drawing.Color.Red;
-            //    lblMensaje.Text = "ya existe el archivo " + file.FileName;
-            //    // en caso quisiera eliminar utilizaria esta linea de codigo
-            //    // if (File.Exists(archivo)) File.Delete(archivo);
-            //}
-            //else
-            //{
-            //    file.SaveAs(fullPath);
-            //    lblMensaje.ForeColor = System.Drawing.Color.Blue;
-            //    lblMensaje.Text = "se guardo el archivo " + file.FileName;
-            //}
-
+            idFotoProductoParaEditar = Convert.ToInt32(e.CommandArgument);
+            lblMensaje.Text = e.CommandArgument.ToString();
+            Response.Redirect("EditarFotoProducto.aspx");
         }
 
-        
+        protected void btnRotarIzquierda_Click(object sender, EventArgs e)
+        {
+            if (bait != null)
+            {
+                byte[] b1 = bait;
 
+                System.Drawing.Image imagen01 = byteArrayToImage(b1);
 
+                imagen01.RotateFlip(RotateFlipType.Rotate270FlipNone);
+
+                bait = imageToByteArray(imagen01);
+
+                //1ro Actualizo la foto temporal que ya esta guardada
+                GuardarFotoRotadaTemporal(imagen01);
+
+                //2do Muestro la foto rotada
+                imgTemporal.ImageUrl = "~/imagenes_productos/" + Session["userid"].ToString() + "temporal" + archivoExtension;
+
+                lblMensaje.Text = "Giro 90° hacia la izquierda.";
+            }
+        }
+
+        protected void btnRotar180_Click(object sender, EventArgs e)
+        {
+            if (bait != null)
+            {
+                byte[] b1 = bait;
+
+                System.Drawing.Image imagen01 = byteArrayToImage(b1);
+
+                imagen01.RotateFlip(RotateFlipType.Rotate180FlipNone);
+
+                bait = imageToByteArray(imagen01);
+
+                //1ro Actualizo la foto temporal que ya esta guardada
+                GuardarFotoRotadaTemporal(imagen01);
+
+                //2do Muestro la foto rotada
+                imgTemporal.ImageUrl = "~/imagenes_productos/" + Session["userid"].ToString() + "temporal" + archivoExtension;
+
+                lblMensaje.Text = "Giro de 180°.";
+            }
+        }
+
+        protected void btnRotarDerecha_Click(object sender, EventArgs e)
+        {
+            if (bait != null)
+            {
+                byte[] b1 = bait;
+
+                System.Drawing.Image imagen01 = byteArrayToImage(b1);
+
+                imagen01.RotateFlip(RotateFlipType.Rotate90FlipNone);
+
+                bait = imageToByteArray(imagen01);
+
+                //1ro Actualizo la foto temporal que ya esta guardada
+                GuardarFotoRotadaTemporal(imagen01);
+
+                //2do Muestro la foto rotada
+                imgTemporal.ImageUrl = "~/imagenes_productos/" + Session["userid"].ToString() + "temporal" + archivoExtension;
+
+                lblMensaje.Text = "Giro 90° hacia la derecha.";
+            }
+        }
+        public byte[] imageToByteArray(System.Drawing.Image imageIn)
+        {
+            MemoryStream ms = new MemoryStream();
+            imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+            return ms.ToArray();
+        }
+
+        public System.Drawing.Image byteArrayToImage(byte[] byteArrayIn)
+        {
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+            System.Drawing.Image returnImage = System.Drawing.Image.FromStream(ms);
+            return returnImage;
+        }
+
+        private void GuardarFotoRotada()
+        {
+            //try
+            //{
+            //    idUsuarioTemporal = Convert.ToInt32(Session["userid"].ToString());
+
+            //    FotoUsuario fotoUsuario2 = fotoUsuarioNego.ObtenerFotoUsuario(idUsuarioTemporal);
+            //    FotoUsuario fotoUsuarioNuevo = new FotoUsuario();
+
+            //    fotoUsuarioNuevo.IdFotoUsuario = fotoUsuario2.IdFotoUsuario;
+            //    fotoUsuarioNuevo.FotoUsuarioCodigo = fotoUsuario2.FotoUsuarioCodigo;
+            //    fotoUsuarioNuevo.IdUsuario = fotoUsuario2.IdUsuario;
+            //    fotoUsuarioNuevo.FotoTemporal = bait;
+
+            //    fotoUsuarioNego.ActualizarFotoUsuario(fotoUsuarioNuevo);
+            //}
+            //catch (Exception ex)
+            //{
+            //    lblMensaje.Text = ex.Message;
+            //}
+        }
+
+        public void GuardarFotoRotadaTemporal(System.Drawing.Image imagen)
+        {
+            string archivoNombre = Session["userid"].ToString() + "temporal" + archivoExtension;
+            string path = Path.Combine(Server.MapPath("~/imagenes_productos/"), archivoNombre);
+            imagen.Save(path);
+        }
     }
 }
 
