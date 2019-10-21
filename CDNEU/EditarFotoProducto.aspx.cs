@@ -79,5 +79,10 @@ namespace CDNEU
 
             Response.Redirect("ListaFotoProducto.aspx");
         }
+
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ListaFotoProducto.aspx");
+        }
     }
 }

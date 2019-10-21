@@ -40,7 +40,7 @@ namespace CDNEU
             }
 
             txtNuevaFotoProductoNombre.Attributes.Add("maxlength", "50");
-            txtNuevaFotoProductoDescripcion.Attributes.Add("maxlength", "80");
+            txtNuevaFotoProductoDescripcion.Attributes.Add("maxlength", "79");
 
             panelFU.Visible = true;
             panelEditarFoto.Visible = false;
@@ -130,7 +130,7 @@ namespace CDNEU
             {
                 lblMensaje.Visible = true;
                 lblMensaje.ForeColor = System.Drawing.Color.Red;
-                lblMensaje.Text = "No se ha cargado ningun archivo !!!";
+                lblMensaje.Text = "No se ha cargado ningun archivo.";
             }
         }
 

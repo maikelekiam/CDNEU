@@ -252,6 +252,7 @@
     <Content Include="imagenes\bg04.jpg" />
     <Content Include="imagenes\copade %28R%29.png" />
     <Content Include="imagenes\copade-barra.jpg" />
+    <Content Include="imagenes\copade-CDNEU 02.jpg" />
     <Content Include="imagenes\copade-CDNEU.jpg" />
     <Content Include="imagenes\copade.ico" />
     <Content Include="imagenes\copade.png" />
@@ -273,7 +274,7 @@
     <Content Include="imagenes\icono-instagram.jpg" />
     <Content Include="imagenes\icono-twitter.jpg" />
     <Content Include="imagenes\icono-youtube.jpg" />
-    <Content Include="imagenes\img-01.png" />
+    <Content Include="imagenes\volver.png" />
     <Content Include="js\bootstrap-datepicker.js" />
     <Content Include="js\bootstrap-select.js" />
     <Content Include="js\bootstrap.js" />

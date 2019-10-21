@@ -726,10 +726,10 @@
           <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
         </orm:field>
         <orm:field name="nombreFotoProducto" property="NombreFotoProducto" behavior="readwrite" uniqueId="67b572fe-d098-44f1-ac5f-b4e842cc2e36" type="System.String">
-          <orm:column name="nombreFotoProducto" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+          <orm:column name="nombreFotoProducto" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
         <orm:field name="descripcionFotoProducto" property="DescripcionFotoProducto" behavior="readwrite" uniqueId="8780ae5c-f97a-4cd4-bdef-0f8008beb1e1" type="System.String">
-          <orm:column name="descripcionFotoProducto" sql-type="varchar" nullable="true" length="80" scale="0" ado-type="StringVariableLength" />
+          <orm:column name="descripcionFotoProducto" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         </orm:field>
         <orm:field name="extensionFotoProducto" property="ExtensionFotoProducto" behavior="readwrite" uniqueId="5d3c24c3-b2d0-4b75-abfb-fbb5f1dfb574" type="System.String">
           <orm:column name="extensionFotoProducto" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
@@ -993,8 +993,8 @@
       <orm:table name="FotoProducto">
         <orm:column name="idFotoProducto" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
         <orm:column name="idUsuario" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
-        <orm:column name="nombreFotoProducto" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
-        <orm:column name="descripcionFotoProducto" sql-type="varchar" nullable="true" length="80" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="nombreFotoProducto" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
+        <orm:column name="descripcionFotoProducto" sql-type="varchar(max)" nullable="true" length="0" scale="0" ado-type="StringInfiniteLength" />
         <orm:column name="extensionFotoProducto" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
         <orm:column name="tipoContenidoFotoProducto" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
         <orm:column name="tamanioFotoProducto" sql-type="bigint" nullable="true" length="0" scale="0" ado-type="Int64" />

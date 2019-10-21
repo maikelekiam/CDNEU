@@ -40,6 +40,15 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.TextBox txtRegistroNombreUsuario;
         
         /// <summary>
+        /// btnActualizarUsuario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnActualizarUsuario;
+        
+        /// <summary>
         /// Label4 control.
         /// </summary>
         /// <remarks>
@@ -101,15 +110,6 @@ namespace CDNEU {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMensaje;
-        
-        /// <summary>
-        /// btnActualizarUsuario control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnActualizarUsuario;
         
         /// <summary>
         /// btnActualizarContrasenia control.

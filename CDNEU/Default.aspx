@@ -52,9 +52,13 @@
 
     <div class="row">
         <div class="col-md-12">
-            <%--<h1>Mis Productos</h1>--%>
+            <h3><asp:Label ID="lblMisProductos" runat="server" Text="La Galería de imágenes está vacía." CssClass="AlineadoIzquierda"></asp:Label></h3>
             <div id="owl-example" class="owl-carousel owl-theme" style="width: 100%;">
-                <asp:Repeater ID="repeter" runat="server" DataSourceID="SqlDataSource1">
+                <asp:Repeater ID="repeter" runat="server" DataSourceID="SqlDataSource1" 
+                    
+                    OnItemDataBound ="repeter_DataBinding"
+                    
+                    >
                     <ItemTemplate>
                         <div class="contenido">
                             <img class="imagenes" src="imagenes_productos/<%# DataBinder.Eval(Container.DataItem, "rutaFotoProducto") %>" />

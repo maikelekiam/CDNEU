@@ -32,6 +32,8 @@
             Font-Bold="true" Text="<img src='imagenes/eliminar.png' /> Eliminar"></asp:LinkButton>
         <asp:LinkButton BorderStyle="none" BorderWidth="1" ID="btnGuardar" runat="server" OnClientClick="return confirm('¿Esta seguro de guardar cambios?')" OnClick="btnGuardar_Click"
             Font-Bold="true" Text="<img src='imagenes/guardar.png' /> Guardar"></asp:LinkButton>
+        <asp:LinkButton BorderStyle="none" BorderWidth="1" ID="btnVolver" runat="server" OnClick="btnVolver_Click"
+            Font-Bold="true" Text="<img src='imagenes/volver.png' /> Volver"></asp:LinkButton>
     </div>
 
 

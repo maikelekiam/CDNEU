@@ -9,12 +9,14 @@ namespace CDNEU
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            CargarDatos();
         }
-        private void CargarDatos()
+
+        protected void repeter_DataBinding(object sender, EventArgs e)
         {
-            //repeter.DataSourceID = "SqlDataSource1";
-            //repeter.DataBind();
+            if (sender != null)
+            {
+                lblMisProductos.Text = "Mi Galería de Imágenes";
+            }
         }
     }
 }

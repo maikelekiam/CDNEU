@@ -82,10 +82,10 @@
                     <asp:Label ID="lblMensaje" runat="server" Text="" Style="color: red" />
                 </h3>
                 <br />
-                <h2>Fotos Guardadas</h2>
+                <h2>Mi Galería</h2>
                 <div class="table-responsive col-md-12">
                     <asp:GridView ID="dgFotoProducto" runat="server" AutoGenerateColumns="False" DataKeyNames="idFotoProducto"
-                        EmptyDataText="No hay imagenes guardadas."
+                        EmptyDataText="No hay fotos guardadas en mi galería."
                         CssClass="table table-bordered table-condensed">
                         <Columns>
                             <asp:TemplateField ItemStyle-CssClass="visible-sm visible-xs" HeaderStyle-CssClass="visible-sm visible-xs" HeaderText="Producto">
