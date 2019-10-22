@@ -40,6 +40,7 @@ namespace CDNEU
 
             txtNombre.Text = fp.NombreFotoProducto;
             txtDescripcion.Text = fp.DescripcionFotoProducto;
+            lblTamanioFoto.Text = Convert.ToString(fp.TamanioFotoProducto)+" KB";
         }
 
         protected void btnEliminar_Click(object sender, EventArgs e)

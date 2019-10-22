@@ -17,6 +17,7 @@
             margin-right: auto;
             margin-left: auto;
         }
+        
 
         .boton_azul {
             text-decoration: none;
@@ -63,12 +64,17 @@
         .altotabla {
             height: 15px;
         }
+
+        .panel {
+            border: none;
+            
+        }
     </style>
 
-    <div class="container-fluid">
+    <div class="container-fluid" style="border: none;">
         <asp:Panel ID="Panel1" CssClass="panel panel-default" runat="server">
             <div class="panel-heading">
-                <h3>Datos de Mi Cuenta</h3>
+                <h3>Mi Cuenta</h3>
             </div>
             <div class="panel-body">
                 <div class="row">

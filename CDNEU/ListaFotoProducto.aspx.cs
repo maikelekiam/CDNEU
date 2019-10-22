@@ -103,8 +103,6 @@ namespace CDNEU
                     // metodo que guarda la imagen en una carpeta y luego en la base de datos
                     //GuardarArchivoEnBaseDeDatos(fuploadNuevaFotoProducto.PostedFile); ************************SIRVE!!!!
 
-
-
                     //GuardarArchivoEnCarpeta(fuploadNuevaFotoProducto.PostedFile);
 
                     panelFU.Visible = false;

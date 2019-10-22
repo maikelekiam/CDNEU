@@ -3,6 +3,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <style>
+        .container {
+            padding-right: 0px;
+            padding-left: 0px;
+            /*margin-right: auto;
+            margin-left: auto;*/
+        }
         th {
             text-align: center;
         }

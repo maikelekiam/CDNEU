@@ -29,10 +29,6 @@
             font-family: 'Oswald','sans-serif';
         }
 
-        .panel-body {
-            /*padding: 5px 0px;*/
-        }
-
         body {
             background: url('../imagenes/bg02.jpg') fixed;
             background-size: cover;
@@ -58,7 +54,6 @@
                 border-color: #6082ac;
             }
 
-
         .boton_modal {
             text-decoration: none;
             font-weight: 400;
@@ -69,16 +64,14 @@
             border: 2px solid #ffffff;
         }
 
-        .anchotabla {
-            width: 200px;
+        .contenedor {
+            margin-left: 5%;
+            width: 90%;
         }
 
-        .anchotextbox {
-            width: 300px;
-        }
-
-        .altotabla {
-            height: 5px;
+        .mk01 {
+            width: 90%;
+            margin-left: 5%;
         }
     </style>
 
@@ -92,11 +85,11 @@
     <br />
     <br />
     <form id="form1" runat="server" class="form-horizontal autoHeight">
-        <div id="exTab3" class="container">
-            <div class="col-md-6 col-md-offset-3">
+        <div id="exTab3" class="contenedor">
+            <div>
 
                 <%--Panel Externo--%>
-                <div class="panel panel-default">
+                <div class="panel panel-default col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
                     <div class="panel-body">
 
                         <ul class="nav nav-pills">
@@ -111,27 +104,27 @@
 
                             <%--Inicio del tab-pane del Login--%>
                             <div class="tab-pane active" id="1b">
-                                <h3>Ingreso al Sistema</h3>
+                                <h3>Registro de Industrias Culturales y Creativas</h3>
                                 <hr />
                                 <div class="form-group">
-                                    <div class="col-md-6 col-md-offset-1">
+                                    <div class="mk01">
                                         <asp:Label ID="Label1" runat="server" Text="Label">Usuario</asp:Label>
                                         <div class="input-group">
                                             <span class="input-group-addon alert-info">
                                                 <span class="glyphicon glyphicon-user"></span>
                                             </span>
-                                            <asp:TextBox ID="txtLoginNombreUsuario" runat="server" CssClass="form-control" placeholder="Ingrese un nombre de Usuario" />
+                                            <asp:TextBox ID="txtLoginNombreUsuario" runat="server" CssClass="form-control" placeholder="Tu Usuario" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="col-md-6 col-md-offset-1">
+                                    <div class="mk01">
                                         <asp:Label ID="Label2" runat="server" Text="Label">Contraseña</asp:Label>
                                         <div class="input-group">
                                             <span class="input-group-addon alert-info">
                                                 <span class="glyphicon glyphicon-lock"></span>
                                             </span>
-                                            <asp:TextBox ID="txtLoginContrasenia" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese una Contraseña" />
+                                            <asp:TextBox ID="txtLoginContrasenia" runat="server" CssClass="form-control" TextMode="Password" placeholder="Tu Contraseña" />
                                             <span class="input-group-addon alert-info">
                                                 <span class="glyphicon glyphicon-eye-open" id="show" action="hide"></span>
                                             </span>
@@ -144,11 +137,11 @@
                                 </div>--%>
                                 <hr />
                                 <div class="form-group">
-                                    <div class="col-md-4 col-md-offset-1">
+                                    <div class="mk01">
                                         <asp:Button ID="btnLogin" runat="server"
                                             Text="Ingresar" OnClick="btnLogin_Click" CssClass="boton_azul" />
                                     </div>
-                                    <div class="col-md-6 col-md-offset-1">
+                                    <div class="mk01">
                                         <button type="button" id="btnOlvidoContrasenia" class="boton_modal" data-toggle="modal" data-target="#modalOlvidoContrasenia">¿Olvidaste tu contraseña?</button>
                                     </div>
                                 </div>
@@ -160,77 +153,82 @@
                                 <%--<h3>Nuevo Usuario</h3>
                                 <hr />--%>
                                 <div class="form-group">
-                                    <div class="col-md-6 col-md-offset-1">
+                                    <div class="mk01">
                                         <asp:Label ID="Label7" runat="server" Text="Label">Usuario</asp:Label>
                                         <div class="input-group">
                                             <span class="input-group-addon alert-info">
                                                 <span class="glyphicon glyphicon-user"></span>
                                             </span>
-                                            <asp:TextBox ID="txtRegistroNombreUsuario" runat="server" CssClass="form-control" placeholder="Ingrese un nombre de Usuario" />
+                                            <asp:TextBox ID="txtRegistroNombreUsuario" runat="server" CssClass="form-control" placeholder="Tu Usuario" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="col-md-6 col-md-offset-1">
+                                    <div class="mk01">
                                         <asp:Label ID="Label8" runat="server" Text="Label">Contraseña</asp:Label>
                                         <div class="input-group">
                                             <span class="input-group-addon alert-info">
                                                 <span class="glyphicon glyphicon-lock"></span>
                                             </span>
-                                            <asp:TextBox ID="txtRegistroContrasenia" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese una Contraseña" />
+                                            <asp:TextBox ID="txtRegistroContrasenia" runat="server" CssClass="form-control" TextMode="Password" placeholder="Tu Contraseña" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="col-md-6 col-md-offset-1">
+                                    <div class="mk01">
                                         <asp:Label ID="Label9" runat="server" Text="Label">Nombre</asp:Label>
                                         <div class="input-group">
                                             <span class="input-group-addon alert-info">
                                                 <span class="glyphicon glyphicon-edit"></span>
                                             </span>
-                                            <asp:TextBox ID="txtRegistroNombre" runat="server" CssClass="form-control" placeholder="Ingrese su nombre" />
+                                            <asp:TextBox ID="txtRegistroNombre" runat="server" CssClass="form-control" placeholder="Tu Nombre" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="col-md-6 col-md-offset-1">
+                                    <div class="mk01">
                                         <asp:Label ID="Label3" runat="server" Text="Label">Apellido</asp:Label>
                                         <div class="input-group">
                                             <span class="input-group-addon alert-info">
                                                 <span class="glyphicon glyphicon-edit"></span>
                                             </span>
-                                            <asp:TextBox ID="txtRegistroApellido" runat="server" CssClass="form-control" placeholder="Ingrese su apellido" />
+                                            <asp:TextBox ID="txtRegistroApellido" runat="server" CssClass="form-control" placeholder="Tu Apellido" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="col-md-6 col-md-offset-1">
+                                    <div class="mk01">
                                         <asp:Label ID="Label5" runat="server" Text="Label">DNI</asp:Label>
                                         <div class="input-group">
                                             <span class="input-group-addon alert-info">
                                                 <span class="glyphicon glyphicon-edit"></span>
                                             </span>
-                                            <asp:TextBox ID="txtRegistroDni" runat="server" CssClass="form-control" placeholder="Ingrese su DNI" />
+                                            <asp:TextBox ID="txtRegistroDni" runat="server" CssClass="form-control" placeholder="Tu DNI" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="col-md-6 col-md-offset-1">
+                                    <div class="mk01">
                                         <asp:Label ID="Label4" runat="server" Text="Label">Correo Electronico</asp:Label>
                                         <div class="input-group">
                                             <span class="input-group-addon alert-info">
                                                 <span class="glyphicon glyphicon-envelope"></span>
                                             </span>
-                                            <asp:TextBox ID="txtRegistroCorreoElectronico" runat="server" CssClass="form-control" placeholder="Ingrese su Correo Electronico" />
+                                            <asp:TextBox ID="txtRegistroCorreoElectronico" runat="server" CssClass="form-control" placeholder="Tu Correo Electronico" />
                                         </div>
                                     </div>
                                 </div>
                                 <br />
                                 <!--Boton de registro-->
                                 <div class="form-group">
-                                    <div class="col-md-10 col-md-offset-1">
+                                    <div class="mk01">
                                         <asp:Button ID="btnRegistro" runat="server"
                                             Text="Enviar Datos" OnClick="btnRegistro_Click" CssClass="boton_azul" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="mk01">
+                                        <button type="button" id="btnPolitica" class="boton_modal">Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</button>
                                     </div>
                                 </div>
                             </div>
@@ -257,13 +255,17 @@
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <div class="col-md-12 col-xs-12">
+                                <div class="mk01">
                                     <asp:TextBox ID="txtOlvidoContraseniaCorreoElectronicoModal" runat="server" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <%--<asp:Button runat="server" ID="btnModalOlvidoContraseniaSalir" Text="Salir" class="boton_rojo" data-dismiss="modal" />--%>
-                                <asp:Button runat="server" ID="btnModalOlvidoContraseniaEnviar" Text="Enviar" CssClass="boton_verde" OnClick="btnModalOlvidoContraseniaEnviar_Click" />
+                                <div class="form-group">
+                                    <div class="mk01">
+                                        <%--<asp:Button runat="server" ID="btnModalOlvidoContraseniaSalir" Text="Salir" class="boton_rojo" data-dismiss="modal" />--%>
+                                        <asp:Button runat="server" ID="btnModalOlvidoContraseniaEnviar" Text="Enviar" CssClass="boton_verde" OnClick="btnModalOlvidoContraseniaEnviar_Click" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

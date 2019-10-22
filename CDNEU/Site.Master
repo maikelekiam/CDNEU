@@ -192,29 +192,28 @@
                         0: {
                             items: 1,
                             nav: true,
-                            loop: false
+                            loop: false,
+                            autoPlay: 100
                         },
                         600: {
                             items: 2,
                             nav: true,
-                            loop: false
+                            loop: false,
+                            autoPlay: 100
                         },
                         900: {
                             items: 3,
                             nav: true,
-                            loop: false,
-                            autoPlay: 2000 //Set AutoPlay to 3 seconds
+                            loop: false
                         },
                         1000: {
-                            items: 4,
+                            items: 3,
                             nav: true,
-                            loop: false,
-                            autoPlay: 2000 //Set AutoPlay to 3 seconds
+                            loop: false
                         }
                     },
-
-                    
-
+                    navText: ["Anterior", "Siguiente"],
+                    autoplay: false,
                     stopOnHover: true,
                     navigation: true,
                     slideSpeed: 300,
@@ -222,8 +221,7 @@
                     goToFirstSpeed: 2000,
                     singleItem: true,
                     autoHeight: true,
-                    transitionStyle: "fade",
-                    loop: true
+                    transitionStyle: "fade"
                 });
                 // Custom Navigation Events
                 $(".next").click(function () {
