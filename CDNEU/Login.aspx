@@ -30,10 +30,18 @@
         }
 
         body {
-            background: url('../imagenes/bg02.jpg') fixed;
+            background: url('imagenes/fondoCREARtransparente.jpg') fixed;
             background-size: cover;
             padding: 0;
             margin: 0;
+        }
+
+        .panel {
+            margin-bottom: 20px;
+            background: rgba(240, 240, 240, 0.15);
+            border: 1px solid thick;
+            border-radius: 4px;
+            -webkit-box-shadow: 0 10px 10px rgba(0,0,0,.05);
         }
 
         .boton_azul {
@@ -58,10 +66,11 @@
             text-decoration: none;
             font-weight: 400;
             font-size: 15px;
-            color: blue;
-            background-color: #ffffff;
+            color: Background;
+            background-color: transparent;
             border-radius: 6px;
-            border: 2px solid #ffffff;
+            border: 2px none #ffffff;
+            text-align: left;
         }
 
         .contenedor {
@@ -72,6 +81,9 @@
         .mk01 {
             width: 90%;
             margin-left: 5%;
+        }
+        .form-control{
+            background-color: white;
         }
     </style>
 
@@ -84,13 +96,12 @@
 <body>
     <br />
     <br />
-    <form id="form1" runat="server" class="form-horizontal autoHeight">
-        <div id="exTab3" class="contenedor">
+    <form id="form1" runat="server" class="form-horizontal">
+        <div id="exTab3" class="contenedor"  >
             <div>
-
                 <%--Panel Externo--%>
-                <div class="panel panel-default col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-                    <div class="panel-body">
+                <div class="panel panel-default col-md-5 col-md-offset-3 col-lg-5 col-lg-offset-3">
+                    <div class="panel-body" >
 
                         <ul class="nav nav-pills">
                             <li class="active">
@@ -100,7 +111,7 @@
                             </li>
                         </ul>
 
-                        <div class="tab-content clearfix">
+                        <div class="tab-content">
 
                             <%--Inicio del tab-pane del Login--%>
                             <div class="tab-pane active" id="1b">
@@ -110,10 +121,11 @@
                                     <div class="mk01">
                                         <asp:Label ID="Label1" runat="server" Text="Label">Usuario</asp:Label>
                                         <div class="input-group">
-                                            <span class="input-group-addon alert-info">
+                                            <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-user"></span>
                                             </span>
-                                            <asp:TextBox ID="txtLoginNombreUsuario" runat="server" CssClass="form-control" placeholder="Tu Usuario" />
+                                            <asp:TextBox ID="txtLoginNombreUsuario" runat="server" CssClass="form-control" placeholder="Tu Usuario"
+                                                onkeyup="minuscula(this);" />
                                         </div>
                                     </div>
                                 </div>
@@ -121,11 +133,11 @@
                                     <div class="mk01">
                                         <asp:Label ID="Label2" runat="server" Text="Label">Contraseña</asp:Label>
                                         <div class="input-group">
-                                            <span class="input-group-addon alert-info">
+                                            <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-lock"></span>
                                             </span>
                                             <asp:TextBox ID="txtLoginContrasenia" runat="server" CssClass="form-control" TextMode="Password" placeholder="Tu Contraseña" />
-                                            <span class="input-group-addon alert-info">
+                                            <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-eye-open" id="show" action="hide"></span>
                                             </span>
                                         </div>
@@ -140,8 +152,7 @@
                                     <div class="mk01">
                                         <asp:Button ID="btnLogin" runat="server"
                                             Text="Ingresar" OnClick="btnLogin_Click" CssClass="boton_azul" />
-                                    </div>
-                                    <div class="mk01">
+
                                         <button type="button" id="btnOlvidoContrasenia" class="boton_modal" data-toggle="modal" data-target="#modalOlvidoContrasenia">¿Olvidaste tu contraseña?</button>
                                     </div>
                                 </div>
@@ -159,7 +170,7 @@
                                             <span class="input-group-addon alert-info">
                                                 <span class="glyphicon glyphicon-user"></span>
                                             </span>
-                                            <asp:TextBox ID="txtRegistroNombreUsuario" runat="server" CssClass="form-control" placeholder="Tu Usuario" />
+                                            <asp:TextBox ID="txtRegistroNombreUsuario" runat="server" CssClass="form-control" placeholder="Tu Usuario" onkeyup="minuscula(this);" />
                                         </div>
                                     </div>
                                 </div>
@@ -171,6 +182,9 @@
                                                 <span class="glyphicon glyphicon-lock"></span>
                                             </span>
                                             <asp:TextBox ID="txtRegistroContrasenia" runat="server" CssClass="form-control" TextMode="Password" placeholder="Tu Contraseña" />
+                                            <span class="input-group-addon alert-info">
+                                                <span class="glyphicon glyphicon-eye-open" id="show2" action="hide"></span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -296,6 +310,24 @@
             }))
         })
     </script>
+    <script>
+        $(document).ready(function () {
+            $('#show2').on('click', (function (e) {
+                e.preventDefault();
+
+                var current = $(this).attr('action');
+
+                if (current == 'hide') {
+                    $('#txtRegistroContrasenia').removeAttr('type');
+                    $(this).removeClass('glyphicon-eye-open').addClass('glyphicon-eye-close').attr('action', 'show');
+                }
+                if (current == 'show') {
+                    $('#txtRegistroContrasenia').attr('type', 'password');
+                    $(this).removeClass('glyphicon-eye-close').addClass('glyphicon-eye-open').attr('action', 'hide');
+                }
+            }))
+        })
+    </script>
     <%--PARA VALIDAR SOLO NUMEROS--%>
     <script>
         function validarSoloNumeros(e) {
@@ -303,6 +335,11 @@
             if (tecla == 8) return true;
             patron = /\d/;
             return patron.test(String.fromCharCode(tecla));
+        }
+    </script>
+    <script>
+        function minuscula(e) {
+            e.value = e.value.toLowerCase();
         }
     </script>
 </body>

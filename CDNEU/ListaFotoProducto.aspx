@@ -9,6 +9,7 @@
             /*margin-right: auto;
             margin-left: auto;*/
         }
+
         th {
             text-align: center;
         }
@@ -72,17 +73,33 @@
                 <asp:Panel ID="panelEditarFoto" runat="server">
                     <div class="form-group col-md-offset-1">
                         <br />
-                        <asp:LinkButton BorderStyle="Solid" BorderWidth="1" ID="btnRotarIzquierda" runat="server" OnClick="btnRotarIzquierda_Click"
-                            Text="<img src='imagenes/girarizquierda20texto.png' />"></asp:LinkButton>
-                        <asp:LinkButton BorderStyle="Solid" BorderWidth="1" ID="btnRotar180" runat="server" OnClick="btnRotar180_Click"
+                        <asp:LinkButton BorderStyle="none" BorderWidth="1" ID="btnRotarIzquierda" runat="server" OnClick="btnRotarIzquierda_Click"
+                            Text="<img src='imagenes/girarizquierda.png' />">
+                        </asp:LinkButton>
+                        <asp:LinkButton BorderStyle="none" BorderWidth="1" ID="btnRotar180" runat="server" OnClick="btnRotar180_Click"
                             Text="<img src='imagenes/girar180.png' />"></asp:LinkButton>
-                        <asp:LinkButton BorderStyle="Solid" BorderWidth="1" ID="btnRotarDerecha" runat="server" OnClick="btnRotarDerecha_Click"
-                            Text="<img src='imagenes/girarderecha20texto.png' />"></asp:LinkButton>
+                        <asp:LinkButton BorderStyle="none" BorderWidth="1" ID="btnRotarDerecha" runat="server" OnClick="btnRotarDerecha_Click"
+                            Text="<img src='imagenes/girarderecha.png' />"></asp:LinkButton>
                     </div>
                 </asp:Panel>
                 <br />
-                <asp:Button ID="btnMostrarFotoTemporal" runat="server" CssClass="boton_azul2" Text="Previsualizar" OnClick="btnMostrarFotoTemporal_Click" />
-                <asp:Button ID="btnGuardarNuevaFotoProducto" runat="server" CssClass="boton_verde" Text="Guardar Foto" OnClick="btnGuardarNuevaFotoProducto_Click" />
+                <%--<asp:Button ID="btnMostrarFotoTemporal" runat="server" CssClass="boton_azul2" Text="Previsualizar" OnClick="btnMostrarFotoTemporal_Click" />--%>
+
+
+                <asp:LinkButton BorderStyle="none" BorderWidth="1" ID="btnMostrarFotoTemporal" runat="server" OnClick="btnMostrarFotoTemporal_Click"
+                    Font-Bold="true" Text="<img src='imagenes/previsualizar.png' /> Previsualizar"></asp:LinkButton>
+
+
+                <asp:LinkButton BorderStyle="none" BorderWidth="1" ID="btnGuardarNuevaFotoProducto" runat="server" OnClientClick="return confirm('¿Esta seguro de guardar la foto?')" OnClick="btnGuardarNuevaFotoProducto_Click"
+                    Font-Bold="true" Text="<img src='imagenes/guardar.png' /> Guardar"></asp:LinkButton>
+
+
+                <%--<asp:Button ID="btnGuardarNuevaFotoProducto" runat="server" CssClass="boton_verde" Text="Guardar Foto" OnClick="btnGuardarNuevaFotoProducto_Click" />--%>
+
+
+
+
+
 
                 <h3>
                     <asp:Label ID="lblMensaje" runat="server" Text="" Style="color: red" />
@@ -133,4 +150,19 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function bigImg(x) {
+            x.style.height = "90px";
+            x.style.width = "90px";
+        }
+
+        function normalImg(x) {
+            x.style.height = "45px";
+            x.style.width = "45px";
+        }
+    </script>
+
+
+
 </asp:Content>

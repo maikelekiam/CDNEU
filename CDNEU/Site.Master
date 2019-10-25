@@ -24,15 +24,18 @@
     <link href="css/owl.carousel.css" rel="stylesheet" />
     <link href="css/owl.theme.default.css" rel="stylesheet" />
 
-
-
-
     <link href="css/estilo-textbox.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/assets.css">
 
     <style>
         h3 {
             font-family: 'Oswald','sans-serif';
+        }
+        .container{
+            /*background: url('imagenes/fondoCREAR.jpg') fixed;
+            background-size: cover;
+            padding: 0;
+            margin: 0;*/
         }
     </style>
 
@@ -86,8 +89,8 @@
 
                     <!-- Logo start -->
                     <div class="logo">
-                        <a href="Default.aspx">
-                            <img src="imagenes/copade-cdneu 02.jpg" /></a>
+                        <a href="About.aspx">
+                            <img src="imagenes/copade-cdneu 03.jpg" /></a>
 
                     </div>
                     <!-- Logo end -->
@@ -96,20 +99,20 @@
                         <!-- top navigation menu start -->
                         <nav class="top-nav boxes with-borders">
                             <ul>
-                                <li class="selected"><a href="default.aspx"><span>Inicio</span></a></li>
+                                <li class="selected"><a href="about.aspx"><span>Inicio</span></a></li>
                                 <li runat="server" id="dropdownAltaUsuario">
                                     <a href="AltaUsuario.aspx"><span>Nuevo Diseñador</span></a>
                                     <ul>
                                         <li>
-                                            <a runat="server" href="~/AltaUsuario.aspx"><span class="glyphicon glyphicon-plus fa-fw"></span>Nuevo Diseñador</a>
+                                            <a runat="server" href="~/AltaUsuario.aspx"><span class="glyphicon glyphicon-plus"></span>&nbsp; Nuevo Diseñador</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="EditarUsuario.aspx"><span>Registrate</span></a>
+                                    <a href="EditarUsuario.aspx"><span>&nbsp; Registrate</span></a>
                                     <ul>
                                         <li>
-                                            <a runat="server" href="~/EditarUsuario.aspx"><span class="glyphicon glyphicon-plus fa-fw"></span>Registrate</a>
+                                            <a runat="server" href="~/EditarUsuario.aspx"><span class="glyphicon glyphicon-plus"></span>&nbsp; Registrate</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -117,7 +120,7 @@
                                     <a href="ListarUsuarios.aspx"><span>Listado de Diseñadores</span></a>
                                     <ul>
                                         <li>
-                                            <a runat="server" href="~/ListarUsuarios.aspx"><span class="glyphicon glyphicon-credit-card fa-fw"></span>Listado de Diseñadores</a>
+                                            <a runat="server" href="~/ListarUsuarios.aspx"><span class="glyphicon glyphicon-credit-card"></span>&nbsp; Listado de Diseñadores</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -125,10 +128,13 @@
                                     <a><span>Mis Fotos</span></a>
                                     <ul>
                                         <li>
-                                            <a runat="server" href="~/FotoPerfil.aspx"><span class="glyphicon glyphicon-credit-card fa-fw fa-fw"></span>Foto de Perfil</a>
+                                            <a runat="server" href="~/FotoPerfil.aspx"><span class="glyphicon glyphicon-credit-card"></span>&nbsp; Foto de Perfil</a>
                                         </li>
                                         <li>
-                                            <a runat="server" href="~/ListaFotoProducto.aspx"><span class="glyphicon glyphicon-credit-card fa-fw fa-fw"></span>Fotos del Producto</a>
+                                            <a runat="server" href="~/ListaFotoProducto.aspx"><span class="glyphicon glyphicon-credit-card"></span>&nbsp; Agregar Fotos del Producto</a>
+                                        </li>
+                                        <li>
+                                            <a runat="server" href="~/Default.aspx"><span class="glyphicon glyphicon-credit-card"></span>&nbsp; Mi Galería</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -136,7 +142,7 @@
                                     <a href="CuentaUsuario.aspx"><span>Mi Cuenta</span></a>
                                     <ul>
                                         <li>
-                                            <a runat="server" href="~/CuentaUsuario.aspx"><span class="glyphicon glyphicon-user fa-fw"></span>Cuenta de Usuario</a>
+                                            <a runat="server" href="~/CuentaUsuario.aspx"><span class="glyphicon glyphicon-user"></span>&nbsp; Cuenta de Usuario</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -245,7 +251,7 @@
 
         <script type="text/javascript" src="assets/js/assets.js"></script>
         <script type="text/javascript" src="assets/js/script.js"></script>
-        
+
         <%--PARA VALIDAR SOLO NUMEROS--%>
         <script>
             function validarSoloNumeros(e) {
@@ -255,6 +261,13 @@
                 return patron.test(String.fromCharCode(tecla));
             }
         </script>
+        <script>
+            function minuscula(e) {
+                e.value = e.value.toLowerCase();
+            }
+        </script>
+
+
     </form>
 </body>
 </html>

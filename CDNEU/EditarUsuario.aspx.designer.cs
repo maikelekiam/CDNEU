@@ -175,15 +175,6 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.TextBox txtDatosPersonalesProvincia;
         
         /// <summary>
-        /// Label59 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label59;
-        
-        /// <summary>
         /// txtFacebook control.
         /// </summary>
         /// <remarks>
@@ -191,15 +182,6 @@ namespace CDNEU {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFacebook;
-        
-        /// <summary>
-        /// Label60 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label60;
         
         /// <summary>
         /// txtInstagram control.
@@ -211,15 +193,6 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.TextBox txtInstagram;
         
         /// <summary>
-        /// Label61 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label61;
-        
-        /// <summary>
         /// txtTwitter control.
         /// </summary>
         /// <remarks>
@@ -229,15 +202,6 @@ namespace CDNEU {
         protected global::System.Web.UI.WebControls.TextBox txtTwitter;
         
         /// <summary>
-        /// Label62 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label62;
-        
-        /// <summary>
         /// txtYouTube control.
         /// </summary>
         /// <remarks>
@@ -245,15 +209,6 @@ namespace CDNEU {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtYouTube;
-        
-        /// <summary>
-        /// Label63 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label63;
         
         /// <summary>
         /// txtFlicker control.

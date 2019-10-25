@@ -3990,11 +3990,11 @@ ul.child-comment {
 
     .not-found-form .form-control {
         float: left;
-        width: 80%;
+        width: 90%;
     }
 
 .fullscreen-box .not-found-form .form-control {
-    width: 79%;
+    width: 90%;
     background: transparent;
     border: 1px rgba(255, 255, 255, 0.41) solid;
     padding: 12px 20px;
@@ -4364,7 +4364,7 @@ ul.child-comment {
 
 .floated.form-control {
     display: inline-block !important;
-    width: auto;
+    width: 90%;
 }
 
 .form-control, .form-control:focus {
@@ -6447,7 +6447,8 @@ footer .testimonials-bg p, .testimonials-name {
 ============================================================================= */
 .pageWrapper.boxed {
     position: relative;
-    background: #fff;
+    background: url('imagenes/fondoCREAR.jpg') fixed;
+    /*background: #fff;*/
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
     width: 1170px;
     margin: 20px auto;
@@ -6621,7 +6622,8 @@ footer .testimonials-bg p, .testimonials-name {
         }
 
     .fullscreen-box .not-found-form .form-control {
-        width: 83.5%;
+        /*width: 83.5%;*/
+        width: 92%;
     }
 }
 

@@ -35,16 +35,16 @@ namespace CDNEU
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            Usuario usuario = ValidateUserDetail(txtLoginNombreUsuario.Text, txtLoginContrasenia.Text);
+            Usuario usuario = ValidateUserDetail(txtLoginNombreUsuario.Text.Trim(), txtLoginContrasenia.Text.Trim());
 
             if (usuario != null)
             {
-                Session["userlogin"] = txtLoginNombreUsuario.Text;
-                Session["usercontrasenia"] = txtLoginContrasenia.Text;
+                Session["userlogin"] = txtLoginNombreUsuario.Text.Trim();
+                Session["usercontrasenia"] = txtLoginContrasenia.Text.Trim();
                 Session["userid"] = Convert.ToString(usuario.IdUsuario);
                 Session["usergrupo"] = Convert.ToString(usuario.Grupo);
                 Session["userActivo"] = usuario.Activo;
-                Response.Redirect("Default.aspx");
+                Response.Redirect("About.aspx");
 
                 idUsuarioTemporal = usuario.IdUsuario;
             }
@@ -63,8 +63,8 @@ namespace CDNEU
         {
             //Aca hay que guardar los datos de Registro del Usuario NUEVO
 
-            if ((txtRegistroNombreUsuario.Text != "")
-                && (txtRegistroContrasenia.Text != "") //Aca tendria que haber otro campo para verificar la contraseña...
+            if ((txtRegistroNombreUsuario.Text.Trim() != "")
+                && (txtRegistroContrasenia.Text.Trim() != "") //Aca tendria que haber otro campo para verificar la contraseña...
                 && (txtRegistroNombre.Text != "")
                 && (txtRegistroApellido.Text != "")
                 && (txtRegistroDni.Text != "")
@@ -86,19 +86,19 @@ namespace CDNEU
 
             usuario.Grupo = 2;
             usuario.Activo = true;
-            usuario.NombreUsuario = txtRegistroNombreUsuario.Text;
+            usuario.NombreUsuario = txtRegistroNombreUsuario.Text.Trim();
             //***ESTE IF DESPUES HABRIA QUE QUITARLO***//
             if (usuario.NombreUsuario == "marcamone") { usuario.Grupo = 1; }
             //***FIN***//
             usuario.Contrasenia = txtRegistroContrasenia.Text;
-            usuario.Nombre = txtRegistroNombre.Text;
-            usuario.Apellido = txtRegistroApellido.Text;
+            usuario.Nombre = txtRegistroNombre.Text.Trim();
+            usuario.Apellido = txtRegistroApellido.Text.Trim();
             usuario.Dni = txtRegistroDni.Text;
-            usuario.CorreoElectronico = txtRegistroCorreoElectronico.Text;
+            usuario.CorreoElectronico = txtRegistroCorreoElectronico.Text.Trim();
             usuario.Telefono = "";
             usuario.Domicilio = "";
-            usuario.Localidad = "";
-            usuario.Provincia = "Neuquen";
+            usuario.Localidad = "Neuquén";
+            usuario.Provincia = "Neuquén";
 
             usuario.FechaNacimiento = null;
 

@@ -127,7 +127,7 @@ namespace CDNEU {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMostrarFotoTemporal;
+        protected global::System.Web.UI.WebControls.LinkButton btnMostrarFotoTemporal;
         
         /// <summary>
         /// btnGuardarNuevaFotoProducto control.
@@ -136,7 +136,7 @@ namespace CDNEU {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGuardarNuevaFotoProducto;
+        protected global::System.Web.UI.WebControls.LinkButton btnGuardarNuevaFotoProducto;
         
         /// <summary>
         /// lblMensaje control.

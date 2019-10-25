@@ -40,7 +40,14 @@
                     </td>
                 </tr>
                 <tr>
-                    <asp:Button ID="btnMostrarFotoTemporal" runat="server" CssClass="boton_azul2" Text="Previsualizar" OnClick="btnMostrarFotoTemporal_Click" />
+
+                    <asp:LinkButton BorderStyle="none" BorderWidth="1" ID="LinkButton6" runat="server" OnClick="btnMostrarFotoTemporal_Click"
+                    Font-Bold="true" Text="<img src='imagenes/previsualizar.png' /> Previsualizar"></asp:LinkButton>
+
+
+
+
+                    <%--<asp:Button ID="btnMostrarFotoTemporal" runat="server" CssClass="boton_azul2" Text="Previsualizar" OnClick="btnMostrarFotoTemporal_Click" />--%>
                 </tr>
                 <tr>
                     <td style="text-align: center" colspan="2">
@@ -51,12 +58,12 @@
             </table>
             <asp:Panel ID="panelEditarFotoPerfil" runat="server">
                 <div class="form-group">
-                    <asp:LinkButton BorderStyle="Solid" BorderWidth="1" ID="LinkButton1" runat="server" OnClick="btnRotarIzquierda_Click"
-                        Text="<img src='imagenes/girarizquierda20texto.png' />"></asp:LinkButton>
-                    <asp:LinkButton BorderStyle="Solid" BorderWidth="1" ID="LinkButton3" runat="server" OnClick="btnRotar180_Click"
+                    <asp:LinkButton BorderStyle="none" BorderWidth="1" ID="LinkButton1" runat="server" OnClick="btnRotarIzquierda_Click"
+                        Text="<img src='imagenes/girarizquierda.png' />"></asp:LinkButton>
+                    <asp:LinkButton BorderStyle="none" BorderWidth="1" ID="LinkButton3" runat="server" OnClick="btnRotar180_Click"
                         Text="<img src='imagenes/girar180.png' />"></asp:LinkButton>
-                    <asp:LinkButton BorderStyle="Solid" BorderWidth="1" ID="LinkButton2" runat="server" OnClick="btnRotarDerecha_Click"
-                        Text="<img src='imagenes/girarderecha20texto.png' />"></asp:LinkButton>
+                    <asp:LinkButton BorderStyle="none" BorderWidth="1" ID="LinkButton2" runat="server" OnClick="btnRotarDerecha_Click"
+                        Text="<img src='imagenes/girarderecha.png' />"></asp:LinkButton>
 
                     <%--</div>
             <div class="form-group">--%>

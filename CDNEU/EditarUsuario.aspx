@@ -369,40 +369,40 @@
                                 <h4>REDES SOCIALES</h4>
 
                                 <table>
-                                    <asp:Label ID="Label59" runat="server">Tu Perfil de Facebook</asp:Label>
-                                    <asp:TextBox ID="txtFacebook" Height="45px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-facebook.jpg);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" />
+                                    <%--<asp:Label ID="Label59" runat="server">Tu Perfil de Facebook</asp:Label>--%>
+                                    <asp:TextBox ID="txtFacebook" Height="48px" BorderStyle="none" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-facebook.png);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" placeholder="  ingresa tu perfil" />
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
                                 </table>
 
                                 <table>
-                                    <asp:Label ID="Label60" runat="server">Tu Perfil de Instagram</asp:Label>
-                                    <asp:TextBox ID="txtInstagram" Height="45px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-instagram.jpg);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" />
+                                    <%--<asp:Label ID="Label60" runat="server">Tu Perfil de Instagram</asp:Label>--%>
+                                    <asp:TextBox ID="txtInstagram" Height="48px" BorderStyle="none" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-instagram.png);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" placeholder="  ingresa tu perfil" />
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
                                 </table>
 
                                 <table>
-                                    <asp:Label ID="Label61" runat="server">Tu Perfil de Twitter</asp:Label>
-                                    <asp:TextBox ID="txtTwitter" Height="45px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-twitter.jpg);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" />
+                                    <%--<asp:Label ID="Label61" runat="server">Tu Perfil de Twitter</asp:Label>--%>
+                                    <asp:TextBox ID="txtTwitter" Height="45px" BorderStyle="none" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-twitter.png);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" placeholder="  ingresa tu perfil" />
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
                                 </table>
 
                                 <table>
-                                    <asp:Label ID="Label62" runat="server">Tu Canal de YouTube</asp:Label>
-                                    <asp:TextBox ID="txtYouTube" Height="45px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-youtube.jpg);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" />
+                                    <%--<asp:Label ID="Label62" runat="server">Tu Canal de YouTube</asp:Label>--%>
+                                    <asp:TextBox ID="txtYouTube" Height="45px" BorderStyle="none" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-youtube.png);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" placeholder="  ingresa tu perfil" />
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
                                 </table>
 
                                 <table>
-                                    <asp:Label ID="Label63" runat="server">Tu Perfil Flickr</asp:Label>
-                                    <asp:TextBox ID="txtFlicker" Height="45px" BorderStyle="Solid" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-flickr.jpg);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" />
+                                    <%--<asp:Label ID="Label63" runat="server">Tu Perfil Flickr</asp:Label>--%>
+                                    <asp:TextBox ID="txtFlicker" Height="45px" BorderStyle="none" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-flickr.png);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" placeholder="  ingresa tu perfil" />
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
