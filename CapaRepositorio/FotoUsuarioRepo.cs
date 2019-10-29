@@ -44,6 +44,14 @@ namespace CapaRepositorio
                 return fotoUsuario.IdFotoUsuario;
             }
         }
+        public IEnumerable<FotoUsuario> MostrarFotoUsuarios()
+        {
+            using (ModeloDeDominio modeloDeDominio = new ModeloDeDominio())
+            {
+                IEnumerable<FotoUsuario> result = modeloDeDominio.FotoUsuarios.ToList();
+                return result;
+            }
+        }
 
     }
 }

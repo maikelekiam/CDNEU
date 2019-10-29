@@ -103,7 +103,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="imagenes_productos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
@@ -263,6 +262,7 @@
     <Content Include="imagenes\fondoCREAR.jpg" />
     <Content Include="imagenes\fondoCREARtransparente.jpg" />
     <Content Include="imagenes\FotoUsuariosx2.png" />
+    <Content Include="imagenes\girar180.png" />
     <Content Include="imagenes\girarderecha.png" />
     <Content Include="imagenes\girarizquierda.png" />
     <Content Include="imagenes\guardar.png" />
@@ -279,6 +279,15 @@
     <Content Include="imagenes\Panel.png" />
     <Content Include="imagenes\previsualizar.png" />
     <Content Include="imagenes\volver.png" />
+    <Content Include="imagenes_productos\foto01.jpg" />
+    <Content Include="imagenes_productos\foto02.jpg" />
+    <Content Include="imagenes_productos\foto03.jpg" />
+    <Content Include="imagenes_productos\foto04.jpg" />
+    <Content Include="imagenes_productos\foto05.jpg" />
+    <Content Include="imagenes_productos\plaza01.jpg" />
+    <Content Include="imagenes_productos\plaza02.jpg" />
+    <Content Include="imagenes_productos\plaza03.jpg" />
+    <Content Include="imagenes_productos\plaza04.jpg" />
     <Content Include="js\bootstrap-datepicker.js" />
     <Content Include="js\bootstrap-select.js" />
     <Content Include="js\bootstrap.js" />
@@ -319,6 +328,7 @@
     <Content Include="assets\php\careers.php" />
     <Content Include="assets\php\fonts\times_new_yorker.ttf" />
     <Content Include="assets\php\sendemail.php" />
+    <Content Include="Handler.ashx" />
     <None Include="Project_Readme.html" />
     <Content Include="Site.Mobile.Master" />
     <None Include="Properties\PublishProfiles\cdneu.pubxml" />
@@ -391,6 +401,9 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Handler.ashx.cs">
+      <DependentUpon>Handler.ashx</DependentUpon>
     </Compile>
     <Compile Include="ListaFotoProducto.aspx.cs">
       <DependentUpon>ListaFotoProducto.aspx</DependentUpon>

@@ -28,6 +28,10 @@ namespace CapaNegocio
         {
             return fotoUsuarioRepo.ObtenerIdFotoUsuario(idUsuario);
         }
+        public IEnumerable<FotoUsuario> MostrarFotoUsuarios()
+        {
+            return fotoUsuarioRepo.MostrarFotoUsuarios();
+        }
     }
 
 

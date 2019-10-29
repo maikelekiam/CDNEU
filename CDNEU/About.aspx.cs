@@ -15,7 +15,8 @@ namespace CDNEU
         UsuarioNego usuarioNego = new UsuarioNego();
         ActividadProfesionalNego actividadProfesionalNego = new ActividadProfesionalNego();
 
-
+        public string subsectores = "";
+        public List<string> lista;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -42,27 +43,97 @@ namespace CDNEU
             lblCorreoTelefono.Text = usuario.CorreoElectronico + " / " + usuario.Telefono;
             lugar.InnerText = usuario.Localidad + " - " + usuario.Provincia;
 
-
-
             ActividadProfesional actividad = actividadProfesionalNego.ObtenerActividadProfesional(Convert.ToInt32(Session["userid"].ToString()));
 
             RBDisciplinaProyectual.SelectedValue = actividad.DisciplinaProyectual;
 
-            if (RBDisciplinaProyectual.SelectedValue != "")
+            if (actividad.DisciplinaProyectualOtra == "")
             {
-                lblActividadProfesional.Text = "Disciplina Proyectual: " + RBDisciplinaProyectual.SelectedItem;
+                if (RBDisciplinaProyectual.SelectedValue != "")
+                {
+                    lblActividadProfesional.Text = "Actividad Profesional: " + RBDisciplinaProyectual.SelectedItem;
+                }
+                else
+                {
+                    lblActividadProfesional.Text = "";
+                }
+            }
+            else if (actividad.DisciplinaProyectualOtra == null)
+            {
+                if (RBDisciplinaProyectual.SelectedValue != "")
+                {
+                    lblActividadProfesional.Text = "Actividad Profesional: " + RBDisciplinaProyectual.SelectedItem;
+                }
+                else
+                {
+                    lblActividadProfesional.Text = "";
+                }
+            }
+            else { lblActividadProfesional.Text = "Actividad Profesional: " + actividad.DisciplinaProyectualOtra; }
+
+            List<string> lista = new List<string>();
+
+            if (actividad.SubSectorOtro == "") { }
+            else if (actividad.SubSectorOtro == null) { }
+            else { lista.Add(actividad.SubSectorOtro); }
+
+
+
+
+
+            if (actividad.Cinematograficas == true) { lista.Add("Artes Cinematográficas"); }
+            if (actividad.Audiovisuales == true) { lista.Add("Artes Audiovisuales"); }
+            if (actividad.Escenicas == true) { lista.Add("Artes Escénicas"); }
+            if (actividad.Musicales == true) { lista.Add("Artes Musicales y Sonoras"); }
+            if (actividad.Literarias == true) { lista.Add("Artes Literarias, Narrativas y Producción Editorial"); }
+            if (actividad.Plasticas == true) { lista.Add("Artes Plásticas y Visuales"); }
+            if (actividad.Graficas == true) { lista.Add("Artes Gráficas e Ilustración"); }
+            if (actividad.Digitales == true) { lista.Add("Artes Digitales"); }
+            if (actividad.Accesorios == true) { lista.Add("Accesorios"); }
+            if (actividad.Calzado == true) { lista.Add("Calzado"); }
+            if (actividad.Ceramica == true) { lista.Add("Cerámica"); }
+            if (actividad.DisenioEditorial == true) { lista.Add("Diseño Editorial"); }
+            if (actividad.DisenioWeb == true) { lista.Add("Diseño WEB"); }
+            if (actividad.Joyeria == true) { lista.Add("Joyería"); }
+            if (actividad.Madera == true) { lista.Add("Madera"); }
+            if (actividad.Mobiliario == true) { lista.Add("Mobiliario"); }
+            if (actividad.Tejidos == true) { lista.Add("Tejidos"); }
+
+            int cantidadElementos = lista.Count;
+
+            //lblSubSectores.Text = Convert.ToString(cantidadElementos) + lista;
+
+
+            if (cantidadElementos == 0)
+            {
+                subsectores = "";
+            }
+            else if (cantidadElementos == 1)
+            {
+                subsectores = lista[0];
+            }
+            else if (cantidadElementos > 1)
+            {
+                subsectores = lista[0];
+
+                for (int i = 1; i < cantidadElementos; i++)
+                {
+                    subsectores = subsectores + ", " + lista[i];
+                }
+            }
+
+            if (subsectores == "")
+            {
+                lblSubSectores.Text = "";
+            }
+            else if (cantidadElementos == 1)
+            {
+                lblSubSectores.Text = "Sub Sector: " + subsectores;
             }
             else
             {
-                lblActividadProfesional.Text = "Disciplina Proyectual: ";
+                lblSubSectores.Text = "Sub Sectores: " + subsectores;
             }
-
-
-
-
-
-
-
         }
     }
 }

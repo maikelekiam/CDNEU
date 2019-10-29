@@ -14,34 +14,65 @@ namespace CDNEU
 {
     public partial class ListarUsuarios : System.Web.UI.Page
     {
+        UsuarioNego usuarioNego = new UsuarioNego();
+        FotoUsuarioNego fotoUsuarioNego = new FotoUsuarioNego();
+
+        static int globalIdUsuario;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack) return;
+
+            globalIdUsuario = Convert.ToInt32(Session["userid"].ToString());
+
+            ListarDiseniadores();
+
+            //BindGrid();
 
         }
 
-        //protected void btnGuardar_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        SqlConnection conectar = new ConectarSQLServer().conectarSQL();
-        //        String comandoInsertar = "INSERT INTO Imagen(id, img) VALUES(@id, @img)";
-        //        SqlCommand comando = new SqlCommand(comandoInsertar, conectar);
-        //        comando.Parameters.Add("@id", SqlDbType.Char, 3).Value = txtId.Text;
-        //        comando.Parameters.Add("@img", SqlDbType.VarBinary).Value = fuImagen.FileBytes;
-        //        comando.ExecuteNonQuery();
-        //        lblMensaje.Text = "Se registro correctamente.";
-        //    }
-        //    catch (Exception ex)
-        //        {
-        //            lblMensaje.Text = ex.Message;
-        //        }
+        public void ListarDiseniadores()
+        {
+            dgvUsuarios.DataSource = fotoUsuarioNego.MostrarFotoUsuarios().ToList().OrderBy(c => c.IdUsuario);
+            dgvUsuarios.DataBind();
+
+            dgvUsuarios.Columns[0].Visible = false;
+        }
 
 
-        //}
+        public string GetConnectionString()
+        {
+            return System.Configuration.ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
+        }
 
-        //protected void btnVer_Click(object sender, EventArgs e)
-        //{
-        //    imgURL.ImageUrl = "~/MostrarUsuario.aspx?id=" + txtId.Text;
-        //}
+        private void BindGrid()
+        {
+            DataTable dt = new DataTable();
+            SqlConnection connection = new SqlConnection(GetConnectionString());
+            try
+            {
+                connection.Open();
+                string sqlStatement = "SELECT * FROM FotoUsuario";
+                SqlCommand sqlCmd = new SqlCommand(sqlStatement, connection);
+                SqlDataAdapter sqlDa = new SqlDataAdapter(sqlCmd);
+
+                sqlDa.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    dgvUsuarios.DataSource = dt;
+                    dgvUsuarios.DataBind();
+                }
+            }
+            catch (System.Data.SqlClient.SqlException ex)
+            {
+                string msg = "Fetch Error:";
+                msg += ex.Message;
+                throw new Exception(msg);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }

@@ -158,7 +158,6 @@
                 <asp:ContentPlaceHolder ID="MainContent" runat="server">
                 </asp:ContentPlaceHolder>
                 <footer>
-                    <%--<br />
                     <br />
                     <br />
                     <br />
@@ -174,7 +173,8 @@
                     <br />
                     <br />
                     <br />
-                    <br />--%>
+                    <br />
+                    <br />
                     <br />
                     <br />
                     <p>CyT - COPADE - <%: DateTime.Now.Year %> - Registro de Industrias Culturales y Creativas</p>

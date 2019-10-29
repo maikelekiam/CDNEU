@@ -5,6 +5,10 @@
     <style>
         body {
             background-color: #dadada;
+            /*background: url('imagenes/fondoCREARtransparente.jpg') fixed;*/
+            /*background-image: url("imagenes/bg02.jpg");
+            /*background-repeat: no-repeat;*/
+            /*background-attachment: fixed;*/
         }
 
         .imagenes {
@@ -35,22 +39,9 @@
             border-radius: 3px;
             text-align: center;
         }
-
-        /*.customNavigation {
-            text-align: center;
-        }
-
-        .customNavigation a {
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        }*/
     </style>
 
-    <div class="container emp-profile">
+    <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <div class="profile-img">
@@ -60,16 +51,17 @@
             </div>
             <div class="col-md-6">
                 <div class="profile-head">
+                    <h2>
+                        <asp:Label ID="lblNombreApellido" runat="server"></asp:Label></h2>
                     <h3>
-                        <asp:Label ID="lblNombreApellido" runat="server"></asp:Label></h3>
-                    <h5>
-                        <asp:Label ID="lblCorreoTelefono" runat="server"></asp:Label></h5>
+                        <asp:Label ID="lblCorreoTelefono" runat="server"></asp:Label></h3>
 
                     <p id="lugar" runat="server" class="proile-rating">- <span></span></p>
 
                     <h4>
                         <asp:Label ID="lblActividadProfesional" runat="server"></asp:Label></h4>
-                    
+                    <h4>
+                        <asp:Label ID="lblSubSectores" runat="server"></asp:Label></h4>
 
 
 

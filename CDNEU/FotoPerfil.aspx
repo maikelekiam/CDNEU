@@ -20,6 +20,9 @@
                 <tr>
                     <td style="text-align: center" colspan="2">
                         <asp:Image ID="imgURL" runat="server" Style="width: 100%; height: auto; max-width: 400px; max-height: initial; border: solid;" />
+                        <asp:LinkButton BorderStyle="none" BorderWidth="1" ID="LinkButton7" runat="server" OnClientClick="return confirm('¿Esta seguro de eliminar la foto?')" OnClick="btnEliminarFoto_Click"
+                            Font-Bold="true" Text="<img src='imagenes/eliminar.png' /> Eliminar"></asp:LinkButton>
+
                     </td>
                 </tr>
                 <tr>
@@ -42,7 +45,7 @@
                 <tr>
 
                     <asp:LinkButton BorderStyle="none" BorderWidth="1" ID="LinkButton6" runat="server" OnClick="btnMostrarFotoTemporal_Click"
-                    Font-Bold="true" Text="<img src='imagenes/previsualizar.png' /> Previsualizar"></asp:LinkButton>
+                        Font-Bold="true" Text="<img src='imagenes/previsualizar.png' /> Previsualizar"></asp:LinkButton>
 
 
 
