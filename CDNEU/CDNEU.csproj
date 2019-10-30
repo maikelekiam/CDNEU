@@ -106,7 +106,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="AltaUsuario.aspx" />
     <Content Include="assets\css\assets.css" />
     <Content Include="assets\css\dark.css" />
     <Content Include="assets\css\demos\construction.css" />
@@ -276,6 +275,7 @@
     <Content Include="imagenes\icono-twitter.png" />
     <Content Include="imagenes\icono-youtube.jpg" />
     <Content Include="imagenes\icono-youtube.png" />
+    <Content Include="imagenes\img01.jpg" />
     <Content Include="imagenes\Panel.png" />
     <Content Include="imagenes\previsualizar.png" />
     <Content Include="imagenes\volver.png" />
@@ -340,13 +340,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AltaUsuario.aspx.cs">
-      <DependentUpon>AltaUsuario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AltaUsuario.aspx.designer.cs">
-      <DependentUpon>AltaUsuario.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>

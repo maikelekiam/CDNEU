@@ -5,11 +5,12 @@
     <style>
         body {
             background-color: #dadada;
-            /*background: url('imagenes/fondoCREARtransparente.jpg') fixed;*/
-            /*background-image: url("imagenes/bg02.jpg");
-            /*background-repeat: no-repeat;*/
-            /*background-attachment: fixed;*/
+            /*background: url('imagenes/fondoCREARtransparente.jpg') fixed;
+            background-image: url("imagenes/img01.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;*/
         }
+
 
         .imagenes {
             width: 100%;

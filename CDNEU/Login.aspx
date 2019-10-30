@@ -25,16 +25,72 @@
 
 
     <style>
-        h3 {
-            font-family: 'Oswald','sans-serif';
-        }
-
+        /* Imagen utilizada por defecto, la que se utlizará en pantallas pequeñas */
         body {
             background: url('imagenes/fondoCREARtransparente.jpg') fixed;
             background-size: cover;
             padding: 0;
             margin: 0;
         }
+
+
+        /* Imagen utilizada en pantallas de anchura 480 px y superior */
+        @media (min-width: 150px) {
+            body {
+                background: url('imagenes/fondoCREARmobile.jpg') fixed;
+                background-size: cover;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+
+        /* Imagen utilizada en pantallas de anchura 480 px y superior */
+        @media (min-width: 480px) {
+            body {
+                background: url('imagenes/fondoCREARtransparente.jpg') fixed;
+                background-size: cover;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        /* Imagen utilizada en pantallas de anchura 768 px y superior */
+        @media (min-width: 768px) {
+            body {
+                background: url('imagenes/fondoCREARtransparente.jpg') fixed;
+                background-size: cover;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        /* Imagen utilizada en pantallas de anchura 1200 px y superior */
+        @media (min-width: 1200px) {
+            body {
+                background: url('imagenes/fondoCREARtransparente.jpg') fixed;
+                background-size: cover;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+
+
+
+
+
+
+        h3 {
+            font-family: 'Oswald','sans-serif';
+        }
+
+        /*body {
+            background: url('imagenes/fondoCREARtransparente.jpg') fixed;
+            background-size: cover;
+            padding: 0;
+            margin: 0;
+        }*/
 
         .panel {
             margin-bottom: 20px;
@@ -82,7 +138,8 @@
             width: 90%;
             margin-left: 5%;
         }
-        .form-control{
+
+        .form-control {
             background-color: white;
         }
     </style>
@@ -97,11 +154,11 @@
     <br />
     <br />
     <form id="form1" runat="server" class="form-horizontal">
-        <div id="exTab3" class="contenedor"  >
+        <div id="exTab3" class="contenedor">
             <div>
                 <%--Panel Externo--%>
                 <div class="panel panel-default col-md-5 col-md-offset-3 col-lg-5 col-lg-offset-3">
-                    <div class="panel-body" >
+                    <div class="panel-body">
 
                         <ul class="nav nav-pills">
                             <li class="active">
@@ -138,7 +195,7 @@
                                             </span>
                                             <asp:TextBox ID="txtLoginContrasenia" runat="server" CssClass="form-control" TextMode="Password" placeholder="Tu Contraseña" />
                                             <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-eye-open" id="show" action="hide"></span>
+                                                <span class="glyphicon glyphicon-eye-close" id="show" action="hide"></span>
                                             </span>
                                         </div>
                                     </div>
@@ -183,7 +240,7 @@
                                             </span>
                                             <asp:TextBox ID="txtRegistroContrasenia" runat="server" CssClass="form-control" TextMode="Password" placeholder="Tu Contraseña" />
                                             <span class="input-group-addon alert-info">
-                                                <span class="glyphicon glyphicon-eye-open" id="show2" action="hide"></span>
+                                                <span class="glyphicon glyphicon-eye-close" id="show2" action="hide"></span>
                                             </span>
                                         </div>
                                     </div>
@@ -301,11 +358,11 @@
 
                 if (current == 'hide') {
                     $('#txtLoginContrasenia').removeAttr('type');
-                    $(this).removeClass('glyphicon-eye-open').addClass('glyphicon-eye-close').attr('action', 'show');
+                    $(this).removeClass('glyphicon-eye-close').addClass('glyphicon-eye-open').attr('action', 'show');
                 }
                 if (current == 'show') {
                     $('#txtLoginContrasenia').attr('type', 'password');
-                    $(this).removeClass('glyphicon-eye-close').addClass('glyphicon-eye-open').attr('action', 'hide');
+                    $(this).removeClass('glyphicon-eye-open').addClass('glyphicon-eye-close').attr('action', 'hide');
                 }
             }))
         })
@@ -319,11 +376,11 @@
 
                 if (current == 'hide') {
                     $('#txtRegistroContrasenia').removeAttr('type');
-                    $(this).removeClass('glyphicon-eye-open').addClass('glyphicon-eye-close').attr('action', 'show');
+                    $(this).removeClass('glyphicon-eye-close').addClass('glyphicon-eye-open').attr('action', 'show');
                 }
                 if (current == 'show') {
                     $('#txtRegistroContrasenia').attr('type', 'password');
-                    $(this).removeClass('glyphicon-eye-close').addClass('glyphicon-eye-open').attr('action', 'hide');
+                    $(this).removeClass('glyphicon-eye-open').addClass('glyphicon-eye-close').attr('action', 'hide');
                 }
             }))
         })

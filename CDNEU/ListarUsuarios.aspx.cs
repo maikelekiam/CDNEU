@@ -17,7 +17,9 @@ namespace CDNEU
         UsuarioNego usuarioNego = new UsuarioNego();
         FotoUsuarioNego fotoUsuarioNego = new FotoUsuarioNego();
 
+
         static int globalIdUsuario;
+        public static int idUsuarioParaEditar;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -74,5 +76,16 @@ namespace CDNEU
                 connection.Close();
             }
         }
+
+
+        protected void ImageButton1_Command(object sender, CommandEventArgs e)
+        {
+            idUsuarioParaEditar = Convert.ToInt32(e.CommandArgument);
+            //lblMensaje.Text = e.CommandArgument.ToString();
+            //Response.Redirect("CuentaUsuario.aspx");
+        }
+
+
+
     }
 }

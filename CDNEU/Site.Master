@@ -31,7 +31,8 @@
         h3 {
             font-family: 'Oswald','sans-serif';
         }
-        .container{
+
+        .container {
             /*background: url('imagenes/fondoCREAR.jpg') fixed;
             background-size: cover;
             padding: 0;
@@ -101,10 +102,13 @@
                             <ul>
                                 <li class="selected"><a href="about.aspx"><span>Inicio</span></a></li>
                                 <li runat="server" id="dropdownAltaUsuario">
-                                    <a href="AltaUsuario.aspx"><span>Nuevo Diseñador</span></a>
+                                    <a href="AltaUsuario.aspx"><span>Datos de Usuarios</span></a>
                                     <ul>
                                         <li>
-                                            <a runat="server" href="~/AltaUsuario.aspx"><span class="glyphicon glyphicon-plus"></span>&nbsp; Nuevo Diseñador</a>
+                                            <a runat="server" href="~/xxx.aspx"><span class="glyphicon glyphicon-plus"></span>&nbsp; Activar / Desactivar</a>
+                                        </li>
+                                        <li>
+                                            <a runat="server" href="~/xxx.aspx"><span class="glyphicon glyphicon-plus"></span>&nbsp; Cambiar Privilegios</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -120,7 +124,10 @@
                                     <a href="ListarUsuarios.aspx"><span>Listado de Diseñadores</span></a>
                                     <ul>
                                         <li>
-                                            <a runat="server" href="~/ListarUsuarios.aspx"><span class="glyphicon glyphicon-credit-card"></span>&nbsp; Listado de Diseñadores</a>
+                                            <a runat="server" href="~/ListarUsuarios.aspx"><span class="glyphicon glyphicon-bullhorn"></span>&nbsp; Listado de Diseñadores</a>
+                                        </li>
+                                        <li>
+                                            <a runat="server" href="~/MostrarUsuario.aspx"><span class="glyphicon glyphicon-picture"></span>&nbsp; Mostrar Diseñador</a>
                                         </li>
                                     </ul>
                                 </li>
