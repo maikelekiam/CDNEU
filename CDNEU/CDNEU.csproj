@@ -244,10 +244,6 @@
     <Content Include="EditarUsuario.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="FotoPerfil.aspx" />
-    <Content Include="imagenes\background01.jpg" />
-    <Content Include="imagenes\bg02.jpg" />
-    <Content Include="imagenes\bg03.png" />
-    <Content Include="imagenes\bg04.jpg" />
     <Content Include="imagenes\copade %28R%29.png" />
     <Content Include="imagenes\copade-barra.jpg" />
     <Content Include="imagenes\copade-CDNEU 02.jpg" />
@@ -265,18 +261,11 @@
     <Content Include="imagenes\girarderecha.png" />
     <Content Include="imagenes\girarizquierda.png" />
     <Content Include="imagenes\guardar.png" />
-    <Content Include="imagenes\icono-facebook.jpg" />
-    <Content Include="imagenes\icono-facebook.png" />
-    <Content Include="imagenes\icono-flickr.jpg" />
-    <Content Include="imagenes\icono-flickr.png" />
-    <Content Include="imagenes\icono-instagram.jpg" />
-    <Content Include="imagenes\icono-instagram.png" />
-    <Content Include="imagenes\icono-twitter.jpg" />
-    <Content Include="imagenes\icono-twitter.png" />
-    <Content Include="imagenes\icono-youtube.jpg" />
-    <Content Include="imagenes\icono-youtube.png" />
-    <Content Include="imagenes\img01.jpg" />
-    <Content Include="imagenes\Panel.png" />
+    <Content Include="imagenes\iconeg-facebook.png" />
+    <Content Include="imagenes\iconeg-flickr.png" />
+    <Content Include="imagenes\iconeg-instagram.png" />
+    <Content Include="imagenes\iconeg-twitter.png" />
+    <Content Include="imagenes\iconeg-youtube.png" />
     <Content Include="imagenes\previsualizar.png" />
     <Content Include="imagenes\volver.png" />
     <Content Include="imagenes_productos\foto01.jpg" />
@@ -298,6 +287,7 @@
     <Content Include="Login.aspx" />
     <Content Include="MostrarFotoPerfil.aspx" />
     <Content Include="MostrarFotoTemporal.aspx" />
+    <Content Include="MostrarUsuario.aspx" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -432,6 +422,13 @@
     </Compile>
     <Compile Include="MostrarFotoTemporal.aspx.designer.cs">
       <DependentUpon>MostrarFotoTemporal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarUsuario.aspx.cs">
+      <DependentUpon>MostrarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MostrarUsuario.aspx.designer.cs">
+      <DependentUpon>MostrarUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

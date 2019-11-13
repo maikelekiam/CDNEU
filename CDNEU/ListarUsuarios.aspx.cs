@@ -82,7 +82,7 @@ namespace CDNEU
         {
             idUsuarioParaEditar = Convert.ToInt32(e.CommandArgument);
             //lblMensaje.Text = e.CommandArgument.ToString();
-            //Response.Redirect("CuentaUsuario.aspx");
+            Response.Redirect("MostrarUsuario.aspx");
         }
 
 

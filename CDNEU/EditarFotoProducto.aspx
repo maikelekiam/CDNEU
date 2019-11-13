@@ -20,7 +20,7 @@
         <tr>
             <td style="text-align: left" colspan="2">
                 <asp:Label ID="lblDescripcion" runat="server" Text="Label" CssClass="AlineadoIzquierda">Breve Descripcion</asp:Label>
-                <asp:TextBox ID="txtDescripcion" runat="server" TextMode="MultiLine" CssClass="form-control" Rows="2" placeholder="Máximo 80 caracteres" />
+                <asp:TextBox ID="txtDescripcion" runat="server" TextMode="MultiLine" CssClass="form-control" Rows="2" placeholder="Máximo 80 caracteres" style = "resize: vertical" />
             </td>
         </tr>
         <tr>

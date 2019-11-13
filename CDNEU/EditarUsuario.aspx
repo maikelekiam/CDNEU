@@ -18,12 +18,10 @@
             font-family: 'Oswald', sans-serif;
         }
 
-
-
         .estiloRedesSociales {
             background-position: left;
             background-repeat: no-repeat;
-            padding-left: 50px;
+            padding-left: 60px;
             padding-right: 50px;
             background-size: contain;
         }
@@ -213,7 +211,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-user"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDatosPersonalesNombre" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                            <asp:TextBox ID="txtDatosPersonalesNombre" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -230,7 +228,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-user"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDatosPersonalesApellido" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                            <asp:TextBox ID="txtDatosPersonalesApellido" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -292,7 +290,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-envelope"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDatosPersonalesCorreoElectronico" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                            <asp:TextBox ID="txtDatosPersonalesCorreoElectronico" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -326,7 +324,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-home"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDatosPersonalesDomicilio" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                            <asp:TextBox ID="txtDatosPersonalesDomicilio" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -343,7 +341,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-map-marker"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDatosPersonalesLocalidad" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                            <asp:TextBox ID="txtDatosPersonalesLocalidad" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -357,7 +355,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-map-marker"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDatosPersonalesProvincia" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                            <asp:TextBox ID="txtDatosPersonalesProvincia" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -370,7 +368,7 @@
 
                                 <table>
                                     <%--<asp:Label ID="Label59" runat="server">Tu Perfil de Facebook</asp:Label>--%>
-                                    <asp:TextBox ID="txtFacebook" Height="48px" BorderStyle="none" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-facebook.png);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" placeholder="  ingresa tu perfil" />
+                                    <asp:TextBox ID="txtFacebook" Height="48px" BorderStyle="none" BorderColor="#cccccc" Style="background-image: url(imagenes/iconeg-facebook.png); background-size: initial; resize: vertical;" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" placeholder="ingresa tu perfil" />
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
@@ -378,7 +376,7 @@
 
                                 <table>
                                     <%--<asp:Label ID="Label60" runat="server">Tu Perfil de Instagram</asp:Label>--%>
-                                    <asp:TextBox ID="txtInstagram" Height="48px" BorderStyle="none" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-instagram.png);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" placeholder="  ingresa tu perfil" />
+                                    <asp:TextBox ID="txtInstagram" Height="48px" BorderStyle="none" BorderColor="#cccccc" Style="background-image: url(imagenes/iconeg-instagram.png); background-size: initial; resize: vertical;" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" placeholder="ingresa tu perfil" />
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
@@ -386,7 +384,7 @@
 
                                 <table>
                                     <%--<asp:Label ID="Label61" runat="server">Tu Perfil de Twitter</asp:Label>--%>
-                                    <asp:TextBox ID="txtTwitter" Height="45px" BorderStyle="none" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-twitter.png);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" placeholder="  ingresa tu perfil" />
+                                    <asp:TextBox ID="txtTwitter" Height="48px" BorderStyle="none" BorderColor="#cccccc" Style="background-image: url(imagenes/iconeg-twitter.png); background-size: initial; resize: vertical;" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" placeholder="ingresa tu perfil" />
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
@@ -394,7 +392,7 @@
 
                                 <table>
                                     <%--<asp:Label ID="Label62" runat="server">Tu Canal de YouTube</asp:Label>--%>
-                                    <asp:TextBox ID="txtYouTube" Height="45px" BorderStyle="none" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-youtube.png);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" placeholder="  ingresa tu perfil" />
+                                    <asp:TextBox ID="txtYouTube" Height="48px" BorderStyle="none" BorderColor="#cccccc" Style="background-image: url(imagenes/iconeg-youtube.png); background-size: initial; resize: vertical;" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" placeholder="ingresa tu perfil" />
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
@@ -402,7 +400,7 @@
 
                                 <table>
                                     <%--<asp:Label ID="Label63" runat="server">Tu Perfil Flickr</asp:Label>--%>
-                                    <asp:TextBox ID="txtFlicker" Height="45px" BorderStyle="none" BorderColor="#cccccc" Style="background-image: url(imagenes/icono-flickr.png);" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" placeholder="  ingresa tu perfil" />
+                                    <asp:TextBox ID="txtFlicker" Height="48px" BorderStyle="none" BorderColor="#cccccc" Style="background-image: url(imagenes/iconeg-flickr.png); background-size: initial; resize: vertical;" runat="server" CssClass="form-control estiloRedesSociales" TextMode="MultiLine" Rows="1" placeholder="ingresa tu perfil" />
                                     <tr>
                                         <td class="altotabla"></td>
                                     </tr>
@@ -475,7 +473,7 @@
                                     </tr>
                                 </table>--%>
                                 <table>
-                                    <asp:TextBox ID="txtPlataformaComercializacionOtro" placeholder="Otra Plataforma" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                    <asp:TextBox ID="txtPlataformaComercializacionOtro" Style="resize: vertical" placeholder="Otra Plataforma" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                 </table>
                             </div>
                             <%--del div group--%>
@@ -548,7 +546,7 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtEstudiosOficialesOtro" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                        <asp:TextBox ID="txtEstudiosOficialesOtro" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
@@ -563,7 +561,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-asterisk"></span>
                                             </span>
-                                            <asp:TextBox ID="txtTituloObtenido" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                            <asp:TextBox ID="txtTituloObtenido" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -579,7 +577,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-asterisk"></span>
                                             </span>
-                                            <asp:TextBox ID="txtInstitucionEmisoraTitulo" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                            <asp:TextBox ID="txtInstitucionEmisoraTitulo" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -595,7 +593,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-asterisk"></span>
                                             </span>
-                                            <asp:TextBox ID="txtOtrosEstudios" runat="server" CssClass="form-control" placeholder="Nombre e Institucion" TextMode="MultiLine" Rows="1" />
+                                            <asp:TextBox ID="txtOtrosEstudios" Style="resize: vertical" runat="server" CssClass="form-control" placeholder="Nombre e Institucion" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -628,7 +626,7 @@
                                                 <span class="input-group-addon">
                                                     <span class="glyphicon glyphicon-asterisk"></span>
                                                 </span>
-                                                <asp:TextBox ID="txtCarreraNombre" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                                <asp:TextBox ID="txtCarreraNombre" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                             </div>
                                             <asp:Label ID="Label14" runat="server" Text="Label">Año de Ingreso</asp:Label>
                                             <div class="input-group">
@@ -656,7 +654,7 @@
                                                 <span class="input-group-addon">
                                                     <span class="glyphicon glyphicon-asterisk"></span>
                                                 </span>
-                                                <asp:TextBox ID="txtCarreraInstitucion" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                                <asp:TextBox ID="txtCarreraInstitucion" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                             </div>
                                             <tr>
                                                 <td style="height: 30px"></td>
@@ -869,7 +867,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-asterisk"></span>
                                             </span>
-                                            <asp:TextBox ID="txtNombreEmpresa" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                            <asp:TextBox ID="txtNombreEmpresa" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -887,7 +885,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-asterisk"></span>
                                             </span>
-                                            <asp:TextBox ID="txtLinkEmpresa" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                            <asp:TextBox ID="txtLinkEmpresa" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -905,7 +903,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-asterisk"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDescripcion" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="2" />
+                                            <asp:TextBox ID="txtDescripcion" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="2" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -956,7 +954,7 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtSustentoDeVidaOtro" runat="server" CssClass="form-control" placeHolder="Otra Actividad" />
+                                        <asp:TextBox ID="txtSustentoDeVidaOtro" Style="resize: vertical" TextMode="MultiLine" Rows="1" runat="server" CssClass="form-control" placeHolder="Otra Actividad" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
@@ -1026,7 +1024,7 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtEstaRegistradoOtro" placeHolder="Otra Situación" runat="server" CssClass="form-control" />
+                                        <asp:TextBox ID="txtEstaRegistradoOtro" Style="resize: vertical" TextMode="MultiLine" Rows="1" placeHolder="Otra Situación" runat="server" CssClass="form-control" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
@@ -1128,7 +1126,7 @@
                                 </table>--%>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtComercializaOtro" runat="server" placeHolder="Otra manera" CssClass="form-control" />
+                                        <asp:TextBox ID="txtComercializaOtro" Style="resize: vertical" TextMode="MultiLine" Rows="1" runat="server" placeHolder="Otra manera" CssClass="form-control" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
@@ -1145,7 +1143,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-asterisk"></span>
                                             </span>
-                                            <asp:TextBox ID="txtComercializaNombreEspacio" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                            <asp:TextBox ID="txtComercializaNombreEspacio" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -1163,7 +1161,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-asterisk"></span>
                                             </span>
-                                            <asp:TextBox ID="txtComercializaLinkEspacio" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                            <asp:TextBox ID="txtComercializaLinkEspacio" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -1181,7 +1179,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-asterisk"></span>
                                             </span>
-                                            <asp:TextBox ID="txtComercializaUbicacionEspacio" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                            <asp:TextBox ID="txtComercializaUbicacionEspacio" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -1249,7 +1247,7 @@
                                 </table>--%>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtFinanciaActividadProfesionalOtro" runat="server" placeHolder="Otro Financiamiento" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                        <asp:TextBox ID="txtFinanciaActividadProfesionalOtro" Style="resize: vertical" runat="server" placeHolder="Otro Financiamiento" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
@@ -1275,7 +1273,7 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtVentasOtrosPaisesCuales" runat="server" CssClass="form-control" placeholder="Indique cuáles" TextMode="MultiLine" Rows="2" />
+                                        <asp:TextBox ID="txtVentasOtrosPaisesCuales" Style="resize: vertical" runat="server" CssClass="form-control" placeholder="Indique cuáles" TextMode="MultiLine" Rows="2" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
@@ -1331,7 +1329,7 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtDondeRealizaProduccionOtro" runat="server" CssClass="form-control" placeHolder="Otro" />
+                                        <asp:TextBox ID="txtDondeRealizaProduccionOtro" Style="resize: vertical" TextMode="MultiLine" Rows="1" runat="server" CssClass="form-control" placeHolder="Otro" />
                                     </tr>
                                     <tr>
                                         <td style="height: 20px"></td>
@@ -1408,7 +1406,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-asterisk"></span>
                                             </span>
-                                            <asp:TextBox ID="txtDificultades" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
+                                            <asp:TextBox ID="txtDificultades" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -1473,7 +1471,7 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtDisponeEquipoOtro" runat="server" CssClass="form-control" placeHolder="Otros equipos" />
+                                        <asp:TextBox ID="txtDisponeEquipoOtro" Style="resize: vertical" TextMode="MultiLine" Rows="1" runat="server" CssClass="form-control" placeHolder="Otros equipos" />
                                     </tr>
                                     <tr>
                                         <td style="height: 20px"></td>
@@ -1522,7 +1520,7 @@
                                 </table>--%>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtFalenciaOtra" runat="server" CssClass="form-control" placeHolder="Otra falencia" />
+                                        <asp:TextBox ID="txtFalenciaOtra" Style="resize: vertical" TextMode="MultiLine" Rows="1" runat="server" CssClass="form-control" placeHolder="Otra falencia" />
                                     </tr>
                                     <tr>
                                         <td style="height: 20px"></td>
@@ -1559,7 +1557,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-asterisk"></span>
                                             </span>
-                                            <asp:TextBox ID="txtAtributos" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
+                                            <asp:TextBox ID="txtAtributos" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -1573,7 +1571,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-asterisk"></span>
                                             </span>
-                                            <asp:TextBox ID="txtRasgos" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
+                                            <asp:TextBox ID="txtRasgos" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -1602,7 +1600,7 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtAspectosRelevantesOtro" runat="server" CssClass="form-control" placeHolder="Otro Aspecto" TextMode="MultiLine" Rows="2" />
+                                        <asp:TextBox ID="txtAspectosRelevantesOtro" Style="resize: vertical" runat="server" CssClass="form-control" placeHolder="Otro Aspecto" TextMode="MultiLine" Rows="2" />
                                     </tr>
                                     <tr>
                                         <td style="height: 10px"></td>
@@ -1617,7 +1615,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-asterisk"></span>
                                             </span>
-                                            <asp:TextBox ID="txtTemasParaCapacitarse" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
+                                            <asp:TextBox ID="txtTemasParaCapacitarse" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
                                         </div>
                                     </tr>
                                     <tr>
@@ -1668,7 +1666,7 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtIncorporaInnovacionOtro" placeHolder="Otra manera" runat="server" CssClass="form-control" />
+                                        <asp:TextBox ID="txtIncorporaInnovacionOtro" Style="resize: vertical" placeHolder="Otra manera" runat="server" CssClass="form-control" />
                                     </tr>
                                     <tr>
                                         <td style="height: 15px"></td>
@@ -1704,7 +1702,7 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtDificultadesInnovarOtro" placeHolder="Otra dificultad" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                        <asp:TextBox ID="txtDificultadesInnovarOtro" Style="resize: vertical" placeHolder="Otra dificultad" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                     </tr>
                                     <tr>
                                         <td style="height: 15px"></td>
@@ -1713,7 +1711,7 @@
                                 <h4>¿Cómo han sido tomadas las innovaciones propuestas en su medio de acción (socios, destinatarios, público general, etc.)?</h4>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtInnovacionesPropuestas" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" />
+                                        <asp:TextBox ID="txtInnovacionesPropuestas" Style="resize: vertical" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" />
                                     </tr>
                                     <tr>
                                         <td style="height: 15px"></td>
@@ -1722,7 +1720,7 @@
                                 <h4>¿Qué puede contarnos en relación a esto? ¿Hay alguna experiencia?</h4>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtAlgunaExperiencia" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" />
+                                        <asp:TextBox ID="txtAlgunaExperiencia" Style="resize: vertical" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" />
                                     </tr>
                                     <tr>
                                         <td style="height: 15px"></td>
@@ -1783,7 +1781,7 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtApoyoOtro" runat="server" CssClass="form-control" placeHolder="Otro tipo de apoyo" TextMode="MultiLine" Rows="1" />
+                                        <asp:TextBox ID="txtApoyoOtro" Style="resize: vertical" runat="server" CssClass="form-control" placeHolder="Otro tipo de apoyo" TextMode="MultiLine" Rows="1" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
@@ -1792,7 +1790,7 @@
                                 <h4>Organismo que brindó el apoyo</h4>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtOrganismoApoyoNombre" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
+                                        <asp:TextBox ID="txtOrganismoApoyoNombre" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="1" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
@@ -1821,7 +1819,7 @@
                                     </tr>
                                 </table>
                                 <table>
-                                    <asp:TextBox ID="txtSelloBuenDisenioOtro" runat="server" CssClass="form-control" placeHolder="Otro" TextMode="MultiLine" Rows="1" />
+                                    <asp:TextBox ID="txtSelloBuenDisenioOtro" Style="resize: vertical" runat="server" CssClass="form-control" placeHolder="Otro" TextMode="MultiLine" Rows="1" />
                                     <tr>
                                         <td style="height: 30px"></td>
                                     </tr>
@@ -1841,7 +1839,7 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <asp:TextBox ID="txtMICAOtro" runat="server" CssClass="form-control" placeHolder="Otro" TextMode="MultiLine" Rows="1" />
+                                        <asp:TextBox ID="txtMICAOtro" Style="resize: vertical" runat="server" CssClass="form-control" placeHolder="Otro" TextMode="MultiLine" Rows="1" />
                                     </tr>
                                     <tr>
                                         <td style="height: 30px"></td>
@@ -1867,7 +1865,7 @@
                                     </tr>
                                 </table>
                                 <table>
-                                    <asp:TextBox ID="txtAporteCDNEUOtro" runat="server" CssClass="form-control" placeHolder="Otro tipo de aporte" TextMode="MultiLine" Rows="1" />
+                                    <asp:TextBox ID="txtAporteCDNEUOtro" Style="resize: vertical" runat="server" CssClass="form-control" placeHolder="Otro tipo de aporte" TextMode="MultiLine" Rows="1" />
                                     <tr>
                                         <td style="height: 30px"></td>
                                     </tr>
@@ -1882,7 +1880,7 @@
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-asterisk"></span>
                                             </span>
-                                            <asp:TextBox ID="txtComentariosFinales" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
+                                            <asp:TextBox ID="txtComentariosFinales" Style="resize: vertical" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
                                         </div>
                                     </tr>
                                     <tr>

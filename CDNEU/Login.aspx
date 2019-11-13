@@ -27,7 +27,7 @@
     <style>
         /* Imagen utilizada por defecto, la que se utlizará en pantallas pequeñas */
         body {
-            background: url('imagenes/fondoCREARtransparente.jpg') fixed;
+            background: url('imagenes/fondoCREAR.jpg') fixed;
             background-size: cover;
             padding: 0;
             margin: 0;
@@ -48,7 +48,7 @@
         /* Imagen utilizada en pantallas de anchura 480 px y superior */
         @media (min-width: 480px) {
             body {
-                background: url('imagenes/fondoCREARtransparente.jpg') fixed;
+                background: url('imagenes/fondoCREAR.jpg') fixed;
                 background-size: cover;
                 padding: 0;
                 margin: 0;
@@ -58,7 +58,7 @@
         /* Imagen utilizada en pantallas de anchura 768 px y superior */
         @media (min-width: 768px) {
             body {
-                background: url('imagenes/fondoCREARtransparente.jpg') fixed;
+                background: url('imagenes/fondoCREAR.jpg') fixed;
                 background-size: cover;
                 padding: 0;
                 margin: 0;
@@ -68,7 +68,7 @@
         /* Imagen utilizada en pantallas de anchura 1200 px y superior */
         @media (min-width: 1200px) {
             body {
-                background: url('imagenes/fondoCREARtransparente.jpg') fixed;
+                background: url('imagenes/fondoCREAR.jpg') fixed;
                 background-size: cover;
                 padding: 0;
                 margin: 0;
@@ -157,7 +157,7 @@
         <div id="exTab3" class="contenedor">
             <div>
                 <%--Panel Externo--%>
-                <div class="panel panel-default col-md-5 col-md-offset-3 col-lg-5 col-lg-offset-3">
+                <div class="panel panel-default col-md-5 col-md-offset-3 col-lg-5 col-lg-offset-3 col-sm-5 col-sm-offset-3">
                     <div class="panel-body">
 
                         <ul class="nav nav-pills">
@@ -210,7 +210,7 @@
                                         <asp:Button ID="btnLogin" runat="server"
                                             Text="Ingresar" OnClick="btnLogin_Click" CssClass="boton_azul" />
 
-                                        <button type="button" id="btnOlvidoContrasenia" class="boton_modal" data-toggle="modal" data-target="#modalOlvidoContrasenia">¿Olvidaste tu contraseña?</button>
+                                        <button type="button" id="btnOlvidoContrasenia" class="boton_modal" data-toggle="modal" data-target="#modalOlvidoContrasenia">¿Olvidaste tu usuario / contraseña?</button>
                                     </div>
                                 </div>
                             </div>

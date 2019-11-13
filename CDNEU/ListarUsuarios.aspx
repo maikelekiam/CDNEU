@@ -63,6 +63,7 @@
                                     <asp:Label ID="lblTelefono" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Usuario.Telefono") %>'></asp:Label>
                                     <br />
                                     <asp:Label ID="lblMail" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Usuario.CorreoElectronico") %>'></asp:Label>
+
                                 </ItemTemplate>
                                 <HeaderStyle CssClass="visible-sm visible-xs"></HeaderStyle>
                                 <ItemStyle CssClass="visible-sm visible-xs"></ItemStyle>
@@ -72,6 +73,8 @@
                                     <h3>
                                         <asp:Label ID="lblUsuario" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Usuario.Nombre")+" "+DataBinder.Eval(Container.DataItem, "Usuario.Apellido") %>'></asp:Label>
                                     </h3>
+                                    <asp:Label ID="LabelNombreUsuario" runat="server" Text='<%# "Nombre de Usuario: " + DataBinder.Eval(Container.DataItem, "Usuario.NombreUsuario") %>'></asp:Label>
+                                    <br />
                                     <asp:Label ID="lblTelefono2" runat="server" Text='<%# "Telefono: "+ DataBinder.Eval(Container.DataItem, "Usuario.Telefono") %>'></asp:Label>
                                     <br />
                                     <asp:Label ID="lblMail2" runat="server" Text='<%# "Correo Electrónico: "+ DataBinder.Eval(Container.DataItem, "Usuario.CorreoElectronico") %>'></asp:Label>
@@ -82,10 +85,6 @@
                                     <asp:ImageButton ID="ImageButton1" runat="server" CssClass="wid-100 hei-80 col-sm-6 col-xs-6 col-lg-6 col-md-6"
                                         ImageUrl='<%# "Handler.ashx?idFotoUsuario=" + Eval("idFotoUsuario")  %>' OnCommand="ImageButton1_Command" CommandArgument='<%#Eval("IdFotoUsuario")%>' />
                                 </ItemTemplate>
-
-
-
-
                                 <%--<ItemTemplate>
                                     <asp:Image ID="Image" runat="server" ImageUrl='<%# "Handler.ashx?idFotoUsuario=" + Eval("idFotoUsuario")  %>' />
                                 </ItemTemplate>--%>
