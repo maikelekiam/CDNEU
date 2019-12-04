@@ -11,7 +11,6 @@
             background-attachment: fixed;*/
         }
 
-
         .imagenes {
             width: 100%;
             height: auto;
